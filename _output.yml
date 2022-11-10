@@ -1,0 +1,10 @@
+bookdown::bs4_book:
+  theme:
+    bootswatch: "litera"
+    primary: "#982a31"
+    fg: "#2b2121"
+    bg: "#ffffff"
+  repo: https://github.com/yanghongXXL/GBD_learning
+  split_by: chapter
+  split_bib: no
+  download: ["pdf", "epub"]

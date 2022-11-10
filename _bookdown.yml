@@ -1,0 +1,12 @@
+book_filename: R4DS
+new_session: true
+clean: [packages.bib, bookdown.bbl]
+delete_merged_file: true
+output_dir: "docs"
+language:
+  label:
+    fig: "图 "
+    tab: "表 "
+  ui:
+    edit: "编辑"
+    chapter_name: ["第 ", " 章"]

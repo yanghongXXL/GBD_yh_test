@@ -1,0 +1,901 @@
+measure,location,sex,age,cause,metric,year,val,upper,lower
+Prevalence,Global,Male,All ages,HIV/AIDS,Number,1990,3867840.3495484684,4395466.319425226,3345710.215066605
+Prevalence,Global,Female,All ages,HIV/AIDS,Number,1990,3961005.642430024,4546159.6450735675,3399240.5612517954
+Prevalence,Global,Both,All ages,HIV/AIDS,Number,1990,7828845.991978493,8848630.56282989,6876622.7787158
+Prevalence,Global,Male,All ages,HIV/AIDS,Percent,1990,0.0015041459324246908,0.0017124360482340937,0.001304048017303884
+Prevalence,Global,Female,All ages,HIV/AIDS,Percent,1990,0.001531698124991589,0.0017603660846439123,0.0013159268947494855
+Prevalence,Global,Both,All ages,HIV/AIDS,Percent,1990,0.0015179602349073584,0.0017153270006989136,0.001333815726857688
+Prevalence,Global,Male,All ages,HIV/AIDS,Rate,1990,143.58574888603968,163.1727957054156,124.20272383840579
+Prevalence,Global,Female,All ages,HIV/AIDS,Rate,1990,149.12873390115436,171.15931992624508,127.97872229587087
+Prevalence,Global,Both,All ages,HIV/AIDS,Rate,1990,146.33773613454875,165.39967266979815,128.53866466649285
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Percent,1990,0.0015362072239788538,0.0017451719650504619,0.0013370819595614947
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Percent,1990,0.0015023623241893409,0.0017246321952904273,0.0012931962117467386
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Percent,1990,0.0015185991589761112,0.0017145307331700632,0.001334217177788582
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Rate,1990,147.5321971340137,167.28363345902562,127.96944826940079
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Rate,1990,146.735542249128,168.38734237529133,126.03971112249792
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Rate,1990,147.05985267464143,165.96401868589749,129.30610297469335
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Number,1990,271388619.1295469,308047068.28377426,237818594.11487052
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Number,1990,474190112.214084,522360622.00995445,427087926.63665044
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Number,1990,745578731.3436311,831888466.0750097,666802119.630457
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Percent,1990,0.10553903984029295,0.11969081384510812,0.09243814898673146
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Percent,1990,0.18336653513147355,0.20202648910144116,0.16506035363805194
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Percent,1990,0.1445627656962453,0.16122175360533106,0.12913492957482253
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Rate,1990,10074.753504604514,11435.62427462609,8828.534233320966
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Rate,1990,17852.88319345835,19666.464840573666,16079.523109368549
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Rate,1990,13936.447819600387,15549.759819849796,12463.945865893807
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Percent,1990,0.11759105469820173,0.1335449439599962,0.10309758271789322
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Percent,1990,0.19902391467952124,0.21918040947876052,0.17942336632326814
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Percent,1990,0.15889232550021518,0.17726931860594927,0.14224597479605713
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Rate,1990,11293.066478760673,12824.477598614356,9902.428799070783
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Rate,1990,19438.655826055303,21408.403517251198,17506.51042527697
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Rate,1990,15387.002898265728,17176.277707525598,13784.513715515692
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Number,1991,279423163.4715236,316254129.97834426,245180482.6704156
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Number,1991,487830759.4271782,536782993.0146582,440002830.7600525
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Number,1991,767253922.8987015,854368910.3463069,687217704.5886317
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Percent,1991,0.10702209970986397,0.12125582259750442,0.09380865156057093
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Percent,1991,0.18588137542258373,0.20465420347516491,0.16754668184022628
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Percent,1991,0.14655365572311777,0.16308810021465772,0.13110073480253992
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Rate,1991,10210.241787584711,11556.061041196439,8958.999599604733
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Rate,1991,18094.248499727364,19909.947616750316,16320.251248003442
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Rate,1991,14122.756318658752,15726.272055375268,12649.53868610541
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Percent,1991,0.11855019227211848,0.13436760298921538,0.1041414893325608
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Percent,1991,0.20061308531301997,0.22104363130379218,0.18118887291546462
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Percent,1991,0.1601540715127771,0.17852287429377797,0.14344479257434306
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Rate,1991,11376.623913389507,12901.149153521237,9986.251537522354
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Rate,1991,19586.925057035132,21561.875194882086,17675.842468999814
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Rate,1991,15500.535296806294,17281.09445953508,13895.653863478128
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Number,1993,294492505.61973923,333536490.0585509,258822490.33553544
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Number,1993,513799408.87979823,565123033.980773,464079117.77011704
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Number,1993,808291914.4995377,898637309.2735586,725529880.503555
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Percent,1993,0.10955843711760897,0.12396150448132616,0.09624611397820378
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Percent,1993,0.19030084087586063,0.20942251892738362,0.17217164092361048
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Percent,1993,0.15001911851086813,0.16677605385417021,0.13447057540736287
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Rate,1993,10441.115968051865,11825.40508102113,9176.449604536803
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Rate,1993,18518.91602931445,20368.777837519297,16726.843325259106
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Rate,1993,14446.772869585719,16061.535277448558,12967.549477743196
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Percent,1993,0.11991606186757169,0.13580850433093913,0.10556223359647793
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Percent,1993,0.20303496660195736,0.22351900704127572,0.18355040983940615
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Percent,1993,0.16203930828595411,0.18038284648230224,0.1453065243324283
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Rate,1993,11491.230978030639,13000.1668935436,10118.056674918109
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Rate,1993,19809.872526608444,21792.76498160853,17936.213927741883
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Rate,1993,15666.27401886617,17424.39279437742,14046.672439420574
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Number,1995,308408306.18648475,348398253.4075742,271454855.47047377
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Number,1995,538186375.02885,592655865.9165902,486816028.1038913
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Number,1995,846594681.2153348,941267023.7317085,759329574.9126558
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Percent,1995,0.11156838675681757,0.12616715832499428,0.09809022341707983
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Percent,1995,0.19382898884836025,0.21354535109429773,0.1754473410169042
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Percent,1995,0.15279005776177282,0.16997917282456068,0.13693146503841255
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Rate,1995,10627.016141622571,12004.974536699596,9353.688188482922
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Rate,1995,18862.522858821678,20771.586455839166,17062.079019852903
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Rate,1995,14709.77512791066,16354.728610549157,13193.524059119543
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Percent,1995,0.12066273037566054,0.13645288666535707,0.10622813908371478
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Percent,1995,0.20441085881999244,0.2248991569301427,0.18500242988220716
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Percent,1995,0.1631164309876008,0.181325466556553,0.14611857626403513
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Rate,1995,11551.367251479354,13051.543454297478,10190.788473495755
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Rate,1995,19935.223835160246,21914.58857450303,18062.050025270786
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Rate,1995,15759.014354625933,17508.177408230607,14146.439675697327
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Number,1994,301569391.4344115,341307270.9658958,265376307.53080395
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Number,1994,526224879.5878494,579178462.6021324,475601799.2777429
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Number,1994,827794271.0222611,920150883.388814,743065970.2556288
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Percent,1994,0.11062510798899466,0.12509017930803623,0.09722594359617705
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Percent,1994,0.1921965287804625,0.21163657561009785,0.17392900475682468
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Percent,1994,0.15149970042775937,0.1684864963136145,0.1358408265250135
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Rate,1994,10538.901957311606,11927.615892707325,9274.06748263704
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Rate,1994,18702.424175483397,20584.43395791798,16903.24219501393
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Rate,1994,14586.2724182137,16213.65588142406,13093.304757313797
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Percent,1994,0.12035832858991341,0.13624297592496312,0.10598464668156661
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Percent,1994,0.20387317125451648,0.2243057341716046,0.18444469462659976
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Percent,1994,0.16268530303376103,0.1809437541865916,0.14586418976635868
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Rate,1994,11526.912080610264,13024.032179030146,10154.917298351342
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Rate,1994,19886.27990178197,21859.82483747623,18018.63556952278
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Rate,1994,15721.979978416095,17484.410867981165,14106.257398865208
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Number,1992,287131689.9206483,325177002.4809012,252058583.2052604
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Number,1992,501021380.4225586,551404144.3266315,452250188.47726667
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Number,1992,788153070.343207,876888853.7294787,706646585.1038805
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Percent,1992,0.10836130682309446,0.12272678895776445,0.09510168898002905
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Percent,1992,0.18818840372271228,0.20714278969462233,0.16996277172407953
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Percent,1992,0.14836939011841513,0.1649772654485387,0.1328520544405135
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Rate,1992,10332.136787535474,11701.157997300612,9070.067329972764
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Rate,1992,18315.618392887285,20157.438948464493,16532.71136508172
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Rate,1992,14292.368978882943,15901.503810058013,12814.330251323267
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Percent,1992,0.11932228822385407,0.13523096873849924,0.10489855536856416
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Percent,1992,0.20194676581043253,0.22247421311438542,0.18249937477461584
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Percent,1992,0.16119953108847518,0.17957434355271923,0.1445532590095782
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Rate,1992,11442.208285759321,12957.662508958883,10070.48342811909
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Rate,1992,19710.11189686928,21689.721114226442,17824.26816366876
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Rate,1992,15593.06211975697,17355.44030597874,13992.391590007053
+Prevalence,Global,Male,All ages,HIV/AIDS,Number,1992,5511182.940878351,6162498.6210257355,4844448.159022986
+Prevalence,Global,Female,All ages,HIV/AIDS,Number,1992,6103842.739403428,6864605.6704452075,5283049.018830525
+Prevalence,Global,Both,All ages,HIV/AIDS,Number,1992,11615025.68028178,12880071.793113371,10244189.307666361
+Prevalence,Global,Male,All ages,HIV/AIDS,Percent,1992,0.002079879855175779,0.0023276684527882606,0.0018310952108133063
+Prevalence,Global,Female,All ages,HIV/AIDS,Percent,1992,0.0022926600549980536,0.002576286815821585,0.001986737060371381
+Prevalence,Global,Both,All ages,HIV/AIDS,Percent,1992,0.0021865205694013685,0.0024224002742153183,0.0019303910159878261
+Prevalence,Global,Male,All ages,HIV/AIDS,Rate,1992,198.31421610768123,221.75113698886028,174.32245480456257
+Prevalence,Global,Female,All ages,HIV/AIDS,Rate,1992,223.13549623535246,250.94637233142635,193.13010095139794
+Prevalence,Global,Both,All ages,HIV/AIDS,Rate,1992,210.62689338950304,233.56724152773637,185.76814451910738
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Percent,1992,0.0021054098737699005,0.002352839728666867,0.0018523978378878097
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Percent,1992,0.0022407685735562374,0.0025184697234466847,0.0019425316773804854
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Percent,1992,0.0021718540076851272,0.002402586289429935,0.0019179633569508835
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Rate,1992,201.89430297511,226.0047744199559,177.55558182281482
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Rate,1992,218.70023920957135,245.9656514986573,189.67437986551997
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Rate,1992,210.08653334195648,232.55801213274506,185.6223272999574
+Prevalence,Global,Male,All ages,HIV/AIDS,Number,1991,4667453.568027773,5260201.943052921,4087490.9229114363
+Prevalence,Global,Female,All ages,HIV/AIDS,Number,1991,4998011.301273705,5660484.689392919,4310282.976914142
+Prevalence,Global,Both,All ages,HIV/AIDS,Number,1991,9665464.869301476,10796743.129899472,8506513.4580217
+Prevalence,Global,Male,All ages,HIV/AIDS,Percent,1991,0.0017876852929286367,0.0020144022839863377,0.0015698733689863832
+Prevalence,Global,Female,All ages,HIV/AIDS,Percent,1991,0.0019044249308637884,0.0021602040158674157,0.0016424449541530776
+Prevalence,Global,Both,All ages,HIV/AIDS,Percent,1991,0.0018462048541553085,0.0020616902992845023,0.0016282302132161412
+Prevalence,Global,Male,All ages,HIV/AIDS,Rate,1991,170.55074772548414,192.21002662353257,149.35866486150047
+Prevalence,Global,Female,All ages,HIV/AIDS,Rate,1991,185.38244409984165,209.95440451324552,159.87374674776206
+Prevalence,Global,Both,All ages,HIV/AIDS,Rate,1991,177.91112040195293,198.7344315981487,156.5784326460757
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Percent,1991,0.001817635436389137,0.002047877149712665,0.0015955954384117286
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Percent,1991,0.0018644055867032968,0.0021155514125971216,0.0016101864840458156
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Percent,1991,0.0018400501518619965,0.002055127446501888,0.0016222048086770124
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Rate,1991,174.42844194892683,196.06670028403886,152.76240744448108
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Rate,1991,182.03180361810158,206.25221522588564,157.31591095524797
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Rate,1991,178.08951225872525,199.0771203791175,156.84123095559755
+Prevalence,Global,Male,All ages,HIV/AIDS,Number,1994,7235159.324186113,8016820.364623241,6453571.930007739
+Prevalence,Global,Female,All ages,HIV/AIDS,Number,1994,8387417.017415554,9357177.202018313,7336261.005900781
+Prevalence,Global,Both,All ages,HIV/AIDS,Number,1994,15622576.341601674,17140212.54102238,13920133.944663161
+Prevalence,Global,Male,All ages,HIV/AIDS,Percent,1994,0.002654089650138329,0.0029410287870165214,0.0023682434073366435
+Prevalence,Global,Female,All ages,HIV/AIDS,Percent,1994,0.0030633897235386102,0.0034175160356671743,0.0026829232945632373
+Prevalence,Global,Both,All ages,HIV/AIDS,Percent,1994,0.002859183863576465,0.0031397671208023064,0.0025517725566586136
+Prevalence,Global,Male,All ages,HIV/AIDS,Rate,1994,252.84606770084008,280.1626631611215,225.5320459457243
+Prevalence,Global,Female,All ages,HIV/AIDS,Rate,1994,298.0950481080133,332.56104738790503,260.73618051255477
+Prevalence,Global,Both,All ages,HIV/AIDS,Rate,1994,275.2799365372925,302.0216715449,245.28179636244462
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Percent,1994,0.0026623987597894374,0.0029499031312196604,0.002377355423378692
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Percent,1994,0.002985567835328623,0.003328281047220003,0.002616435736317896
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Percent,1994,0.0028226362260348197,0.0030987837571348595,0.002517186184250658
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Rate,1994,254.98139741585678,282.25033390613663,227.36796978021704
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Rate,1994,291.21947656705197,324.6490810186889,255.07193731055304
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Rate,1994,272.78059712210523,299.3094059929509,242.99616300797206
+Prevalence,Global,Male,All ages,HIV/AIDS,Number,1995,8092458.121619837,8900985.875612935,7299370.846752618
+Prevalence,Global,Female,All ages,HIV/AIDS,Number,1995,9523142.526244378,10554192.943307394,8402247.52988582
+Prevalence,Global,Both,All ages,HIV/AIDS,Number,1995,17615600.647864215,19222083.526741695,15847574.65830383
+Prevalence,Global,Male,All ages,HIV/AIDS,Percent,1995,0.002927500115903241,0.0032234883903054993,0.0026361761522150557
+Prevalence,Global,Female,All ages,HIV/AIDS,Percent,1995,0.003429780466948697,0.0038001855114918066,0.0030299276779446084
+Prevalence,Global,Both,All ages,HIV/AIDS,Percent,1995,0.003179196314823409,0.00346964629363048,0.002856605191806668
+Prevalence,Global,Male,All ages,HIV/AIDS,Rate,1995,278.84684477939453,306.70678668199366,251.51894503523798
+Prevalence,Global,Female,All ages,HIV/AIDS,Rate,1995,333.77005053216396,369.9066250773785,294.484575328488
+Prevalence,Global,Both,All ages,HIV/AIDS,Rate,1995,306.07506758863195,333.98807297298265,275.35521391627
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Percent,1995,0.00292336220017867,0.003222276060896316,0.002632211123165992
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Percent,1995,0.003338844367406704,0.0036982954851629488,0.002951977811040909
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Percent,1995,0.0031299998962754007,0.00341501056645363,0.0028155488267227777
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Rate,1995,279.8602156223505,308.1805668283227,251.89842731183765
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Rate,1995,325.6216110258442,360.3776206685528,288.0878245735267
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Rate,1995,302.3953521894627,329.48559556665157,272.33145638176626
+Prevalence,Global,Male,All ages,HIV/AIDS,Number,1993,6371914.50401956,7081837.616126787,5638302.393129586
+Prevalence,Global,Female,All ages,HIV/AIDS,Number,1993,7240747.528978105,8122177.9919921495,6307451.313219078
+Prevalence,Global,Both,All ages,HIV/AIDS,Number,1993,13612662.032997668,15023301.435345268,12034841.07003834
+Prevalence,Global,Male,All ages,HIV/AIDS,Percent,1993,0.0023705120184650402,0.0026364580372845348,0.0020944542513447384
+Prevalence,Global,Female,All ages,HIV/AIDS,Percent,1993,0.0026818238553805774,0.0030071410695795197,0.002334633909885378
+Prevalence,Global,Both,All ages,HIV/AIDS,Percent,1993,0.002526511297238364,0.0027896458669359908,0.002233303060516259
+Prevalence,Global,Male,All ages,HIV/AIDS,Rate,1993,225.9137227786911,251.08376751824397,199.9037939037605
+Prevalence,Global,Female,All ages,HIV/AIDS,Rate,1993,260.97888234429973,292.7483558939581,227.34000703340612
+Prevalence,Global,Both,All ages,HIV/AIDS,Rate,1993,243.30199648590292,268.5146537957585,215.1012676751269
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Percent,1993,0.0023883441827480664,0.0026598560335485393,0.002113878677535485
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Percent,1993,0.0026170642125031567,0.002934397112133758,0.0022812031750479543
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Percent,1993,0.002501339907311906,0.002760274902796415,0.002213415156871194
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Rate,1993,228.86795349835498,254.79906287015206,202.6231559428162
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Rate,1993,255.34379152960707,286.1830313175711,222.76274912154855
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Rate,1993,241.83429797304487,267.01459277619205,214.07991758709247
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Number,1996,314862303.4209533,355669660.2447396,277120588.6079237
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Number,1996,549424160.8831689,604637964.9095842,497120909.8053902
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Number,1996,864286464.3041223,961132066.2641865,775400426.3932627
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Percent,1996,0.11233874393894501,0.1268492678531935,0.0987611772616565
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Percent,1996,0.19510940232439172,0.21473689053984016,0.17667499623202831
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Percent,1996,0.15382122095880202,0.17114748911222455,0.13787823762893392
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Rate,1996,10699.37161404476,12086.051030732146,9416.866125936116
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Rate,1996,18990.109084339172,20898.500152794404,17182.317374131133
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Rate,1996,14809.509876995267,16468.95493139155,13286.45159628077
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Percent,1996,0.12075478559995456,0.13642466364923533,0.10638651545599546
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Percent,1996,0.20456861871337856,0.225198082932007,0.18513550748045496
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Percent,1996,0.163257305582438,0.18157400675818683,0.1462132699907061
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Rate,1996,11556.11503855624,13049.0467476399,10191.980463152066
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Rate,1996,19948.546026519114,21931.847199793407,18080.77281860572
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Rate,1996,15768.993766199701,17517.65220320491,14158.360894541347
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Number,2000,339025971.5638795,381519124.7901016,299410915.7846383
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Number,2000,592602180.5311645,651530517.4827578,536851133.75717914
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Number,2000,931628152.0950439,1035250394.3662492,836863022.0062441
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Percent,2000,0.11482800639621929,0.1295142293113732,0.1012366321310625
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Percent,2000,0.19921413796594908,0.2193893499574628,0.18058536562688396
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Percent,2000,0.15717933249472008,0.1744414299096446,0.1411293748234492
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Rate,2000,10930.498004130404,12300.514951168076,9653.27347135763
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Rate,2000,19405.67191816196,21335.371151702635,17580.017949389287
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Rate,2000,15135.11311488799,16818.546955381273,13595.570798551096
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2000,0.12030613821948809,0.13565161666241374,0.10626310749473489
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2000,0.20392968004791487,0.22404237833291357,0.1847972753070471
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2000,0.16281818295693712,0.18038702921296293,0.14618785711615084
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2000,11493.921416985595,12942.902389988336,10152.151815991178
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2000,19879.919869985104,21822.60857177584,18031.568412572586
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2000,15710.766487991832,17427.089555757353,14127.86814954224
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Number,1998,326683536.2259436,368664856.3517659,288018304.8625353
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Number,1998,570440440.5347128,626433869.7089041,516865821.9377624
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Number,1998,897123976.7606568,997488391.2305999,805436302.788839
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Percent,1998,0.11349942870517411,0.12793063463462312,0.09994940743858129
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Percent,1998,0.19702194756993116,0.21662432982702723,0.17843186717773232
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Percent,1998,0.15538388330050154,0.17267486714137786,0.13942419421364272
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Rate,1998,10806.235134751629,12194.918573739364,9527.243280801627
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Rate,1998,19184.19270567251,21067.279280884813,17382.451920370913
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Rate,1998,14960.558228425913,16634.24849380162,13431.562436520702
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Percent,1998,0.1204177080657237,0.135901724166599,0.10629244996144198
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Percent,1998,0.20411150059224134,0.22436822606922516,0.1849932333450763
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Percent,1998,0.16291106886723195,0.18071950619179902,0.14620350018495942
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Rate,1998,11513.813216283013,12985.174171478106,10162.200541433216
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Rate,1998,19901.03061708242,21862.119778672277,18064.188389167164
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Rate,1998,15727.432340078507,17449.594118901794,14136.191933429876
+Prevalence,Global,Male,All ages,HIV/AIDS,Number,1997,9771007.592678534,10593935.260999521,8982800.805234602
+Prevalence,Global,Female,All ages,HIV/AIDS,Number,1997,11681718.48585835,12741717.296731364,10541131.784604672
+Prevalence,Global,Both,All ages,HIV/AIDS,Number,1997,21452726.07853687,23097499.63450919,19619978.527469892
+Prevalence,Global,Male,All ages,HIV/AIDS,Percent,1997,0.0034394574742159095,0.003731025054392696,0.003159410062710218
+Prevalence,Global,Female,All ages,HIV/AIDS,Percent,1997,0.00409068221955625,0.0044535907255302465,0.003696324963921464
+Prevalence,Global,Both,All ages,HIV/AIDS,Percent,1997,0.0037659158035097035,0.004053305747366823,0.0034495364978141445
+Prevalence,Global,Male,All ages,HIV/AIDS,Rate,1997,327.5254782042532,355.1101234455796,301.10468152256294
+Prevalence,Global,Female,All ages,HIV/AIDS,Rate,1997,398.22600692523173,434.3610237303758,359.3437749880272
+Prevalence,Global,Both,All ages,HIV/AIDS,Rate,1997,362.5779528413104,390.3766869802137,331.60222263769646
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Percent,1997,0.003411161451119411,0.0036992265440961734,0.0031368389921793433
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Percent,1997,0.00397736379677916,0.004322817482776518,0.003599197577549988
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Percent,1997,0.003693907120854374,0.0039689241152415,0.0033829532385922455
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Rate,1997,326.30493211751957,354.017740131064,299.8282322444954
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Rate,1997,387.82262181606797,422.1375182378093,350.71653406494147
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Rate,1997,356.7023465120902,383.74339667086383,326.8292803883781
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Number,1997,320877782.59530556,361836516.1987376,282633646.6513766
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Number,1997,560045122.4123242,615732205.4088099,507140102.2301174
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Number,1997,880922905.0076293,979538540.7918826,790631796.3180834
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Percent,1997,0.11295053996924281,0.12750896605306689,0.09938038904759537
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Percent,1997,0.19611546011971162,0.21570315062619477,0.17754094399505063
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Percent,1997,0.1546412054510489,0.17201953054324579,0.13871323307377043
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Rate,1997,10755.866085744992,12128.80830105518,9473.917546176819
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Rate,1997,19091.757181633966,20990.111839456815,17288.242145814223
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Rate,1997,14888.700966924873,16555.42878556663,13362.668087533322
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Percent,1997,0.12062947822442445,0.13614198907936992,0.10629982428344906
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Percent,1997,0.20440409447185331,0.2249986929300213,0.1851090838053083
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Percent,1997,0.16313568054438984,0.18126610996623002,0.14622595523841198
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Rate,1997,11539.23293208695,13026.534484773985,10177.711228988372
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Rate,1997,19930.93355273597,21920.000833182636,18078.75904103558
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Rate,1997,15753.23873655017,17494.486852851194,14153.262317973884
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Number,1999,332584310.12535644,374582781.30217993,293227437.8342513
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Number,1999,581087118.3038169,637994662.3289777,526604800.8467782
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Number,1999,913671428.4291737,1015955281.9985685,820641992.1005421
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Percent,1999,0.11408334684481965,0.12862546640456732,0.1005323076954149
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Percent,1999,0.1979902138629629,0.21768715330810343,0.1793351226644509
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Percent,1999,0.1561777264112957,0.17343618571086064,0.14020402202899707
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Rate,1999,10860.273492240287,12231.699832419581,9575.106441757744
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Rate,1999,19282.684557561173,21171.09368902805,17474.753683864354
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Rate,1999,15037.603294751663,16721.03561579886,13506.484213300859
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Percent,1999,0.12026047608541042,0.13577629309574704,0.10621078797711923
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Percent,1999,0.20388651715168027,0.22392579056139159,0.18484939515468055
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Percent,1999,0.16274857442188984,0.18034909436437374,0.14613990977081528
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Rate,1999,11493.797901164091,12958.09492418107,10145.404742427414
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Rate,1999,19877.629203500102,21818.006231844574,18040.517195156674
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Rate,1999,15707.726313260051,17425.142238184377,14128.092078860233
+Prevalence,Global,Male,All ages,HIV/AIDS,Number,1996,8947665.93038021,9764175.13420571,8126999.657649615
+Prevalence,Global,Female,All ages,HIV/AIDS,Number,1996,10634069.846492054,11689853.37397274,9490455.313979076
+Prevalence,Global,Both,All ages,HIV/AIDS,Number,1996,19581735.776872262,21258033.257727746,17777324.036771722
+Prevalence,Global,Male,All ages,HIV/AIDS,Percent,1996,0.0031924226736471254,0.0034892903070678598,0.0028995256103271877
+Prevalence,Global,Female,All ages,HIV/AIDS,Percent,1996,0.0037763313394064465,0.0041481264372387186,0.0033766829914695534
+Prevalence,Global,Both,All ages,HIV/AIDS,Percent,1996,0.003485060607171889,0.003780235160104025,0.0031606115982419844
+Prevalence,Global,Male,All ages,HIV/AIDS,Rate,1996,304.05164996672806,331.7975417521194,276.16449635177634
+Prevalence,Global,Female,All ages,HIV/AIDS,Rate,1996,367.55235894751183,404.04410027188004,328.02485675695016
+Prevalence,Global,Both,All ages,HIV/AIDS,Rate,1996,335.53216598132286,364.25544827812405,304.61365158725476
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Percent,1996,0.003176653848121587,0.0034726944177608556,0.002893757722109176
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Percent,1996,0.0036739763784113524,0.004028160309328073,0.0032870668210967617
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Percent,1996,0.0034245339303765254,0.0037126399520144107,0.003113188110258697
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Rate,1996,304.00127660315087,332.18621294608045,276.6195041284662
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Rate,1996,358.26830668885935,393.31926164121023,320.1302253669383
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Rate,1996,330.77453166766645,359.0591458225499,300.7665283486978
+Prevalence,Global,Male,All ages,HIV/AIDS,Number,2000,11673171.467393516,12460901.863204572,10863320.124069663
+Prevalence,Global,Female,All ages,HIV/AIDS,Number,2000,14066282.409242937,15046602.00217328,13050286.654086467
+Prevalence,Global,Both,All ages,HIV/AIDS,Number,2000,25739453.876636453,27209344.57847556,24267125.757068105
+Prevalence,Global,Male,All ages,HIV/AIDS,Percent,2000,0.003953719527640191,0.004222522534925236,0.0036834564230109877
+Prevalence,Global,Female,All ages,HIV/AIDS,Percent,2000,0.004728645006206501,0.005053549152637137,0.004397431463918466
+Prevalence,Global,Both,All ages,HIV/AIDS,Percent,2000,0.00434263500442653,0.004590231955315703,0.004089283668031868
+Prevalence,Global,Male,All ages,HIV/AIDS,Rate,2000,376.35340100242297,401.75052759861717,350.2430754394275
+Prevalence,Global,Female,All ages,HIV/AIDS,Rate,2000,460.62210114940024,492.72417741631654,427.3517539543568
+Prevalence,Global,Both,All ages,HIV/AIDS,Rate,2000,418.15991182991996,442.0395702417316,394.2406554379943
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Percent,2000,0.0038893582270412906,0.0041458712126359164,0.0036228890342442
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Percent,2000,0.004589681664609493,0.004902980629370367,0.00427832122142463
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Percent,2000,0.0042407642035353806,0.00447491868011845,0.004003133051995597
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Rate,2000,371.5832422890154,396.63375377526916,345.89724830738345
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Rate,2000,447.42095378227594,477.61345003871435,416.6649496192992
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Rate,2000,409.2016878222301,432.20227887392014,386.11974022114185
+Prevalence,Global,Male,All ages,HIV/AIDS,Number,1998,10515184.380282592,11333274.628649257,9731738.674401091
+Prevalence,Global,Female,All ages,HIV/AIDS,Number,1998,12618214.153000126,13673297.774786245,11508102.003943212
+Prevalence,Global,Both,All ages,HIV/AIDS,Number,1998,23133398.53328273,24730848.922899622,21313965.39828954
+Prevalence,Global,Male,All ages,HIV/AIDS,Percent,1998,0.0036533006507561807,0.003936499467663937,0.003379272974891266
+Prevalence,Global,Female,All ages,HIV/AIDS,Percent,1998,0.004358154026622993,0.0047186284723562365,0.003976669172519337
+Prevalence,Global,Both,All ages,HIV/AIDS,Percent,1998,0.004006765847957472,0.0042832344061625085,0.003699514789709793
+Prevalence,Global,Male,All ages,HIV/AIDS,Rate,1998,347.8276138777067,374.88889675540645,321.9123240811264
+Prevalence,Global,Female,All ages,HIV/AIDS,Rate,1998,424.3567508742712,459.8397322385844,387.02313306054594
+Prevalence,Global,Both,All ages,HIV/AIDS,Rate,1998,385.77561713177977,412.41491135416686,355.43450925382695
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Percent,1998,0.003611741882414093,0.0038964592925015114,0.003340580759844791
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Percent,1998,0.004234837216489445,0.00457701845779536,0.0038728314031233374
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Percent,1998,0.003923467133435203,0.0041884989043372315,0.0036284035888974444
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Rate,1998,345.33713406101896,372.49925339597024,319.33851964295116
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Rate,1998,412.8995728597694,446.8568849237515,377.61307443497196
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Rate,1998,378.7705260352748,404.27753682720817,349.6823935362108
+Prevalence,Global,Male,All ages,HIV/AIDS,Number,1999,11149968.521389194,11943942.954032041,10333209.161388703
+Prevalence,Global,Female,All ages,HIV/AIDS,Number,1999,13416383.212182852,14433715.85461458,12341179.382862983
+Prevalence,Global,Both,All ages,HIV/AIDS,Number,1999,24566351.733572043,26097546.239917938,22871098.024978638
+Prevalence,Global,Male,All ages,HIV/AIDS,Percent,1999,0.003824689942483234,0.004093857023254311,0.003548162266391998
+Prevalence,Global,Female,All ages,HIV/AIDS,Percent,1999,0.0045712856200294995,0.0049188429578935836,0.004209121562742811
+Prevalence,Global,Both,All ages,HIV/AIDS,Percent,1999,0.0041992411190734345,0.004463726408689413,0.00391815562366502
+Prevalence,Global,Male,All ages,HIV/AIDS,Rate,1999,364.09326563395376,390.01986295629166,337.4226448111941
+Prevalence,Global,Female,All ages,HIV/AIDS,Rate,1999,445.2067121003014,478.96568526663594,409.5273524607768
+Prevalence,Global,Both,All ages,HIV/AIDS,Rate,1999,404.32374294981923,429.5248106827997,376.4225172349993
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Percent,1999,0.003771267876843826,0.004036783591718769,0.0034963832256321298
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Percent,1999,0.004439525984961879,0.004770199826663888,0.004097406309514599
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Percent,1999,0.004106131818848315,0.0043617330729564556,0.0038366181238000765
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Rate,1999,360.43402604263827,386.3244843288776,334.32504513473697
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Rate,1999,432.82493690943744,464.9917115099991,398.81072897271713
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Rate,1999,396.3034859632391,420.7905153365696,370.0865002377047
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Number,2001,345727386.33222485,389570775.4074923,305006864.4009608
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Number,2001,604584518.6961167,664536067.056758,547693334.117943
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Number,2001,950311905.0283415,1056770041.4970162,853394221.3423373
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Percent,2001,0.11565373044234116,0.13036734361977484,0.10187715652747803
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Percent,2001,0.2005690265163152,0.2208649259376235,0.18156920169574323
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Percent,2001,0.15828828144636925,0.1757668425010214,0.14209610518700605
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Rate,2001,11006.326957546544,12402.093373995856,9709.977880280336
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Rate,2001,19538.300771329225,21475.749295653502,17699.753734228743
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Rate,2001,15240.286538290778,16947.57074206667,13686.003926248697
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2001,0.12047925444502929,0.1358499000802237,0.10643500678150504
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2001,0.20414223483861094,0.22445524675250142,0.184957987111545
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2001,0.16303522687028613,0.18068082227820675,0.14637155183634543
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2001,11503.95985673258,12955.908719017114,10167.243054356422
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2001,19895.54735992952,21848.889481433882,18040.843334354824
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2001,15725.22921032024,17448.24060334422,14144.329877228589
+Prevalence,Global,Male,All ages,HIV/AIDS,Number,2001,12087215.909732902,12858013.316714277,11304764.140604757
+Prevalence,Global,Female,All ages,HIV/AIDS,Number,2001,14570489.966727665,15495968.125203954,13673339.648026837
+Prevalence,Global,Both,All ages,HIV/AIDS,Number,2001,26657705.87646057,28017376.166180417,25309708.35104461
+Prevalence,Global,Male,All ages,HIV/AIDS,Percent,2001,0.004043471281961104,0.004299351929106033,0.003785729152685691
+Prevalence,Global,Female,All ages,HIV/AIDS,Percent,2001,0.004833720282622992,0.005137571732679327,0.0045365980855270015
+Prevalence,Global,Both,All ages,HIV/AIDS,Percent,2001,0.004440241623709837,0.004665289928791013,0.0042187654973709025
+Prevalence,Global,Male,All ages,HIV/AIDS,Rate,2001,384.79986130210295,409.3384099235123,359.89029283864454
+Prevalence,Global,Female,All ages,HIV/AIDS,Rate,2001,470.8731476775545,500.7817378885691,441.88002558823234
+Prevalence,Global,Both,All ages,HIV/AIDS,Rate,2001,427.513402558732,449.31862745730183,405.89537543359205
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Percent,2001,0.003971567103188498,0.004237505623243775,0.0037136540485282993
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Percent,2001,0.004690215712349475,0.004980290276767766,0.004409707155948989
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Percent,2001,0.004332467221380139,0.004553035191431083,0.004119512828243407
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Rate,2001,379.22298776070926,404.0342248954119,354.6386367565062
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Rate,2001,457.1043650504627,485.22867937539394,429.8545069972061
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Rate,2001,417.87806595222605,438.8928097734177,397.5591914509968
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Number,2003,358797412.410799,404735654.14381164,316419472.3054135
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Number,2003,628200400.4228776,691526760.2328117,567987291.3887655
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Number,2003,986997812.8336765,1097392662.7529204,885975996.2022725
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Percent,2003,0.11720798060749413,0.13217460393383668,0.10322889363726043
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Percent,2003,0.2030992920822549,0.22385485324757534,0.18375525200703197
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Percent,2003,0.1603760131710817,0.17813874978551653,0.1439423272965359
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Rate,2003,11138.576855220199,12564.692591949644,9822.987816664614
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Rate,2003,19775.620329782698,21769.121205658386,17880.123952618902
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Rate,2003,15427.01172038169,17152.509610477766,13848.016580855943
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2003,0.12072768140823267,0.13614047050948838,0.10662649968233157
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2003,0.20440003599009532,0.22511011485357915,0.18486092027328246
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2003,0.16333897960085814,0.18123759663795425,0.14639088632749794
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2003,11504.563797674085,12962.929107376938,10154.086041876742
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2003,19900.201701752107,21885.83130407643,18002.04540513672
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2003,15730.544448849509,17463.623690887434,14139.833299205276
+Prevalence,Global,Male,All ages,HIV/AIDS,Number,2002,12396556.295189315,13183360.691953968,11623175.81443315
+Prevalence,Global,Female,All ages,HIV/AIDS,Number,2002,14938080.081777371,15791041.436641734,14159296.500059444
+Prevalence,Global,Both,All ages,HIV/AIDS,Number,2002,27334636.37696669,28565728.318559762,26147975.749944173
+Prevalence,Global,Male,All ages,HIV/AIDS,Percent,2002,0.004097462817895465,0.004358568461534174,0.0038469622185738172
+Prevalence,Global,Female,All ages,HIV/AIDS,Percent,2002,0.00489174640441942,0.005172504996345969,0.004638021358878823
+Prevalence,Global,Both,All ages,HIV/AIDS,Percent,2002,0.004496452809686587,0.004695436767464806,0.0042992554056785785
+Prevalence,Global,Male,All ages,HIV/AIDS,Rate,2002,389.6932857609312,414.42696044648477,365.3816000384863
+Prevalence,Global,Female,All ages,HIV/AIDS,Rate,2002,476.4379797063546,503.6424920971344,451.59930738227234
+Prevalence,Global,Both,All ages,HIV/AIDS,Rate,2002,432.7515654678008,452.24174479969486,413.9648058072362
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Percent,2002,0.004019087364577387,0.004279513438409921,0.0037665953947833303
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Percent,2002,0.004744838109795621,0.005008697575275334,0.004505440439817504
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Percent,2002,0.004383690950718505,0.004575329654964845,0.004194859233549054
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Rate,2002,383.4041650962255,408.12907250375736,358.9718068001488
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Rate,2002,462.21108659514323,487.94932569466516,438.7943240388538
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Rate,2002,422.52224620321874,441.1663446796891,404.5175681487195
+Prevalence,Global,Male,All ages,HIV/AIDS,Number,2003,12615249.075975237,13418192.839186214,11855746.639843209
+Prevalence,Global,Female,All ages,HIV/AIDS,Number,2003,15185321.971139953,15934409.267735055,14523707.79834836
+Prevalence,Global,Both,All ages,HIV/AIDS,Number,2003,27800571.04711518,28879657.98740075,26717494.303636506
+Prevalence,Global,Male,All ages,HIV/AIDS,Percent,2003,0.0041210363161709234,0.00439080139925691,0.0038690606966140157
+Prevalence,Global,Female,All ages,HIV/AIDS,Percent,2003,0.004909471720298685,0.0051508033924207,0.004692213959922022
+Prevalence,Global,Both,All ages,HIV/AIDS,Percent,2003,0.0045172950001217205,0.004691472581080703,0.004336471223292314
+Prevalence,Global,Male,All ages,HIV/AIDS,Rate,2003,391.63025295069417,416.55699575201993,368.0521111805477
+Prevalence,Global,Female,All ages,HIV/AIDS,Rate,2003,478.03083488107063,501.61195001782664,457.2033558200541
+Prevalence,Global,Both,All ages,HIV/AIDS,Rate,2003,434.52957017790516,451.3959569709034,417.6008218073815
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Percent,2003,0.004036952487666895,0.004310177318245229,0.003789166009122611
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Percent,2003,0.004760404466611268,0.004990530089333594,0.004555564713093318
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Percent,2003,0.004400387827488851,0.004574336325491647,0.004226702776397292
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Rate,2003,384.69287066701276,409.69187753132815,360.91585646844504
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Rate,2003,463.46809744535705,485.70134939537877,443.570161162972
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Rate,2003,423.7828468695945,440.3150307647331,406.7769477580521
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Number,2002,352273769.91956216,397495453.0406344,310629740.08999056
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Number,2002,616402947.5681071,677631923.079304,558446568.6491582
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Number,2002,968676717.4876695,1076848210.9978368,869915169.8321941
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Percent,2002,0.11643719982279221,0.1312547905427272,0.1025754165782755
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Percent,2002,0.2018521024302345,0.22227596545055534,0.18282615465427676
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Percent,2002,0.1593434352827772,0.17699693594360616,0.14306521691943844
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Rate,2002,11073.940182937555,12495.511292159958,9764.834780584024
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Rate,2002,19659.673359405937,21612.522000753794,17811.20153892587
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Rate,2002,15335.721322352469,17048.251260923742,13772.166067161896
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2002,0.12061033104670904,0.13601134772642753,0.10654648194535396
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2002,0.20428810600319475,0.22479239333103923,0.1849501918568506
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2002,0.16319912178043547,0.18090801385291952,0.14644740389107885
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2002,11505.79137088428,12964.348115585775,10162.195622253894
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2002,19900.435553816988,21873.515341369275,18032.789636923768
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2002,15730.005815197814,17455.81489478985,14148.997079928535
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Number,2004,365382585.6957374,412413446.1322824,322063038.20612586
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Number,2004,640093943.4470332,705191612.2542416,577670199.6805558
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Number,2004,1005476529.1427704,1117032597.4079406,902478602.977623
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Percent,2004,0.11796448513769059,0.13312818032165621,0.10383948111586572
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Percent,2004,0.20431707883913816,0.22527391657155363,0.18461545558788484
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Percent,2004,0.16138646315098873,0.17932367887058914,0.14479897562992297
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Rate,2004,11202.973305368874,12644.983665539381,9874.755286432128
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Rate,2004,19889.63730317146,21912.416982799055,17949.94448880868
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Rate,2004,15517.31470342407,17238.936808142047,13927.76866452525
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2004,0.12083356722911728,0.1363424037572467,0.10663360223905824
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2004,0.20449605154582287,0.22531086274370762,0.1847225325559599
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2004,0.16346092467221626,0.1816121305813288,0.14634596506221678
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2004,11503.277147453835,12968.04589076709,10145.52270105869
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2004,19899.485167206654,21890.189936769282,17968.011708145394
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2004,15730.49221020125,17471.07228699043,14126.762555030462
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Number,2007,382536421.08958095,431820635.74059695,337102598.36049443
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Number,2007,673035901.9945999,742479573.0554631,605725870.4199067
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Number,2007,1055572323.084181,1175465611.903892,945936248.6319407
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Percent,2007,0.11901947900973484,0.1345466739944818,0.10483924777075958
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Percent,2007,0.2066114600208048,0.22819632327261993,0.18614870638405595
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Percent,2007,0.1631093761563436,0.18136224058373349,0.1460870948065499
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Rate,2007,11295.719944089878,12751.008004705474,9954.128113237764
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Rate,2007,20112.317371530702,22187.501098997687,18100.893146900195
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Rate,2007,15677.715231646958,17458.41068869441,14049.363372860307
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2007,0.11993279787584815,0.13531540319417443,0.10577865788910426
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2007,0.20351746212102345,0.2247975415802652,0.18331147303623754
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2007,0.1625417288937172,0.18102170839917808,0.14534690010438636
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2007,11398.187865295811,12854.593501501155,10069.742512482942
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2007,19788.656190117177,21831.95878367748,17819.750303833192
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2007,15622.546229354633,17398.262274375164,14005.583321070022
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Number,2006,378217098.393085,426613123.0552745,333383228.4783963
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Number,2006,663636999.2761319,731376571.2129812,597484699.8510592
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Number,2006,1041854097.6692176,1158818390.7598572,934003769.3476274
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Percent,2006,0.1191626934737686,0.1346157990221804,0.10501502916757093
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Percent,2006,0.2064130857961894,0.2278104527941426,0.18606992216967627
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Percent,2006,0.1630687763032646,0.18131296533656388,0.14607679544569968
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Rate,2006,11312.431389807314,12759.951110244287,9971.45532208246
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Rate,2006,20094.244313787807,22145.328731466703,18091.220871731108
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Rate,2006,15676.412644879987,17436.333278016184,14053.62663824298
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2006,0.12071726663860771,0.13620535195616354,0.106583992882129
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2006,0.2043680167810203,0.22538629309175914,0.18429789504121197
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2006,0.16335911324352323,0.1817394029718839,0.14611221345248848
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2006,11479.780780467485,12952.020377173887,10126.255732971547
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2006,19877.26921989896,21895.062094576086,17924.452930029463
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2006,15708.294335853512,17467.752998561387,14093.527293678057
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Number,2005,372279639.52062625,420247177.34404355,328143130.8236575
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Number,2005,652382779.3290005,719247324.8798987,587699012.1898873
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Number,2005,1024662418.8496269,1138708675.0071206,919444360.7156897
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Percent,2005,0.11875439253516575,0.134097672562932,0.10450419068474245
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Percent,2005,0.20557394668133913,0.22678965258696096,0.1854406595416929
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Percent,2005,0.16242979148296285,0.1806074096674331,0.14563404129922192
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Rate,2005,11274.867869643105,12727.61358436322,9938.148772067789
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Rate,2005,20011.50645862975,22062.542027841715,18027.365146370972
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Rate,2005,15615.350249098623,17353.35898420676,14011.878900811991
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2005,0.12096238200451172,0.13644738063068046,0.1067270330297384
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2005,0.20462587539025656,0.2256074257973507,0.18472069286545914
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2005,0.16360477026661618,0.18189251926756517,0.14642117374569452
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2005,11508.35953935849,12985.664839764308,10152.743440233862
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2005,19906.294301327165,21908.581356668205,17970.078929614017
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2005,15737.100236614082,17483.64765655655,14123.03127732228
+Prevalence,Global,Male,All ages,HIV/AIDS,Number,2004,12762665.492560178,13615113.552661026,11955701.692394553
+Prevalence,Global,Female,All ages,HIV/AIDS,Number,2004,15334760.82111169,15972351.101102607,14742233.348372584
+Prevalence,Global,Both,All ages,HIV/AIDS,Number,2004,28097426.31367187,29169743.317252062,27040936.165661547
+Prevalence,Global,Male,All ages,HIV/AIDS,Percent,2004,0.004120479721253643,0.004400341032942952,0.003858616987118329
+Prevalence,Global,Female,All ages,HIV/AIDS,Percent,2004,0.00489484073224644,0.005101341162684363,0.004704499462614787
+Prevalence,Global,Both,All ages,HIV/AIDS,Percent,2004,0.0045098631926543025,0.0046823629721306536,0.0043393924776791775
+Prevalence,Global,Male,All ages,HIV/AIDS,Rate,2004,391.31531281451583,417.4521710978379,366.57304466717
+Prevalence,Global,Female,All ages,HIV/AIDS,Rate,2004,476.49697983438875,496.3088208100349,458.08537534164776
+Prevalence,Global,Both,All ages,HIV/AIDS,Rate,2004,433.62186369206273,450.170713838344,417.3172661877133
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Percent,2004,0.004032219353196602,0.0043175515104943015,0.0037651965533749415
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Percent,2004,0.004745472120453023,0.0049430778762575185,0.004565365452828912
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Percent,2004,0.004390380865698278,0.004558522642284384,0.004217377394295092
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Rate,2004,383.8620056501776,410.5009579929107,358.57822158509265
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Rate,2004,461.78069139684766,481.0580952164673,444.1088314606226
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Rate,2004,422.50214751652214,438.89152557133156,406.10021587175487
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Number,2009,390158349.6274856,440930778.5776851,343859809.8229727
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Number,2009,690355763.746042,763984814.4935912,619397644.0239192
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Number,2009,1080514113.3735275,1205976353.8053355,966550700.6553615
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Percent,2009,0.11851488535556104,0.13403591749028343,0.10446647011036503
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Percent,2009,0.20664429378010526,0.22870583057138286,0.18540203759943666
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Percent,2009,0.16290331933414984,0.18164393627608932,0.14563264139124604
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Rate,2009,11241.260031163245,12704.117552443742,9907.304406472374
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Rate,2009,20111.10365876949,22256.02885479564,18043.986708199714
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Rate,2009,15651.730683867005,17469.10740660342,14000.919628646205
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2009,0.11820742206913712,0.1337212427630271,0.10429909835063966
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2009,0.20159471906264523,0.22321815809900336,0.1809116263973158
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2009,0.160717643295992,0.17935138515878848,0.14349631404388205
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2009,11220.001657061479,12679.942958890431,9917.002956832983
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2009,19588.41509698889,21665.256401817955,17589.378167163748
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2009,15432.16552021611,17232.538877626008,13804.388283668934
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Number,2010,396052813.1984714,447927308.8603826,349135857.53797424
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Number,2010,701253557.2102118,776697638.8829365,628263967.0968268
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Number,2010,1097306370.4086833,1226045673.7641664,979900656.4899851
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Percent,2010,0.11890450914840817,0.13453465958481792,0.10470645870624233
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Percent,2010,0.20731806530196634,0.229626199026408,0.18572677878677837
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Percent,2010,0.16345140927938615,0.18248007300341698,0.14598977570381722
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Rate,2010,11278.033349429625,12755.215867930508,9942.022158599786
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Rate,2010,20176.471766139923,22347.149359345745,18076.414819543388
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Rate,2010,15704.254039765581,17546.72463805799,14023.985696465452
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2010,0.11800971888992615,0.13361252642075255,0.10400042277047045
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2010,0.20133643859383463,0.2230501099145185,0.18052289585566475
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2010,0.1604904368298506,0.17920298050854008,0.1432721576456755
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2010,11197.014489129,12667.410642329458,9884.224286658933
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2010,19558.618111537005,21658.575881286095,17539.14749304074
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2010,15405.590349752856,17216.229204948653,13760.094120692267
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Number,2008,386155971.13756883,436087823.5846811,340435844.59492743
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Number,2008,681525033.9892641,753272189.9140904,613044717.5428987
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Number,2008,1067681005.126833,1190848352.3340206,955659085.7055931
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Percent,2008,0.1186849641263349,0.13415638180548417,0.10458373774807059
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Percent,2008,0.20655494113988032,0.22844195347817936,0.1856392842317472
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Percent,2008,0.16292743701137347,0.18138719717821056,0.14574381895465693
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Rate,2008,11260.201666240422,12716.200718817921,9927.015379985201
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Rate,2008,20104.423223530914,22220.90481387568,18084.310688177236
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Rate,2008,15656.722653716437,17462.877287878775,14014.007165575884
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2008,0.11897491196454273,0.1344509714377685,0.10494502631938095
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2008,0.20245895152760307,0.22385465985985692,0.18206936221642864
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2008,0.16153269929407554,0.180112005368554,0.14432411028496683
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2008,11299.574442852909,12748.675224138047,9984.181642271695
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2008,19678.872834639038,21757.47663703131,17714.200335468984
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2008,15517.620227967804,17302.654351024496,13899.875950849144
+Prevalence,Global,Male,All ages,HIV/AIDS,Number,2005,12861895.09385154,13792723.368868953,12010135.119476737
+Prevalence,Global,Female,All ages,HIV/AIDS,Number,2005,15415163.290393395,15977803.626797177,14868019.403106134
+Prevalence,Global,Both,All ages,HIV/AIDS,Number,2005,28277058.384244934,29390265.747317325,27197685.957766622
+Prevalence,Global,Male,All ages,HIV/AIDS,Percent,2005,0.004102878203473598,0.004397759647692014,0.003831506000427666
+Prevalence,Global,Female,All ages,HIV/AIDS,Percent,2005,0.004857518170808255,0.00503490731123537,0.004681846891316239
+Prevalence,Global,Both,All ages,HIV/AIDS,Percent,2005,0.0044825069347845465,0.00465711599099153,0.004312364133080122
+Prevalence,Global,Male,All ages,HIV/AIDS,Rate,2005,389.5355865368307,417.72666844413885,363.739168607307
+Prevalence,Global,Female,All ages,HIV/AIDS,Rate,2005,472.85221118776786,490.1109143335047,456.06885365415803
+Prevalence,Global,Both,All ages,HIV/AIDS,Rate,2005,430.92843317111596,447.8931647299903,414.4793293700797
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Percent,2005,0.0040109459883845965,0.0043187503795479275,0.0037343094772756304
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Percent,2005,0.004708673510064564,0.004881283696060191,0.004536388660317211
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Percent,2005,0.00436105810859039,0.004537475710451399,0.004192954103335289
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Rate,2005,381.5984785935654,410.03715122876343,355.01685817177855
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Rate,2005,458.0656817648964,475.0125597037352,441.4066145580489
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Rate,2005,419.487275392193,436.4465528434891,402.8813589563949
+Prevalence,Global,Male,All ages,HIV/AIDS,Number,2007,13067918.640351998,14163139.86287101,12139488.360455787
+Prevalence,Global,Female,All ages,HIV/AIDS,Number,2007,15546028.996122165,16210377.937273506,14965767.455702571
+Prevalence,Global,Both,All ages,HIV/AIDS,Number,2007,28613947.63647416,30084543.1595727,27364986.834388807
+Prevalence,Global,Male,All ages,HIV/AIDS,Percent,2007,0.004065886438845457,0.004407800771207344,0.0037792705472817073
+Prevalence,Global,Female,All ages,HIV/AIDS,Percent,2007,0.004772397925087603,0.00497783903209563,0.004589006410025418
+Prevalence,Global,Both,All ages,HIV/AIDS,Percent,2007,0.004421512845993072,0.004654065556134676,0.0042291820412916
+Prevalence,Global,Male,All ages,HIV/AIDS,Rate,2007,385.87580443484313,418.2160249324398,358.4606673363949
+Prevalence,Global,Female,All ages,HIV/AIDS,Rate,2007,464.56164984722676,484.41437495487395,447.22170672558076
+Prevalence,Global,Both,All ages,HIV/AIDS,Rate,2007,424.9839758844491,446.8257552944185,406.4339899077685
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Percent,2007,0.003968875028008043,0.004306493026460196,0.0036849684385806642
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Percent,2007,0.004625917902688291,0.004828258977771511,0.004445267339674558
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Percent,2007,0.004297634755784664,0.004534562101392566,0.004106556092736019
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Rate,2007,377.191397342096,409.0087128674537,349.6796101102815
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Rate,2007,449.79183532273964,469.10879212068306,432.55925293757286
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Rate,2007,413.06112501219536,434.9228356162051,394.60155490536175
+Prevalence,Global,Male,All ages,HIV/AIDS,Number,2006,12953414.061270699,13989761.051588606,12065512.67096912
+Prevalence,Global,Female,All ages,HIV/AIDS,Number,2006,15471717.67801184,16045427.111333076,14928325.068199167
+Prevalence,Global,Both,All ages,HIV/AIDS,Number,2006,28425131.739282556,29691735.476280574,27258630.760983355
+Prevalence,Global,Male,All ages,HIV/AIDS,Percent,2006,0.004081189328157451,0.004408666603957911,0.0038002768502234763
+Prevalence,Global,Female,All ages,HIV/AIDS,Percent,2006,0.00481222536963888,0.004997215099976158,0.004644542103293241
+Prevalence,Global,Both,All ages,HIV/AIDS,Percent,2006,0.0044490607887191945,0.004650165706534644,0.004269355058172326
+Prevalence,Global,Male,All ages,HIV/AIDS,Rate,2006,387.4351753383585,418.4321986718202,360.87814340781904
+Prevalence,Global,Female,All ages,HIV/AIDS,Rate,2006,468.46766427283075,485.83899457969454,452.014296133633
+Prevalence,Global,Both,All ages,HIV/AIDS,Rate,2006,427.7029726397881,446.7611141618577,410.15104216566107
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Percent,2006,0.003986820456386748,0.004314035116533924,0.003706809783057558
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Percent,2006,0.004664803773250286,0.0048486072133578535,0.004498891133660444
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Percent,2006,0.004326629897209869,0.00452902274851217,0.004147403541440698
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Rate,2006,379.1294913890443,410.1234534381203,352.24194404420075
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Rate,2006,453.7079657766832,471.1971643054992,437.17817321705786
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Rate,2006,416.0384872632033,435.2158648870844,398.47794428350244
+Prevalence,Global,Male,All ages,HIV/AIDS,Number,2010,13674118.286865532,14877520.581183229,12688573.03110263
+Prevalence,Global,Female,All ages,HIV/AIDS,Number,2010,16220507.754697708,17015125.6662978,15556098.746854339
+Prevalence,Global,Both,All ages,HIV/AIDS,Number,2010,29894626.041563246,31643661.262796283,28546204.05877401
+Prevalence,Global,Male,All ages,HIV/AIDS,Percent,2010,0.004105337846924737,0.004469809320062419,0.0038092905063796217
+Prevalence,Global,Female,All ages,HIV/AIDS,Percent,2010,0.004795437297448245,0.005022547443506394,0.0045961755715264035
+Prevalence,Global,Both,All ages,HIV/AIDS,Percent,2010,0.004453042929806598,0.00471705391329431,0.004253832658737073
+Prevalence,Global,Male,All ages,HIV/AIDS,Rate,2010,389.3853469134005,423.65353225587864,361.3208769956065
+Prevalence,Global,Female,All ages,HIV/AIDS,Rate,2010,466.6965513117632,489.55930287062944,447.5801711521366
+Prevalence,Global,Both,All ages,HIV/AIDS,Rate,2010,427.84113392657105,452.8726968332105,408.5430035761204
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Percent,2010,0.003995053132042798,0.004352136476424607,0.0037050657131754163
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Percent,2010,0.004649116856265675,0.004869817389927452,0.004457043554811802
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Percent,2010,0.004320907751780366,0.0045760860986180886,0.004126031153122411
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Rate,2010,379.05558209784067,412.4088570182347,351.75277895578375
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Rate,2010,451.6318298894067,473.7829390391888,433.1090012981274
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Rate,2010,414.76422639905263,438.92061023757907,395.82331943752524
+Prevalence,Global,Male,All ages,HIV/AIDS,Number,2008,13225360.194881393,14374335.907871326,12278517.16348676
+Prevalence,Global,Female,All ages,HIV/AIDS,Number,2008,15694390.73968805,16437810.570172198,15049587.95569096
+Prevalence,Global,Both,All ages,HIV/AIDS,Number,2008,28919750.934569445,30535695.444436736,27601868.953075517
+Prevalence,Global,Male,All ages,HIV/AIDS,Percent,2008,0.004064847980845899,0.004421800036819388,0.0037745866090345115
+Prevalence,Global,Female,All ages,HIV/AIDS,Percent,2008,0.0047566308398895385,0.004981482862601349,0.004561580485656982
+Prevalence,Global,Both,All ages,HIV/AIDS,Percent,2008,0.004413160506550678,0.004673096079469277,0.004218581423025892
+Prevalence,Global,Male,All ages,HIV/AIDS,Rate,2008,385.64785743007474,419.1516724811955,358.0381756520873
+Prevalence,Global,Female,All ages,HIV/AIDS,Rate,2008,462.97150937983497,484.9017777623964,443.950362072438
+Prevalence,Global,Both,All ages,HIV/AIDS,Rate,2008,424.0859558453252,447.7825420853158,404.76022786524413
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Percent,2008,0.00396430094144996,0.004312388363002548,0.0036802875106535576
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Percent,2008,0.004610605705808039,0.004830724891655832,0.004421355257490199
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Percent,2008,0.004287083135429428,0.004542688148163488,0.004094489289145345
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Rate,2008,376.5040047482695,409.58968740780483,348.98103359128163
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Rate,2008,448.14651819778516,469.6859244593937,429.7149910894436
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Rate,2008,411.8358858372663,435.3927680981948,392.93398117946555
+Prevalence,Global,Male,All ages,HIV/AIDS,Number,2009,13424461.455580886,14595386.814157555,12444777.920975063
+Prevalence,Global,Female,All ages,HIV/AIDS,Number,2009,15923243.255077394,16704807.88848213,15266993.750073636
+Prevalence,Global,Both,All ages,HIV/AIDS,Number,2009,29347704.71065828,31035312.631369762,28011207.007890202
+Prevalence,Global,Male,All ages,HIV/AIDS,Percent,2009,0.004077866622905516,0.004440490457156614,0.0037836375049866877
+Prevalence,Global,Female,All ages,HIV/AIDS,Percent,2009,0.004766322921074396,0.005000857731784086,0.0045705777025513575
+Prevalence,Global,Both,All ages,HIV/AIDS,Percent,2009,0.0044246242169971705,0.004692040781597602,0.00423078042797337
+Prevalence,Global,Male,All ages,HIV/AIDS,Rate,2009,386.7861911569915,420.5229455937755,358.5595048095943
+Prevalence,Global,Female,All ages,HIV/AIDS,Rate,2009,463.86806991947793,486.6362253892612,444.75053297080143
+Prevalence,Global,Both,All ages,HIV/AIDS,Rate,2009,425.1146418502045,449.5603981323399,405.75487426880557
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Percent,2009,0.003973109452199472,0.004328549747737812,0.00368938271963405
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Percent,2009,0.004620449096007464,0.004847718940743656,0.004428707937499569
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Percent,2009,0.00429592466023968,0.004554862593661939,0.004103956235679492
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Rate,2009,377.11580697651965,410.33344292863563,349.554347020623
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Rate,2009,448.95506477662946,470.7490460865161,430.2966270428188
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Rate,2009,412.4936814675425,436.1907943556544,393.7176077917279
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Number,2011,403816061.52385914,456645622.5774773,356023606.50128293
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Number,2011,712830544.1253241,789127556.4705932,639008752.6541318
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Number,2011,1116646605.6491826,1247847335.3357737,998388542.7988303
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Percent,2011,0.11980135074467091,0.13557231524353203,0.1054495798760092
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Percent,2011,0.2081598895133335,0.23059719893176076,0.18644377198190334
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Percent,2011,0.16432989661016945,0.1835011951614978,0.14685557184250375
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Rate,2011,11365.009000230499,12851.845443998653,10019.936990402584
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Rate,2011,20258.06051525855,22426.359146626044,18160.10563482726
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Rate,2011,15789.904203230248,17645.14375947355,14117.679997093815
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2011,0.11834411934717269,0.13392037740839455,0.10431487895830216
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2011,0.20130263966956222,0.2229804728843467,0.18023361412638925
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2011,0.16063350031458573,0.17938038387386337,0.1434785046434301
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2011,11226.51881339232,12692.046462483215,9906.711665392242
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2011,19550.51868146204,21636.263576768768,17534.020007752028
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2011,15415.889585813533,17226.504818900154,13778.208761013364
+Prevalence,Global,Male,All ages,HIV/AIDS,Number,2011,13958069.750459136,15189658.25461951,12958644.253436992
+Prevalence,Global,Female,All ages,HIV/AIDS,Number,2011,16569383.181600396,17322648.000052422,15904279.39746147
+Prevalence,Global,Both,All ages,HIV/AIDS,Number,2011,30527452.932059515,32292392.34882824,29124701.04464588
+Prevalence,Global,Male,All ages,HIV/AIDS,Percent,2011,0.004141025856142079,0.0045150011449984085,0.0038415420924193732
+Prevalence,Global,Female,All ages,HIV/AIDS,Percent,2011,0.004838589454951621,0.005057499227396818,0.004643359396493365
+Prevalence,Global,Both,All ages,HIV/AIDS,Percent,2011,0.004492565619325941,0.004757454907391973,0.004288274757335544
+Prevalence,Global,Male,All ages,HIV/AIDS,Rate,2011,392.8362525779337,427.4981092201468,364.7083972225682
+Prevalence,Global,Female,All ages,HIV/AIDS,Rate,2011,470.8883057266332,492.2954752173018,451.9866006593418
+Prevalence,Global,Both,All ages,HIV/AIDS,Rate,2011,431.6724332723026,456.6295004180732,411.83686684411765
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Percent,2011,0.0040245041345557675,0.00438475910936282,0.003732273994278626
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Percent,2011,0.004690175070895555,0.0049011284611017525,0.004503395080714129
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Percent,2011,0.004355862661578188,0.004610105350379572,0.004158949596555071
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Rate,2011,381.7742089745662,415.47161291193254,354.3507553038812
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Rate,2011,455.50817662798704,475.8452040770857,437.21597584574715
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Rate,2011,418.0264068386769,441.89673088518487,398.81759615944986
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Number,2013,420946638.4169363,476495458.73320305,370549062.91798395
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Number,2013,733351064.6709709,812545573.5494231,657396910.5203621
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Number,2013,1154297703.0879068,1289790742.883865,1029992997.7203962
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Percent,2013,0.12196815012518032,0.1381351444799141,0.10714479758167804
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Percent,2013,0.20906283199878295,0.23157146022863828,0.1870198380351729
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Percent,2013,0.1658691529945657,0.18548874011983027,0.14802128420792676
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Rate,2013,11574.257542099955,13101.615866941818,10188.536728374049
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Rate,2013,20340.13073409348,22536.65943857251,18233.47609125332
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Rate,2013,15938.141830132527,17808.982670833142,14221.785625835944
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2013,0.11943852032829066,0.13528816894614437,0.10513293291697991
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2013,0.20061632332607718,0.22222607403066785,0.17945712071546085
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2013,0.16080890540709847,0.17980991137251015,0.14356159561231477
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2013,11325.720424011954,12806.912308648241,9974.05788302161
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2013,19469.149109320988,21570.83666397723,17451.580075629558
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2013,15423.72522984603,17237.636619753437,13774.610305443224
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Number,2012,412272191.5274524,466436212.7494536,363354388.9961432
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Number,2012,723258358.660449,800678056.2152542,648586020.8705335
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Number,2012,1135530550.1879013,1269872280.3879464,1014256793.7128441
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Percent,2012,0.12086411218391477,0.13678651493950666,0.10634994743785346
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Percent,2012,0.20866024744584138,0.23114210595297122,0.18671997561421488
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Percent,2012,0.16511426939411716,0.18451294281756717,0.14749017382482324
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Rate,2012,11467.641810923382,12974.252266777528,10106.95862846532
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Rate,2012,20304.135251355652,22477.54948355784,18207.848042412163
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Rate,2012,15865.53702029441,17742.548337609056,14171.110329064653
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2012,0.11886489651247041,0.1345027588402277,0.10470442259799097
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2012,0.20098957133186182,0.2226213616595323,0.17978185731302007
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2012,0.1607231183201489,0.179525231775628,0.14354648555614302
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2012,11273.654917313579,12745.642366998309,9931.468608990286
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2012,19513.109233041097,21616.326123404466,17498.88773889037
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2012,15420.159221025382,17214.3260969434,13778.188544283119
+Prevalence,Global,Male,All ages,HIV/AIDS,Number,2012,14270316.629878744,15559999.999659695,13246520.255974878
+Prevalence,Global,Female,All ages,HIV/AIDS,Number,2012,16964169.665865045,17694650.34266859,16298168.084148107
+Prevalence,Global,Both,All ages,HIV/AIDS,Number,2012,31234486.295743786,33025372.810403876,29814566.3310287
+Prevalence,Global,Male,All ages,HIV/AIDS,Percent,2012,0.004183612998721154,0.004567681357325336,0.003879612371864478
+Prevalence,Global,Female,All ages,HIV/AIDS,Percent,2012,0.004894186472041687,0.005105082950977347,0.0047055092729789165
+Prevalence,Global,Both,All ages,HIV/AIDS,Percent,2012,0.00454174975445596,0.0048104003752883,0.0043350039966864
+Prevalence,Global,Male,All ages,HIV/AIDS,Rate,2012,396.9389228839507,432.81237551571223,368.46130459067325
+Prevalence,Global,Female,All ages,HIV/AIDS,Rate,2012,476.2375590938392,496.7444475144458,457.54080152322115
+Prevalence,Global,Both,All ages,HIV/AIDS,Rate,2012,436.4056066593719,461.4277219100659,416.56660473880294
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Percent,2012,0.00405971196165374,0.004430395824017947,0.0037607814112161383
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Percent,2012,0.004742043806918266,0.004942226857340888,0.004559280506534289
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Percent,2012,0.004399103410114627,0.004653507214533708,0.004198430010040923
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Rate,2012,385.03659871021466,419.78496252942347,357.78072646701605
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Rate,2012,460.38043317228596,479.825716218702,442.55377237736366
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Rate,2012,422.0576005776154,445.78316477903365,402.9788137080493
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Number,2014,429441377.5505675,485398798.9291929,377481100.87189734
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Number,2014,743888238.2890276,825178178.9210709,666593450.1560469
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Number,2014,1173329615.839595,1312747331.77706,1046783832.6824548
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Percent,2014,0.12301610217695315,0.139447354132648,0.10806523774573885
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Percent,2014,0.20960806539907623,0.23212836776513565,0.18763573534506744
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Percent,2014,0.16666885274244156,0.186584003035894,0.14853452377940832
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Rate,2014,11675.678356394637,13197.052140627013,10262.979185975297
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Rate,2014,20390.9996942535,22619.26876648186,18272.243246628877
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Rate,2014,16015.515981511073,17918.51632136399,14288.212770898956
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2014,0.11995684452208845,0.13601017675075586,0.10553526913675569
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2014,0.200399670932628,0.22190475534537746,0.1793725660274946
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2014,0.16094755450331868,0.18008678787825735,0.14337951229245616
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2014,11372.406448404057,12864.09079022212,10002.886612210832
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2014,19441.100885957545,21556.983736850034,17420.071382766953
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2014,15432.55330304594,17263.67057376081,13778.999686189098
+Prevalence,Global,Male,All ages,HIV/AIDS,Number,2013,14598453.057758378,15951084.446877906,13548330.473717049
+Prevalence,Global,Female,All ages,HIV/AIDS,Number,2013,17398827.777913116,18104217.435167253,16736760.503941076
+Prevalence,Global,Both,All ages,HIV/AIDS,Number,2013,31997280.835671484,33825409.58108505,30554016.368556816
+Prevalence,Global,Male,All ages,HIV/AIDS,Percent,2013,0.00422990754727232,0.004622784680450164,0.003921715497327747
+Prevalence,Global,Female,All ages,HIV/AIDS,Percent,2013,0.0049600553112382016,0.005165824850833315,0.004770853324307364
+Prevalence,Global,Both,All ages,HIV/AIDS,Percent,2013,0.0045979466540817,0.004868200556158466,0.004393045862196234
+Prevalence,Global,Male,All ages,HIV/AIDS,Rate,2013,401.395901490477,438.5875610226084,372.52195850288336
+Prevalence,Global,Female,All ages,HIV/AIDS,Rate,2013,482.5716477026049,502.1362444397267,464.2086350118164
+Prevalence,Global,Both,All ages,HIV/AIDS,Rate,2013,441.8073420515814,467.04950891217374,421.8792474935413
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Percent,2013,0.004097410495923995,0.004474363963457187,0.003798611858646238
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Percent,2013,0.004802727843504157,0.00500182990476403,0.004619919343504879
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Percent,2013,0.004448076709955471,0.00470532709857016,0.004247371618014119
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Rate,2013,388.5317250346765,424.26533385605734,360.7586143584212
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Rate,2013,466.0870617493055,484.68106532180684,448.52880653005985
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Rate,2013,426.6271433224583,450.73521147925254,407.7238257108101
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Number,2016,445397057.8596592,504480433.8429885,391267788.616831
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Number,2016,770599243.7174768,854819511.7339364,690407206.0757548
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Number,2016,1215996301.5771363,1362042001.0658731,1083315392.6934097
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Percent,2016,0.12473921706161263,0.14157424283231032,0.10955036142185187
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Percent,2016,0.2121615360316899,0.2351173461909328,0.18966141922505608
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Percent,2016,0.16882363516333906,0.18910005066653,0.15017614925594236
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Rate,2016,11841.976621195101,13412.85353820501,10402.816820777382
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Rate,2016,20640.726396833965,22896.590937797755,18492.759186040483
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Rate,2016,16225.0447019717,18173.733196880883,14454.682674599908
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2016,0.12068066360631884,0.13693083509610512,0.10604363998662404
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2016,0.2014940955498604,0.2234704756531662,0.18009785518482105
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2016,0.16184561893758728,0.18118130863300114,0.14385973228345178
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2016,11435.899672044125,12958.046449015823,10054.963614481225
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2016,19540.109745847087,21676.06363446283,17508.466434845664
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2016,15512.29217470704,17350.098635257407,13828.042107034127
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Number,2017,453394849.85244215,513842284.5953341,398172702.12780374
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Number,2017,785503018.418079,872922288.1909227,701140691.5587959
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Number,2017,1238897868.270521,1387345236.1598504,1101198861.0553155
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Percent,2017,0.1255802127115681,0.14252551805285815,0.11010844319636942
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Percent,2017,0.21380765525433867,0.23736717522293255,0.1908713176064887
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Percent,2017,0.17007832244698906,0.19059449449938362,0.15110090243890548
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Rate,2017,11923.912271914556,13513.630172704785,10471.615129259339
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Rate,2017,20804.670339902335,23120.039022560908,18570.267214438703
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Rate,2017,16348.59295017399,18307.51600130111,14531.506105277658
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2017,0.1210505616311898,0.1373532054824985,0.10623709295567636
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2017,0.20244037889781388,0.2246266198351922,0.18052024480209297
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2017,0.16250176078616385,0.18208162723946913,0.14432957483270129
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2017,11468.7940919562,13002.253614694668,10076.135267899828
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2017,19630.920255230514,21796.137697610637,17530.7867604053
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2017,15573.305684950592,17430.800082594957,13848.314258629733
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Number,2015,437377496.121171,494819162.68926156,384217293.4320345
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Number,2015,755831303.1319163,839223219.7324398,677101143.2861301
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Number,2015,1193208799.2530875,1336756825.0968153,1064849477.5844411
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Percent,2015,0.12388672122687351,0.14049957084739428,0.10878074247586456
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Percent,2015,0.210530826156182,0.2333624916306929,0.18867898503060299
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Percent,2015,0.16757172813008686,0.18783848775431214,0.14939524092903986
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Rate,2015,11759.606291879834,13304.019046492713,10330.30766640234
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Rate,2015,20479.792779595922,22739.356738372575,18346.54247299311
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Rate,2015,16102.811520486273,18040.047321752903,14370.553121938154
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2015,0.12030889506882558,0.13648696011023015,0.10590993279637112
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2015,0.2005766612490727,0.2224800800648198,0.17973594258080444
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2015,0.16120404244819525,0.18051406937478123,0.14358021449222674
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2015,11402.924664104727,12908.762607977134,10021.376571277271
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2015,19452.807073426906,21593.478957793268,17426.549408329247
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2015,15453.018858169266,17304.39975566963,13799.411740398995
+Prevalence,Global,Male,All ages,HIV/AIDS,Number,2014,14951169.732950848,16355335.903173383,13867109.039869774
+Prevalence,Global,Female,All ages,HIV/AIDS,Number,2014,17849806.884817094,18567861.43335039,17194088.79985726
+Prevalence,Global,Both,All ages,HIV/AIDS,Number,2014,32800976.617767937,34666629.831779085,31345668.21507897
+Prevalence,Global,Male,All ages,HIV/AIDS,Percent,2014,0.004282900408144178,0.004681645657406756,0.0039695256441226595
+Prevalence,Global,Female,All ages,HIV/AIDS,Percent,2014,0.00502962418448891,0.005236642305938358,0.00484401811493399
+Prevalence,Global,Both,All ages,HIV/AIDS,Percent,2014,0.00465933916290051,0.004923560554284047,0.004452296139191649
+Prevalence,Global,Male,All ages,HIV/AIDS,Rate,2014,406.49331429000796,444.66986973969404,377.0198060700544
+Prevalence,Global,Female,All ages,HIV/AIDS,Rate,2014,489.2877558703537,508.97061859886884,471.31362134083673
+Prevalence,Global,Both,All ages,HIV/AIDS,Rate,2014,447.7212184362439,473.186695878891,427.85679614037053
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Percent,2014,0.0041407319961711585,0.004522567402452045,0.0038405236522436118
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Percent,2014,0.0048666284948506305,0.005061868549434427,0.004687238612890502
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Percent,2014,0.004501520001844737,0.004750434397875462,0.0043032016655742324
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Rate,2014,392.5544894667617,428.8861019098352,364.399500498603
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Rate,2014,472.1177308424352,490.74656728769685,454.75077146600466
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Rate,2014,431.6279170628712,455.72228936651425,412.9141037853386
+Prevalence,Global,Male,All ages,HIV/AIDS,Number,2016,15702483.194071941,17161389.42370194,14570717.741399992
+Prevalence,Global,Female,All ages,HIV/AIDS,Number,2016,18758554.78554572,19503924.908248033,18056382.581556316
+Prevalence,Global,Both,All ages,HIV/AIDS,Number,2016,34461037.97961767,36386115.12439039,32900564.150305912
+Prevalence,Global,Male,All ages,HIV/AIDS,Percent,2016,0.004397732014550897,0.00480294307112511,0.004077953887566356
+Prevalence,Global,Female,All ages,HIV/AIDS,Percent,2016,0.005164629862595483,0.005376819956843489,0.0049730864217736315
+Prevalence,Global,Both,All ages,HIV/AIDS,Percent,2016,0.0047844557013788595,0.0050537034405482946,0.004578714694520647
+Prevalence,Global,Male,All ages,HIV/AIDS,Rate,2016,417.4891495073586,456.27776105952097,387.3983803953622
+Prevalence,Global,Female,All ages,HIV/AIDS,Rate,2016,502.4533829810304,522.4183399836529,483.64549488073925
+Prevalence,Global,Both,All ages,HIV/AIDS,Rate,2016,459.8138012183526,485.50011513902047,438.9923911499157
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Percent,2016,0.004234072792453466,0.004622739615434864,0.003930097521198884
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Percent,2016,0.004988614630899458,0.00518854321323223,0.004802410191930039
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Percent,2016,0.0046089839639802035,0.004862747972942211,0.004413616951357183
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Rate,2016,401.22353990660565,437.8645357416694,372.69306190404455
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Rate,2016,483.774375390829,502.78908495038513,465.86511574643816
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Rate,2016,441.75055381794607,466.1638085801294,422.2172010089917
+Prevalence,Global,Male,All ages,HIV/AIDS,Number,2017,16074734.71288758,17594481.67089707,14907032.29961054
+Prevalence,Global,Female,All ages,HIV/AIDS,Number,2017,19206344.564776726,19977961.199654996,18481119.559473693
+Prevalence,Global,Both,All ages,HIV/AIDS,Number,2017,35281079.2776643,37224457.82172263,33687036.19641949
+Prevalence,Global,Male,All ages,HIV/AIDS,Percent,2017,0.004452389567733265,0.004867771956071288,0.004127029775946347
+Prevalence,Global,Female,All ages,HIV/AIDS,Percent,2017,0.005227835790414933,0.005439571978712823,0.005030565396886506
+Prevalence,Global,Both,All ages,HIV/AIDS,Percent,2017,0.00484349158387222,0.005114687374202253,0.004621964913622087
+Prevalence,Global,Male,All ages,HIV/AIDS,Rate,2017,422.7523241015013,462.7204212440069,392.04270942425075
+Prevalence,Global,Female,All ages,HIV/AIDS,Rate,2017,508.695266263229,529.1321447232974,489.4871069006217
+Prevalence,Global,Both,All ages,HIV/AIDS,Rate,2017,465.5718753948207,491.2168503185922,444.5367584995982
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Percent,2017,0.004277160622207641,0.004672801688247274,0.003967118086600696
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Percent,2017,0.005043758078206392,0.005248308753418646,0.004854028344496833
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Percent,2017,0.004658060582270656,0.004914792163280837,0.0044486540952194085
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Rate,2017,405.23036982827773,442.9741464005985,376.16677385114355
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Rate,2017,489.09803136118063,508.49162727724325,470.92134683107565
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Rate,2017,446.4005311459713,470.7341878756834,426.68054288752114
+Prevalence,Global,Male,All ages,HIV/AIDS,Number,2015,15323358.519269433,16745236.744688747,14215315.164825264
+Prevalence,Global,Female,All ages,HIV/AIDS,Number,2015,18305478.269360244,19032293.332991548,17643074.215072107
+Prevalence,Global,Both,All ages,HIV/AIDS,Number,2015,33628836.78862967,35537078.46873476,32136124.750028584
+Prevalence,Global,Male,All ages,HIV/AIDS,Percent,2015,0.0043403740481942335,0.0047455311414830005,0.004024679377642584
+Prevalence,Global,Female,All ages,HIV/AIDS,Percent,2015,0.005098867102051431,0.0053047170182989045,0.004911502975781928
+Prevalence,Global,Both,All ages,HIV/AIDS,Percent,2015,0.004722798101159479,0.004988426354731854,0.004515226544184806
+Prevalence,Global,Male,All ages,HIV/AIDS,Rate,2015,411.9934492606121,450.22296100781824,382.2018991279382
+Prevalence,Global,Female,All ages,HIV/AIDS,Rate,2015,496.0000996710024,515.6936765717992,478.0517853950883
+Prevalence,Global,Both,All ages,HIV/AIDS,Rate,2015,453.8340823496047,479.58653751881155,433.68935945869026
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Percent,2015,0.004187517949241193,0.004576119550544192,0.00388497406129111
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Percent,2015,0.004929548042507622,0.005122814878697215,0.004747525990692594
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Percent,2015,0.004556250176383119,0.004803736109793663,0.004358134398440825
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Rate,2015,396.89033679896147,433.34642053149753,368.4662434735031
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Rate,2015,478.08726047771296,496.77603564363454,460.764930141572
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Rate,2015,436.7589385000239,461.1083376241152,417.8059905023639
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Number,2018,461438982.4711298,523325355.4674342,404729236.2400657
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Number,2018,800592705.1807288,888720846.0484924,715354464.7709639
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Number,2018,1262031687.6518588,1415621307.7107508,1122765686.0522578
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Percent,2018,0.12646434398737408,0.1434878960428499,0.11077612029141992
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Percent,2018,0.2155335421789415,0.239210197021105,0.1923141356406133
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Percent,2018,0.17139630651279394,0.1919395504619832,0.15247627510062975
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Rate,2018,12010.080511327693,13620.825052803826,10534.070369391635
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Rate,2018,20977.321018769482,23286.47558613852,18743.88831250089
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Rate,2018,16478.69625671108,18484.158339714122,14660.26161540947
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2018,0.12144660652425189,0.13783860568433934,0.10648697933075098
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2018,0.2034425110075416,0.22574299547179455,0.1815934870840682
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2018,0.1632000529069868,0.18288759758580522,0.14509852002324103
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2018,11503.621874338194,13054.253816177668,10097.931714985212
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2018,19727.267232589355,21899.571282226032,17637.503758300893
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2018,15638.017299114628,17518.28105423907,13915.469303347383
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Number,2019,470282811.09666955,533639374.6165905,412409080.17267513
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Number,2019,817900942.0689833,908964769.1758006,731481476.6879463
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Number,2019,1288183753.1656528,1444626651.7481713,1146920116.8613558
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Percent,2019,0.1275776297747375,0.14488104209214805,0.1117037341238038
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Percent,2019,0.2178465096212312,0.24182649735321876,0.1948788391208637
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Percent,2019,0.17312596657107404,0.19373487444734414,0.1541402639590573
+Prevalence,Global,Male,All ages,Sexually transmitted infections excluding HIV,Rate,2019,12117.647228571786,13750.138291893236,10626.43079754196
+Prevalence,Global,Female,All ages,Sexually transmitted infections excluding HIV,Rate,2019,21208.428838103788,23569.74253464362,18967.54490278964
+Prevalence,Global,Both,All ages,Sexually transmitted infections excluding HIV,Rate,2019,16648.654513629805,18670.542899669905,14822.944889215023
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2019,0.12206346033188097,0.13860097787647072,0.1069664991230202
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2019,0.20500748643538805,0.22761718138487597,0.18318165598684932
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Percent,2019,0.1642927137356026,0.18391681764484502,0.14621153946404997
+Prevalence,Global,Male,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2019,11559.152626097135,13123.970274932199,10143.452576030757
+Prevalence,Global,Female,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2019,19879.861341379707,22055.210731585114,17762.15410172855
+Prevalence,Global,Both,Age-standardized,Sexually transmitted infections excluding HIV,Rate,2019,15741.010902453467,17648.85913466122,14014.549628927356
+Prevalence,Global,Male,All ages,HIV/AIDS,Number,2018,16444171.16128062,17968065.57821216,15253676.427710135
+Prevalence,Global,Female,All ages,HIV/AIDS,Number,2018,19645089.057507064,20441492.286244582,18903597.02587511
+Prevalence,Global,Both,All ages,HIV/AIDS,Number,2018,36089260.21878771,38066310.000230975,34448952.428809814
+Prevalence,Global,Male,All ages,HIV/AIDS,Percent,2018,0.004506822221059218,0.004926931629338221,0.004183592641188715
+Prevalence,Global,Female,All ages,HIV/AIDS,Percent,2018,0.005288822788170067,0.005506459863956158,0.005092492399800671
+Prevalence,Global,Both,All ages,HIV/AIDS,Percent,2018,0.00490131172841599,0.005169971325247864,0.004677315066361715
+Prevalence,Global,Male,All ages,HIV/AIDS,Rate,2018,427.99985933435886,467.66294661861457,397.0143159762234
+Prevalence,Global,Female,All ages,HIV/AIDS,Rate,2018,514.7453092376255,535.6128565953546,495.31655816389224
+Prevalence,Global,Both,All ages,HIV/AIDS,Rate,2018,471.2274367542365,497.0423217143898,449.8094849682122
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Percent,2018,0.004318232292521259,0.004715558474164075,0.004012007123366991
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Percent,2018,0.005094415080277441,0.005302615869485697,0.0049054761100233895
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Percent,2018,0.0047039429267925,0.004959033833126776,0.0044886350641929855
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Rate,2018,409.02585030617706,446.4986032009676,379.7597678279871
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Rate,2018,493.9895404969047,513.8699296002405,475.3002949418457
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Rate,2018,450.73403095947765,475.20016114298693,430.69467264419586
+Prevalence,Global,Male,All ages,HIV/AIDS,Number,2019,16798122.524677522,18379216.102656342,15593069.018285822
+Prevalence,Global,Female,All ages,HIV/AIDS,Number,2019,20050031.439857464,20898453.641093824,19266710.29328311
+Prevalence,Global,Both,All ages,HIV/AIDS,Number,2019,36848153.964534976,38856666.01493741,35149001.88077762
+Prevalence,Global,Male,All ages,HIV/AIDS,Percent,2019,0.004557019083005859,0.004976038907148153,0.004232078248673931
+Prevalence,Global,Female,All ages,HIV/AIDS,Percent,2019,0.005340312787473458,0.0055664107560260846,0.005130992829128078
+Prevalence,Global,Both,All ages,HIV/AIDS,Percent,2019,0.004952257910536918,0.005223435856880331,0.0047202860675829295
+Prevalence,Global,Male,All ages,HIV/AIDS,Rate,2019,432.83258085000716,473.5721821308404,401.78230017324546
+Prevalence,Global,Female,All ages,HIV/AIDS,Rate,2019,519.9036253929343,541.9034800869164,499.59186153497933
+Prevalence,Global,Both,All ages,HIV/AIDS,Rate,2019,476.2303385002345,502.18860969519204,454.27027578474656
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Percent,2019,0.00435417175370125,0.004754147586795392,0.004045986686799955
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Percent,2019,0.005134315177653981,0.005353287365405575,0.004933297018583975
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Percent,2019,0.0047419134394320476,0.00500189619657939,0.004527105985556651
+Prevalence,Global,Male,Age-standardized,HIV/AIDS,Rate,2019,412.32658013188535,450.70278870011543,382.99882155073215
+Prevalence,Global,Female,Age-standardized,HIV/AIDS,Rate,2019,497.87968341327945,518.7160933604434,478.3694326223841
+Prevalence,Global,Both,Age-standardized,HIV/AIDS,Rate,2019,454.32314681392955,478.59042090966614,433.7562912935764

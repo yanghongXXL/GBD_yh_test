@@ -1,0 +1,16 @@
+"","measure","location","sex","age","cause","metric","year","val","upper","lower"
+"1","Prevalence","Global","Male","All ages","HIV/AIDS","Number",2019,16798122.5246775,18379216.1026563,15593069.0182858
+"2","Prevalence","Global","Female","All ages","HIV/AIDS","Number",2019,20050031.4398575,20898453.6410938,19266710.2932831
+"3","Prevalence","Global","Both","All ages","HIV/AIDS","Number",2019,36848153.964535,38856666.0149374,35149001.8807776
+"4","Prevalence","Global","Male","All ages","HIV/AIDS","Percent",2019,0.00455701908300585,0.00497603890714815,0.00423207824867393
+"5","Prevalence","Global","Female","All ages","HIV/AIDS","Percent",2019,0.00534031278747345,0.00556641075602608,0.00513099282912807
+"6","Prevalence","Global","Both","All ages","HIV/AIDS","Percent",2019,0.00495225791053691,0.00522343585688033,0.00472028606758292
+"7","Prevalence","Global","Male","All ages","HIV/AIDS","Rate",2019,432.832580850007,473.57218213084,401.782300173245
+"8","Prevalence","Global","Female","All ages","HIV/AIDS","Rate",2019,519.903625392934,541.903480086916,499.591861534979
+"9","Prevalence","Global","Both","All ages","HIV/AIDS","Rate",2019,476.230338500234,502.188609695192,454.270275784747
+"10","Prevalence","Global","Male","Age-standardized","HIV/AIDS","Percent",2019,0.00435417175370125,0.00475414758679539,0.00404598668679995
+"11","Prevalence","Global","Female","Age-standardized","HIV/AIDS","Percent",2019,0.00513431517765398,0.00535328736540557,0.00493329701858397
+"12","Prevalence","Global","Both","Age-standardized","HIV/AIDS","Percent",2019,0.00474191343943204,0.00500189619657939,0.00452710598555665
+"13","Prevalence","Global","Male","Age-standardized","HIV/AIDS","Rate",2019,412.326580131885,450.702788700115,382.998821550732
+"14","Prevalence","Global","Female","Age-standardized","HIV/AIDS","Rate",2019,497.879683413279,518.716093360443,478.369432622384
+"15","Prevalence","Global","Both","Age-standardized","HIV/AIDS","Rate",2019,454.323146813929,478.590420909666,433.756291293576

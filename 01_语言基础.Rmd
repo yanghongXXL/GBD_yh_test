@@ -1,0 +1,665 @@
+# Base_R基础
+
+```{r setup, include=FALSE}
+options(digits = 4, 
+        dplyr.print_min = 6, 
+        dplyr.print_max = 6,
+        htmltools.dir.version = FALSE, 
+        formatR.indent = 2, 
+        width = 55
+        )
+
+knitr::opts_chunk$set(
+                      echo = TRUE, 
+                      warning = FALSE, 
+                      message = FALSE,
+                      fig.width = 6, 
+                      fig.height = 4,
+                      fig.showtext = TRUE
+                      )
+library(tidyverse)
+library(ggplot2)
+library(readxl)
+library(showtext)
+```
+
+## 基础拾遗
+
+1.  窗口可以通过拖动分割柱移动，也可以使用快捷键控制。比如：**Ctrl+shift+1**(2\\3\\4)
+
+2.  创建一个R脚本 ------**Ctrl+shift+N**
+
+3.  快速注释------**Ctrl+shift+C**
+
+4.  善于利用小标题实现功能分区（**ctrl+shift+r**）
+
+5.  **ctrl+alt+r** ------快速插入代码框
+
+6.  注释（Ctrl+shift+c）； \# ；
+
+7.  赋值（Alt+-）： =, \<- ;
+
+8.  函数的标志： ();
+
+9.  变量索引： \$;
+
+10. 管道操作符： %\>%， \|\>：读作 "然后" ;
+
+11. 比较或判断： \>, \< , \>=, \<=, ==, != ；
+
+12. 逻辑运算： &(与), \|(或), !(非) ;
+
+13. 算数运算： +， -， \*， /, \^, %%(取余), %/%(整除)。
+
+## 数据基本操作
+
+### 读取数据
+
+```{r}
+mydata <- read_csv("data/data.csv") # 读取数据
+# knitr::kable(mydata, align = "c")
+
+colnames(mydata) # 查看表头
+str(mydata) # 查看数据结构
+unique(mydata$cause) # 查看分类变量的取值（唯一值）
+# 其他查看数据的函数
+# summary(mydata)
+# head(mydata)
+# tail(mydata)
+```
+
+### 选择数据
+
+```{r}
+mydata2 <- mydata |> 
+  filter(cause == "HIV/AIDS") |> 
+  filter(year == 2019)
+mydata2
+```
+
+这里面出现了管道操作符号" \|\> ", 这个符号读作：然后。所以这个语句的意思是：首先，选中 mydata，然后，选择 cause 为"HIV/AIDS" 的行，然后，选择年份为 2019 年的行，最后，将选择好的数据赋值给 mydata2。
+
+特别注意： = 是赋值符， == 为判断符。
+
+### 保存数据
+
+```{r}
+write.csv(mydata2, # 将 mydata2 这个数据
+          "HIV.csv") # 保存为 HIV.csv 文件
+```
+
+## 数据类型与数据结构
+
+### 常见的数据类型
+
+R 语言常见数据类型有：数值类型（numeric），字符串（character），逻辑（logical），其他： POSIXct,POSIXt 等。
+
+-   数值类型： 1， 2， 3， 4.5,3.8;
+
+```{r}
+class(1)
+typeof(4.5)
+```
+
+-   字符串类型："字符"， "123"， "ASIR"， "HIV"
+
+```{r}
+class("123")
+typeof("ASIR")
+```
+
+-   逻辑： TRUE， FALSE, T, F;
+
+```{r}
+class(T)
+typeof(FALSE)
+```
+
+### 特殊数据类型： NaN,Inf， NA， NULL
+
+-   NaN:Not a number, 计算出错时候出现，比如 0/0,Inf/Inf
+
+-   Inf : 无穷
+
+-   NA：not availabel，缺失值。 NA 值具有传染性，任何数值与之发生关系均会变为 NA
+
+-   NULL：空值。空值与 NA 的区别：比如一个教室稀稀拉拉坐了十几个学生，那么没有学生的位置可以视为缺失，而空值表示连座位也没有。
+
+### 数据类型的转换 as.type()
+
+-   numeric 与 logical 可以转化为 character，而 character 转化为 numeric 或者 logical 有可能出错，产生 NA 值。
+
+```{r}
+a <- as.character(1990)
+class(a)
+```
+
+```{r}
+b <- as.numeric("1990")
+class(b)
+```
+
+```{r}
+c <- as.numeric("ABC")
+## Warning: 强制改变过程中产生了NA
+c
+```
+
+-   logical 可以转化为数值 0/1, 而在进行逻辑判断的时候， 0/1 也会被认为是 F/T
+
+```{r}
+as.numeric(TRUE)
+as.logical(1)
+```
+
+### 数据结构
+
+-   标量
+
+单个元素组成的数据结构，比如"A",123,TRUE 等。
+
+\### 向量
+
+多个标量组成的一维的数据结构，比如 Vector。
+
+```{r}
+# 生成向量
+a <- c(1990:2019)
+a
+b <- c(1,2,3,4,5,6)
+b
+c <- rep("A",3) #repeat 前三个字母
+c
+d <- seq(from=1,to=10,by=2) #sequence 前三个字母
+d
+```
+
+-   矩阵 (matrix)，数据框 (data.frame)， tipple
+
+-   列表 (list) 与数组 (array)
+
+## 作业
+
+-   查看 data.csv 数据, 说出这个数据的性别有多少种？
+
+```{r}
+data <- read_csv("data/data.csv")
+unique(data$sex)
+```
+
+-   从 data.csv 文档选择年龄标准化 患病率数据。
+
+```{r}
+data |> 
+  filter(age == "Age-standardized") |> 
+  filter(metric == "Rate")
+```
+
+-   从 data.csv 文档选择患病人数数据。
+
+```{r}
+data |> 
+  filter(metric == "Number")
+  
+```
+
+-   从 data.csv 文档中选择 1990 到 2010 年艾滋病的女性患病率数据，并写出为 HIV_female.csv 文档。
+
+```{r}
+data |> 
+  filter(year %in% c(1990:2010)) |> 
+  filter(sex == "Female") |> 
+  filter(cause == "HIV/AIDS") |> 
+  filter(metric == "Rate") |> 
+  write_csv("data/HIV_female.csv")
+```
+
+-   从 data.csv 文档中选择 1990,1995,2000,2005,2010,2015年男性、女性其他传染性疾病患病率数据，并写出为 nonHIV.csv 文档
+
+```{r}
+data |> 
+  filter(year %in% c(1990,1995, 2000, 2005, 2010, 2015)) |> 
+  filter(cause != "HIV/AIDS") |> 
+  filter(metric == "Rate") |> 
+  write_csv("data/nonHIV.csv")
+```
+
+## 函数
+
+### 函数的结构
+
+R 语言函数一般由三个部分构成：函数体（body），参数（formals） , 环境（environment）。可以通过相应的函数查看函数的相应部分。以常见的 "粘贴" 函数 paste() 为例：
+
+```{r}
+# paste() 函数可以将两个向量对应的元素粘贴在一起。
+a <- c("A","B","C")
+b <- c(1:3)
+c <- paste(a,b,sep = ":",collapse = NULL)
+c
+```
+
+我们分别使用 body， formals, environment 函数查看 paste() 函数的相应部分。
+
+```{r}
+# 查看函数结构
+body(paste)
+# 查看函数参数
+formals(paste)
+# 查看函数来自哪个包
+environment(paste)
+```
+
+### 函数的功能
+
+函数就像一个加工厂，可以将 "原料" 通过一系列转变，然后输出相应的 "产品"
+
+![函数展示](images/0101.png){fig-align="center"}
+
+这里的输入，可以是某个值、向量、 data.frame，或者是其他类型的数据；
+
+输出，可以是数据，文档，图片等等。
+
+### 函数的分类
+
+R 语言的函数包括内置函数，外来函数（R 包），自编函数三大类。
+
+-   实用的内置函数
+
+```{r eval=FALSE}
+# 查看R语言自带数据集
+data()
+# 描述性统计类
+sum()
+cumsum()
+mean()
+median()
+sd()
+quantile()
+# 生成随机数
+runif(n = , min = , max = ) # uniform，生成 n 个服从均匀分布的小数
+round(runif(n=,min=,max=),# round() 函数空值小数点的位数
+      digits = 0)# 生成 n 个服从均匀分布的整数
+```
+
+-   实用的外来函数（tidyverse）
+
+```{r eval=FALSE}
+# 根据变量取值进行筛选
+filter()
+# 选择变量
+select()
+# 生成变量
+mutate()
+# 排序
+arrange()
+# 分组统计
+group_by() |>
+  summarize()
+```
+
+-   演示（使用R自带数据）
+
+```{r}
+# 加载数据
+data("ToothGrowth")
+# 查看表头
+colnames(ToothGrowth)
+
+# 查看数据结构
+str(ToothGrowth)
+
+# 查看分组变量的取值
+unique(ToothGrowth$supp)
+
+# 生成变量（生成两个标签）
+ToothGrowth <- ToothGrowth |>
+  mutate(剂量=ifelse(dose==0.5,"0.5mg",
+                   ifelse(dose==1.0,"1.0mg","2.0mg"))) |>
+  mutate(补充喂养=ifelse(supp=="VC"," 维 C"," 橙汁"))
+
+# 分组统计
+summary_data <- ToothGrowth |>
+  group_by(补充喂养, 剂量) |>
+  summarize(
+    n=n(),
+    mean=mean(len),
+    sd=sd(len))
+```
+
+-   自编函数
+
+### 查看函数帮助
+
+```{r eval=FALSE}
+# 如果知道具体的函数名字：
+? # 查看函数的帮助，比如 ?filter
+help() # 同？
+?? # 查看 R 包的帮助，比如??dplyr
+# 如果不知道具体的函数名字
+apropos("norm")# apropos: 就... 而言
+```
+
+## 向量及其操作
+
+向量为一系列标量的集合
+
+### 创建向量
+
+```{r eval=FALSE}
+c()
+seq()
+rep()
+```
+
+### 向量的类型
+
+-   字符串，数值， logical 类型
+
+```{r}
+# 字符串型：
+a <- c("A","A","B","B","C","C")
+# 数值类型
+b <- c(1:10)
+# logical 类型
+c <- c(T,T,F,F)
+```
+
+-   因子类型
+
+R 语言有一类非常重要的变量类型，名为因子（factor）。因子可以视为分类变量的特殊类型，它既有值，又对值进行了排序（levels）。
+
+```{r}
+# 如何生成因子
+name1 <- c(0,1,2)
+name2 <- factor(name1,
+                levels = c(0,1,2), #levels 必须与原始数据取值相同
+                labels = c("Male","Female","Both")) #labels 是为了
+class(name1)
+class(name2)
+```
+
+### 向量的运算
+
+```{r}
+# 简单统计
+a <- c(1:20)
+mean(a)
+
+# 算数运算
+b <- 2*a # 标量与向量
+c <- b+a # 标量与向量
+```
+
+### 重要：向量的循环补齐机制
+
+```{r}
+a <- c("A","B","C","D","E")
+b <- c(1:3)
+c <- paste(a,b,sep = ":")
+c
+```
+
+![循环补齐](images/0102.png){fig-align="center"}
+
+### 交、并、补
+
+```{r}
+# 向量的交、并、补集，找不同，找相同，找不同（背熟）
+
+# 取交集
+a <- c(1:15)
+b <- c(10:20)
+intersect(a,b) 
+
+# 取并集
+union(a,b)
+
+# 找不同
+setdiff(a,b)
+setdiff(b,a)
+
+# 去除重复
+aa <- c(rep("A",3),4:6)
+unique(aa)
+```
+
+### 向量的下标索引
+
+```{r}
+# 已经知道向量 x
+x <- c(" 张三"," 小明"," 王五"," 李思齐")
+# 如何选择李思齐？
+x[4]
+
+# 如何同时选择小明与李思齐？
+x[c(2,4)]
+
+# 如何不选择张三
+x[-1]
+```
+
+## 数据框及其操作
+
+数据框是 R 语言最常用的二维表。
+
+### 生成数据框
+
+```{r eval=FALSE}
+# 通过 read.csv 函数等读取
+df <- read_csv()
+```
+
+```{r}
+# 通过向量组合生成
+age <- c(20,30,18,26)
+name <- c(" 赵"," 钱"," 孙"," 李")
+score <- c(99,65,77,88)
+df <- data.frame(age=age,
+                 name=name,
+                 score=score)
+```
+
+### 数据框的下标索引
+
+```{r}
+# 数据框下标索引中间有逗号，逗号前表示行，逗号后表示列 [row,col]
+# 选择 df 前两列
+df[,2] # 空着表示全选
+
+df[2,] # 选择 df 前两行
+
+df[2,2] # 选择 df 第二行第二列
+
+df[-3,] # 不选择第三行
+
+df[c(1,3),2] # 选择 1， 3 行； 2 列
+
+df[df$name==" 李",] # 选择姓李的数据
+```
+
+### 数据框如何生成新的列
+
+```{r}
+# 比如生成身高数据
+height <- c(178,180,169,175)
+df$height <- height
+df
+```
+
+## 作业
+
+-   查看函数帮助，说出 paste() 与 paste0() 的差别， sep 和 collapse 参数的作用。
+
+```{r eval=FALSE}
+?paste
+?paste0
+# paste 比 paste0() 多了一个参数： sep
+```
+
+sep 和 collapse 参数的作用:
+
+```{r}
+# 函数形式 paste (..., sep = " ", collapse =NULL)
+# 示例
+a <- c(1:4)
+b <- c("A","B","C","D")
+# sep 参数指定某个连接符，比如这里制定了下划线
+paste(a,b,sep = "_",collapse = NULL)
+```
+
+```{r}
+# collapse 参数默认为 NULL，
+# 如果是其他值，向量就会坍缩成一个字符串标量
+paste(a,b,sep = "_",collapse = ":")
+```
+
+-   加载 R 内置数据 ToothGrowth, 按照喂养方式与剂量分组统计不同组牙齿生长长度的均值，标准差，中位数，四分位间距，最小值，最大值，以及老鼠的个数。
+
+```{r}
+data("ToothGrowth")
+str(ToothGrowth)
+```
+
+```{r}
+library(tidyverse)
+
+# 分组统计
+temp <- ToothGrowth |> 
+  group_by(supp, dose) |> 
+  summarise(len_mean = mean(len),
+            len_sd = round(sd(len), 1),
+            len_median = median(len),
+            len_IQR_lower = quantile(len, 0.25),
+            len_IQR_upper = quantile(len, 0.75),
+            len_min = min(len),
+            len_max = max(len),
+            mice_number = n())
+knitr::kable(temp) # 展示数据
+```
+
+-   生成 1 到 100 范围差值为 5 的等差序列 a，生成 1 到一百万倍数为 10 的等比序列 b。
+
+```{r}
+# 等差序列
+a <- seq(from = 1, to = 100, by = 5)
+a
+# 等比序列
+b <- 10^seq(from = 0, to = 6)
+b
+```
+
+-   已知向量 a=c(1:18),b=c(5:36), 用两种方法找到只存在 a,b 某一个向量中的所有元素。
+
+```{r}
+## 方法一 
+# duplicated() 函数判断一个向量每个元素是否重复，并生成一个逻辑向量
+a <- c(1:18)
+b <- c(5:36)
+c <- c(a,b)#5:18 存在重复的元素
+c <- c[!duplicated(c)]
+c
+
+## 方法二：使用 unique() 函数
+# unique() 函数可以直接去重
+a=c(1:18)
+b=c(5:36)
+c <- c(a,b)#5:18 存在重复的元素
+c <- unique(c)
+c
+
+## 方法三：使用 setdiff() 函数：
+# setdiff() 函数可以找到 a 或 b 互为补充的部分
+a=c(1:18)
+b=c(5:36)
+# 1.
+c <- setdiff(a,b)
+c <- c(c,b)
+c
+
+# 2.
+c <- setdiff(b,a)
+c <- c(a,c)
+c
+```
+
+-   将 data.csv 的年龄，年份都设置为因子。
+
+```{r}
+temp <- read_csv("data/data.csv")
+# R 默认按照数值或字母先后顺序排序，因此这里不需要设定 levels
+# 但是其他离散的分类变量，一定要检查顺序对不对，设定好 levels
+temp$year <- factor(temp$year)
+temp$age <- factor(temp$age)
+```
+
+-   在 data.csv 中选择年龄标准化患病率数据，然后生成一列变量 se(标准误）。提示：根据正态性假设，标准误与区间存在以下关系： se=（区间上限-区间下限） /（2\*1.96）。
+
+```{r}
+temp |> 
+  filter(age == 'Age-standardized') |> 
+  mutate(se = (upper- lower)/(1.96*2))
+```
+
+-   在 data.csv 中生成年龄组变量（5 年间隔），如果年份在 1990 年到 1994年之间，生成 year2 为"year:1990-94"；如果年份在 1995 年到 1999 年之间，生成"year:1995-99", 以此类推。提示：使用 ifelse(test,yes,no) 函数。
+
+```{r}
+## 方法一，用 ifelse：
+temp |> 
+  mutate(year2 = ifelse(year %in% c(1990:1994),"year:1990_94",
+                        ifelse(year%in%c(1995:1999),"year:1995_99",
+                        ifelse(year%in%c(2000:2004),"year:2000_04",
+                        ifelse(year%in%c(2005:2009),"year:2005_09",
+                        ifelse(year%in%c(2010:2014),"year:2010_14",
+                                     "year:2015_19"))))))
+```
+
+```{r}
+## 方法二，用 case_when:
+temp <- temp |>
+mutate(year2=case_when(year%in%c(1990:1994)~"year:1990_94",
+                       year%in%c(1995:1999)~"year:1995_99",
+                       year%in%c(2000:2004)~"year:2000_04",
+                       year%in%c(2005:2009)~"year:2005_09",
+                       year%in%c(2010:2014)~"year:2010_14",
+                       year%in%c(2015:2019)~"year:2015_19"))
+```
+
+```{r}
+####### 正常计算OR #############
+#       患病  不患病
+#暴露     80     30
+#非暴露   20     70
+#       患病  不患病
+#暴露     0.8     0.3
+#非暴露   0.2     0.7
+# 患病暴露比（odds） 0.8/0.2
+# 不患病暴露比（odds） 0.3/0.7
+# 计算OR值 (0.8/0.2)/(0.3/0.7)=9.33
+#### 转换成logisttic计算 #######
+#  y患病=1，不患病=0
+#  x暴露=1，不暴露=0
+## 由于是二分类变量 1-p(y=1)=p(y=0)
+#       患病      不患病
+#暴露     p(y=1)  p(y=0)
+#非暴露  p'(y=1)  p'(y=0)
+## (1)OR = [p(y=1)/p'(y=1)]/[(p(y=0)/p'(y=0))]=[p(y=1)/p(y=0)]/[p'(y=1)/p'(y=0)]
+##    构建logistic方程 ln [P(y=1)/(1-P(y=1))] = bx+d  
+##    推出P(y=1)/(1-P(y=1))=P(y=1)/P(y=0)=exp(b*x+d)
+## (2)暴露组 p(y=1)/p(y=0) = exp(b*1+d)
+## (3)非暴露组 p'(y=1)/p'(y=0) = exp(b*0+d)=exp(d)
+## 根据(1)推导代入(2)(3)得到
+## OR=exp(b*1+d)/exp(d)=exp(b)
+########### R语言模拟程序  ###########
+x <- c(rep(1,80),rep(0,20),rep(1,30),rep(0,70))
+y <- rep(c(1,0),c(100,100))
+df <- data.frame(x,y)
+df$y <- factor(df$y,c(0,1))
+df$x <- factor(df$x,c(0,1))
+df2 <- df 
+names(df2) <- c("暴露","患病")
+table(df2)
+(0.8/0.2)/(0.3/0.7)
+table(df$x,df$y)
+glm(y~x,data = df,family = binomial())
+log(9.333)
+```

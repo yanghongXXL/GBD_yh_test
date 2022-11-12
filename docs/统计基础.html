@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>第 2 章 统计基础 | GBD 笔记总结</title>
+<meta name="author" content="杨 弘">
+<meta name="description" content="2.1 随机抽样与概率分布  2.1.1 随机抽样 R 语言内置的随机抽样函数： sample(vector,n,replace=T)。 其中vector为要抽样的总体，这里必须是向量， n为抽取的样本数，replace代表是否为有放回抽样，如果 replace=T, 则代表抽样是有放回的。 # 例如, 下面表示在 1 到 10 间进行 4 次有放回的抽样。...">
+<meta name="generator" content="bookdown 0.29 with bs4_book()">
+<meta property="og:title" content="第 2 章 统计基础 | GBD 笔记总结">
+<meta property="og:type" content="book">
+<meta property="og:url" content="https://yanghongxxl.github.com/GBD_yh_test/统计基础.html">
+<meta property="og:description" content="2.1 随机抽样与概率分布  2.1.1 随机抽样 R 语言内置的随机抽样函数： sample(vector,n,replace=T)。 其中vector为要抽样的总体，这里必须是向量， n为抽取的样本数，replace代表是否为有放回抽样，如果 replace=T, 则代表抽样是有放回的。 # 例如, 下面表示在 1 到 10 间进行 4 次有放回的抽样。...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="第 2 章 统计基础 | GBD 笔记总结">
+<meta name="twitter:description" content="2.1 随机抽样与概率分布  2.1.1 随机抽样 R 语言内置的随机抽样函数： sample(vector,n,replace=T)。 其中vector为要抽样的总体，这里必须是向量， n为抽取的样本数，replace代表是否为有放回抽样，如果 replace=T, 则代表抽样是有放回的。 # 例如, 下面表示在 1 到 10 间进行 4 次有放回的抽样。...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.1/transition.js"></script><script src="libs/bs3compat-0.4.1/tabs.js"></script><script src="libs/bs3compat-0.4.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">GBD 笔记总结</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">前言</a></li>
+<li><a class="" href="base_r%E5%9F%BA%E7%A1%80.html"><span class="header-section-number">1</span> Base_R基础</a></li>
+<li><a class="active" href="%E7%BB%9F%E8%AE%A1%E5%9F%BA%E7%A1%80.html"><span class="header-section-number">2</span> 统计基础</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/yanghongXXL/GBD_yh_test">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="统计基础" class="section level1" number="2">
+<h1>
+<span class="header-section-number">第 2 章</span> 统计基础<a class="anchor" aria-label="anchor" href="#%E7%BB%9F%E8%AE%A1%E5%9F%BA%E7%A1%80"><i class="fas fa-link"></i></a>
+</h1>
+<div id="随机抽样与概率分布" class="section level2" number="2.1">
+<h2>
+<span class="header-section-number">2.1</span> 随机抽样与概率分布<a class="anchor" aria-label="anchor" href="#%E9%9A%8F%E6%9C%BA%E6%8A%BD%E6%A0%B7%E4%B8%8E%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83"><i class="fas fa-link"></i></a>
+</h2>
+<div id="随机抽样" class="section level3" number="2.1.1">
+<h3>
+<span class="header-section-number">2.1.1</span> 随机抽样<a class="anchor" aria-label="anchor" href="#%E9%9A%8F%E6%9C%BA%E6%8A%BD%E6%A0%B7"><i class="fas fa-link"></i></a>
+</h3>
+<p>R 语言内置的随机抽样函数： sample(vector,n,replace=T)。 其中vector为要抽样的总体，这里必须是向量， n为抽取的样本数，replace代表是否为有放回抽样，如果 replace=T, 则代表抽样是有放回的。</p>
+<div class="sourceCode" id="cb146"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># 例如, 下面表示在 1 到 10 间进行 4 次有放回的抽样。</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">10</span>,<span class="fl">4</span>,replace<span class="op">=</span><span class="cn">T</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## [1] 2 4 7 3</code></pre>
+<p>注意，上面 1 到 10 十个元素中，每个元素被抽取的概率都是相同的，如果需要对概率不同的事件进行模拟，还需要再增加 prob=c()参数。例如，某药物治疗某病成功的治愈的概率为0.3，稳定的概率为 0.6，恶化的概率为0.1，那对50 人进行治疗，疾病治愈、稳定、恶化的模拟如下：</p>
+<div class="sourceCode" id="cb148"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">" 治愈"</span>,<span class="st">" 稳定"</span>,<span class="st">" 恶化"</span><span class="op">)</span>,<span class="fl">50</span>,replace <span class="op">=</span> <span class="cn">T</span>,prob<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.3</span>,<span class="fl">0.6</span>,<span class="fl">0.1</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<pre><code>##  [1] " 稳定" " 恶化" " 治愈" " 恶化" " 稳定" " 治愈"
+##  [7] " 稳定" " 稳定" " 治愈" " 恶化" " 稳定" " 治愈"
+## [13] " 治愈" " 治愈" " 稳定" " 稳定" " 稳定" " 稳定"
+## [19] " 治愈" " 稳定" " 稳定" " 稳定" " 治愈" " 稳定"
+## [25] " 稳定" " 稳定" " 治愈" " 治愈" " 稳定" " 稳定"
+## [31] " 稳定" " 稳定" " 治愈" " 稳定" " 稳定" " 恶化"
+## [37] " 治愈" " 治愈" " 治愈" " 治愈" " 稳定" " 治愈"
+## [43] " 稳定" " 治愈" " 稳定" " 稳定" " 恶化" " 稳定"
+## [49] " 稳定" " 治愈"</code></pre>
+</div>
+<div id="常见概率分布" class="section level3" number="2.1.2">
+<h3>
+<span class="header-section-number">2.1.2</span> 常见概率分布<a class="anchor" aria-label="anchor" href="#%E5%B8%B8%E8%A7%81%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83"><i class="fas fa-link"></i></a>
+</h3>
+<p>常见概率分布如伯努利分布，二项分布，多项分布，正态分布， t 分布，泊松分布等可以自行理解。</p>
+</div>
+</div>
+<div id="t检验与多元线性回归分析" class="section level2" number="2.2">
+<h2>
+<span class="header-section-number">2.2</span> t检验与多元线性回归分析<a class="anchor" aria-label="anchor" href="#t%E6%A3%80%E9%AA%8C%E4%B8%8E%E5%A4%9A%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90"><i class="fas fa-link"></i></a>
+</h2>
+<p>t 检验可以用于独立样本，两独立样本，配对样本均值的比较；使用 t 检验的前提是数据满足正态性（如果是两独立样本，则需要满足方差齐性）。</p>
+<p>R 语言做 t 检验的函数为 stats 包的 t.test() 函数，我们查看一下这个函数 的帮助，看看里面有什么参数：</p>
+<div class="sourceCode" id="cb150"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="op">?</span><span class="va">t.test</span></span></code></pre></div>
+<p>帮助文件中， t.test 的用法是这样描述的：</p>
+<div class="inline-figure"><img src="images/0201.png" width="40%" style="display: block; margin: auto;"></div>
+<p>这里 t.test() 函数有两种用法，一种是 Default S3 method, 另外一种是 S3 method for class “formula”。</p>
+<ul>
+<li>Default method:</li>
+</ul>
+<div class="sourceCode" id="cb151"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># 比较男女性别身高的差异.</span></span>
+<span><span class="va">male</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">100</span>,mean <span class="op">=</span> <span class="fl">178</span>,sd<span class="op">=</span><span class="fl">13</span><span class="op">)</span></span>
+<span><span class="va">female</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">100</span>,mean<span class="op">=</span><span class="fl">168</span>,sd<span class="op">=</span><span class="fl">12</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span><span class="va">male</span>,<span class="va">female</span>,</span>
+<span>       alternative<span class="op">=</span><span class="st">"two.side"</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## 
+##  Welch Two Sample t-test
+## 
+## data:  male and female
+## t = 5.9, df = 196, p-value = 2e-08
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##   6.783 13.656
+## sample estimates:
+## mean of x mean of y 
+##     179.7     169.5</code></pre>
+<ul>
+<li>method for class “formula”(R 语言的公式： y~x):</li>
+</ul>
+<div class="sourceCode" id="cb153"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># 同样男女身高数据，生成 data.frame</span></span>
+<span><span class="va">sex</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="st">"male"</span>,<span class="fl">100</span><span class="op">)</span>,<span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="st">"female"</span>,<span class="fl">100</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">height</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">male</span>,<span class="va">female</span><span class="op">)</span></span>
+<span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>sex<span class="op">=</span><span class="va">sex</span>,</span>
+<span>                 height<span class="op">=</span><span class="va">height</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span><span class="va">height</span><span class="op">~</span><span class="va">sex</span>,</span>
+<span>       alternative<span class="op">=</span><span class="st">"two.side"</span>,</span>
+<span>       data<span class="op">=</span><span class="va">df</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## 
+##  Welch Two Sample t-test
+## 
+## data:  height by sex
+## t = -5.9, df = 196, p-value = 2e-08
+## alternative hypothesis: true difference in means between group female and group male is not equal to 0
+## 95 percent confidence interval:
+##  -13.656  -6.783
+## sample estimates:
+## mean in group female   mean in group male 
+##                169.5                179.7</code></pre>
+<p>但是在 t 检验之前，我们还需要判断两组数据是否满足正态性，方差齐两个条件。</p>
+<ul>
+<li>正态性检验，使用shapiro.test()函数</li>
+</ul>
+<div class="sourceCode" id="cb155"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># H0：数据满足正态， H1：数据不满足正态</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/shapiro.test.html">shapiro.test</a></span><span class="op">(</span><span class="va">male</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## 
+##  Shapiro-Wilk normality test
+## 
+## data:  male
+## W = 0.98, p-value = 0.2</code></pre>
+<div class="sourceCode" id="cb157"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/shapiro.test.html">shapiro.test</a></span><span class="op">(</span><span class="va">female</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## 
+##  Shapiro-Wilk normality test
+## 
+## data:  female
+## W = 0.99, p-value = 1</code></pre>
+<div class="sourceCode" id="cb159"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># H0: 方差齐； H1: 方差不齐</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://r-forge.r-project.org/projects/car/">car</a></span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/pkg/car/man/leveneTest.html">leveneTest</a></span><span class="op">(</span><span class="va">height</span><span class="op">~</span><span class="va">sex</span>,data<span class="op">=</span><span class="va">df</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## Levene's Test for Homogeneity of Variance (center = median)
+##        Df F value Pr(&gt;F)
+## group   1    1.21   0.27
+##       198</code></pre>
+<p>所以两独立样本 t 检验的完整流程是怎么样子的：</p>
+<div class="sourceCode" id="cb161"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># 1. 正态性检验：</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/shapiro.test.html">shapiro.test</a></span><span class="op">(</span><span class="va">male</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/shapiro.test.html">shapiro.test</a></span><span class="op">(</span><span class="va">female</span><span class="op">)</span></span>
+<span><span class="co"># 2. 方差齐性检验；</span></span>
+<span><span class="fu"><a href="https://rdrr.io/pkg/car/man/leveneTest.html">leveneTest</a></span><span class="op">(</span><span class="va">height</span><span class="op">~</span><span class="va">sex</span>,data<span class="op">=</span><span class="va">df</span><span class="op">)</span></span>
+<span><span class="co"># 3.t 检验</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span><span class="va">height</span><span class="op">~</span><span class="va">sex</span>, <span class="co"># 输入公式</span></span>
+<span>       alternative<span class="op">=</span><span class="st">"two.side"</span>,<span class="co"># 双侧检验</span></span>
+<span>       var.equal<span class="op">=</span><span class="cn">T</span>, <span class="co"># 方差齐</span></span>
+<span>       data<span class="op">=</span><span class="va">df</span><span class="op">)</span> <span class="co"># 提供数据</span></span></code></pre></div>
+<p>t 检验非常常见，但是高分文献中，除了非常严格遵循盲法、随机、对照原则的临床实验以外，以它作为主要统计方法，非常罕见，为什么？</p>
+<p>主要原因包括：</p>
+<p>1.t 检验（或者卡方等其他类型的检验）没有办法获得危险因素的效应值，比如这里，我们不能直观地看到性别对身高的效应值是多少；</p>
+<p>2. 没有办法矫正混杂</p>
+<p>我们通过 ToothGrowth 数据，看看混杂因素是怎么影响 t 检验的结果的。</p>
+<p>加载并查看数据：</p>
+<div class="sourceCode" id="cb162"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="st">"ToothGrowth"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">ToothGrowth</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## 'data.frame':    60 obs. of  3 variables:
+##  $ len : num  4.2 11.5 7.3 5.8 6.4 10 11.2 11.2 5.2 7 ...
+##  $ supp: Factor w/ 2 levels "OJ","VC": 2 2 2 2 2 2 2 2 2 2 ...
+##  $ dose: num  0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 ...</code></pre>
+<p>我们对不同辅食类型小鼠牙齿的长度进行比较：</p>
+<p>首先比较总体：</p>
+<div class="sourceCode" id="cb164"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># 总体</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span><span class="va">len</span><span class="op">~</span><span class="va">supp</span>,</span>
+<span>       var.equal<span class="op">=</span><span class="cn">T</span>,</span>
+<span>       data<span class="op">=</span><span class="va">ToothGrowth</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## 
+##  Two Sample t-test
+## 
+## data:  len by supp
+## t = 1.9, df = 58, p-value = 0.06
+## alternative hypothesis: true difference in means between group OJ and group VC is not equal to 0
+## 95 percent confidence interval:
+##  -0.167  7.567
+## sample estimates:
+## mean in group OJ mean in group VC 
+##            20.66            16.96</code></pre>
+<p>我们看到总体似乎是没有差异的，因为 p&gt;0.05。但是除了辅食的不同，剂量也是非常重要的因素，我们按照剂量进行分层，分别进行不同剂量两种辅食的比较：</p>
+<p>0.5mg 组：</p>
+<div class="sourceCode" id="cb166"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="va">ToothGrowth</span> <span class="op">|&gt;</span></span>
+<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">dose</span><span class="op">==</span><span class="fl">0.5</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span><span class="va">len</span><span class="op">~</span><span class="va">supp</span>,</span>
+<span>       var.equal<span class="op">=</span><span class="cn">T</span>,</span>
+<span>       data<span class="op">=</span><span class="va">df</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## 
+##  Two Sample t-test
+## 
+## data:  len by supp
+## t = 3.2, df = 18, p-value = 0.005
+## alternative hypothesis: true difference in means between group OJ and group VC is not equal to 0
+## 95 percent confidence interval:
+##  1.77 8.73
+## sample estimates:
+## mean in group OJ mean in group VC 
+##            13.23             7.98</code></pre>
+<p>1.0mg 组：</p>
+<div class="sourceCode" id="cb168"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="va">ToothGrowth</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">dose</span> <span class="op">==</span> <span class="fl">1.0</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span><span class="va">len</span><span class="op">~</span><span class="va">supp</span>,</span>
+<span>       var.equal<span class="op">=</span><span class="cn">T</span>,</span>
+<span>       data<span class="op">=</span><span class="va">df</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## 
+##  Two Sample t-test
+## 
+## data:  len by supp
+## t = 4, df = 18, p-value = 8e-04
+## alternative hypothesis: true difference in means between group OJ and group VC is not equal to 0
+## 95 percent confidence interval:
+##  2.841 9.019
+## sample estimates:
+## mean in group OJ mean in group VC 
+##            22.70            16.77</code></pre>
+<p>2.0mg 组：</p>
+<div class="sourceCode" id="cb170"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="va">ToothGrowth</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">dose</span> <span class="op">==</span> <span class="fl">2.0</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span><span class="va">len</span><span class="op">~</span><span class="va">supp</span>,</span>
+<span>       var.equal<span class="op">=</span><span class="cn">T</span>,</span>
+<span>       data<span class="op">=</span><span class="va">df</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## 
+##  Two Sample t-test
+## 
+## data:  len by supp
+## t = -0.046, df = 18, p-value = 1
+## alternative hypothesis: true difference in means between group OJ and group VC is not equal to 0
+## 95 percent confidence interval:
+##  -3.723  3.563
+## sample estimates:
+## mean in group OJ mean in group VC 
+##            26.06            26.14</code></pre>
+<p>我们进行线性回归，将两个因素同时纳入模型：</p>
+<div class="sourceCode" id="cb172"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># 将剂量转变为 factor</span></span>
+<span><span class="va">ToothGrowth</span><span class="op">$</span><span class="va">dose</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">ToothGrowth</span><span class="op">$</span><span class="va">dose</span>,</span>
+<span>                           levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.5</span>,<span class="fl">1.0</span>,<span class="fl">2.0</span><span class="op">)</span>,</span>
+<span>                           labels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"0.5mg"</span>,<span class="st">"1.0mg"</span>,<span class="st">"2.0mg"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co"># 构建线性模型</span></span>
+<span><span class="va">fit</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">len</span><span class="op">~</span><span class="va">supp</span><span class="op">+</span><span class="va">dose</span>,</span>
+<span>          data<span class="op">=</span><span class="va">ToothGrowth</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">fit</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = len ~ supp + dose, data = ToothGrowth)
+## 
+## Residuals:
+##    Min     1Q Median     3Q    Max 
+##  -7.08  -2.75  -0.80   2.45   9.65 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)   12.455      0.988   12.60  &lt; 2e-16 ***
+## suppVC        -3.700      0.988   -3.74  0.00043 ***
+## dose1.0mg      9.130      1.210    7.54  4.4e-10 ***
+## dose2.0mg     15.495      1.210   12.80  &lt; 2e-16 ***
+## ---
+## Signif. codes:  
+## 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 3.83 on 56 degrees of freedom
+## Multiple R-squared:  0.762,  Adjusted R-squared:  0.75 
+## F-statistic: 59.9 on 3 and 56 DF,  p-value: &lt;2e-16</code></pre>
+<p>提取模型的估计结果：</p>
+<ul>
+<li>提取系数cofficients</li>
+</ul>
+<div class="sourceCode" id="cb174"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">coef1</span> <span class="op">&lt;-</span> <span class="va">fit</span><span class="op">$</span><span class="va">coefficients</span></span>
+<span><span class="va">coef2</span> <span class="op">&lt;-</span> <span class="va">fit</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span></span>
+<span><span class="va">coef3</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/coef.html">coef</a></span><span class="op">(</span><span class="va">fit</span><span class="op">)</span></span>
+<span><span class="va">coef</span></span></code></pre></div>
+<pre><code>## function (object, ...) 
+## UseMethod("coef")
+## &lt;bytecode: 0x0000018b648ff848&gt;
+## &lt;environment: namespace:stats&gt;</code></pre>
+<p>提取系数的 95% 可信区间：</p>
+<div class="sourceCode" id="cb176"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">interval</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/confint.html">confint</a></span><span class="op">(</span><span class="va">fit</span><span class="op">)</span></span>
+<span><span class="va">interval</span></span></code></pre></div>
+<pre><code>##              2.5 % 97.5 %
+## (Intercept) 10.475  14.43
+## suppVC      -5.680  -1.72
+## dose1.0mg    6.705  11.55
+## dose2.0mg   13.070  17.92</code></pre>
+</div>
+<div id="logistic回归" class="section level2" number="2.3">
+<h2>
+<span class="header-section-number">2.3</span> logistic回归<a class="anchor" aria-label="anchor" href="#logistic%E5%9B%9E%E5%BD%92"><i class="fas fa-link"></i></a>
+</h2>
+<div id="数据来源" class="section level3" number="2.3.1">
+<h3>
+<span class="header-section-number">2.3.1</span> 数据来源<a class="anchor" aria-label="anchor" href="#%E6%95%B0%E6%8D%AE%E6%9D%A5%E6%BA%90"><i class="fas fa-link"></i></a>
+</h3>
+<p>我们使用 MASS 包的 birthwt 数据作演示。 birthwt 数据是 1986 年在马萨诸塞州斯普林菲尔德 Baystate 医疗中心收集的，这个数据包括以下几个指标： low: 出生体重小于 2.5 公斤的指标, 如果小于 2.5 则为 1，反之则为 0；</p>
+<p>age: 母亲生育时的年龄；</p>
+<p>lwt: 母亲在最后一次月经时的体重 (磅);</p>
+<p>race: 母亲的种族（1 = 白人， 2 = 黑人， 3 = 其他） ;</p>
+<p>smoke: 怀孕期间的吸烟状况;</p>
+<p>ptl: 既往早产的次数;</p>
+<p>ht：是否有高血压病史;</p>
+<p>ui：是否存在子宫刺激;</p>
+<p>ftv: 在怀孕的前三个月, 医生看病的次数;</p>
+<p>bwt: 出生体重, 以克计。</p>
+</div>
+<div id="获得并查看数据" class="section level3" number="2.3.2">
+<h3>
+<span class="header-section-number">2.3.2</span> 获得并查看数据<a class="anchor" aria-label="anchor" href="#%E8%8E%B7%E5%BE%97%E5%B9%B6%E6%9F%A5%E7%9C%8B%E6%95%B0%E6%8D%AE"><i class="fas fa-link"></i></a>
+</h3>
+<div class="sourceCode" id="cb178"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://www.stats.ox.ac.uk/pub/MASS4/">MASS</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="st">"birthwt"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">birthwt</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## 'data.frame':    189 obs. of  10 variables:
+##  $ low  : int  0 0 0 0 0 0 0 0 0 0 ...
+##  $ age  : int  19 33 20 21 18 21 22 17 29 26 ...
+##  $ lwt  : int  182 155 105 108 107 124 118 103 123 113 ...
+##  $ race : int  2 3 1 1 1 3 1 3 1 1 ...
+##  $ smoke: int  0 0 1 1 1 0 0 0 1 1 ...
+##  $ ptl  : int  0 0 0 0 0 0 0 0 0 0 ...
+##  $ ht   : int  0 0 0 0 0 0 0 0 0 0 ...
+##  $ ui   : int  1 0 0 1 1 0 0 0 0 0 ...
+##  $ ftv  : int  0 3 1 2 0 0 1 1 1 0 ...
+##  $ bwt  : int  2523 2551 2557 2594 2600 2622 2637 2637 2663 2665 ...</code></pre>
+<div class="sourceCode" id="cb180"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/unique.html">unique</a></span><span class="op">(</span><span class="va">birthwt</span><span class="op">$</span><span class="va">low</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## [1] 0 1</code></pre>
+</div>
+<div id="清洗数据" class="section level3" number="2.3.3">
+<h3>
+<span class="header-section-number">2.3.3</span> 清洗数据<a class="anchor" aria-label="anchor" href="#%E6%B8%85%E6%B4%97%E6%95%B0%E6%8D%AE"><i class="fas fa-link"></i></a>
+</h3>
+<p>这里主要是对分类变量进行转换，转换为 factor。</p>
+<div class="sourceCode" id="cb182"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="va">birthwt</span></span>
+<span><span class="va">df</span><span class="op">$</span><span class="va">low</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">df</span><span class="op">$</span><span class="va">low</span>, </span>
+<span>                 levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">1</span><span class="op">)</span>,</span>
+<span>                 labels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"No"</span>, <span class="st">"Yes"</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">df</span><span class="op">$</span><span class="va">race</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">df</span><span class="op">$</span><span class="va">race</span>,</span>
+<span>                  levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">3</span><span class="op">)</span>,</span>
+<span>                  labels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"white"</span>,<span class="st">"black"</span>,<span class="st">"other"</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">df</span><span class="op">$</span><span class="va">smoke</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">df</span><span class="op">$</span><span class="va">smoke</span>,</span>
+<span>                   levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">1</span><span class="op">)</span>,</span>
+<span>                   labels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"No"</span>,<span class="st">"Yes"</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">df</span><span class="op">$</span><span class="va">ht</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">df</span><span class="op">$</span><span class="va">ht</span>,</span>
+<span>                levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">1</span><span class="op">)</span>,</span>
+<span>                labels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"No"</span>,<span class="st">"Yes"</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">df</span><span class="op">$</span><span class="va">ui</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">df</span><span class="op">$</span><span class="va">ui</span>,</span>
+<span>                levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">1</span><span class="op">)</span>,</span>
+<span>                labels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"No"</span>,<span class="st">"Yes"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+</div>
+<div id="构建全模型" class="section level3" number="2.3.4">
+<h3>
+<span class="header-section-number">2.3.4</span> 构建全模型<a class="anchor" aria-label="anchor" href="#%E6%9E%84%E5%BB%BA%E5%85%A8%E6%A8%A1%E5%9E%8B"><i class="fas fa-link"></i></a>
+</h3>
+<div class="sourceCode" id="cb183"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">a</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span><span class="op">(</span><span class="va">df</span><span class="op">)</span></span>
+<span><span class="va">a</span></span></code></pre></div>
+<pre><code>##  [1] "low"   "age"   "lwt"   "race"  "smoke" "ptl"  
+##  [7] "ht"    "ui"    "ftv"   "bwt"</code></pre>
+<div class="sourceCode" id="cb185"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># fix(a)</span></span></code></pre></div>
+<div class="sourceCode" id="cb186"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">model</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/glm.html">glm</a></span><span class="op">(</span><span class="va">low</span><span class="op">~</span><span class="va">age</span><span class="op">+</span><span class="va">lwt</span><span class="op">+</span><span class="va">race</span><span class="op">+</span><span class="va">smoke</span><span class="op">+</span><span class="va">ptl</span><span class="op">+</span><span class="va">ht</span><span class="op">+</span><span class="va">ui</span><span class="op">+</span><span class="va">ftv</span>,</span>
+<span>             family <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/family.html">binomial</a></span><span class="op">(</span>link <span class="op">=</span> <span class="st">"logit"</span><span class="op">)</span>,<span class="co"># 连接函数</span></span>
+<span>             data <span class="op">=</span> <span class="va">df</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">model</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## 
+## Call:
+## glm(formula = low ~ age + lwt + race + smoke + ptl + ht + ui + 
+##     ftv, family = binomial(link = "logit"), data = df)
+## 
+## Deviance Residuals: 
+##    Min      1Q  Median      3Q     Max  
+## -1.895  -0.821  -0.532   0.982   2.212  
+## 
+## Coefficients:
+##             Estimate Std. Error z value Pr(&gt;|z|)   
+## (Intercept)  0.48062    1.19689    0.40   0.6880   
+## age         -0.02955    0.03703   -0.80   0.4249   
+## lwt         -0.01542    0.00692   -2.23   0.0258 * 
+## raceblack    1.27226    0.52736    2.41   0.0158 * 
+## raceother    0.88050    0.44078    2.00   0.0458 * 
+## smokeYes     0.93885    0.40215    2.33   0.0196 * 
+## ptl          0.54334    0.34540    1.57   0.1157   
+## htYes        1.86330    0.69753    2.67   0.0076 **
+## uiYes        0.76765    0.45932    1.67   0.0947 . 
+## ftv          0.06530    0.17239    0.38   0.7048   
+## ---
+## Signif. codes:  
+## 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 234.67  on 188  degrees of freedom
+## Residual deviance: 201.28  on 179  degrees of freedom
+## AIC: 221.3
+## 
+## Number of Fisher Scoring iterations: 4</code></pre>
+</div>
+<div id="使用逐步后退法获得最优模型aic信息量准则" class="section level3" number="2.3.5">
+<h3>
+<span class="header-section-number">2.3.5</span> 使用逐步后退法获得最优模型（AIC信息量准则）<a class="anchor" aria-label="anchor" href="#%E4%BD%BF%E7%94%A8%E9%80%90%E6%AD%A5%E5%90%8E%E9%80%80%E6%B3%95%E8%8E%B7%E5%BE%97%E6%9C%80%E4%BC%98%E6%A8%A1%E5%9E%8Baic%E4%BF%A1%E6%81%AF%E9%87%8F%E5%87%86%E5%88%99"><i class="fas fa-link"></i></a>
+</h3>
+<div class="sourceCode" id="cb188"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/step.html">step</a></span><span class="op">(</span><span class="va">model</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## Start:  AIC=221.3
+## low ~ age + lwt + race + smoke + ptl + ht + ui + ftv
+## 
+##         Df Deviance AIC
+## - ftv    1      201 219
+## - age    1      202 220
+## &lt;none&gt;          201 221
+## - ptl    1      204 222
+## - ui     1      204 222
+## - race   2      209 225
+## - lwt    1      207 225
+## - smoke  1      207 225
+## - ht     1      209 227
+## 
+## Step:  AIC=219.4
+## low ~ age + lwt + race + smoke + ptl + ht + ui
+## 
+##         Df Deviance AIC
+## - age    1      202 218
+## &lt;none&gt;          201 219
+## - ptl    1      204 220
+## - ui     1      204 220
+## - race   2      209 223
+## - lwt    1      207 223
+## - smoke  1      207 223
+## - ht     1      209 225
+## 
+## Step:  AIC=218
+## low ~ lwt + race + smoke + ptl + ht + ui
+## 
+##         Df Deviance AIC
+## &lt;none&gt;          202 218
+## - ptl    1      204 218
+## - ui     1      205 219
+## - smoke  1      208 222
+## - lwt    1      208 222
+## - race   2      210 222
+## - ht     1      210 224</code></pre>
+<pre><code>## 
+## Call:  glm(formula = low ~ lwt + race + smoke + ptl + ht + ui, family = binomial(link = "logit"), 
+##     data = df)
+## 
+## Coefficients:
+## (Intercept)          lwt    raceblack    raceother  
+##     -0.0865      -0.0159       1.3257       0.8971  
+##    smokeYes          ptl        htYes        uiYes  
+##      0.9387       0.5032       1.8550       0.7857  
+## 
+## Degrees of Freedom: 188 Total (i.e. Null);  181 Residual
+## Null Deviance:       235 
+## Residual Deviance: 202   AIC: 218</code></pre>
+</div>
+<div id="最优模型" class="section level3" number="2.3.6">
+<h3>
+<span class="header-section-number">2.3.6</span> 最优模型<a class="anchor" aria-label="anchor" href="#%E6%9C%80%E4%BC%98%E6%A8%A1%E5%9E%8B"><i class="fas fa-link"></i></a>
+</h3>
+<div class="sourceCode" id="cb191"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">model_best</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/glm.html">glm</a></span><span class="op">(</span>formula <span class="op">=</span> <span class="va">low</span> <span class="op">~</span> <span class="va">lwt</span> <span class="op">+</span> <span class="va">race</span> <span class="op">+</span> <span class="va">smoke</span> <span class="op">+</span> <span class="va">ptl</span> <span class="op">+</span> <span class="va">ht</span> <span class="op">+</span> <span class="va">ui</span>,</span>
+<span>                  family <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/family.html">binomial</a></span><span class="op">(</span>link <span class="op">=</span> <span class="st">"logit"</span><span class="op">)</span>,</span>
+<span>                  data <span class="op">=</span> <span class="va">df</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">model_best</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## 
+## Call:
+## glm(formula = low ~ lwt + race + smoke + ptl + ht + ui, family = binomial(link = "logit"), 
+##     data = df)
+## 
+## Deviance Residuals: 
+##    Min      1Q  Median      3Q     Max  
+## -1.905  -0.812  -0.524   0.948   2.181  
+## 
+## Coefficients:
+##             Estimate Std. Error z value Pr(&gt;|z|)   
+## (Intercept) -0.08655    0.95176   -0.09   0.9275   
+## lwt         -0.01591    0.00686   -2.32   0.0203 * 
+## raceblack    1.32572    0.52224    2.54   0.0111 * 
+## raceother    0.89708    0.43388    2.07   0.0387 * 
+## smokeYes     0.93873    0.39872    2.35   0.0186 * 
+## ptl          0.50321    0.34123    1.47   0.1403   
+## htYes        1.85504    0.69512    2.67   0.0076 **
+## uiYes        0.78570    0.45644    1.72   0.0852 . 
+## ---
+## Signif. codes:  
+## 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 234.67  on 188  degrees of freedom
+## Residual deviance: 201.99  on 181  degrees of freedom
+## AIC: 218
+## 
+## Number of Fisher Scoring iterations: 4</code></pre>
+</div>
+<div id="提取系数的or值与区间并写出" class="section level3" number="2.3.7">
+<h3>
+<span class="header-section-number">2.3.7</span> 提取系数的OR值与区间，并写出<a class="anchor" aria-label="anchor" href="#%E6%8F%90%E5%8F%96%E7%B3%BB%E6%95%B0%E7%9A%84or%E5%80%BC%E4%B8%8E%E5%8C%BA%E9%97%B4%E5%B9%B6%E5%86%99%E5%87%BA"><i class="fas fa-link"></i></a>
+</h3>
+<div class="sourceCode" id="cb193"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># 提取 OR 与区间并合并</span></span>
+<span><span class="va">or</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Log.html">exp</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/coef.html">coef</a></span><span class="op">(</span><span class="va">model_best</span><span class="op">)</span><span class="op">)</span><span class="co"># 系数</span></span>
+<span><span class="va">or_interval</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Log.html">exp</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/confint.html">confint</a></span><span class="op">(</span><span class="va">model_best</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">or</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html">cbind</a></span><span class="op">(</span><span class="va">or</span>,<span class="va">or_interval</span><span class="op">)</span></span>
+<span><span class="co"># 提取其他值</span></span>
+<span><span class="va">temp</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">model_best</span><span class="op">)</span></span>
+<span><span class="va">temp</span> <span class="op">&lt;-</span> <span class="va">temp</span><span class="op">$</span><span class="va">coefficients</span></span>
+<span><span class="co"># 合并</span></span>
+<span><span class="va">results</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html">cbind</a></span><span class="op">(</span><span class="va">temp</span>,<span class="va">or</span><span class="op">)</span></span>
+<span><span class="co"># write.csv(results,"results.csv",row.names = T)</span></span></code></pre></div>
+</div>
+<div id="随手画一个列线图" class="section level3" number="2.3.8">
+<h3>
+<span class="header-section-number">2.3.8</span> 随手画一个列线图<a class="anchor" aria-label="anchor" href="#%E9%9A%8F%E6%89%8B%E7%94%BB%E4%B8%80%E4%B8%AA%E5%88%97%E7%BA%BF%E5%9B%BE"><i class="fas fa-link"></i></a>
+</h3>
+<div class="sourceCode" id="cb194"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># install.packages("regplot")</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">regplot</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/pkg/regplot/man/regplot.html">regplot</a></span><span class="op">(</span><span class="va">model_best</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## [1] "note: points tables not constructed unless points=TRUE "</code></pre>
+</div>
+</div>
+<div id="本章作业" class="section level2" number="2.4">
+<h2>
+<span class="header-section-number">2.4</span> 本章作业<a class="anchor" aria-label="anchor" href="#%E6%9C%AC%E7%AB%A0%E4%BD%9C%E4%B8%9A"><i class="fas fa-link"></i></a>
+</h2>
+<p>1. 抛硬币，假设硬币两面密度不均， A 面向上的概率为 0.55， B 面向上的概率为 0.45，连续抛 50 次，模拟每次抛硬币的结果。</p>
+<div class="sourceCode" id="cb196"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"正面"</span>,<span class="st">"反面"</span><span class="op">)</span>,</span>
+<span>       <span class="fl">50</span>,</span>
+<span>       replace <span class="op">=</span> <span class="cn">T</span>,</span>
+<span>       prob<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.55</span>,<span class="fl">0.45</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<pre><code>##  [1] "正面" "正面" "正面" "反面" "反面" "反面" "反面"
+##  [8] "反面" "反面" "正面" "正面" "反面" "正面" "正面"
+## [15] "反面" "正面" "反面" "正面" "正面" "反面" "正面"
+## [22] "正面" "反面" "反面" "反面" "反面" "正面" "正面"
+## [29] "正面" "反面" "正面" "正面" "反面" "正面" "反面"
+## [36] "正面" "正面" "反面" "正面" "正面" "反面" "正面"
+## [43] "正面" "正面" "反面" "反面" "反面" "正面" "反面"
+## [50] "反面"</code></pre>
+<p>2. 使用 ToothGrowth 数据，将牙齿生长长度按照 18.8 分为两类，如果大于18.8 定义为阳性，否则定义为阴性，使用 logistic 回归分析辅食类型与剂量对阳性事件的影响。（提取 OR 等并且写出哦！）</p>
+<div class="sourceCode" id="cb198"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/rm.html">rm</a></span><span class="op">(</span>list<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/ls.html">ls</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="st">"ToothGrowth"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">ToothGrowth</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## 'data.frame':    60 obs. of  3 variables:
+##  $ len : num  4.2 11.5 7.3 5.8 6.4 10 11.2 11.2 5.2 7 ...
+##  $ supp: Factor w/ 2 levels "OJ","VC": 2 2 2 2 2 2 2 2 2 2 ...
+##  $ dose: num  0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 ...</code></pre>
+<div class="sourceCode" id="cb200"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span><span class="op">(</span><span class="va">ToothGrowth</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## [1] "len"  "supp" "dose"</code></pre>
+<div class="sourceCode" id="cb202"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="va">ToothGrowth</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>len2<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="va">len</span><span class="op">&gt;</span><span class="fl">18.8</span>,<span class="st">"阳性"</span>,<span class="st">"阴性"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">df</span><span class="op">$</span><span class="va">len2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">df</span><span class="op">$</span><span class="va">len2</span>,</span>
+<span>                  levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"阴性"</span>,<span class="st">"阳性"</span><span class="op">)</span>,</span>
+<span>                  labels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"阴性"</span>,<span class="st">"阳性"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co"># logistic</span></span>
+<span><span class="va">fit</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/glm.html">glm</a></span><span class="op">(</span><span class="va">len2</span><span class="op">~</span><span class="va">supp</span><span class="op">+</span><span class="va">dose</span>,</span>
+<span>    family <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/family.html">binomial</a></span><span class="op">(</span>link <span class="op">=</span> <span class="st">"logit"</span><span class="op">)</span>,</span>
+<span>    data<span class="op">=</span><span class="va">df</span><span class="op">)</span></span>
+<span><span class="va">temp</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">fit</span><span class="op">)</span></span>
+<span><span class="va">temp</span> <span class="op">&lt;-</span> <span class="va">temp</span><span class="op">$</span><span class="va">coefficients</span></span>
+<span></span>
+<span><span class="va">OR</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Log.html">exp</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/coef.html">coef</a></span><span class="op">(</span><span class="va">fit</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">OR_interval</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Log.html">exp</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/confint.html">confint</a></span><span class="op">(</span><span class="va">fit</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">OR</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html">cbind</a></span><span class="op">(</span><span class="va">OR</span>,<span class="va">OR_interval</span><span class="op">)</span></span>
+<span><span class="va">result</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html">cbind</a></span><span class="op">(</span><span class="va">temp</span>,<span class="va">OR</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/getwd.html">getwd</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## [1] "D:/OneDrive - b.sxmu.edu.cn/03-yh学习/00-小论文/03-GBD/GBD_yh_test"</code></pre>
+<div class="sourceCode" id="cb204"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># write.csv(result,"logistic.csv",row.names = T)</span></span></code></pre></div>
+<p>3. 课后思考题：辅食类型与剂量是否存在交互效应？分别研究交互效应对len(线性模型) 与阳性事件（logistic 回归）的影响。</p>
+<div class="sourceCode" id="cb205"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">fit1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/glm.html">glm</a></span><span class="op">(</span><span class="va">len2</span><span class="op">~</span><span class="va">supp</span><span class="op">+</span><span class="va">dose</span><span class="op">+</span><span class="va">supp</span><span class="op">:</span><span class="va">dose</span>, <span class="co">#写法1</span></span>
+<span>           family <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/family.html">binomial</a></span><span class="op">(</span>link <span class="op">=</span> <span class="st">"logit"</span><span class="op">)</span>,</span>
+<span>           data<span class="op">=</span><span class="va">df</span><span class="op">)</span></span>
+<span><span class="va">fit2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/glm.html">glm</a></span><span class="op">(</span><span class="va">len2</span><span class="op">~</span><span class="va">supp</span><span class="op">*</span><span class="va">dose</span>, <span class="co">#写法2</span></span>
+<span>            family <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/family.html">binomial</a></span><span class="op">(</span>link <span class="op">=</span> <span class="st">"logit"</span><span class="op">)</span>,</span>
+<span>            data<span class="op">=</span><span class="va">df</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">fit3</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/glm.html">glm</a></span><span class="op">(</span><span class="va">len2</span><span class="op">~</span><span class="op">(</span><span class="va">supp</span><span class="op">+</span><span class="va">dose</span><span class="op">)</span><span class="op">^</span><span class="fl">2</span>, <span class="co">#写法3</span></span>
+<span>            family <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/family.html">binomial</a></span><span class="op">(</span>link <span class="op">=</span> <span class="st">"logit"</span><span class="op">)</span>,</span>
+<span>            data<span class="op">=</span><span class="va">df</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># 交互效应的解读</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">fit3</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## 
+## Call:
+## glm(formula = len2 ~ (supp + dose)^2, family = binomial(link = "logit"), 
+##     data = df)
+## 
+## Deviance Residuals: 
+##     Min       1Q   Median       3Q      Max  
+## -2.1680  -0.4242  -0.0654   0.4477   2.2148  
+## 
+## Coefficients:
+##             Estimate Std. Error z value Pr(&gt;|z|)   
+## (Intercept)   -6.593      2.355   -2.80   0.0051 **
+## suppVC        -0.382      3.227   -0.12   0.9057   
+## dose           8.791      2.978    2.95   0.0032 **
+## suppVC:dose   -4.178      3.296   -1.27   0.2049   
+## ---
+## Signif. codes:  
+## 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 83.178  on 59  degrees of freedom
+## Residual deviance: 26.220  on 56  degrees of freedom
+## AIC: 34.22
+## 
+## Number of Fisher Scoring iterations: 7</code></pre>
+<div class="sourceCode" id="cb207"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># 1.看主效应：看主效应方向；主效应的方向代表这个向量对结局的影响；</span></span>
+<span><span class="co"># 2.看交互效应的方向：交互效应的方向代表了另外一个变量对该变量对结局影响的削弱或者增强。</span></span>
+<span><span class="co"># 3.一般只做两个变量的交互，没必要做更高阶的交互。</span></span>
+<span><span class="co"># 4.交互效应有没有必要放入模型？看P值；看AIC。</span></span>
+<span><span class="co"># anova(fit,fit3)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/AIC.html">AIC</a></span><span class="op">(</span><span class="va">fit</span>,<span class="va">fit3</span><span class="op">)</span></span></code></pre></div>
+<pre><code>##      df   AIC
+## fit   3 34.04
+## fit3  4 34.22</code></pre>
+
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="base_r%E5%9F%BA%E7%A1%80.html"><span class="header-section-number">1</span> Base_R基础</a></div>
+<div class="empty"></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#%E7%BB%9F%E8%AE%A1%E5%9F%BA%E7%A1%80"><span class="header-section-number">2</span> 统计基础</a></li>
+<li>
+<a class="nav-link" href="#%E9%9A%8F%E6%9C%BA%E6%8A%BD%E6%A0%B7%E4%B8%8E%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83"><span class="header-section-number">2.1</span> 随机抽样与概率分布</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#%E9%9A%8F%E6%9C%BA%E6%8A%BD%E6%A0%B7"><span class="header-section-number">2.1.1</span> 随机抽样</a></li>
+<li><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83"><span class="header-section-number">2.1.2</span> 常见概率分布</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#t%E6%A3%80%E9%AA%8C%E4%B8%8E%E5%A4%9A%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90"><span class="header-section-number">2.2</span> t检验与多元线性回归分析</a></li>
+<li>
+<a class="nav-link" href="#logistic%E5%9B%9E%E5%BD%92"><span class="header-section-number">2.3</span> logistic回归</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E6%9D%A5%E6%BA%90"><span class="header-section-number">2.3.1</span> 数据来源</a></li>
+<li><a class="nav-link" href="#%E8%8E%B7%E5%BE%97%E5%B9%B6%E6%9F%A5%E7%9C%8B%E6%95%B0%E6%8D%AE"><span class="header-section-number">2.3.2</span> 获得并查看数据</a></li>
+<li><a class="nav-link" href="#%E6%B8%85%E6%B4%97%E6%95%B0%E6%8D%AE"><span class="header-section-number">2.3.3</span> 清洗数据</a></li>
+<li><a class="nav-link" href="#%E6%9E%84%E5%BB%BA%E5%85%A8%E6%A8%A1%E5%9E%8B"><span class="header-section-number">2.3.4</span> 构建全模型</a></li>
+<li><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E9%80%90%E6%AD%A5%E5%90%8E%E9%80%80%E6%B3%95%E8%8E%B7%E5%BE%97%E6%9C%80%E4%BC%98%E6%A8%A1%E5%9E%8Baic%E4%BF%A1%E6%81%AF%E9%87%8F%E5%87%86%E5%88%99"><span class="header-section-number">2.3.5</span> 使用逐步后退法获得最优模型（AIC信息量准则）</a></li>
+<li><a class="nav-link" href="#%E6%9C%80%E4%BC%98%E6%A8%A1%E5%9E%8B"><span class="header-section-number">2.3.6</span> 最优模型</a></li>
+<li><a class="nav-link" href="#%E6%8F%90%E5%8F%96%E7%B3%BB%E6%95%B0%E7%9A%84or%E5%80%BC%E4%B8%8E%E5%8C%BA%E9%97%B4%E5%B9%B6%E5%86%99%E5%87%BA"><span class="header-section-number">2.3.7</span> 提取系数的OR值与区间，并写出</a></li>
+<li><a class="nav-link" href="#%E9%9A%8F%E6%89%8B%E7%94%BB%E4%B8%80%E4%B8%AA%E5%88%97%E7%BA%BF%E5%9B%BE"><span class="header-section-number">2.3.8</span> 随手画一个列线图</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#%E6%9C%AC%E7%AB%A0%E4%BD%9C%E4%B8%9A"><span class="header-section-number">2.4</span> 本章作业</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/yanghongXXL/GBD_yh_test/blob/master/02_%E7%BB%9F%E8%AE%A1%E5%9F%BA%E7%A1%80.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/yanghongXXL/GBD_yh_test/edit/master/02_%E7%BB%9F%E8%AE%A1%E5%9F%BA%E7%A1%80.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>GBD 笔记总结</strong>" was written by 杨 弘. It was last built on 2022-11-12.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+</body>
+</html>

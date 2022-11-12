@@ -10,7 +10,7 @@
 <meta name="generator" content="bookdown 0.29 with bs4_book()">
 <meta property="og:title" content="第 1 章 Base_R基础 | GBD 笔记总结">
 <meta property="og:type" content="book">
-<meta property="og:url" content="https://yanghongxxl.github.io/GBD_learning/base_r基础.html">
+<meta property="og:url" content="https://yanghongxxl.github.com/GBD_yh_test/base_r基础.html">
 <meta property="og:description" content="1.1 基础拾遗 窗口可以通过拖动分割柱移动，也可以使用快捷键控制。比如：Ctrl+shift+1(2\3\4) 创建一个R脚本 ——Ctrl+shift+N 快速注释——Ctrl+shift+C 善于利用小标题实现功能分区（ctrl+shift+r） ctrl+alt+r ——快速插入代码框 注释（Ctrl+shift+c）； # ； 赋值（Alt+-）： =, &lt;- ; 函数的标志：...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第 1 章 Base_R基础 | GBD 笔记总结">
@@ -45,10 +45,11 @@
         <ul class="book-toc list-unstyled">
 <li><a class="" href="index.html">前言</a></li>
 <li><a class="active" href="base_r%E5%9F%BA%E7%A1%80.html"><span class="header-section-number">1</span> Base_R基础</a></li>
+<li><a class="" href="%E7%BB%9F%E8%AE%A1%E5%9F%BA%E7%A1%80.html"><span class="header-section-number">2</span> 统计基础</a></li>
 </ul>
 
         <div class="book-extra">
-          <p><a id="book-repo" href="https://github.com/yanghongXXL/GBD_learning">View book source <i class="fab fa-github"></i></a></p>
+          <p><a id="book-repo" href="https://github.com/yanghongXXL/GBD_yh_test">View book source <i class="fab fa-github"></i></a></p>
         </div>
       </nav>
 </div>
@@ -209,9 +210,9 @@
 <li><p>NULL：空值。空值与 NA 的区别：比如一个教室稀稀拉拉坐了十几个学生，那么没有学生的位置可以视为缺失，而空值表示连座位也没有。</p></li>
 </ul>
 </div>
-<div id="数据类型的转换-as.type" class="section level3" number="1.3.3">
+<div id="数据类型的转换" class="section level3" number="1.3.3">
 <h3>
-<span class="header-section-number">1.3.3</span> 数据类型的转换 as.type()<a class="anchor" aria-label="anchor" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E8%BD%AC%E6%8D%A2-as.type"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.3.3</span> 数据类型的转换<a class="anchor" aria-label="anchor" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E8%BD%AC%E6%8D%A2"><i class="fas fa-link"></i></a>
 </h3>
 <ul>
 <li>numeric 与 logical 可以转化为 character，而 character 转化为 numeric 或者 logical 有可能出错，产生 NA 值。</li>
@@ -586,7 +587,7 @@
 </div>
 <div id="向量的下标索引" class="section level3" number="1.6.6">
 <h3>
-<span class="header-section-number">1.6.6</span> 向量的下标索引 []<a class="anchor" aria-label="anchor" href="#%E5%90%91%E9%87%8F%E7%9A%84%E4%B8%8B%E6%A0%87%E7%B4%A2%E5%BC%95"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.6.6</span> 向量的下标索引<a class="anchor" aria-label="anchor" href="#%E5%90%91%E9%87%8F%E7%9A%84%E4%B8%8B%E6%A0%87%E7%B4%A2%E5%BC%95"><i class="fas fa-link"></i></a>
 </h3>
 <div class="sourceCode" id="cb88"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># 已经知道向量 x</span></span>
@@ -627,7 +628,7 @@
 </div>
 <div id="数据框的下标索引" class="section level3" number="1.7.2">
 <h3>
-<span class="header-section-number">1.7.2</span> 数据框的下标索引 <span class="math display">\[ , \]</span><a class="anchor" aria-label="anchor" href="#%E6%95%B0%E6%8D%AE%E6%A1%86%E7%9A%84%E4%B8%8B%E6%A0%87%E7%B4%A2%E5%BC%95"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.7.2</span> 数据框的下标索引<a class="anchor" aria-label="anchor" href="#%E6%95%B0%E6%8D%AE%E6%A1%86%E7%9A%84%E4%B8%8B%E6%A0%87%E7%B4%A2%E5%BC%95"><i class="fas fa-link"></i></a>
 </h3>
 <div class="sourceCode" id="cb96"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># 数据框下标索引中间有逗号，逗号前表示行，逗号后表示列 [row,col]</span></span>
@@ -1006,7 +1007,7 @@
 </div>
   <div class="chapter-nav">
 <div class="prev"><a href="index.html">前言</a></div>
-<div class="empty"></div>
+<div class="next"><a href="%E7%BB%9F%E8%AE%A1%E5%9F%BA%E7%A1%80.html"><span class="header-section-number">2</span> 统计基础</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
@@ -1023,7 +1024,7 @@
 <a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="header-section-number">1.3</span> 数据类型与数据结构</a><ul class="nav navbar-nav">
 <li><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="header-section-number">1.3.1</span> 常见的数据类型</a></li>
 <li><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-naninf-na-null"><span class="header-section-number">1.3.2</span> 特殊数据类型： NaN,Inf， NA， NULL</a></li>
-<li><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E8%BD%AC%E6%8D%A2-as.type"><span class="header-section-number">1.3.3</span> 数据类型的转换 as.type()</a></li>
+<li><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E8%BD%AC%E6%8D%A2"><span class="header-section-number">1.3.3</span> 数据类型的转换</a></li>
 <li><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="header-section-number">1.3.4</span> 数据结构</a></li>
 </ul>
 </li>
@@ -1043,13 +1044,13 @@
 <li><a class="nav-link" href="#%E5%90%91%E9%87%8F%E7%9A%84%E8%BF%90%E7%AE%97"><span class="header-section-number">1.6.3</span> 向量的运算</a></li>
 <li><a class="nav-link" href="#%E9%87%8D%E8%A6%81%E5%90%91%E9%87%8F%E7%9A%84%E5%BE%AA%E7%8E%AF%E8%A1%A5%E9%BD%90%E6%9C%BA%E5%88%B6"><span class="header-section-number">1.6.4</span> 重要：向量的循环补齐机制</a></li>
 <li><a class="nav-link" href="#%E4%BA%A4%E5%B9%B6%E8%A1%A5"><span class="header-section-number">1.6.5</span> 交、并、补</a></li>
-<li><a class="nav-link" href="#%E5%90%91%E9%87%8F%E7%9A%84%E4%B8%8B%E6%A0%87%E7%B4%A2%E5%BC%95"><span class="header-section-number">1.6.6</span> 向量的下标索引 []</a></li>
+<li><a class="nav-link" href="#%E5%90%91%E9%87%8F%E7%9A%84%E4%B8%8B%E6%A0%87%E7%B4%A2%E5%BC%95"><span class="header-section-number">1.6.6</span> 向量的下标索引</a></li>
 </ul>
 </li>
 <li>
 <a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E6%A1%86%E5%8F%8A%E5%85%B6%E6%93%8D%E4%BD%9C"><span class="header-section-number">1.7</span> 数据框及其操作</a><ul class="nav navbar-nav">
 <li><a class="nav-link" href="#%E7%94%9F%E6%88%90%E6%95%B0%E6%8D%AE%E6%A1%86"><span class="header-section-number">1.7.1</span> 生成数据框</a></li>
-<li><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E6%A1%86%E7%9A%84%E4%B8%8B%E6%A0%87%E7%B4%A2%E5%BC%95"><span class="header-section-number">1.7.2</span> 数据框的下标索引 \[ , \]</a></li>
+<li><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E6%A1%86%E7%9A%84%E4%B8%8B%E6%A0%87%E7%B4%A2%E5%BC%95"><span class="header-section-number">1.7.2</span> 数据框的下标索引</a></li>
 <li><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E6%A1%86%E5%A6%82%E4%BD%95%E7%94%9F%E6%88%90%E6%96%B0%E7%9A%84%E5%88%97"><span class="header-section-number">1.7.3</span> 数据框如何生成新的列</a></li>
 </ul>
 </li>
@@ -1058,8 +1059,8 @@
 
       <div class="book-extra">
         <ul class="list-unstyled">
-<li><a id="book-source" href="https://github.com/yanghongXXL/GBD_learning/blob/master/01_%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80.Rmd">View source <i class="fab fa-github"></i></a></li>
-          <li><a id="book-edit" href="https://github.com/yanghongXXL/GBD_learning/edit/master/01_%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+<li><a id="book-source" href="https://github.com/yanghongXXL/GBD_yh_test/blob/master/01_%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/yanghongXXL/GBD_yh_test/edit/master/01_%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
         </ul>
 </div>
     </nav>
@@ -1071,7 +1072,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>GBD 笔记总结</strong>" was written by 杨 弘. It was last built on 2022-11-10.</p>
+    <p>"<strong>GBD 笔记总结</strong>" was written by 杨 弘. It was last built on 2022-11-12.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
@@ -1079,34 +1080,6 @@
   </div>
 
 </div></div>
-</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
-for (let popover of popovers) {
-  const div = document.createElement('div');
-  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
-  div.innerHTML = popover.getAttribute('data-content');
-
-  var has_math = div.querySelector("span.math");
-  if (has_math) {
-    document.body.appendChild(div);
-    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
-    MathJax.Hub.Queue(function() {
-      popover.setAttribute('data-content', div.innerHTML);
-      document.body.removeChild(div);
-    })
-  }
-}
-</script>
+</footer>
 </body>
 </html>

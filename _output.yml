@@ -4,7 +4,7 @@ bookdown::bs4_book:
     primary: "#982a31"
     fg: "#2b2121"
     bg: "#ffffff"
-  repo: https://github.com/yanghongXXL/GBD_learning
+  repo: https://github.com/yanghongXXL/GBD_yh_test
   split_by: chapter
   split_bib: no
   download: ["pdf", "epub"]

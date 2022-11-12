@@ -125,7 +125,7 @@ typeof(FALSE)
 
 -   NULL：空值。空值与 NA 的区别：比如一个教室稀稀拉拉坐了十几个学生，那么没有学生的位置可以视为缺失，而空值表示连座位也没有。
 
-### 数据类型的转换 as.type()
+### 数据类型的转换
 
 -   numeric 与 logical 可以转化为 character，而 character 转化为 numeric 或者 logical 有可能出错，产生 NA 值。
 

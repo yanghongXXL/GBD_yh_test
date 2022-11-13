@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>第 3 章 ggplot图层语法与GBD数据展示一 | GBD 笔记总结</title>
+<meta name="author" content="杨 弘">
+<meta name="description" content="3.1 图层的基本概念 ggplot2 图层语法，可以类比于 photoshop 中图层的概念： ggplot2 绘制的图形，也是由一个个图层叠加而成的。 每一个图层，都可以指定用于画图的数据，指定需要绘制的几何图案，以及图像的美学属性映射，包括颜色、坐标、位置、尺度等等；图层代码与图层 代码之间，则用加号”+“进行连接。 图层语法模板 # 加载 ggplot2 包...">
+<meta name="generator" content="bookdown 0.29 with bs4_book()">
+<meta property="og:title" content="第 3 章 ggplot图层语法与GBD数据展示一 | GBD 笔记总结">
+<meta property="og:type" content="book">
+<meta property="og:url" content="https://yanghongxxl.github.com/GBD_yh_test/ggplot图层语法与gbd数据展示一.html">
+<meta property="og:description" content="3.1 图层的基本概念 ggplot2 图层语法，可以类比于 photoshop 中图层的概念： ggplot2 绘制的图形，也是由一个个图层叠加而成的。 每一个图层，都可以指定用于画图的数据，指定需要绘制的几何图案，以及图像的美学属性映射，包括颜色、坐标、位置、尺度等等；图层代码与图层 代码之间，则用加号”+“进行连接。 图层语法模板 # 加载 ggplot2 包...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="第 3 章 ggplot图层语法与GBD数据展示一 | GBD 笔记总结">
+<meta name="twitter:description" content="3.1 图层的基本概念 ggplot2 图层语法，可以类比于 photoshop 中图层的概念： ggplot2 绘制的图形，也是由一个个图层叠加而成的。 每一个图层，都可以指定用于画图的数据，指定需要绘制的几何图案，以及图像的美学属性映射，包括颜色、坐标、位置、尺度等等；图层代码与图层 代码之间，则用加号”+“进行连接。 图层语法模板 # 加载 ggplot2 包...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.1/transition.js"></script><script src="libs/bs3compat-0.4.1/tabs.js"></script><script src="libs/bs3compat-0.4.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">GBD 笔记总结</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">前言</a></li>
+<li><a class="" href="base_r%E5%9F%BA%E7%A1%80.html"><span class="header-section-number">1</span> Base_R基础</a></li>
+<li><a class="" href="%E7%BB%9F%E8%AE%A1%E5%9F%BA%E7%A1%80.html"><span class="header-section-number">2</span> 统计基础</a></li>
+<li><a class="active" href="ggplot%E5%9B%BE%E5%B1%82%E8%AF%AD%E6%B3%95%E4%B8%8Egbd%E6%95%B0%E6%8D%AE%E5%B1%95%E7%A4%BA%E4%B8%80.html"><span class="header-section-number">3</span> ggplot图层语法与GBD数据展示一</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/yanghongXXL/GBD_yh_test">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="ggplot图层语法与gbd数据展示一" class="section level1" number="3">
+<h1>
+<span class="header-section-number">第 3 章</span> ggplot图层语法与GBD数据展示一<a class="anchor" aria-label="anchor" href="#ggplot%E5%9B%BE%E5%B1%82%E8%AF%AD%E6%B3%95%E4%B8%8Egbd%E6%95%B0%E6%8D%AE%E5%B1%95%E7%A4%BA%E4%B8%80"><i class="fas fa-link"></i></a>
+</h1>
+<div id="图层的基本概念" class="section level2" number="3.1">
+<h2>
+<span class="header-section-number">3.1</span> 图层的基本概念<a class="anchor" aria-label="anchor" href="#%E5%9B%BE%E5%B1%82%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><i class="fas fa-link"></i></a>
+</h2>
+<p>ggplot2 图层语法，可以类比于 photoshop 中图层的概念：</p>
+<div class="inline-figure"><img src="images/0301.png" width="90%" style="display: block; margin: auto;"></div>
+<p>ggplot2 绘制的图形，也是由一个个图层叠加而成的。</p>
+<p>每一个图层，都可以指定用于画图的数据，指定需要绘制的几何图案，以及图像的美学属性映射，包括颜色、坐标、位置、尺度等等；图层代码与图层 代码之间，则用加号”+“进行连接。</p>
+<p>图层语法模板</p>
+<div class="sourceCode" id="cb208"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># 加载 ggplot2 包</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
+<span><span class="co"># 打开画板</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data<span class="op">=</span><span class="va">df1</span>, <span class="co"># 指定数据</span></span>
+<span>       <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">x1</span>,y<span class="op">=</span><span class="va">y1</span>,color<span class="op">=</span><span class="va">group1</span><span class="op">)</span><span class="op">)</span><span class="op">+</span> <span class="co"># 美学属性映射</span></span>
+<span>    <span class="co"># 图层 1</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span><span class="op">+</span></span>
+<span>    <span class="co"># 图层 2</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span>data<span class="op">=</span><span class="va">df2</span>,<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">x2</span>,y<span class="op">=</span><span class="va">y2</span>,color<span class="op">=</span><span class="va">group2</span><span class="op">)</span><span class="op">)</span><span class="op">+</span> </span>
+<span>    <span class="co"># 其他</span></span>
+<span>    <span class="fu">scale_y_continues</span><span class="op">(</span><span class="op">)</span><span class="op">+</span> <span class="co"># 尺度设定</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap</a></span><span class="op">(</span><span class="op">)</span><span class="op">+</span> <span class="co"># 分面</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># 主题风格设定</span></span></code></pre></div>
+</div>
+<div id="ggplot2-基本元素" class="section level2" number="3.2">
+<h2>
+<span class="header-section-number">3.2</span> ggplot2 基本元素<a class="anchor" aria-label="anchor" href="#ggplot2-%E5%9F%BA%E6%9C%AC%E5%85%83%E7%B4%A0"><i class="fas fa-link"></i></a>
+</h2>
+<div id="数据" class="section level3" number="3.2.1">
+<h3>
+<span class="header-section-number">3.2.1</span> 数据<a class="anchor" aria-label="anchor" href="#%E6%95%B0%E6%8D%AE"><i class="fas fa-link"></i></a>
+</h3>
+<p>画图第一件事，肯定是指定用于画图的数据。一般用于 ggplot2 画图的数据，是长数据 (整洁的数据)。</p>
+</div>
+<div id="几何图形" class="section level3" number="3.2.2">
+<h3>
+<span class="header-section-number">3.2.2</span> 几何图形<a class="anchor" aria-label="anchor" href="#%E5%87%A0%E4%BD%95%E5%9B%BE%E5%BD%A2"><i class="fas fa-link"></i></a>
+</h3>
+<p>统计图中最常见的几种几何图案：点、线、柱状图、条形图、直方图、误差图、箱图……</p>
+<p>ggplot2 用 geometry 函数指定所需绘制的图案，比如 geom_point(),geom_line(),geom_bar(),geom_errorb</p>
+<p>geom 是 geometry 的前四个字母， geom_ 下划线后连接几何图形比如point,bar,box 等。 geometry 函数可以设定不同的参数，包括坐标，位置，颜色，尺度等。</p>
+</div>
+<div id="美学属性映射" class="section level3" number="3.2.3">
+<h3>
+<span class="header-section-number">3.2.3</span> 美学属性映射<a class="anchor" aria-label="anchor" href="#%E7%BE%8E%E5%AD%A6%E5%B1%9E%E6%80%A7%E6%98%A0%E5%B0%84"><i class="fas fa-link"></i></a>
+</h3>
+<p>美学的英文单词： aesthetic。 aes() 函数将某个变量的数据映射给某种美学属性。美学属性可以在画板处进行全局映射，也可以在某个图层中进行局部映射。</p>
+<div class="sourceCode" id="cb209"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># 打开画板</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data<span class="op">=</span><span class="va">df1</span>,</span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">x1</span>,y<span class="op">=</span><span class="va">y1</span>,color<span class="op">=</span><span class="va">group1</span><span class="op">)</span><span class="op">)</span><span class="op">+</span> <span class="co"># 全局映射</span></span>
+<span>    <span class="co"># 图层 1</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span><span class="op">+</span> <span class="co"># 受全局映射的控制</span></span>
+<span>    <span class="co"># 图层 2</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span>data<span class="op">=</span><span class="va">df2</span>,<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">x2</span>,y<span class="op">=</span><span class="va">y2</span>,group<span class="op">=</span><span class="va">group2</span><span class="op">)</span><span class="op">)</span><span class="op">+</span> <span class="co">#局部映射不受控制</span></span>
+<span>    <span class="co"># 其他</span></span>
+<span>    <span class="fu">scale_y_continues</span><span class="op">(</span><span class="op">)</span><span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap</a></span><span class="op">(</span><span class="op">)</span><span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+</div>
+</div>
+<div id="我的第一个图" class="section level2" number="3.3">
+<h2>
+<span class="header-section-number">3.3</span> 我的第一个图<a class="anchor" aria-label="anchor" href="#%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%9B%BE"><i class="fas fa-link"></i></a>
+</h2>
+<p>这里我们用 Global_HIV.csv 数据进行第一个图的绘制：</p>
+<p>使用线图展示 <strong>1990 到 2019</strong> 年全球<strong>男</strong>、<strong>女</strong> <strong>HIV 发病人数</strong>的变化趋势。</p>
+<div id="准备画图数据" class="section level3" number="3.3.1">
+<h3>
+<span class="header-section-number">3.3.1</span> 准备画图数据<a class="anchor" aria-label="anchor" href="#%E5%87%86%E5%A4%87%E7%94%BB%E5%9B%BE%E6%95%B0%E6%8D%AE"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>加载需要的R包</li>
+</ul>
+<div class="sourceCode" id="cb210"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span></code></pre></div>
+<ul>
+<li>读取数据</li>
+</ul>
+<div class="sourceCode" id="cb211"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/Global_HIV.csv"</span><span class="op">)</span></span></code></pre></div>
+<ul>
+<li>查看数据</li>
+</ul>
+<div class="sourceCode" id="cb212"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span><span class="op">(</span><span class="va">df</span><span class="op">)</span></span></code></pre></div>
+<pre><code>##  [1] "measure"  "location" "sex"      "age"     
+##  [5] "cause"    "metric"   "year"     "val"     
+##  [9] "upper"    "lower"</code></pre>
+<div class="sourceCode" id="cb214"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/unique.html">unique</a></span><span class="op">(</span><span class="va">df</span><span class="op">$</span><span class="va">measure</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## [1] "Deaths"                                
+## [2] "YLLs (Years of Life Lost)"             
+## [3] "Incidence"                             
+## [4] "DALYs (Disability-Adjusted Life Years)"
+## [5] "YLDs (Years Lived with Disability)"    
+## [6] "Prevalence"</code></pre>
+<div class="sourceCode" id="cb216"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/unique.html">unique</a></span><span class="op">(</span><span class="va">df</span><span class="op">$</span><span class="va">sex</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## [1] "Male"   "Female" "Both"</code></pre>
+<div class="sourceCode" id="cb218"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/unique.html">unique</a></span><span class="op">(</span><span class="va">df</span><span class="op">$</span><span class="va">age</span><span class="op">)</span></span></code></pre></div>
+<pre><code>##  [1] "&lt;5 years"         "5-9 years"       
+##  [3] "10-14 years"      "15-19 years"     
+##  [5] "20-24 years"      "25-29 years"     
+##  [7] "30-34 years"      "35-39 years"     
+##  [9] "40-44 years"      "45-49 years"     
+## [11] "50-54 years"      "55-59 years"     
+## [13] "60-64 years"      "65-69 years"     
+## [15] "70-74 years"      "75-79 years"     
+## [17] "All ages"         "Age-standardized"
+## [19] "80-84 years"      "85-89 years"     
+## [21] "90-94 years"      "95+ years"</code></pre>
+<div class="sourceCode" id="cb220"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/unique.html">unique</a></span><span class="op">(</span><span class="va">df</span><span class="op">$</span><span class="va">cause</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## [1] "HIV/AIDS and sexually transmitted infections" 
+## [2] "HIV/AIDS"                                     
+## [3] "Sexually transmitted infections excluding HIV"
+## [4] "Syphilis"                                     
+## [5] "Chlamydial infection"                         
+## [6] "Gonococcal infection"                         
+## [7] "Other sexually transmitted infections"        
+## [8] "Trichomoniasis"                               
+## [9] "Genital herpes"</code></pre>
+<div class="sourceCode" id="cb222"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/unique.html">unique</a></span><span class="op">(</span><span class="va">df</span><span class="op">$</span><span class="va">metric</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## [1] "Number"  "Percent" "Rate"</code></pre>
+<ul>
+<li>选择数据</li>
+</ul>
+<div class="sourceCode" id="cb224"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">temp</span> <span class="op">&lt;-</span> <span class="va">df</span> <span class="op">|&gt;</span></span>
+<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">measure</span><span class="op">==</span><span class="st">"Incidence"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">sex</span><span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Male"</span>,<span class="st">"Female"</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">age</span><span class="op">==</span><span class="st">"All ages"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">cause</span><span class="op">==</span><span class="st">"HIV/AIDS"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">metric</span><span class="op">==</span><span class="st">"Number"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">temp</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## spc_tbl_ [60 × 10] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+##  $ measure : chr [1:60] "Incidence" "Incidence" "Incidence" "Incidence" ...
+##  $ location: chr [1:60] "Global" "Global" "Global" "Global" ...
+##  $ sex     : chr [1:60] "Male" "Female" "Male" "Female" ...
+##  $ age     : chr [1:60] "All ages" "All ages" "All ages" "All ages" ...
+##  $ cause   : chr [1:60] "HIV/AIDS" "HIV/AIDS" "HIV/AIDS" "HIV/AIDS" ...
+##  $ metric  : chr [1:60] "Number" "Number" "Number" "Number" ...
+##  $ year    : num [1:60] 1991 1991 1990 1990 1994 ...
+##  $ val     : num [1:60] 1054341 1313369 919820 1137890 1334822 ...
+##  $ upper   : num [1:60] 1226338 1579485 1063665 1371008 1582749 ...
+##  $ lower   : num [1:60] 888662 1060693 780544 916513 1121995 ...
+##  - attr(*, "spec")=
+##   .. cols(
+##   ..   measure = col_character(),
+##   ..   location = col_character(),
+##   ..   sex = col_character(),
+##   ..   age = col_character(),
+##   ..   cause = col_character(),
+##   ..   metric = col_character(),
+##   ..   year = col_double(),
+##   ..   val = col_double(),
+##   ..   upper = col_double(),
+##   ..   lower = col_double()
+##   .. )
+##  - attr(*, "problems")=&lt;externalptr&gt;</code></pre>
+</div>
+<div id="画图" class="section level3" number="3.3.2">
+<h3>
+<span class="header-section-number">3.3.2</span> 画图<a class="anchor" aria-label="anchor" href="#%E7%94%BB%E5%9B%BE"><i class="fas fa-link"></i></a>
+</h3>
+<p>思考：我们想直观地对比男性、女性 HIV 发病人数发展变化趋势，需要将两条线放在同一个图案中，该怎么做？</p>
+<p>方法：使用不同的颜色进行区分。用 ggplot2 美学属性映射的思维，就是将性别这个变量映射到颜色中去。</p>
+<div class="sourceCode" id="cb226"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">fig1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">temp</span>,<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">year</span>,y<span class="op">=</span><span class="va">val</span>,color<span class="op">=</span><span class="va">sex</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="va">fig1</span></span></code></pre></div>
+<div class="inline-figure"><img src="03_ggplot2_files/figure-html/unnamed-chunk-7-1.png" width="576"></div>
+</div>
+<div id="如何查看-ggplot2-内部函数参数的种类及作用" class="section level3" number="3.3.3">
+<h3>
+<span class="header-section-number">3.3.3</span> 如何查看 ggplot2 内部函数参数的种类及作用？<a class="anchor" aria-label="anchor" href="#%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B-ggplot2-%E5%86%85%E9%83%A8%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E7%9A%84%E7%A7%8D%E7%B1%BB%E5%8F%8A%E4%BD%9C%E7%94%A8"><i class="fas fa-link"></i></a>
+</h3>
+<div class="sourceCode" id="cb227"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="op">?</span><span class="va">ggplot</span></span>
+<span><span class="op">?</span><span class="va">aes</span></span>
+<span><span class="op">?</span><span class="va">geom_line</span></span></code></pre></div>
+</div>
+<div id="图片的保存" class="section level3" number="3.3.4">
+<h3>
+<span class="header-section-number">3.3.4</span> 图片的保存<a class="anchor" aria-label="anchor" href="#%E5%9B%BE%E7%89%87%E7%9A%84%E4%BF%9D%E5%AD%98"><i class="fas fa-link"></i></a>
+</h3>
+<p>两种保存图片的方式：</p>
+<p>1、使用 export 导出 (不推荐)；【直接再窗口保存，不推荐】</p>
+<p>2、使用 ggsave() 函数导出：</p>
+<div class="sourceCode" id="cb228"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsave.html">ggsave</a></span><span class="op">(</span><span class="st">" 我的第一个图.jpeg"</span>,width <span class="op">=</span> <span class="fl">8</span>,height <span class="op">=</span> <span class="fl">6</span>,dpi <span class="op">=</span> <span class="fl">300</span><span class="op">)</span></span></code></pre></div>
+</div>
+<div id="作业一" class="section level3" number="3.3.5">
+<h3>
+<span class="header-section-number">3.3.5</span> 作业一<a class="anchor" aria-label="anchor" href="#%E4%BD%9C%E4%B8%9A%E4%B8%80"><i class="fas fa-link"></i></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li>给 fig1 增加一个点图层，点为各个年份的发病人数，将每个点的大小设定为 1.2(size=1.2)，并将生成的图片对象赋值给 fig2。</li>
+</ol>
+<div class="sourceCode" id="cb229"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">fig2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">temp</span>,<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">year</span>,y<span class="op">=</span><span class="va">val</span>,color<span class="op">=</span><span class="va">sex</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span><span class="op">)</span><span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span>size<span class="op">=</span> <span class="fl">1.2</span><span class="op">)</span></span>
+<span><span class="va">fig2</span></span></code></pre></div>
+<div class="inline-figure"><img src="03_ggplot2_files/figure-html/unnamed-chunk-10-1.png" width="576"></div>
+<ol start="2" style="list-style-type: decimal">
+<li>给 fig2 增加一个图层, 展示发病人数的 95%UI, 提示：geom_ribbon(aes(ymin=?,ymax=?)), 将 95%UI 的填充颜色按照性别区分（提示：将性别这个变量映射到填充颜色中去，设置 fill=?）；并将填充颜色的透明度设置为 0.1（alpha=?）。最终将生成的图片对象赋值给 fig3.</li>
+</ol>
+<div class="sourceCode" id="cb230"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># fig3 &lt;- ggplot(data = temp,aes(x=year,y=val,color=sex))+</span></span>
+<span><span class="co">#     geom_line()+</span></span>
+<span><span class="co">#     geom_point(size= 1.2)+</span></span>
+<span><span class="co">#     geom_ribbon(aes(ymin=lower,ymax=upper,fill=sex),alpha=0.1)</span></span>
+<span><span class="co"># fig3</span></span>
+<span></span>
+<span><span class="co"># 或者</span></span>
+<span><span class="va">fig3</span> <span class="op">&lt;-</span> <span class="va">fig2</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_ribbon.html">geom_ribbon</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>ymin <span class="op">=</span> <span class="va">lower</span>, ymax <span class="op">=</span> <span class="va">upper</span>, fill <span class="op">=</span> <span class="va">sex</span><span class="op">)</span>, </span>
+<span>                           alpha <span class="op">=</span> <span class="fl">0.1</span><span class="op">)</span></span>
+<span><span class="va">fig3</span></span></code></pre></div>
+<div class="inline-figure"><img src="03_ggplot2_files/figure-html/unnamed-chunk-11-1.png" width="576"></div>
+<ol start="3" style="list-style-type: decimal">
+<li>去除 fig3 图片中 95%UI 的颜色边框（提示：设置 color=NA），并大胆猜测 fill 和 color 参数的作用范围。然后赋值给 fig4。</li>
+</ol>
+<div class="sourceCode" id="cb231"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">fig4</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">temp</span>,<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">year</span>,y<span class="op">=</span><span class="va">val</span>,color<span class="op">=</span><span class="va">sex</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span><span class="op">)</span><span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span>size<span class="op">=</span> <span class="fl">1.2</span><span class="op">)</span><span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_ribbon.html">geom_ribbon</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>ymin<span class="op">=</span><span class="va">lower</span>,ymax<span class="op">=</span><span class="va">upper</span>,fill<span class="op">=</span><span class="va">sex</span><span class="op">)</span>,alpha<span class="op">=</span><span class="fl">0.1</span>,color<span class="op">=</span><span class="cn">NA</span><span class="op">)</span></span>
+<span><span class="va">fig4</span></span></code></pre></div>
+<div class="inline-figure"><img src="03_ggplot2_files/figure-html/unnamed-chunk-12-1.png" width="576"></div>
+<ol start="4" style="list-style-type: decimal">
+<li>使用线图展示全球因艾滋病死亡人数的发展变化趋势，并用 ggsave 函数保存到工作路径中。</li>
+</ol>
+<div class="sourceCode" id="cb232"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">fig5</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">df</span>,<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">year</span>,y<span class="op">=</span><span class="va">val</span>,color<span class="op">=</span><span class="va">sex</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span><span class="op">)</span></span>
+<span>    </span>
+<span><span class="va">fig5</span></span></code></pre></div>
+<div class="inline-figure"><img src="03_ggplot2_files/figure-html/unnamed-chunk-13-1.png" width="576"></div>
+<div class="sourceCode" id="cb233"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># ggsave(filename = "AIDs线图.jpeg",width = 8,height = 6,dpi = 300)</span></span></code></pre></div>
+</div>
+</div>
+<div id="图片的标题与注脚" class="section level2" number="3.4">
+<h2>
+<span class="header-section-number">3.4</span> 图片的标题与注脚<a class="anchor" aria-label="anchor" href="#%E5%9B%BE%E7%89%87%E7%9A%84%E6%A0%87%E9%A2%98%E4%B8%8E%E6%B3%A8%E8%84%9A"><i class="fas fa-link"></i></a>
+</h2>
+<div id="增加标题副标题注脚标签" class="section level3" number="3.4.1">
+<h3>
+<span class="header-section-number">3.4.1</span> 增加标题、副标题、注脚、标签<a class="anchor" aria-label="anchor" href="#%E5%A2%9E%E5%8A%A0%E6%A0%87%E9%A2%98%E5%89%AF%E6%A0%87%E9%A2%98%E6%B3%A8%E8%84%9A%E6%A0%87%E7%AD%BE"><i class="fas fa-link"></i></a>
+</h3>
+<p>前面我们生成了 fig4：</p>
+<p>现在要在图片上方增加一个图片标题 (title)： Temporal trend of global incidence number of HIV; 副标题 subtitle: from 1990 to 2019; 在图片下方增加</p>
+<p>注脚 (caption)： base on data from GBD 2019；最后打上一个”A” 的标签。</p>
+<div class="sourceCode" id="cb234"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">fig5</span> <span class="op">&lt;-</span> <span class="va">fig4</span> <span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Temporal trend of global incidence number of HIV"</span>,</span>
+<span>         subtitle <span class="op">=</span> <span class="st">"from 1990 to 2019"</span>,</span>
+<span>         caption <span class="op">=</span> <span class="st">"base on data from GBD 2019"</span>,</span>
+<span>         tag<span class="op">=</span><span class="st">"A"</span><span class="op">)</span></span>
+<span><span class="va">fig5</span></span></code></pre></div>
+<div class="inline-figure"><img src="03_ggplot2_files/figure-html/unnamed-chunk-14-1.png" width="576"></div>
+</div>
+<div id="修改图片标题的字体大小位置" class="section level3" number="3.4.2">
+<h3>
+<span class="header-section-number">3.4.2</span> 修改图片标题的字体大小、位置<a class="anchor" aria-label="anchor" href="#%E4%BF%AE%E6%94%B9%E5%9B%BE%E7%89%87%E6%A0%87%E9%A2%98%E7%9A%84%E5%AD%97%E4%BD%93%E5%A4%A7%E5%B0%8F%E4%BD%8D%E7%BD%AE"><i class="fas fa-link"></i></a>
+</h3>
+<div class="sourceCode" id="cb235"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">fig5</span> <span class="op">&lt;-</span> <span class="va">fig4</span> <span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Temporal trend of global incidence number of HIV"</span>,</span>
+<span>         subtitle <span class="op">=</span> <span class="st">"from 1990 to 2019"</span>,</span>
+<span>         caption <span class="op">=</span> <span class="st">"base on data from GBD 2019"</span>,</span>
+<span>         tag<span class="op">=</span><span class="st">"A"</span><span class="op">)</span><span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>plot.title <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">10</span>,</span>
+<span>                                    hjust <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span><span class="op">)</span> <span class="co"># h表示横向，just表示矫正；vjust表示垂直矫正。 0--&gt;1   左--&gt;右</span></span>
+<span><span class="va">fig5</span></span></code></pre></div>
+<div class="inline-figure"><img src="03_ggplot2_files/figure-html/unnamed-chunk-15-1.png" width="576"></div>
+</div>
+<div id="作业二" class="section level3" number="3.4.3">
+<h3>
+<span class="header-section-number">3.4.3</span> 作业二<a class="anchor" aria-label="anchor" href="#%E4%BD%9C%E4%B8%9A%E4%BA%8C"><i class="fas fa-link"></i></a>
+</h3>
+<p>将 fig5 的图片标题，副标题字体大小均设定为 12，居中显示。</p>
+<div class="sourceCode" id="cb236"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">fig5</span> <span class="op">&lt;-</span> <span class="va">fig4</span> <span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Temporal trend of global incidence number of HIV"</span>,</span>
+<span>         subtitle <span class="op">=</span> <span class="st">"from 1990 to 2019"</span>,</span>
+<span>         caption <span class="op">=</span> <span class="st">"base on data from GBD 2019"</span>,</span>
+<span>         tag<span class="op">=</span><span class="st">"A"</span><span class="op">)</span><span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>plot.title <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">10</span>,</span>
+<span>                                    hjust <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span><span class="co"># h表示横向，just表示矫正；vjust表示垂直矫正。 0--&gt;1   左--&gt;右</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>plot.subtitle <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">12</span>,</span>
+<span>                                       hjust <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">fig5</span></span></code></pre></div>
+<div class="inline-figure"><img src="03_ggplot2_files/figure-html/unnamed-chunk-16-1.png" width="576"></div>
+</div>
+</div>
+<div id="坐标轴设定" class="section level2" number="3.5">
+<h2>
+<span class="header-section-number">3.5</span> 坐标轴设定<a class="anchor" aria-label="anchor" href="#%E5%9D%90%E6%A0%87%E8%BD%B4%E8%AE%BE%E5%AE%9A"><i class="fas fa-link"></i></a>
+</h2>
+<div id="坐标轴标题修改" class="section level3" number="3.5.1">
+<h3>
+<span class="header-section-number">3.5.1</span> 坐标轴标题修改<a class="anchor" aria-label="anchor" href="#%E5%9D%90%E6%A0%87%E8%BD%B4%E6%A0%87%E9%A2%98%E4%BF%AE%E6%94%B9"><i class="fas fa-link"></i></a>
+</h3>
+<p>修改 fig5 坐标轴的标题, 将 Y 轴的设为 Incidence number，将 X 轴的标题去掉.</p>
+<div class="sourceCode" id="cb237"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># 方法一：</span></span>
+<span><span class="va">fig5</span><span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span><span class="op">(</span>label <span class="op">=</span> <span class="st">""</span><span class="op">)</span><span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span><span class="op">(</span>label<span class="op">=</span><span class="st">"Incidence number"</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="03_ggplot2_files/figure-html/unnamed-chunk-17-1.png" width="576"></div>
+<div class="sourceCode" id="cb238"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># 方法二：</span></span>
+<span><span class="va">fig5</span><span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x<span class="op">=</span><span class="st">""</span>,y<span class="op">=</span><span class="st">"Incidence number"</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="03_ggplot2_files/figure-html/unnamed-chunk-18-1.png" width="576"></div>
+<ul>
+<li>坐标轴标题 (title) 字体大小设定</li>
+</ul>
+<p>字体大小一般都在 theme 里面设定：</p>
+<div class="sourceCode" id="cb239"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">fig5</span><span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span><span class="op">(</span>label <span class="op">=</span> <span class="st">""</span><span class="op">)</span><span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span><span class="op">(</span>label<span class="op">=</span><span class="st">"Incidence number"</span><span class="op">)</span><span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>axis.title <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">6</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="03_ggplot2_files/figure-html/unnamed-chunk-19-1.png" width="576"></div>
+</div>
+<div id="坐标轴尺度分段标签设定" class="section level3" number="3.5.2">
+<h3>
+<span class="header-section-number">3.5.2</span> 坐标轴尺度、分段、标签设定<a class="anchor" aria-label="anchor" href="#%E5%9D%90%E6%A0%87%E8%BD%B4%E5%B0%BA%E5%BA%A6%E5%88%86%E6%AE%B5%E6%A0%87%E7%AD%BE%E8%AE%BE%E5%AE%9A"><i class="fas fa-link"></i></a>
+</h3>
+<p>将 fig5 的 x 轴限度设置在 1990 年到 2019 年之间，间隔 5 年分段, 并改变每段标签为”year:1990”。</p>
+<div class="sourceCode" id="cb240"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">fig5</span><span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x<span class="op">=</span><span class="st">""</span>, y<span class="op">=</span><span class="st">"Incidence number"</span><span class="op">)</span><span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_x_continuous</a></span><span class="op">(</span>limits<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1990</span>,<span class="fl">2020</span><span class="op">)</span>,</span>
+<span>                       breaks <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">1990</span>,<span class="fl">2020</span>,by<span class="op">=</span><span class="fl">5</span><span class="op">)</span>,</span>
+<span>                       labels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="st">"year:"</span>,</span>
+<span>                                      <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">1990</span>,<span class="fl">2020</span>,by<span class="op">=</span><span class="fl">5</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="03_ggplot2_files/figure-html/unnamed-chunk-20-1.png" width="576"></div>
+</div>
+<div id="坐标轴文字text大小旋转设定" class="section level3" number="3.5.3">
+<h3>
+<span class="header-section-number">3.5.3</span> 坐标轴文字（text）大小、旋转设定<a class="anchor" aria-label="anchor" href="#%E5%9D%90%E6%A0%87%E8%BD%B4%E6%96%87%E5%AD%97text%E5%A4%A7%E5%B0%8F%E6%97%8B%E8%BD%AC%E8%AE%BE%E5%AE%9A"><i class="fas fa-link"></i></a>
+</h3>
+<p>将上图 x 轴文字大小设定为 8，旋转为 45° 排列，同样在 theme 里面设定。</p>
+<div class="sourceCode" id="cb241"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">fig5</span><span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x<span class="op">=</span><span class="st">""</span>, y<span class="op">=</span><span class="st">"Incidence number"</span><span class="op">)</span><span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_x_continuous</a></span><span class="op">(</span>limits<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1990</span>,<span class="fl">2020</span><span class="op">)</span>,</span>
+<span>                       breaks <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">1990</span>,<span class="fl">2020</span>,by<span class="op">=</span><span class="fl">5</span><span class="op">)</span>,</span>
+<span>                       labels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="st">"year:"</span>,</span>
+<span>                                      <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">1990</span>,<span class="fl">2020</span>,by<span class="op">=</span><span class="fl">5</span><span class="op">)</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>axis.text.x <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size<span class="op">=</span><span class="fl">8</span>,</span>
+<span>                                     angle <span class="op">=</span> <span class="fl">45</span>,</span>
+<span>                                     hjust<span class="op">=</span><span class="fl">1</span>,</span>
+<span>                                     vjust <span class="op">=</span> <span class="fl">1</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="03_ggplot2_files/figure-html/unnamed-chunk-21-1.png" width="576"></div>
+</div>
+<div id="作业三" class="section level3" number="3.5.4">
+<h3>
+<span class="header-section-number">3.5.4</span> 作业三<a class="anchor" aria-label="anchor" href="#%E4%BD%9C%E4%B8%9A%E4%B8%89"><i class="fas fa-link"></i></a>
+</h3>
+<p>设定 fig5 的 y 轴，将它的限度设置在 0 到 2.5 million 之间，间隔为 0.5 million，尺度缩小 1 百万倍，同时 y 轴的标题变为 Incidence number(million)</p>
+<div class="sourceCode" id="cb242"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">fig5</span> <span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x<span class="op">=</span><span class="st">""</span>, y<span class="op">=</span><span class="st">"Incidence number"</span><span class="op">)</span><span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>axis.text.x <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size<span class="op">=</span><span class="fl">8</span>,</span>
+<span>                                     angle <span class="op">=</span> <span class="fl">45</span>,</span>
+<span>                                     hjust<span class="op">=</span><span class="fl">1</span>,</span>
+<span>                                     vjust <span class="op">=</span> <span class="fl">1</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_x_continuous</a></span><span class="op">(</span>limits<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1990</span>,<span class="fl">2020</span><span class="op">)</span>,</span>
+<span>                       breaks <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">1990</span>,<span class="fl">2020</span>,by<span class="op">=</span><span class="fl">5</span><span class="op">)</span>,</span>
+<span>                       labels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="st">"year:"</span>,</span>
+<span>                                      <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">1990</span>,<span class="fl">2020</span>,by<span class="op">=</span><span class="fl">5</span><span class="op">)</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_y_continuous</a></span><span class="op">(</span>limits<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">2500000</span><span class="op">)</span>,</span>
+<span>                       breaks <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">2500000</span>,by<span class="op">=</span><span class="fl">500000</span><span class="op">)</span>,</span>
+<span>                       labels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">2.5</span>, by <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span>, <span class="st">"millon"</span><span class="op">)</span><span class="op">)</span> </span></code></pre></div>
+<div class="inline-figure"><img src="03_ggplot2_files/figure-html/unnamed-chunk-22-1.png" width="576"></div>
+</div>
+</div>
+<div id="颜色尺度的调整" class="section level2" number="3.6">
+<h2>
+<span class="header-section-number">3.6</span> 颜色尺度的调整<a class="anchor" aria-label="anchor" href="#%E9%A2%9C%E8%89%B2%E5%B0%BA%E5%BA%A6%E7%9A%84%E8%B0%83%E6%95%B4"><i class="fas fa-link"></i></a>
+</h2>
+<div id="手工调整颜色" class="section level3" number="3.6.1">
+<h3>
+<span class="header-section-number">3.6.1</span> 手工调整颜色<a class="anchor" aria-label="anchor" href="#%E6%89%8B%E5%B7%A5%E8%B0%83%E6%95%B4%E9%A2%9C%E8%89%B2"><i class="fas fa-link"></i></a>
+</h3>
+<p>手动调整颜色，将男性颜色设置为蓝色，女性颜色设置为红色</p>
+<p>常用颜色代码：＃号后面 6 位数。<a href="https://www.cnblogs.com/biostat-yu/p/13839621.html" class="uri">https://www.cnblogs.com/biostat-yu/p/13839621.html</a></p>
+<div class="sourceCode" id="cb243"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">fig5</span><span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_fill_manual</a></span><span class="op">(</span>values<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"red"</span>,<span class="st">"blue"</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_color_manual</a></span><span class="op">(</span>values<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"red"</span>,<span class="st">"blue"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="03_ggplot2_files/figure-html/unnamed-chunk-23-1.png" width="576"></div>
+</div>
+<div id="使用-ggsci-代替-scale_fillcolor_manual" class="section level3" number="3.6.2">
+<h3>
+<span class="header-section-number">3.6.2</span> 使用 ggsci() 代替 scale_fill/color_manual<a class="anchor" aria-label="anchor" href="#%E4%BD%BF%E7%94%A8-ggsci-%E4%BB%A3%E6%9B%BF-scale_fillcolor_manual"><i class="fas fa-link"></i></a>
+</h3>
+<div class="sourceCode" id="cb244"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># install.packages("ggsci")</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://nanx.me/ggsci/">ggsci</a></span><span class="op">)</span></span>
+<span><span class="va">fig5</span><span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://nanx.me/ggsci/reference/scale_nejm.html">scale_fill_nejm</a></span><span class="op">(</span><span class="op">)</span><span class="op">+</span> <span class="co"># 使用新英格兰配色</span></span>
+<span>    <span class="fu"><a href="https://nanx.me/ggsci/reference/scale_nejm.html">scale_color_nejm</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="03_ggplot2_files/figure-html/unnamed-chunk-24-1.png" width="576"></div>
+<div class="sourceCode" id="cb245"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">fig5</span><span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://nanx.me/ggsci/reference/scale_lancet.html">scale_fill_lancet</a></span><span class="op">(</span><span class="op">)</span><span class="op">+</span> <span class="co"># 使用柳叶刀配色</span></span>
+<span>    <span class="fu"><a href="https://nanx.me/ggsci/reference/scale_lancet.html">scale_color_lancet</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="03_ggplot2_files/figure-html/unnamed-chunk-25-1.png" width="576"></div>
+</div>
+</div>
+<div id="修改主题的其他元素-theme" class="section level2" number="3.7">
+<h2>
+<span class="header-section-number">3.7</span> 修改主题的其他元素： theme()<a class="anchor" aria-label="anchor" href="#%E4%BF%AE%E6%94%B9%E4%B8%BB%E9%A2%98%E7%9A%84%E5%85%B6%E4%BB%96%E5%85%83%E7%B4%A0-theme"><i class="fas fa-link"></i></a>
+</h2>
+<p>前面已经提到，图片的 title, 轴的 title、 text，字体大小等都在 theme 里面设定，这里还可以修改其他元素：</p>
+<ul>
+<li>常用主题</li>
+</ul>
+<div class="sourceCode" id="cb246"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># theme_bw()</span></span>
+<span><span class="va">fig7</span> <span class="op">&lt;-</span> <span class="va">fig5</span><span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x<span class="op">=</span><span class="st">""</span>, y<span class="op">=</span><span class="st">"Incidence number"</span><span class="op">)</span><span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_x_continuous</a></span><span class="op">(</span>limits<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1990</span>,<span class="fl">2020</span><span class="op">)</span>,</span>
+<span>                       breaks <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">1990</span>,<span class="fl">2020</span>,by<span class="op">=</span><span class="fl">5</span><span class="op">)</span>,</span>
+<span>                       labels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">1990</span>,<span class="fl">2020</span>,by<span class="op">=</span><span class="fl">5</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://nanx.me/ggsci/reference/scale_nejm.html">scale_fill_nejm</a></span><span class="op">(</span><span class="op">)</span><span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://nanx.me/ggsci/reference/scale_nejm.html">scale_color_nejm</a></span><span class="op">(</span><span class="op">)</span><span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="va">fig7</span></span></code></pre></div>
+<div class="inline-figure"><img src="03_ggplot2_files/figure-html/unnamed-chunk-26-1.png" width="576"></div>
+<div class="sourceCode" id="cb247"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># theme_classic()</span></span>
+<span><span class="va">fig7</span><span class="op">+</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_classic</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="03_ggplot2_files/figure-html/unnamed-chunk-27-1.png" width="576"></div>
+<div class="sourceCode" id="cb248"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># theme_gray()</span></span>
+<span><span class="va">fig7</span><span class="op">+</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_gray</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="03_ggplot2_files/figure-html/unnamed-chunk-28-1.png" width="576"></div>
+<div id="图例-legend-的修改" class="section level3" number="3.7.1">
+<h3>
+<span class="header-section-number">3.7.1</span> 图例 legend 的修改<a class="anchor" aria-label="anchor" href="#%E5%9B%BE%E4%BE%8B-legend-%E7%9A%84%E4%BF%AE%E6%94%B9"><i class="fas fa-link"></i></a>
+</h3>
+<div id="legend-可以放在图片的上下左右" class="section level4" number="3.7.1.1">
+<h4>
+<span class="header-section-number">3.7.1.1</span> legend 可以放在图片的上下左右：<a class="anchor" aria-label="anchor" href="#legend-%E5%8F%AF%E4%BB%A5%E6%94%BE%E5%9C%A8%E5%9B%BE%E7%89%87%E7%9A%84%E4%B8%8A%E4%B8%8B%E5%B7%A6%E5%8F%B3"><i class="fas fa-link"></i></a>
+</h4>
+<div class="sourceCode" id="cb249"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># 没有 legend</span></span>
+<span><span class="va">fig7</span><span class="op">+</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>legend.position <span class="op">=</span> <span class="st">"none"</span><span class="op">)</span><span class="co"># 没有 legend</span></span></code></pre></div>
+<div class="inline-figure"><img src="03_ggplot2_files/figure-html/unnamed-chunk-29-1.png" width="576"></div>
+<div class="sourceCode" id="cb250"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># legend 在上方</span></span>
+<span><span class="va">fig7</span><span class="op">+</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>legend.position <span class="op">=</span> <span class="st">"top"</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="03_ggplot2_files/figure-html/unnamed-chunk-30-1.png" width="576"></div>
+<p><strong>legend 还可以在左边, 下方，右边，相应的参数取值为 legend.position =“left”,“bottom”,“right”。</strong></p>
+</div>
+<div id="legend-也可以放在图片的内部" class="section level4" number="3.7.1.2">
+<h4>
+<span class="header-section-number">3.7.1.2</span> legend 也可以放在图片的内部：<a class="anchor" aria-label="anchor" href="#legend-%E4%B9%9F%E5%8F%AF%E4%BB%A5%E6%94%BE%E5%9C%A8%E5%9B%BE%E7%89%87%E7%9A%84%E5%86%85%E9%83%A8"><i class="fas fa-link"></i></a>
+</h4>
+<div class="sourceCode" id="cb251"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># 比如在左下角：</span></span>
+<span><span class="va">fig5</span><span class="op">+</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>legend.position <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">1</span><span class="op">)</span>,</span>
+<span>           legend.justification<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">1</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="03_ggplot2_files/figure-html/unnamed-chunk-31-1.png" width="576"></div>
+<div class="sourceCode" id="cb252"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># 比如在右上角：</span></span>
+<span><span class="va">fig5</span><span class="op">+</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>legend.position <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">1</span><span class="op">)</span>,</span>
+<span>           legend.justification<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">1</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="03_ggplot2_files/figure-html/unnamed-chunk-32-1.png" width="576"></div>
+<p>参数设定规则： legend.position = c(0,1) 中 c(0,1) 逗号前面的值设定 legend在 x 轴的相对位置；逗号后面的值设定 legend 在 y 轴的相对位置，另外，legend.justification 设定与 legend.position 一致即可。比如设定 legend 在图片<strong>内左下角，左上角，右上角，右下角分别为 c(0,0),c(0,1),c(1,0),c(1,1)。</strong></p>
+</div>
+</div>
+<div id="作业四" class="section level3" number="3.7.2">
+<h3>
+<span class="header-section-number">3.7.2</span> 作业四<a class="anchor" aria-label="anchor" href="#%E4%BD%9C%E4%B8%9A%E5%9B%9B"><i class="fas fa-link"></i></a>
+</h3>
+<p>将 fig5 的背景主题设置为 theme_bw()，并将 legend 设置在图片内正中间。</p>
+<div class="sourceCode" id="cb253"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">fig5</span><span class="op">+</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span><span class="op">(</span><span class="op">)</span><span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>legend.position <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.5</span>,<span class="fl">0.5</span><span class="op">)</span>,</span>
+<span>           legend.justification<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.5</span>,<span class="fl">0.5</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="03_ggplot2_files/figure-html/unnamed-chunk-33-1.png" width="576"></div>
+</div>
+</div>
+<div id="总结" class="section level2" number="3.8">
+<h2>
+<span class="header-section-number">3.8</span> 总结<a class="anchor" aria-label="anchor" href="#%E6%80%BB%E7%BB%93"><i class="fas fa-link"></i></a>
+</h2>
+<ol style="list-style-type: decimal">
+<li><p>画图之前查看数据；</p></li>
+<li><p>想好用什么几何图形展示数据：点？线？柱？条？</p></li>
+<li><p>设定 aes(), 指定 x、 y、 color、 fill 等参数的映射；</p></li>
+<li><p>映射可通过画板全局设定，也可以在单个图层设定；</p></li>
+<li><p>图层以 + 号连接；</p></li>
+<li><p>坐标轴、颜色等尺度可以通过 scale_ 图层指定；</p></li>
+<li><p>字体大小、位置、旋转等可以通过 theme 图层设定。</p></li>
+</ol>
+</div>
+<div id="课后作业" class="section level2" number="3.9">
+<h2>
+<span class="header-section-number">3.9</span> 课后作业<a class="anchor" aria-label="anchor" href="#%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A"><i class="fas fa-link"></i></a>
+</h2>
+<p>使用线图展示全球 HIV 的 DALY number 数据，要求：</p>
+<ol style="list-style-type: decimal">
+<li><p>有图片 title,caption,tag，</p></li>
+<li><p>x 轴的尺度在 1990-2020 之间，间隔为 5 年， 45° 旋转</p></li>
+<li><p>不同颜色表示男性、女性；</p></li>
+<li><p>展示 95%UI，有透明度、边框颜色参数的设定；</p></li>
+<li><p>设定 legend 位置为图片内，右下角；</p></li>
+<li><p>使用 ggsave 导出 jpeg 格式， dpi=300。</p></li>
+</ol>
+<div class="sourceCode" id="cb254"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/Global_HIV.csv"</span><span class="op">)</span></span></code></pre></div>
+
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="%E7%BB%9F%E8%AE%A1%E5%9F%BA%E7%A1%80.html"><span class="header-section-number">2</span> 统计基础</a></div>
+<div class="empty"></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#ggplot%E5%9B%BE%E5%B1%82%E8%AF%AD%E6%B3%95%E4%B8%8Egbd%E6%95%B0%E6%8D%AE%E5%B1%95%E7%A4%BA%E4%B8%80"><span class="header-section-number">3</span> ggplot图层语法与GBD数据展示一</a></li>
+<li><a class="nav-link" href="#%E5%9B%BE%E5%B1%82%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="header-section-number">3.1</span> 图层的基本概念</a></li>
+<li>
+<a class="nav-link" href="#ggplot2-%E5%9F%BA%E6%9C%AC%E5%85%83%E7%B4%A0"><span class="header-section-number">3.2</span> ggplot2 基本元素</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#%E6%95%B0%E6%8D%AE"><span class="header-section-number">3.2.1</span> 数据</a></li>
+<li><a class="nav-link" href="#%E5%87%A0%E4%BD%95%E5%9B%BE%E5%BD%A2"><span class="header-section-number">3.2.2</span> 几何图形</a></li>
+<li><a class="nav-link" href="#%E7%BE%8E%E5%AD%A6%E5%B1%9E%E6%80%A7%E6%98%A0%E5%B0%84"><span class="header-section-number">3.2.3</span> 美学属性映射</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%9B%BE"><span class="header-section-number">3.3</span> 我的第一个图</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#%E5%87%86%E5%A4%87%E7%94%BB%E5%9B%BE%E6%95%B0%E6%8D%AE"><span class="header-section-number">3.3.1</span> 准备画图数据</a></li>
+<li><a class="nav-link" href="#%E7%94%BB%E5%9B%BE"><span class="header-section-number">3.3.2</span> 画图</a></li>
+<li><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B-ggplot2-%E5%86%85%E9%83%A8%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E7%9A%84%E7%A7%8D%E7%B1%BB%E5%8F%8A%E4%BD%9C%E7%94%A8"><span class="header-section-number">3.3.3</span> 如何查看 ggplot2 内部函数参数的种类及作用？</a></li>
+<li><a class="nav-link" href="#%E5%9B%BE%E7%89%87%E7%9A%84%E4%BF%9D%E5%AD%98"><span class="header-section-number">3.3.4</span> 图片的保存</a></li>
+<li><a class="nav-link" href="#%E4%BD%9C%E4%B8%9A%E4%B8%80"><span class="header-section-number">3.3.5</span> 作业一</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#%E5%9B%BE%E7%89%87%E7%9A%84%E6%A0%87%E9%A2%98%E4%B8%8E%E6%B3%A8%E8%84%9A"><span class="header-section-number">3.4</span> 图片的标题与注脚</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#%E5%A2%9E%E5%8A%A0%E6%A0%87%E9%A2%98%E5%89%AF%E6%A0%87%E9%A2%98%E6%B3%A8%E8%84%9A%E6%A0%87%E7%AD%BE"><span class="header-section-number">3.4.1</span> 增加标题、副标题、注脚、标签</a></li>
+<li><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E5%9B%BE%E7%89%87%E6%A0%87%E9%A2%98%E7%9A%84%E5%AD%97%E4%BD%93%E5%A4%A7%E5%B0%8F%E4%BD%8D%E7%BD%AE"><span class="header-section-number">3.4.2</span> 修改图片标题的字体大小、位置</a></li>
+<li><a class="nav-link" href="#%E4%BD%9C%E4%B8%9A%E4%BA%8C"><span class="header-section-number">3.4.3</span> 作业二</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#%E5%9D%90%E6%A0%87%E8%BD%B4%E8%AE%BE%E5%AE%9A"><span class="header-section-number">3.5</span> 坐标轴设定</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#%E5%9D%90%E6%A0%87%E8%BD%B4%E6%A0%87%E9%A2%98%E4%BF%AE%E6%94%B9"><span class="header-section-number">3.5.1</span> 坐标轴标题修改</a></li>
+<li><a class="nav-link" href="#%E5%9D%90%E6%A0%87%E8%BD%B4%E5%B0%BA%E5%BA%A6%E5%88%86%E6%AE%B5%E6%A0%87%E7%AD%BE%E8%AE%BE%E5%AE%9A"><span class="header-section-number">3.5.2</span> 坐标轴尺度、分段、标签设定</a></li>
+<li><a class="nav-link" href="#%E5%9D%90%E6%A0%87%E8%BD%B4%E6%96%87%E5%AD%97text%E5%A4%A7%E5%B0%8F%E6%97%8B%E8%BD%AC%E8%AE%BE%E5%AE%9A"><span class="header-section-number">3.5.3</span> 坐标轴文字（text）大小、旋转设定</a></li>
+<li><a class="nav-link" href="#%E4%BD%9C%E4%B8%9A%E4%B8%89"><span class="header-section-number">3.5.4</span> 作业三</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#%E9%A2%9C%E8%89%B2%E5%B0%BA%E5%BA%A6%E7%9A%84%E8%B0%83%E6%95%B4"><span class="header-section-number">3.6</span> 颜色尺度的调整</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#%E6%89%8B%E5%B7%A5%E8%B0%83%E6%95%B4%E9%A2%9C%E8%89%B2"><span class="header-section-number">3.6.1</span> 手工调整颜色</a></li>
+<li><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-ggsci-%E4%BB%A3%E6%9B%BF-scale_fillcolor_manual"><span class="header-section-number">3.6.2</span> 使用 ggsci() 代替 scale_fill/color_manual</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E4%B8%BB%E9%A2%98%E7%9A%84%E5%85%B6%E4%BB%96%E5%85%83%E7%B4%A0-theme"><span class="header-section-number">3.7</span> 修改主题的其他元素： theme()</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#%E5%9B%BE%E4%BE%8B-legend-%E7%9A%84%E4%BF%AE%E6%94%B9"><span class="header-section-number">3.7.1</span> 图例 legend 的修改</a></li>
+<li><a class="nav-link" href="#%E4%BD%9C%E4%B8%9A%E5%9B%9B"><span class="header-section-number">3.7.2</span> 作业四</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="header-section-number">3.8</span> 总结</a></li>
+<li><a class="nav-link" href="#%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A"><span class="header-section-number">3.9</span> 课后作业</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/yanghongXXL/GBD_yh_test/blob/master/03_ggplot2.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/yanghongXXL/GBD_yh_test/edit/master/03_ggplot2.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>GBD 笔记总结</strong>" was written by 杨 弘. It was last built on 2022-11-13.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+</body>
+</html>

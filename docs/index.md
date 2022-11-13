@@ -1,7 +1,7 @@
 --- 
 title: "GBD 笔记总结"
 author: "杨 弘"
-date: "2022-11-12"
+date: "2022-11-13"
 site: bookdown::bookdown_site
 knit: bookdown::render_book
 output: bookdown::bs4_book

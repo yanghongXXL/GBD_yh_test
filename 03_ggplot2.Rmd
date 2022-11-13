@@ -476,4 +476,40 @@ fig5+theme_bw()+
 ```{r}
 df <- read_csv("data/Global_HIV.csv")
 
+temp3 <- df |>
+  filter(measure=="DALYs (Disability-Adjusted Life Years)") |>
+  filter(sex%in%c("Male","Female")) |>
+  filter(age=="All ages") |>
+  filter(cause=="HIV/AIDS") |>
+  filter(metric=="Number")
+# 看看最大值有多大
+max(temp3$val)
+max(temp3$upper) #72,576,395
+# 绘图
+library(ggsci)
+pic <- ggplot(data = temp3,aes(x=year,y=val,color=sex))+
+  geom_line()+
+  geom_ribbon(aes(ymin=lower,ymax=upper,fill=sex),
+              alpha=0.1,
+              color=NA)+
+  scale_x_continuous(limits = c(1990,2020),
+                     breaks = seq(1990,2020,by=5),
+                     labels = seq(1990,2020,by=5))+
+  scale_y_continuous(limits = c(0,80000000),
+                     breaks = seq(0,80000000,by=20000000),
+                     labels = seq(0,80,by=20))+
+  scale_fill_nejm()+
+  scale_color_nejm()+
+  labs(title="Temporal trend of golobal DALY number",
+       subtitle = "of HIV from 1990 to 2019",
+       x="",
+       y="DALY number (million)")+
+  theme_bw()+
+  theme(legend.position = c(1,0),
+        legend.justification=c(1,0),
+        legend.background  = element_blank(),
+        axis.text.x = element_text(angle = 45,hjust = 1,vjust=1))
+
+
+pic
 ```

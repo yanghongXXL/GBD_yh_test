@@ -70,19 +70,19 @@
 <div class="sourceCode" id="cb146"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># 例如, 下面表示在 1 到 10 间进行 4 次有放回的抽样。</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">10</span>,<span class="fl">4</span>,replace<span class="op">=</span><span class="cn">T</span><span class="op">)</span></span></code></pre></div>
-<pre><code>## [1] 8 5 6 7</code></pre>
+<pre><code>## [1] 10  5  7  6</code></pre>
 <p>注意，上面 1 到 10 十个元素中，每个元素被抽取的概率都是相同的，如果需要对概率不同的事件进行模拟，还需要再增加 prob=c()参数。例如，某药物治疗某病成功的治愈的概率为0.3，稳定的概率为 0.6，恶化的概率为0.1，那对50 人进行治疗，疾病治愈、稳定、恶化的模拟如下：</p>
 <div class="sourceCode" id="cb148"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">" 治愈"</span>,<span class="st">" 稳定"</span>,<span class="st">" 恶化"</span><span class="op">)</span>,<span class="fl">50</span>,replace <span class="op">=</span> <span class="cn">T</span>,prob<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.3</span>,<span class="fl">0.6</span>,<span class="fl">0.1</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<pre><code>##  [1] " 治愈" " 恶化" " 稳定" " 稳定" " 治愈" " 稳定"
-##  [7] " 治愈" " 治愈" " 治愈" " 稳定" " 稳定" " 治愈"
-## [13] " 稳定" " 稳定" " 稳定" " 稳定" " 稳定" " 稳定"
-## [19] " 稳定" " 治愈" " 稳定" " 治愈" " 稳定" " 稳定"
-## [25] " 稳定" " 治愈" " 稳定" " 稳定" " 稳定" " 治愈"
-## [31] " 稳定" " 治愈" " 稳定" " 治愈" " 治愈" " 稳定"
-## [37] " 稳定" " 恶化" " 稳定" " 恶化" " 稳定" " 稳定"
-## [43] " 稳定" " 治愈" " 稳定" " 稳定" " 稳定" " 治愈"
-## [49] " 恶化" " 稳定"</code></pre>
+<pre><code>##  [1] " 稳定" " 治愈" " 稳定" " 恶化" " 治愈" " 稳定"
+##  [7] " 稳定" " 恶化" " 稳定" " 治愈" " 稳定" " 治愈"
+## [13] " 治愈" " 治愈" " 稳定" " 稳定" " 治愈" " 稳定"
+## [19] " 稳定" " 稳定" " 稳定" " 稳定" " 恶化" " 稳定"
+## [25] " 稳定" " 治愈" " 稳定" " 稳定" " 稳定" " 稳定"
+## [31] " 稳定" " 治愈" " 稳定" " 治愈" " 恶化" " 稳定"
+## [37] " 恶化" " 治愈" " 治愈" " 治愈" " 治愈" " 稳定"
+## [43] " 治愈" " 治愈" " 稳定" " 治愈" " 治愈" " 治愈"
+## [49] " 稳定" " 恶化"</code></pre>
 </div>
 <div id="常见概率分布" class="section level3" number="2.1.2">
 <h3>
@@ -115,13 +115,13 @@
 ##  Welch Two Sample t-test
 ## 
 ## data:  male and female
-## t = 5.9, df = 196, p-value = 2e-08
+## t = 8.6, df = 197, p-value = 2e-15
 ## alternative hypothesis: true difference in means is not equal to 0
 ## 95 percent confidence interval:
-##   6.797 13.688
+##  12.25 19.51
 ## sample estimates:
 ## mean of x mean of y 
-##     179.0     168.7</code></pre>
+##     182.2     166.3</code></pre>
 <ul>
 <li>method for class “formula”(R 语言的公式： y~x):</li>
 </ul>
@@ -138,13 +138,13 @@
 ##  Welch Two Sample t-test
 ## 
 ## data:  height by sex
-## t = -5.9, df = 196, p-value = 2e-08
+## t = -8.6, df = 197, p-value = 2e-15
 ## alternative hypothesis: true difference in means between group female and group male is not equal to 0
 ## 95 percent confidence interval:
-##  -13.688  -6.797
+##  -19.51 -12.25
 ## sample estimates:
 ## mean in group female   mean in group male 
-##                168.7                179.0</code></pre>
+##                166.3                182.2</code></pre>
 <p>但是在 t 检验之前，我们还需要判断两组数据是否满足正态性，方差齐两个条件。</p>
 <ul>
 <li>正态性检验，使用shapiro.test()函数</li>
@@ -156,21 +156,21 @@
 ##  Shapiro-Wilk normality test
 ## 
 ## data:  male
-## W = 0.98, p-value = 0.3</code></pre>
+## W = 0.98, p-value = 0.09</code></pre>
 <div class="sourceCode" id="cb157"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/shapiro.test.html">shapiro.test</a></span><span class="op">(</span><span class="va">female</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## 
 ##  Shapiro-Wilk normality test
 ## 
 ## data:  female
-## W = 0.98, p-value = 0.2</code></pre>
+## W = 0.99, p-value = 1</code></pre>
 <div class="sourceCode" id="cb159"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># H0: 方差齐； H1: 方差不齐</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://r-forge.r-project.org/projects/car/">car</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/pkg/car/man/leveneTest.html">leveneTest</a></span><span class="op">(</span><span class="va">height</span><span class="op">~</span><span class="va">sex</span>,data<span class="op">=</span><span class="va">df</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## Levene's Test for Homogeneity of Variance (center = median)
 ##        Df F value Pr(&gt;F)
-## group   1    1.83   0.18
+## group   1    0.24   0.62
 ##       198</code></pre>
 <p>所以两独立样本 t 检验的完整流程是怎么样子的：</p>
 <div class="sourceCode" id="cb161"><pre class="downlit sourceCode r">
@@ -219,7 +219,7 @@
 <p>0.5mg 组：</p>
 <div class="sourceCode" id="cb166"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="va">ToothGrowth</span> <span class="op">|&gt;</span></span>
-<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">dose</span><span class="op">==</span><span class="fl">0.5</span><span class="op">)</span></span>
+<span>    <span class="fu"><a href="https://rdrr.io/pkg/dplyr/man/filter.html">filter</a></span><span class="op">(</span><span class="va">dose</span><span class="op">==</span><span class="fl">0.5</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span><span class="va">len</span><span class="op">~</span><span class="va">supp</span>,</span>
 <span>       var.equal<span class="op">=</span><span class="cn">T</span>,</span>
@@ -238,7 +238,7 @@
 <p>1.0mg 组：</p>
 <div class="sourceCode" id="cb168"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="va">ToothGrowth</span> <span class="op">|&gt;</span> </span>
-<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">dose</span> <span class="op">==</span> <span class="fl">1.0</span><span class="op">)</span></span>
+<span>    <span class="fu"><a href="https://rdrr.io/pkg/dplyr/man/filter.html">filter</a></span><span class="op">(</span><span class="va">dose</span> <span class="op">==</span> <span class="fl">1.0</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span><span class="va">len</span><span class="op">~</span><span class="va">supp</span>,</span>
 <span>       var.equal<span class="op">=</span><span class="cn">T</span>,</span>
@@ -257,7 +257,7 @@
 <p>2.0mg 组：</p>
 <div class="sourceCode" id="cb170"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="va">ToothGrowth</span> <span class="op">|&gt;</span> </span>
-<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">dose</span> <span class="op">==</span> <span class="fl">2.0</span><span class="op">)</span></span>
+<span>    <span class="fu"><a href="https://rdrr.io/pkg/dplyr/man/filter.html">filter</a></span><span class="op">(</span><span class="va">dose</span> <span class="op">==</span> <span class="fl">2.0</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span><span class="va">len</span><span class="op">~</span><span class="va">supp</span>,</span>
 <span>       var.equal<span class="op">=</span><span class="cn">T</span>,</span>
@@ -315,7 +315,7 @@
 <span><span class="va">coef</span></span></code></pre></div>
 <pre><code>## function (object, ...) 
 ## UseMethod("coef")
-## &lt;bytecode: 0x00000239967b6308&gt;
+## &lt;bytecode: 0x000002d2869aafb8&gt;
 ## &lt;environment: namespace:stats&gt;</code></pre>
 <p>提取系数的 95% 可信区间：</p>
 <div class="sourceCode" id="cb176"><pre class="downlit sourceCode r">
@@ -584,14 +584,14 @@
 <span>       <span class="fl">50</span>,</span>
 <span>       replace <span class="op">=</span> <span class="cn">T</span>,</span>
 <span>       prob<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.55</span>,<span class="fl">0.45</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<pre><code>##  [1] "正面" "反面" "正面" "正面" "反面" "反面" "正面"
-##  [8] "正面" "反面" "正面" "正面" "正面" "反面" "正面"
-## [15] "正面" "反面" "反面" "反面" "反面" "正面" "反面"
-## [22] "反面" "正面" "正面" "反面" "正面" "反面" "反面"
-## [29] "正面" "正面" "反面" "反面" "反面" "正面" "反面"
-## [36] "正面" "正面" "正面" "反面" "反面" "反面" "正面"
-## [43] "反面" "正面" "正面" "正面" "正面" "反面" "正面"
-## [50] "正面"</code></pre>
+<pre><code>##  [1] "正面" "正面" "正面" "正面" "反面" "正面" "反面"
+##  [8] "反面" "反面" "正面" "正面" "反面" "正面" "正面"
+## [15] "反面" "正面" "反面" "反面" "正面" "反面" "正面"
+## [22] "正面" "正面" "正面" "正面" "反面" "正面" "正面"
+## [29] "反面" "反面" "正面" "反面" "反面" "正面" "正面"
+## [36] "反面" "反面" "正面" "反面" "正面" "正面" "反面"
+## [43] "正面" "正面" "正面" "正面" "正面" "反面" "正面"
+## [50] "反面"</code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li>使用 ToothGrowth 数据，将牙齿生长长度按照 18.8 分为两类，如果大于18.8 定义为阳性，否则定义为阴性，使用 logistic 回归分析辅食类型与剂量对阳性事件的影响。（提取 OR 等并且写出哦！）</li>
 </ol>
@@ -609,7 +609,7 @@
 <pre><code>## [1] "len"  "supp" "dose"</code></pre>
 <div class="sourceCode" id="cb201"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="va">ToothGrowth</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>len2<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="va">len</span><span class="op">&gt;</span><span class="fl">18.8</span>,<span class="st">"阳性"</span>,<span class="st">"阴性"</span><span class="op">)</span><span class="op">)</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/dplyr/man/mutate.html">mutate</a></span><span class="op">(</span>len2<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="va">len</span><span class="op">&gt;</span><span class="fl">18.8</span>,<span class="st">"阳性"</span>,<span class="st">"阴性"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">df</span><span class="op">$</span><span class="va">len2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">df</span><span class="op">$</span><span class="va">len2</span>,</span>
 <span>                  levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"阴性"</span>,<span class="st">"阳性"</span><span class="op">)</span>,</span>
 <span>                  labels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"阴性"</span>,<span class="st">"阳性"</span><span class="op">)</span><span class="op">)</span></span>

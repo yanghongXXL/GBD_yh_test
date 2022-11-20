@@ -1,0 +1,229 @@
+# GBD 数据可视化 -绘制地图
+
+```{r setup, include=FALSE}
+options(digits = 4, 
+        dplyr.print_min = 6, 
+        dplyr.print_max = 6,
+        htmltools.dir.version = FALSE, 
+        formatR.indent = 2, 
+        width = 55
+        )
+
+knitr::opts_chunk$set(
+                      echo = TRUE, 
+                      warning = FALSE, 
+                      message = FALSE,
+                      fig.width = 6, 
+                      fig.height = 4,
+                      fig.showtext = TRUE
+                      )
+library(tidyverse)
+library(ggplot2)
+library(readxl)
+library(showtext)
+library(sf)
+```
+
+## sf包
+
+### 读取文件
+
+```{r}
+map <- st_read("data/世界国家/世界国家.shp")
+map2 <- read_sf("data/世界国家/世界国家.shp") # 推荐读取方式
+class(map)
+class(map2)
+```
+
+### 查看shp文件
+
+```{r}
+colnames(map)
+```
+
+### 设定地图文件的坐标参考系
+
+```{r}
+map <- st_set_crs(map,4326)
+```
+
+### 简单绘制世界地图
+
+```{r}
+ggplot(data=map)+
+    geom_sf()
+```
+
+## 利用 ggplot2 绘制地图
+
+### 读取 GBD 数据
+
+```{r}
+GBD <- read.csv("data/national HIV.csv")
+colnames(GBD)
+```
+
+### 读取 location 数据
+
+GBD 的国家（或地区）名与地图上的国家（或地区）名并不能完全匹配，因此通过两个数据的地区直接连接会产生大量的 NA 值。 location 数据是我已经整理好的，用于连接 GBD 和地图数据的中间数据。它有三列，分别为 location,location2,location3。其中 location 与 GBD 的 location 完全一致;location2 与 map 数据的 FENAME 列完全一致； location3 与 map 数据的 NAME 列完全一致。
+
+```{r}
+# 读取 location 数据
+location <- read.csv("data/location.csv")
+colnames(location)
+```
+
+我们可以通过这个 location 数据实现 GBD 数据与 map 数据的连接合并。
+
+### 数据的合并联接
+
+tidyverse 包中的 join 函数可以实现两个数据的合并联接。根据目的不同，join 函数可以分为： left_join(),inner_join(),full_join() 等多个函数。它们的具体功能可以参考本次教案 join 函数讲解 ppt。
+
+首先，我们合并 GBD 数据与 location 数据：
+
+```{r}
+GBD <- left_join(GBD,location,by="location")
+colnames(GBD)
+```
+
+然后，我们再通过 location2/location3 与 map 数据合并。
+
+```{r}
+df <- left_join(map,GBD,by=c("NAME"="location3"))
+# df <- na.omit(df) # 直接删除不太好, 南极洲都被删除了
+df
+```
+
+### 绘制属性地图
+
+```{r}
+fig1 <- df |>
+    filter(measure=="Incidence") |>
+    filter(year==2019) |>
+    filter(sex=="Both") |>
+    ggplot()+
+    geom_sf(aes(group=NAME,fill=val),color=alpha("white",0.2))
+
+fig1
+```
+
+### 尺度变换：限制经纬度获得小地图
+
+```{r}
+fig2 <- fig1+
+    coord_sf(xlim = c(0,50),ylim = c(-30,0))
+
+fig2
+```
+
+后续可以通过 patchwork 进行图片的拼接。
+
+### 颜色变换
+
+#### scale_fill_gradient2()
+
+```{r}
+fig2+scale_fill_gradient2(low = "green",
+                          mid = "yellow",midpoint = 250,
+                          high = "darkred")
+```
+
+#### scale_fill_distiller()
+
+```{r}
+fig2+scale_fill_distiller(palette="Spectral",# 色盘
+                          name="ASR")
+```
+
+#### scale_fill_manual() 离散颜色
+
+包括前面讲过的 scale_fill_lancet 等函数也可以用在这里。但是我们的数据val 本身是离散的，需要进行数据变换，转换成分类变量，然后转化为因子，才能用离散颜色。
+
+```{r eval=FALSE}
+library(ggsci)
+fig2+scale_fill_manual()
+```
+
+简书上有关于地图配色的文章，讲得挺完善的，大家可以去学习一下：[https: /www.jianshu.com/p/d85aa0b4fb1c](https:/www.jianshu.com/p/d85aa0b4fb1c)
+
+## 课后作业
+
+1.  文档里有一份胃癌的数据，请绘制疾病地图，展示 2019 年男性胃癌年龄标准化发病率的空间分布
+```{r}
+rm(list=ls())
+library(tidyverse)
+library(sf)
+# 读取GBD数据
+GBD <- read.csv("data/stomach cancer.csv",header = T)
+location <- read.csv("data/location.csv",header = T)
+GBD <- left_join(GBD,location,by="location")
+colnames(GBD)
+# 读取地图数据
+map <- read_sf("data/世界国家/世界国家.shp")
+colnames(map)
+# 合并，筛选
+df <- map |> 
+  left_join(GBD,by=c("NAME"= "location3")) |>
+  filter(year==1990) |> 
+  filter(sex=="Male") |> 
+  filter(age=="Age-standardized") |> 
+  filter(measure=="Incidence")
+```
+
+```{r}
+# 画图
+ggplot(df) + 
+  geom_sf(aes(fill=val))+
+  scale_fill_distiller(palette="Spectral") 
+```
+
+
+
+2.  使用 facet 分面系统，同时展示 1990 和 2019 两年男性胃癌不同测量指标（包括 incidence,precalence 等）的全球分布。
+
+```{r}
+rm(list=ls())
+# 读取GBD数据
+GBD <- read.csv("data/stomach cancer.csv",header = T)
+location <- read.csv("data/location.csv",header = T)
+GBD <- left_join(GBD,location,by="location")
+colnames(GBD)
+unique(GBD$cause)
+unique(GBD$measure)
+# 读取地图数据
+map <- read_sf("data/世界国家/世界国家.shp")
+colnames(map)
+# 合并，筛选
+df <- map |> 
+  left_join(GBD,by=c("NAME"= "location3")) |>
+  filter(year%in%c(1990,2019)) |> 
+  filter(sex=="Male") |> 
+  filter(age=="Age-standardized") |> 
+  mutate(year=factor(year)) |> 
+  mutate(measure=factor(measure,
+                        levels = c("Incidence","Prevalence","Deaths",
+                                   "YLDs (Years Lived with Disability)",
+                                   "YLLs (Years of Life Lost)","Deaths"),
+                        labels = c("Incidence","Prevalence","Deaths",
+                                   "YLDs (Years Lived with Disability)",
+                                   "YLLs (Years of Life Lost)","Deaths"))) |> 
+  na.omit()
+
+```
+
+```{r}
+# 画图
+ggplot(df) + 
+  geom_sf(aes(fill=val))+
+  facet_grid(measure~year)+
+  scale_fill_distiller(palette="Spectral")  
+```
+
+
+3.  说说如何实现下面图的绘制？
+
+```{r , out.width = '90%', fig.align='center', echo = FALSE}
+knitr::include_graphics("images/050z.png", dpi = 300)
+```
+
+

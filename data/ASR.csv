@@ -1,0 +1,541 @@
+"measure","location","sex","age","cause","metric","year","val","upper","lower","se"
+"Incidence","Global","Both","Age-standardized","Chlamydial infection","Rate",1990,2867.667088,3741.425236,2150.602619,405.822096173469
+"Incidence","Global","Both","Age-standardized","Chlamydial infection","Rate",1991,2868.571725,3741.399798,2150.814769,405.761486989796
+"Incidence","Global","Both","Age-standardized","Chlamydial infection","Rate",1992,2871.715954,3744.238343,2152.565903,406.038887755102
+"Incidence","Global","Both","Age-standardized","Chlamydial infection","Rate",1993,2876.974258,3748.688003,2155.792736,406.350833418367
+"Incidence","Global","Both","Age-standardized","Chlamydial infection","Rate",1994,2882.987982,3752.121713,2161.849221,405.681758163265
+"Incidence","Global","Both","Age-standardized","Chlamydial infection","Rate",1995,2889.250913,3756.978349,2167.881515,405.381845408163
+"Incidence","Global","Both","Age-standardized","Chlamydial infection","Rate",1996,2913.363761,3789.719768,2187.208767,408.803826785714
+"Incidence","Global","Both","Age-standardized","Chlamydial infection","Rate",1997,2962.575795,3853.078359,2225.442286,415.213283928571
+"Incidence","Global","Both","Age-standardized","Chlamydial infection","Rate",1998,3019.17423,3924.185456,2268.942101,422.255957908163
+"Incidence","Global","Both","Age-standardized","Chlamydial infection","Rate",1999,3064.767115,3982.547972,2304.413557,428.095514030612
+"Incidence","Global","Both","Age-standardized","Chlamydial infection","Rate",2000,3083.252742,4006.822495,2319.328925,430.483053571429
+"Incidence","Global","Both","Age-standardized","Chlamydial infection","Rate",2001,3079.493186,4000.283793,2317.739073,429.220591836735
+"Incidence","Global","Both","Age-standardized","Chlamydial infection","Rate",2002,3072.381916,3989.74645,2314.192104,427.437333163265
+"Incidence","Global","Both","Age-standardized","Chlamydial infection","Rate",2003,3063.102436,3977.133011,2309.57328,425.397890561224
+"Incidence","Global","Both","Age-standardized","Chlamydial infection","Rate",2004,3052.26989,3962.699344,2303.644732,423.228217346939
+"Incidence","Global","Both","Age-standardized","Chlamydial infection","Rate",2005,3042.190663,3941.989347,2298.249311,419.321437755102
+"Incidence","Global","Both","Age-standardized","Chlamydial infection","Rate",2006,3006.999386,3891.377462,2272.947135,412.864879336735
+"Incidence","Global","Both","Age-standardized","Chlamydial infection","Rate",2007,2937.800298,3807.922762,2220.547002,404.942795918367
+"Incidence","Global","Both","Age-standardized","Chlamydial infection","Rate",2008,2858.701277,3725.132709,2160.106321,399.241425510204
+"Incidence","Global","Both","Age-standardized","Chlamydial infection","Rate",2009,2793.587563,3650.602203,2106.896769,393.802406632653
+"Incidence","Global","Both","Age-standardized","Chlamydial infection","Rate",2010,2767.146818,3618.821308,2088.687619,390.340226785714
+"Incidence","Global","Both","Age-standardized","Chlamydial infection","Rate",2011,2768.348503,3618.579851,2088.274965,390.383899489796
+"Incidence","Global","Both","Age-standardized","Chlamydial infection","Rate",2012,2770.634802,3620.160858,2087.900023,390.882866071429
+"Incidence","Global","Both","Age-standardized","Chlamydial infection","Rate",2013,2773.224454,3622.438402,2088.287319,391.365072193878
+"Incidence","Global","Both","Age-standardized","Chlamydial infection","Rate",2014,2775.355272,3624.275321,2088.171351,391.863257653061
+"Incidence","Global","Both","Age-standardized","Chlamydial infection","Rate",2015,2776.541692,3624.665015,2087.53446,392.125141581633
+"Incidence","Global","Both","Age-standardized","Chlamydial infection","Rate",2016,2775.285464,3624.03475,2086.88947,392.128897959184
+"Incidence","Global","Both","Age-standardized","Chlamydial infection","Rate",2017,2773.698445,3624.137598,2085.999322,392.382213265306
+"Incidence","Global","Both","Age-standardized","Chlamydial infection","Rate",2018,2808.218637,3660.448598,2109.516188,395.646022959184
+"Incidence","Global","Both","Age-standardized","Chlamydial infection","Rate",2019,2883.865376,3762.802933,2161.214358,408.568514030612
+"Incidence","Global","Female","Age-standardized","Chlamydial infection","Rate",1990,2579.571583,3360.434865,1964.607702,356.078357908163
+"Incidence","Global","Female","Age-standardized","Chlamydial infection","Rate",1991,2578.083119,3357.555357,1963.098572,355.728771683673
+"Incidence","Global","Female","Age-standardized","Chlamydial infection","Rate",1992,2577.895723,3356.378489,1961.13232,355.930145153061
+"Incidence","Global","Female","Age-standardized","Chlamydial infection","Rate",1993,2579.868689,3359.94116,1961.210454,356.819057653061
+"Incidence","Global","Female","Age-standardized","Chlamydial infection","Rate",1994,2583.365065,3367.940094,1962.627025,358.498231887755
+"Incidence","Global","Female","Age-standardized","Chlamydial infection","Rate",1995,2587.90883,3375.251699,1965.565259,359.613887755102
+"Incidence","Global","Female","Age-standardized","Chlamydial infection","Rate",1996,2610.734776,3404.805119,1984.634919,362.288316326531
+"Incidence","Global","Female","Age-standardized","Chlamydial infection","Rate",1997,2658.232634,3463.420172,2023.748358,367.263217857143
+"Incidence","Global","Female","Age-standardized","Chlamydial infection","Rate",1998,2713.819716,3530.708598,2069.363501,372.792116581633
+"Incidence","Global","Female","Age-standardized","Chlamydial infection","Rate",1999,2759.732207,3584.455606,2106.849211,376.940406887755
+"Incidence","Global","Female","Age-standardized","Chlamydial infection","Rate",2000,2779.492876,3604.372254,2122.277796,378.085320918367
+"Incidence","Global","Female","Age-standardized","Chlamydial infection","Rate",2001,2778.61809,3599.534609,2123.488336,376.542416581633
+"Incidence","Global","Female","Age-standardized","Chlamydial infection","Rate",2002,2775.758787,3593.810031,2121.111037,375.688518877551
+"Incidence","Global","Female","Age-standardized","Chlamydial infection","Rate",2003,2771.443279,3588.119087,2117.527307,375.150964285714
+"Incidence","Global","Female","Age-standardized","Chlamydial infection","Rate",2004,2765.495823,3579.650906,2113.016275,374.1414875
+"Incidence","Global","Female","Age-standardized","Chlamydial infection","Rate",2005,2759.305321,3569.968497,2108.427889,372.841991836735
+"Incidence","Global","Female","Age-standardized","Chlamydial infection","Rate",2006,2730.005141,3531.328196,2085.312956,368.88143877551
+"Incidence","Global","Female","Age-standardized","Chlamydial infection","Rate",2007,2670.343257,3453.299578,2040.092947,360.511895663265
+"Incidence","Global","Female","Age-standardized","Chlamydial infection","Rate",2008,2602.319817,3365.271664,1989.033144,351.081255102041
+"Incidence","Global","Female","Age-standardized","Chlamydial infection","Rate",2009,2547.088647,3297.865179,1946.111256,344.835184438776
+"Incidence","Global","Female","Age-standardized","Chlamydial infection","Rate",2010,2526.313009,3269.701117,1930.640405,341.597120408163
+"Incidence","Global","Female","Age-standardized","Chlamydial infection","Rate",2011,2529.171113,3276.25691,1929.578091,343.54051505102
+"Incidence","Global","Female","Age-standardized","Chlamydial infection","Rate",2012,2531.791003,3284.209157,1931.492933,345.080669387755
+"Incidence","Global","Female","Age-standardized","Chlamydial infection","Rate",2013,2534.596333,3292.93483,1933.63524,346.760099489796
+"Incidence","Global","Female","Age-standardized","Chlamydial infection","Rate",2014,2537.791103,3301.296884,1933.710785,348.874004846939
+"Incidence","Global","Female","Age-standardized","Chlamydial infection","Rate",2015,2541.88404,3309.380075,1934.406858,350.75847372449
+"Incidence","Global","Female","Age-standardized","Chlamydial infection","Rate",2016,2549.566352,3326.605218,1940.875912,353.502373979592
+"Incidence","Global","Female","Age-standardized","Chlamydial infection","Rate",2017,2556.573805,3346.216833,1940.733844,358.541578826531
+"Incidence","Global","Female","Age-standardized","Chlamydial infection","Rate",2018,2596.639096,3400.644166,1964.15271,366.451902040816
+"Incidence","Global","Female","Age-standardized","Chlamydial infection","Rate",2019,2677.334507,3505.384693,2027.509716,377.008922704082
+"Incidence","Global","Male","Age-standardized","Chlamydial infection","Rate",1990,3147.301125,4129.527723,2334.471452,457.922518112245
+"Incidence","Global","Male","Age-standardized","Chlamydial infection","Rate",1991,3150.6018,4133.42864,2339.378893,457.665751785714
+"Incidence","Global","Male","Age-standardized","Chlamydial infection","Rate",1992,3157.040529,4140.759435,2344.629477,458.196417857143
+"Incidence","Global","Male","Age-standardized","Chlamydial infection","Rate",1993,3165.51808,4150.018923,2351.560332,458.790456887755
+"Incidence","Global","Male","Age-standardized","Chlamydial infection","Rate",1994,3174.099707,4160.907766,2358.554509,459.783994132653
+"Incidence","Global","Male","Age-standardized","Chlamydial infection","Rate",1995,3182.140042,4174.01935,2365.06219,461.468663265306
+"Incidence","Global","Male","Age-standardized","Chlamydial infection","Rate",1996,3207.772199,4206.528426,2387.490264,464.04034744898
+"Incidence","Global","Male","Age-standardized","Chlamydial infection","Rate",1997,3259.14083,4279.665557,2427.680993,472.445041836735
+"Incidence","Global","Male","Age-standardized","Chlamydial infection","Rate",1998,3317.367632,4359.553563,2470.373825,481.933606632653
+"Incidence","Global","Male","Age-standardized","Chlamydial infection","Rate",1999,3363.471659,4421.382439,2503.52966,489.248157908163
+"Incidence","Global","Male","Age-standardized","Chlamydial infection","Rate",2000,3381.463486,4448.597068,2515.443921,493.151313010204
+"Incidence","Global","Male","Age-standardized","Chlamydial infection","Rate",2001,3375.489979,4438.284155,2507.972269,492.426501530612
+"Incidence","Global","Male","Age-standardized","Chlamydial infection","Rate",2002,3364.760194,4421.499826,2497.506188,490.814703571429
+"Incidence","Global","Male","Age-standardized","Chlamydial infection","Rate",2003,3351.122547,4401.32419,2485.401301,488.755839030612
+"Incidence","Global","Male","Age-standardized","Chlamydial infection","Rate",2004,3335.956953,4379.205494,2474.013933,486.018255357143
+"Incidence","Global","Male","Age-standardized","Chlamydial infection","Rate",2005,3322.418242,4358.716445,2464.66515,483.176350765306
+"Incidence","Global","Male","Age-standardized","Chlamydial infection","Rate",2006,3281.567288,4300.997171,2435.008567,476.017501020408
+"Incidence","Global","Male","Age-standardized","Chlamydial infection","Rate",2007,3202.9123,4196.943822,2380.433328,463.395534183674
+"Incidence","Global","Male","Age-standardized","Chlamydial infection","Rate",2008,3112.790275,4092.472267,2316.667007,453.011545918367
+"Incidence","Global","Male","Age-standardized","Chlamydial infection","Rate",2009,3037.879226,3992.516847,2262.714784,441.276036479592
+"Incidence","Global","Male","Age-standardized","Chlamydial infection","Rate",2010,3005.841461,3952.385779,2239.033973,437.079542346939
+"Incidence","Global","Male","Age-standardized","Chlamydial infection","Rate",2011,3005.382457,3948.438616,2239.8641,435.860845918367
+"Incidence","Global","Male","Age-standardized","Chlamydial infection","Rate",2012,3007.290199,3949.861465,2242.525328,435.544932908163
+"Incidence","Global","Male","Age-standardized","Chlamydial infection","Rate",2013,3009.62845,3955.025815,2244.811295,436.279214285714
+"Incidence","Global","Male","Age-standardized","Chlamydial infection","Rate",2014,3010.671361,3958.648361,2244.710955,437.228930102041
+"Incidence","Global","Male","Age-standardized","Chlamydial infection","Rate",2015,3008.942142,3954.557106,2242.271089,436.807657397959
+"Incidence","Global","Male","Age-standardized","Chlamydial infection","Rate",2016,2998.782249,3939.630058,2234.103554,435.083291836735
+"Incidence","Global","Male","Age-standardized","Chlamydial infection","Rate",2017,2988.656136,3923.659783,2225.164232,433.289681377551
+"Incidence","Global","Male","Age-standardized","Chlamydial infection","Rate",2018,3017.617456,3957.765437,2238.286674,438.642541581633
+"Incidence","Global","Male","Age-standardized","Chlamydial infection","Rate",2019,3088.094158,4039.303191,2286.900577,447.041483163265
+"Incidence","Global","Both","Age-standardized","Genital herpes","Rate",1990,960.2939401,1116.808253,822.8058466,75.000613877551
+"Incidence","Global","Both","Age-standardized","Genital herpes","Rate",1991,971.5445594,1127.449019,833.991449,74.861625
+"Incidence","Global","Both","Age-standardized","Genital herpes","Rate",1992,981.0278154,1135.552058,843.3007704,74.5538998979592
+"Incidence","Global","Both","Age-standardized","Genital herpes","Rate",1993,988.7833958,1144.247981,850.9484458,74.82131
+"Incidence","Global","Both","Age-standardized","Genital herpes","Rate",1994,994.7877923,1151.237527,856.175575,75.270906122449
+"Incidence","Global","Both","Age-standardized","Genital herpes","Rate",1995,998.7838831,1155.705712,859.7580956,75.4968409183673
+"Incidence","Global","Both","Age-standardized","Genital herpes","Rate",1996,999.439221,1154.396796,860.961678,74.8558974489796
+"Incidence","Global","Both","Age-standardized","Genital herpes","Rate",1997,997.0142144,1149.557145,858.4292576,74.2673182142857
+"Incidence","Global","Both","Age-standardized","Genital herpes","Rate",1998,993.5176744,1144.966721,854.8169217,74.0178059438776
+"Incidence","Global","Both","Age-standardized","Genital herpes","Rate",1999,990.976768,1142.308331,852.0788949,74.0381214540816
+"Incidence","Global","Both","Age-standardized","Genital herpes","Rate",2000,991.2659378,1142.473022,852.6379645,73.9375146683673
+"Incidence","Global","Both","Age-standardized","Genital herpes","Rate",2001,992.7734519,1144.353921,854.0096866,74.0674067346938
+"Incidence","Global","Both","Age-standardized","Genital herpes","Rate",2002,993.1155491,1144.972856,854.3332993,74.1427440561225
+"Incidence","Global","Both","Age-standardized","Genital herpes","Rate",2003,992.9474338,1144.705555,854.0626952,74.1435866836735
+"Incidence","Global","Both","Age-standardized","Genital herpes","Rate",2004,992.9750473,1146.004228,853.815434,74.5379576530612
+"Incidence","Global","Both","Age-standardized","Genital herpes","Rate",2005,993.9785583,1147.879232,854.7273114,74.7836532142857
+"Incidence","Global","Both","Age-standardized","Genital herpes","Rate",2006,993.9667287,1149.051756,853.3823573,75.4258670153062
+"Incidence","Global","Both","Age-standardized","Genital herpes","Rate",2007,991.5821055,1148.168185,849.6283743,76.1581149744898
+"Incidence","Global","Both","Age-standardized","Genital herpes","Rate",2008,988.4294083,1145.595351,845.1206036,76.6517212755102
+"Incidence","Global","Both","Age-standardized","Genital herpes","Rate",2009,986.2411884,1143.841694,841.6869393,77.0802945663265
+"Incidence","Global","Both","Age-standardized","Genital herpes","Rate",2010,986.6363948,1145.196203,841.2172346,77.5456552040816
+"Incidence","Global","Both","Age-standardized","Genital herpes","Rate",2011,989.1926671,1148.260833,843.3736939,77.7773314030612
+"Incidence","Global","Both","Age-standardized","Genital herpes","Rate",2012,992.3238602,1152.430557,846.751519,77.9793464285714
+"Incidence","Global","Both","Age-standardized","Genital herpes","Rate",2013,995.6605443,1158.142052,850.3692142,78.5134790306122
+"Incidence","Global","Both","Age-standardized","Genital herpes","Rate",2014,998.9906711,1162.817983,853.5932068,78.8838714795918
+"Incidence","Global","Both","Age-standardized","Genital herpes","Rate",2015,1002.148023,1166.388221,854.2228522,79.6340226530612
+"Incidence","Global","Both","Age-standardized","Genital herpes","Rate",2016,1007.991068,1172.969066,857.7406317,80.4154169132653
+"Incidence","Global","Both","Age-standardized","Genital herpes","Rate",2017,1014.157529,1181.065812,861.6298759,81.4887592091837
+"Incidence","Global","Both","Age-standardized","Genital herpes","Rate",2018,1017.820833,1186.228321,864.8475775,81.9848835459184
+"Incidence","Global","Both","Age-standardized","Genital herpes","Rate",2019,1021.675736,1191.203736,869.150387,82.1564665816326
+"Incidence","Global","Female","Age-standardized","Genital herpes","Rate",1990,1192.427167,1373.806928,1027.734613,88.2837538265306
+"Incidence","Global","Female","Age-standardized","Genital herpes","Rate",1991,1207.557525,1389.423469,1042.811441,88.4214357142857
+"Incidence","Global","Female","Age-standardized","Genital herpes","Rate",1992,1220.695849,1403.461247,1055.881802,88.6682257653061
+"Incidence","Global","Female","Age-standardized","Genital herpes","Rate",1993,1231.669113,1413.398346,1066.176809,88.5769227040816
+"Incidence","Global","Female","Age-standardized","Genital herpes","Rate",1994,1240.134365,1422.839466,1073.801426,89.0403163265306
+"Incidence","Global","Female","Age-standardized","Genital herpes","Rate",1995,1245.580374,1429.818754,1078.62193,89.5910265306122
+"Incidence","Global","Female","Age-standardized","Genital herpes","Rate",1996,1246.818251,1429.993049,1081.400713,88.9266163265306
+"Incidence","Global","Female","Age-standardized","Genital herpes","Rate",1997,1244.616064,1426.938056,1079.96454,88.5136520408163
+"Incidence","Global","Female","Age-standardized","Genital herpes","Rate",1998,1241.106926,1423.152424,1075.928727,88.5774737244898
+"Incidence","Global","Female","Age-standardized","Genital herpes","Rate",1999,1238.412478,1419.779847,1071.491321,88.8491137755102
+"Incidence","Global","Female","Age-standardized","Genital herpes","Rate",2000,1238.58766,1419.651186,1072.004095,88.6854823979592
+"Incidence","Global","Female","Age-standardized","Genital herpes","Rate",2001,1240.043459,1421.106881,1072.833056,88.8453635204082
+"Incidence","Global","Female","Age-standardized","Genital herpes","Rate",2002,1240.330189,1421.851878,1072.354884,89.1573964285714
+"Incidence","Global","Female","Age-standardized","Genital herpes","Rate",2003,1240.104765,1422.137173,1071.402872,89.4730359693878
+"Incidence","Global","Female","Age-standardized","Genital herpes","Rate",2004,1240.085695,1424.127337,1071.507073,89.9541489795918
+"Incidence","Global","Female","Age-standardized","Genital herpes","Rate",2005,1241.079605,1426.606808,1072.694513,90.2837487244898
+"Incidence","Global","Female","Age-standardized","Genital herpes","Rate",2006,1241.55913,1428.530021,1071.978859,90.9569290816327
+"Incidence","Global","Female","Age-standardized","Genital herpes","Rate",2007,1240.305464,1429.497788,1068.106414,92.1916770408163
+"Incidence","Global","Female","Age-standardized","Genital herpes","Rate",2008,1238.413514,1430.158155,1064.033426,93.3991655612245
+"Incidence","Global","Female","Age-standardized","Genital herpes","Rate",2009,1237.268147,1430.838526,1061.043253,94.3355288265306
+"Incidence","Global","Female","Age-standardized","Genital herpes","Rate",2010,1238.262187,1433.818695,1060.328142,95.2782022959183
+"Incidence","Global","Female","Age-standardized","Genital herpes","Rate",2011,1240.123942,1436.563248,1061.606228,95.6523010204081
+"Incidence","Global","Female","Age-standardized","Genital herpes","Rate",2012,1241.243796,1438.023149,1062.207191,95.8714178571429
+"Incidence","Global","Female","Age-standardized","Genital herpes","Rate",2013,1242.24219,1439.484088,1062.629285,96.1364293367347
+"Incidence","Global","Female","Age-standardized","Genital herpes","Rate",2014,1243.89832,1441.934519,1063.520673,96.5341443877551
+"Incidence","Global","Female","Age-standardized","Genital herpes","Rate",2015,1247.08126,1447.928416,1065.666152,97.5158836734694
+"Incidence","Global","Female","Age-standardized","Genital herpes","Rate",2016,1254.378296,1454.271623,1069.942448,98.0431568877551
+"Incidence","Global","Female","Age-standardized","Genital herpes","Rate",2017,1262.023606,1462.658338,1074.199369,99.0966757653061
+"Incidence","Global","Female","Age-standardized","Genital herpes","Rate",2018,1267.007829,1468.047794,1079.730218,99.060606122449
+"Incidence","Global","Female","Age-standardized","Genital herpes","Rate",2019,1272.127078,1479.167277,1084.26136,100.741305357143
+"Incidence","Global","Male","Age-standardized","Genital herpes","Rate",1990,733.9170364,864.861973,620.5902229,62.3142219642857
+"Incidence","Global","Male","Age-standardized","Genital herpes","Rate",1991,741.5393804,871.4962709,628.3189904,62.0350205357143
+"Incidence","Global","Male","Age-standardized","Genital herpes","Rate",1992,747.5816811,877.2066186,633.6456532,62.1328993367347
+"Incidence","Global","Male","Age-standardized","Genital herpes","Rate",1993,752.2614138,880.8064242,638.6926708,61.7637126020408
+"Incidence","Global","Male","Age-standardized","Genital herpes","Rate",1994,755.8130641,883.7663637,642.5335554,61.5389817091837
+"Incidence","Global","Male","Age-standardized","Genital herpes","Rate",1995,758.2730985,887.4111102,644.9549533,61.8510604336735
+"Incidence","Global","Male","Age-standardized","Genital herpes","Rate",1996,758.2090631,886.7592546,645.2220734,61.6166278571429
+"Incidence","Global","Male","Age-standardized","Genital herpes","Rate",1997,755.3888552,881.2740175,643.3464787,60.6958007142857
+"Incidence","Global","Male","Age-standardized","Genital herpes","Rate",1998,751.7163226,877.6546512,641.3729894,60.275934132653
+"Incidence","Global","Male","Age-standardized","Genital herpes","Rate",1999,749.1242376,874.519658,639.9959177,59.8274847704082
+"Incidence","Global","Male","Age-standardized","Genital herpes","Rate",2000,749.3536797,875.0130399,640.0267808,59.9454742602041
+"Incidence","Global","Male","Age-standardized","Genital herpes","Rate",2001,750.7894749,875.971783,640.6707435,60.0257753826531
+"Incidence","Global","Male","Age-standardized","Genital herpes","Rate",2002,751.114155,876.3434155,640.5688729,60.1465669897959
+"Incidence","Global","Male","Age-standardized","Genital herpes","Rate",2003,750.972114,875.9706021,640.1151103,60.1672172959184
+"Incidence","Global","Male","Age-standardized","Genital herpes","Rate",2004,751.0395735,877.153293,640.2492995,60.4346922193877
+"Incidence","Global","Male","Age-standardized","Genital herpes","Rate",2005,752.0760049,879.7318529,640.6459743,60.9912955612245
+"Incidence","Global","Male","Age-standardized","Genital herpes","Rate",2006,751.6718516,878.9770396,640.3083455,60.8848709438776
+"Incidence","Global","Male","Age-standardized","Genital herpes","Rate",2007,748.335976,875.2340662,637.8640526,60.5535748979592
+"Incidence","Global","Male","Age-standardized","Genital herpes","Rate",2008,744.1256987,871.1106558,633.2940543,60.6675003826531
+"Incidence","Global","Male","Age-standardized","Genital herpes","Rate",2009,741.0382879,867.6484801,629.9167781,60.6458423469388
+"Incidence","Global","Male","Age-standardized","Genital herpes","Rate",2010,740.9201953,867.0417619,628.7764531,60.7819665306122
+"Incidence","Global","Male","Age-standardized","Genital herpes","Rate",2011,744.256288,871.1262165,630.9922592,61.2586625765306
+"Incidence","Global","Male","Age-standardized","Genital herpes","Rate",2012,749.4592418,877.0170812,634.4524208,61.8787398979592
+"Incidence","Global","Male","Age-standardized","Genital herpes","Rate",2013,755.1769217,884.5228197,639.2389211,62.5724231122449
+"Incidence","Global","Male","Age-standardized","Genital herpes","Rate",2014,760.2392796,890.6550886,642.2048408,63.380165255102
+"Incidence","Global","Male","Age-standardized","Genital herpes","Rate",2015,763.5068419,894.9145884,645.1875895,63.7058670663265
+"Incidence","Global","Male","Age-standardized","Genital herpes","Rate",2016,768.0973145,900.8897323,649.5154015,64.1261047959184
+"Incidence","Global","Male","Age-standardized","Genital herpes","Rate",2017,772.9861153,908.8772207,654.0998567,64.9942255102041
+"Incidence","Global","Male","Age-standardized","Genital herpes","Rate",2018,775.5317067,912.3778755,655.657313,65.4899394132653
+"Incidence","Global","Male","Age-standardized","Genital herpes","Rate",2019,778.3308555,917.0336289,657.9029819,66.1047568877551
+"Incidence","Global","Both","Age-standardized","Gonococcal infection","Rate",1990,1178.582801,1536.003626,912.2888112,159.110922142857
+"Incidence","Global","Both","Age-standardized","Gonococcal infection","Rate",1991,1182.240246,1540.779333,916.2000139,159.331458954082
+"Incidence","Global","Both","Age-standardized","Gonococcal infection","Rate",1992,1184.775496,1543.638153,918.471569,159.481271428571
+"Incidence","Global","Both","Age-standardized","Gonococcal infection","Rate",1993,1186.321601,1541.295854,919.6068026,158.594145765306
+"Incidence","Global","Both","Age-standardized","Gonococcal infection","Rate",1994,1186.948683,1539.684749,919.8420351,158.12314130102
+"Incidence","Global","Both","Age-standardized","Gonococcal infection","Rate",1995,1186.671462,1537.175464,919.3296931,157.613717066327
+"Incidence","Global","Both","Age-standardized","Gonococcal infection","Rate",1996,1184.711114,1535.665531,918.9594318,157.322984489796
+"Incidence","Global","Both","Age-standardized","Gonococcal infection","Rate",1997,1181.065376,1531.116411,916.6798634,156.744017244898
+"Incidence","Global","Both","Age-standardized","Gonococcal infection","Rate",1998,1176.883608,1525.921143,913.8377586,156.143720510204
+"Incidence","Global","Both","Age-standardized","Gonococcal infection","Rate",1999,1173.269296,1521.448224,911.4988829,155.599321709184
+"Incidence","Global","Both","Age-standardized","Gonococcal infection","Rate",2000,1171.426229,1519.181659,910.4739837,155.282570229592
+"Incidence","Global","Both","Age-standardized","Gonococcal infection","Rate",2001,1173.506494,1522.183573,911.440096,155.801907397959
+"Incidence","Global","Both","Age-standardized","Gonococcal infection","Rate",2002,1179.486434,1531.268969,915.7266698,157.026096734694
+"Incidence","Global","Both","Age-standardized","Gonococcal infection","Rate",2003,1186.94963,1542.479959,921.4310826,158.430835816327
+"Incidence","Global","Both","Age-standardized","Gonococcal infection","Rate",2004,1193.289802,1551.911374,926.0177684,159.666736122449
+"Incidence","Global","Both","Age-standardized","Gonococcal infection","Rate",2005,1195.969044,1555.465907,927.5196685,160.190366964286
+"Incidence","Global","Both","Age-standardized","Gonococcal infection","Rate",2006,1192.950134,1551.014067,923.4990945,160.080350127551
+"Incidence","Global","Both","Age-standardized","Gonococcal infection","Rate",2007,1185.76689,1541.203906,918.4430143,158.867574413265
+"Incidence","Global","Both","Age-standardized","Gonococcal infection","Rate",2008,1176.997824,1529.195373,912.1656457,157.405542678571
+"Incidence","Global","Both","Age-standardized","Gonococcal infection","Rate",2009,1169.417591,1518.344257,905.2222659,156.40867119898
+"Incidence","Global","Both","Age-standardized","Gonococcal infection","Rate",2010,1165.773732,1511.657823,902.4895679,155.400065076531
+"Incidence","Global","Both","Age-standardized","Gonococcal infection","Rate",2011,1165.794346,1507.869446,903.0128249,154.300158443878
+"Incidence","Global","Both","Age-standardized","Gonococcal infection","Rate",2012,1166.932337,1509.365827,903.5500001,154.54485380102
+"Incidence","Global","Both","Age-standardized","Gonococcal infection","Rate",2013,1168.414755,1511.42591,904.26045,154.889147959184
+"Incidence","Global","Both","Age-standardized","Gonococcal infection","Rate",2014,1169.425187,1512.871883,906.6623962,154.645277244898
+"Incidence","Global","Both","Age-standardized","Gonococcal infection","Rate",2015,1169.078782,1512.260302,906.2276369,154.600169668367
+"Incidence","Global","Both","Age-standardized","Gonococcal infection","Rate",2016,1147.09457,1484.183606,890.3877209,151.478542117347
+"Incidence","Global","Both","Age-standardized","Gonococcal infection","Rate",2017,1122.812207,1443.909563,873.9021928,145.410043418367
+"Incidence","Global","Both","Age-standardized","Gonococcal infection","Rate",2018,1120.392932,1436.473543,870.8231748,144.298563316327
+"Incidence","Global","Both","Age-standardized","Gonococcal infection","Rate",2019,1124.390328,1441.078844,872.9729727,144.924967168367
+"Incidence","Global","Female","Age-standardized","Gonococcal infection","Rate",1990,843.9632699,1118.67662,641.8644806,121.635749846939
+"Incidence","Global","Female","Age-standardized","Gonococcal infection","Rate",1991,844.5163831,1120.832231,644.1643836,121.598940663265
+"Incidence","Global","Female","Age-standardized","Gonococcal infection","Rate",1992,843.9696363,1121.213363,643.4162666,121.887014387755
+"Incidence","Global","Female","Age-standardized","Gonococcal infection","Rate",1993,842.5458122,1120.523834,643.0232602,121.811370867347
+"Incidence","Global","Female","Age-standardized","Gonococcal infection","Rate",1994,840.4603188,1115.503364,641.7495225,120.855571811224
+"Incidence","Global","Female","Age-standardized","Gonococcal infection","Rate",1995,837.6982058,1109.589827,637.5510062,120.418066530612
+"Incidence","Global","Female","Age-standardized","Gonococcal infection","Rate",1996,835.3065216,1099.496729,639.2565901,117.40819869898
+"Incidence","Global","Female","Age-standardized","Gonococcal infection","Rate",1997,833.8335682,1092.213528,641.4505278,114.99056127551
+"Incidence","Global","Female","Age-standardized","Gonococcal infection","Rate",1998,832.5071443,1085.593955,644.5727233,112.50541625
+"Incidence","Global","Female","Age-standardized","Gonococcal infection","Rate",1999,830.7707885,1079.240786,644.9384344,110.79141622449
+"Incidence","Global","Female","Age-standardized","Gonococcal infection","Rate",2000,828.3733239,1076.901847,643.6963282,110.511611938776
+"Incidence","Global","Female","Age-standardized","Gonococcal infection","Rate",2001,825.886135,1074.022906,641.6656145,110.295227423469
+"Incidence","Global","Female","Age-standardized","Gonococcal infection","Rate",2002,823.8767539,1072.134562,640.4645449,110.119902321429
+"Incidence","Global","Female","Age-standardized","Gonococcal infection","Rate",2003,822.0537019,1070.659232,639.5725869,109.971082933673
+"Incidence","Global","Female","Age-standardized","Gonococcal infection","Rate",2004,820.0403648,1070.003184,638.2521603,110.140567270408
+"Incidence","Global","Female","Age-standardized","Gonococcal infection","Rate",2005,817.7071362,1069.050479,636.1730612,110.427912704082
+"Incidence","Global","Female","Age-standardized","Gonococcal infection","Rate",2006,811.3792269,1060.365863,629.7228294,109.857916734694
+"Incidence","Global","Female","Age-standardized","Gonococcal infection","Rate",2007,799.8222283,1045.660979,617.9553974,109.108566734694
+"Incidence","Global","Female","Age-standardized","Gonococcal infection","Rate",2008,786.5612263,1033.067584,606.4240633,108.837632831633
+"Incidence","Global","Female","Age-standardized","Gonococcal infection","Rate",2009,774.9486417,1018.609368,594.9576932,108.074406836735
+"Incidence","Global","Female","Age-standardized","Gonococcal infection","Rate",2010,768.2193837,1016.101106,588.5229892,109.076050204082
+"Incidence","Global","Female","Age-standardized","Gonococcal infection","Rate",2011,765.161825,1011.684558,587.1889783,108.28968869898
+"Incidence","Global","Female","Age-standardized","Gonococcal infection","Rate",2012,762.3937121,1004.530392,585.1664948,106.980586020408
+"Incidence","Global","Female","Age-standardized","Gonococcal infection","Rate",2013,759.896886,998.9990814,582.7808166,106.17812877551
+"Incidence","Global","Female","Age-standardized","Gonococcal infection","Rate",2014,757.492881,994.5308038,581.5138974,105.361455714286
+"Incidence","Global","Female","Age-standardized","Gonococcal infection","Rate",2015,754.8533602,991.3178589,579.9781496,104.933599311224
+"Incidence","Global","Female","Age-standardized","Gonococcal infection","Rate",2016,745.6358969,977.2149953,572.4447212,103.257722984694
+"Incidence","Global","Female","Age-standardized","Gonococcal infection","Rate",2017,736.4953,966.6446714,566.3004731,102.128622015306
+"Incidence","Global","Female","Age-standardized","Gonococcal infection","Rate",2018,738.3379684,966.9867657,565.7939323,102.345110561224
+"Incidence","Global","Female","Age-standardized","Gonococcal infection","Rate",2019,746.6184192,970.8913469,573.5486485,101.362933265306
+"Incidence","Global","Male","Age-standardized","Gonococcal infection","Rate",1990,1505.496992,1957.263142,1165.86176,201.888107653061
+"Incidence","Global","Male","Age-standardized","Gonococcal infection","Rate",1991,1511.915186,1964.762838,1170.786182,202.545065306122
+"Incidence","Global","Male","Age-standardized","Gonococcal infection","Rate",1992,1517.269331,1970.121306,1175.656356,202.669630102041
+"Incidence","Global","Male","Age-standardized","Gonococcal infection","Rate",1993,1521.656816,1974.027692,1177.870615,203.101295153061
+"Incidence","Global","Male","Age-standardized","Gonococcal infection","Rate",1994,1525.061875,1976.542233,1180.410563,203.09481377551
+"Incidence","Global","Male","Age-standardized","Gonococcal infection","Rate",1995,1527.474626,1977.83968,1180.669862,203.35964744898
+"Incidence","Global","Male","Age-standardized","Gonococcal infection","Rate",1996,1526.266637,1980.457343,1180.481349,204.075508673469
+"Incidence","Global","Male","Age-standardized","Gonococcal infection","Rate",1997,1520.913222,1978.115876,1177.870186,204.144308673469
+"Incidence","Global","Male","Age-standardized","Gonococcal infection","Rate",1998,1514.430121,1973.513341,1174.566273,203.81302755102
+"Incidence","Global","Male","Age-standardized","Gonococcal infection","Rate",1999,1509.520965,1965.795715,1172.43334,202.388360969388
+"Incidence","Global","Male","Age-standardized","Gonococcal infection","Rate",2000,1508.731389,1962.99264,1172.480798,201.661184183673
+"Incidence","Global","Male","Age-standardized","Gonococcal infection","Rate",2001,1515.734296,1976.992081,1178.453122,203.708918112245
+"Incidence","Global","Male","Age-standardized","Gonococcal infection","Rate",2002,1529.927135,2001.732192,1188.560737,207.441697704082
+"Incidence","Global","Male","Age-standardized","Gonococcal infection","Rate",2003,1546.78856,2024.055788,1199.252811,210.408922704082
+"Incidence","Global","Male","Age-standardized","Gonococcal infection","Rate",2004,1561.525108,2043.038471,1211.308124,212.176108928571
+"Incidence","Global","Male","Age-standardized","Gonococcal infection","Rate",2005,1569.206489,2051.770482,1216.451282,213.091632653061
+"Incidence","Global","Male","Age-standardized","Gonococcal infection","Rate",2006,1569.384757,2053.783647,1215.072595,213.956901020408
+"Incidence","Global","Male","Age-standardized","Gonococcal infection","Rate",2007,1566.30883,2050.800871,1210.981774,214.239565561224
+"Incidence","Global","Male","Age-standardized","Gonococcal infection","Rate",2008,1561.693776,2045.097884,1207.798533,213.596773214286
+"Incidence","Global","Male","Age-standardized","Gonococcal infection","Rate",2009,1557.88614,2040.154051,1204.686657,213.129437244898
+"Incidence","Global","Male","Age-standardized","Gonococcal infection","Rate",2010,1557.145197,2036.792653,1204.37134,212.352375765306
+"Incidence","Global","Male","Age-standardized","Gonococcal infection","Rate",2011,1559.990878,2043.348884,1205.091688,213.841121428571
+"Incidence","Global","Male","Age-standardized","Gonococcal infection","Rate",2012,1564.713034,2051.790946,1207.777303,215.309602806122
+"Incidence","Global","Male","Age-standardized","Gonococcal infection","Rate",2013,1569.854223,2053.331461,1209.815197,215.182720408163
+"Incidence","Global","Male","Age-standardized","Gonococcal infection","Rate",2014,1573.978909,2052.251161,1211.850832,214.387839030612
+"Incidence","Global","Male","Age-standardized","Gonococcal infection","Rate",2015,1575.617677,2054.412917,1212.407349,214.79733877551
+"Incidence","Global","Male","Age-standardized","Gonococcal infection","Rate",2016,1540.857754,1998.173972,1191.085365,205.889950765306
+"Incidence","Global","Male","Age-standardized","Gonococcal infection","Rate",2017,1501.537174,1942.485978,1164.061222,198.577743877551
+"Incidence","Global","Male","Age-standardized","Gonococcal infection","Rate",2018,1494.706235,1929.306293,1156.342865,197.184547959184
+"Incidence","Global","Male","Age-standardized","Gonococcal infection","Rate",2019,1494.214551,1922.584033,1154.101465,196.041471428571
+"Incidence","Global","Both","Age-standardized","HIV/AIDS","Rate",1990,37.59159185,44.53833951,31.12277515,3.42233784693878
+"Incidence","Global","Both","Age-standardized","HIV/AIDS","Rate",1991,42.44954154,50.4460096,34.91930681,3.96089356887755
+"Incidence","Global","Both","Age-standardized","HIV/AIDS","Rate",1992,46.18431439,55.46818038,38.04507519,4.44466969132653
+"Incidence","Global","Both","Age-standardized","HIV/AIDS","Rate",1993,49.16821739,59.31081624,40.33863153,4.83984303826531
+"Incidence","Global","Both","Age-standardized","HIV/AIDS","Rate",1994,51.30773083,61.80716444,42.5710876,4.90716245918367
+"Incidence","Global","Both","Age-standardized","HIV/AIDS","Rate",1995,52.94330568,63.85947501,44.3220625,4.98403380357143
+"Incidence","Global","Both","Age-standardized","HIV/AIDS","Rate",1996,54.03072438,64.93604938,45.66363108,4.91643323979592
+"Incidence","Global","Both","Age-standardized","HIV/AIDS","Rate",1997,53.96705937,65.21177072,45.5786694,5.00844421428571
+"Incidence","Global","Both","Age-standardized","HIV/AIDS","Rate",1998,52.57021839,63.80357791,44.46968168,4.93211638520408
+"Incidence","Global","Both","Age-standardized","HIV/AIDS","Rate",1999,50.63498324,61.46570852,43.04191548,4.69994720408163
+"Incidence","Global","Both","Age-standardized","HIV/AIDS","Rate",2000,48.24299793,58.51611079,41.07723329,4.44869323979592
+"Incidence","Global","Both","Age-standardized","HIV/AIDS","Rate",2001,45.6434216,55.30696488,38.96377065,4.16918220153061
+"Incidence","Global","Both","Age-standardized","HIV/AIDS","Rate",2002,43.34430924,52.13955552,37.25971672,3.79587724489796
+"Incidence","Global","Both","Age-standardized","HIV/AIDS","Rate",2003,41.30965821,49.30960358,35.73905762,3.46187396938776
+"Incidence","Global","Both","Age-standardized","HIV/AIDS","Rate",2004,39.4968471,46.65349358,34.47568044,3.10658498469388
+"Incidence","Global","Both","Age-standardized","HIV/AIDS","Rate",2005,37.97385986,44.46295469,33.38092585,2.82704817346939
+"Incidence","Global","Both","Age-standardized","HIV/AIDS","Rate",2006,36.72841611,42.65063457,32.44981337,2.60225030612245
+"Incidence","Global","Both","Age-standardized","HIV/AIDS","Rate",2007,35.57340388,41.16032409,31.63748161,2.42929655102041
+"Incidence","Global","Both","Age-standardized","HIV/AIDS","Rate",2008,34.51481416,39.80691725,30.88584698,2.27578323214286
+"Incidence","Global","Both","Age-standardized","HIV/AIDS","Rate",2009,33.65667707,38.61345341,30.42816771,2.08808308673469
+"Incidence","Global","Both","Age-standardized","HIV/AIDS","Rate",2010,32.88147398,37.49109359,29.91475663,1.93273902040816
+"Incidence","Global","Both","Age-standardized","HIV/AIDS","Rate",2011,32.09705423,36.39903113,29.22902471,1.82908327040816
+"Incidence","Global","Both","Age-standardized","HIV/AIDS","Rate",2012,31.33153958,35.58409551,28.50549419,1.80576564285714
+"Incidence","Global","Both","Age-standardized","HIV/AIDS","Rate",2013,30.60023061,34.71756793,27.75710797,1.77562754081633
+"Incidence","Global","Both","Age-standardized","HIV/AIDS","Rate",2014,30.02114974,33.92321814,27.18856172,1.71802459693878
+"Incidence","Global","Both","Age-standardized","HIV/AIDS","Rate",2015,29.42813105,33.17696895,26.59776259,1.67836896938776
+"Incidence","Global","Both","Age-standardized","HIV/AIDS","Rate",2016,28.52920818,32.05860537,25.658713,1.63262560459184
+"Incidence","Global","Both","Age-standardized","HIV/AIDS","Rate",2017,27.45625917,30.97680032,24.55262475,1.63882029846939
+"Incidence","Global","Both","Age-standardized","HIV/AIDS","Rate",2018,26.10611332,29.52503151,23.25934328,1.59838985459184
+"Incidence","Global","Both","Age-standardized","HIV/AIDS","Rate",2019,25.23768094,28.56644514,22.38732698,1.57630565306122
+"Incidence","Global","Female","Age-standardized","HIV/AIDS","Rate",1990,41.34371659,49.95831742,33.17450263,4.28158540561224
+"Incidence","Global","Female","Age-standardized","HIV/AIDS","Rate",1991,46.93638975,56.6189973,37.78638323,4.80423828316327
+"Incidence","Global","Female","Age-standardized","HIV/AIDS","Rate",1992,51.34072901,62.34044427,41.28731016,5.37069747704082
+"Incidence","Global","Female","Age-standardized","HIV/AIDS","Rate",1993,54.80147356,67.00648903,44.22641707,5.81124284693878
+"Incidence","Global","Female","Age-standardized","HIV/AIDS","Rate",1994,57.28179689,70.18903405,47.05668406,5.90110969132653
+"Incidence","Global","Female","Age-standardized","HIV/AIDS","Rate",1995,58.95832316,71.94036143,48.63810288,5.94445371173469
+"Incidence","Global","Female","Age-standardized","HIV/AIDS","Rate",1996,59.80159743,72.93503488,49.62703085,5.94591939540816
+"Incidence","Global","Female","Age-standardized","HIV/AIDS","Rate",1997,59.47697109,72.63892546,49.53503107,5.89385060969388
+"Incidence","Global","Female","Age-standardized","HIV/AIDS","Rate",1998,57.91477053,71.14500517,48.20526794,5.85197378316327
+"Incidence","Global","Female","Age-standardized","HIV/AIDS","Rate",1999,55.74019394,68.49942045,46.66372739,5.5703298622449
+"Incidence","Global","Female","Age-standardized","HIV/AIDS","Rate",2000,53.05651302,65.19629513,44.43106728,5.29725200255102
+"Incidence","Global","Female","Age-standardized","HIV/AIDS","Rate",2001,50.1188382,61.30246396,42.10549747,4.89718532908163
+"Incidence","Global","Female","Age-standardized","HIV/AIDS","Rate",2002,47.43719277,57.56515924,40.01054476,4.47821797959184
+"Incidence","Global","Female","Age-standardized","HIV/AIDS","Rate",2003,45.06829548,54.21579585,38.27122007,4.06749382142857
+"Incidence","Global","Female","Age-standardized","HIV/AIDS","Rate",2004,42.9809417,51.30869044,36.76167698,3.71097282142857
+"Incidence","Global","Female","Age-standardized","HIV/AIDS","Rate",2005,41.22949423,48.95249191,35.46097747,3.44171286734694
+"Incidence","Global","Female","Age-standardized","HIV/AIDS","Rate",2006,39.77279242,46.82935738,34.4439132,3.15955208673469
+"Incidence","Global","Female","Age-standardized","HIV/AIDS","Rate",2007,38.44839846,45.16019648,33.49571616,2.97563273469388
+"Incidence","Global","Female","Age-standardized","HIV/AIDS","Rate",2008,37.23397702,43.5704772,32.60240847,2.79797671683673
+"Incidence","Global","Female","Age-standardized","HIV/AIDS","Rate",2009,36.19609591,42.06660733,31.92420877,2.58734657142857
+"Incidence","Global","Female","Age-standardized","HIV/AIDS","Rate",2010,35.26651717,40.92310531,31.27639868,2.46089454846939
+"Incidence","Global","Female","Age-standardized","HIV/AIDS","Rate",2011,34.30760041,39.84865277,30.47098291,2.39226271938776
+"Incidence","Global","Female","Age-standardized","HIV/AIDS","Rate",2012,33.33299097,38.58323743,29.58544544,2.29535509948979
+"Incidence","Global","Female","Age-standardized","HIV/AIDS","Rate",2013,32.37402341,37.34306871,28.6541026,2.2165729872449
+"Incidence","Global","Female","Age-standardized","HIV/AIDS","Rate",2014,31.4887146,36.03946372,27.83793864,2.09222578571429
+"Incidence","Global","Female","Age-standardized","HIV/AIDS","Rate",2015,30.63615953,35.02926214,27.04363391,2.03715005867347
+"Incidence","Global","Female","Age-standardized","HIV/AIDS","Rate",2016,29.56271357,33.77230366,26.06970104,1.96494964795918
+"Incidence","Global","Female","Age-standardized","HIV/AIDS","Rate",2017,28.30132713,32.56979685,24.76172176,1.99185589030612
+"Incidence","Global","Female","Age-standardized","HIV/AIDS","Rate",2018,26.70794592,30.98630643,23.25275178,1.97284557397959
+"Incidence","Global","Female","Age-standardized","HIV/AIDS","Rate",2019,25.74000162,29.99592042,22.29037796,1.96569960714286
+"Incidence","Global","Male","Age-standardized","HIV/AIDS","Rate",1990,33.97752097,39.45552667,28.61935599,2.76432925510204
+"Incidence","Global","Male","Age-standardized","HIV/AIDS","Rate",1991,38.12303601,44.5912482,31.92661819,3.23077296173469
+"Incidence","Global","Male","Age-standardized","HIV/AIDS","Rate",1992,41.20728228,48.89222328,34.55006118,3.65871482142857
+"Incidence","Global","Male","Age-standardized","HIV/AIDS","Rate",1993,43.72626237,52.06045106,36.406489,3.99335766836735
+"Incidence","Global","Male","Age-standardized","HIV/AIDS","Rate",1994,45.52992053,54.32037733,38.10032254,4.13776907908163
+"Incidence","Global","Male","Age-standardized","HIV/AIDS","Rate",1995,47.11928688,56.48442628,39.96899143,4.21312113520408
+"Incidence","Global","Male","Age-standardized","HIV/AIDS","Rate",1996,48.44173308,57.87761635,41.44333011,4.19241995918367
+"Incidence","Global","Male","Age-standardized","HIV/AIDS","Rate",1997,48.63342872,58.2152933,41.56140515,4.24844085459184
+"Incidence","Global","Male","Age-standardized","HIV/AIDS","Rate",1998,47.40060742,57.24850615,40.54502655,4.26109173469388
+"Incidence","Global","Male","Age-standardized","HIV/AIDS","Rate",1999,45.7035633,55.17566814,39.19306478,4.07719473469388
+"Incidence","Global","Male","Age-standardized","HIV/AIDS","Rate",2000,43.60253396,52.64706695,37.5089206,3.86177202806122
+"Incidence","Global","Male","Age-standardized","HIV/AIDS","Rate",2001,41.33697515,49.67712862,35.69198958,3.56763751020408
+"Incidence","Global","Male","Age-standardized","HIV/AIDS","Rate",2002,39.41621697,47.02887623,34.20168116,3.27224364030612
+"Incidence","Global","Male","Age-standardized","HIV/AIDS","Rate",2003,37.71317122,44.71709533,32.94071547,3.00417853571429
+"Incidence","Global","Male","Age-standardized","HIV/AIDS","Rate",2004,36.17489326,42.51389956,31.83141331,2.72512404336735
+"Incidence","Global","Male","Age-standardized","HIV/AIDS","Rate",2005,34.87986269,40.62984972,30.89210028,2.48411975510204
+"Incidence","Global","Male","Age-standardized","HIV/AIDS","Rate",2006,33.84436316,39.08932627,30.08752347,2.29637826530612
+"Incidence","Global","Male","Age-standardized","HIV/AIDS","Rate",2007,32.85746565,37.68214153,29.42620029,2.10610745918367
+"Incidence","Global","Male","Age-standardized","HIV/AIDS","Rate",2008,31.95290557,36.46247577,28.8699141,1.93687797704082
+"Incidence","Global","Male","Age-standardized","HIV/AIDS","Rate",2009,31.26940095,35.38462332,28.48434505,1.76027506887755
+"Incidence","Global","Male","Age-standardized","HIV/AIDS","Rate",2010,30.64167465,34.57253463,28.05702456,1.66211991581633
+"Incidence","Global","Male","Age-standardized","HIV/AIDS","Rate",2011,30.02450413,33.87194866,27.45652328,1.63658810714286
+"Incidence","Global","Male","Age-standardized","HIV/AIDS","Rate",2012,29.45872271,33.1366457,26.89426922,1.59244297959184
+"Incidence","Global","Male","Age-standardized","HIV/AIDS","Rate",2013,28.94503754,32.58279695,26.22520178,1.62183550255102
+"Incidence","Global","Male","Age-standardized","HIV/AIDS","Rate",2014,28.66201242,32.19974117,25.86665093,1.61558424489796
+"Incidence","Global","Male","Age-standardized","HIV/AIDS","Rate",2015,28.32078387,31.75903871,25.45844813,1.60729351530612
+"Incidence","Global","Male","Age-standardized","HIV/AIDS","Rate",2016,27.59181856,30.76833712,24.75212404,1.53474823469388
+"Incidence","Global","Male","Age-standardized","HIV/AIDS","Rate",2017,26.70158599,29.78394663,23.84247232,1.51568222193878
+"Incidence","Global","Male","Age-standardized","HIV/AIDS","Rate",2018,25.58752208,28.53355788,22.79090291,1.46496300255102
+"Incidence","Global","Male","Age-standardized","HIV/AIDS","Rate",2019,24.8152863,27.84363643,22.01774747,1.48619616326531
+"Incidence","Global","Both","Age-standardized","Syphilis","Rate",1990,160.026023,208.1049492,120.655715,22.3084781122449
+"Incidence","Global","Both","Age-standardized","Syphilis","Rate",1991,160.388405,208.1936483,121.5565471,22.1013013265306
+"Incidence","Global","Both","Age-standardized","Syphilis","Rate",1992,160.8277644,208.4465952,122.0726728,22.034163877551
+"Incidence","Global","Both","Age-standardized","Syphilis","Rate",1993,161.3662589,208.9102967,122.5888027,22.0207892857143
+"Incidence","Global","Both","Age-standardized","Syphilis","Rate",1994,162.0055771,209.5847314,123.110099,22.0598552040816
+"Incidence","Global","Both","Age-standardized","Syphilis","Rate",1995,162.6870561,210.1882051,123.6059121,22.0873196428571
+"Incidence","Global","Both","Age-standardized","Syphilis","Rate",1996,163.4504913,210.8600729,124.0741895,22.1392559693878
+"Incidence","Global","Both","Age-standardized","Syphilis","Rate",1997,164.278987,211.7003149,124.5470168,22.2329842091837
+"Incidence","Global","Both","Age-standardized","Syphilis","Rate",1998,165.0788014,212.4372489,124.9838942,22.3095292602041
+"Incidence","Global","Both","Age-standardized","Syphilis","Rate",1999,165.7788812,213.0852224,125.3397323,22.3840535969388
+"Incidence","Global","Both","Age-standardized","Syphilis","Rate",2000,166.2731378,213.7812189,125.5802578,22.5002451785714
+"Incidence","Global","Both","Age-standardized","Syphilis","Rate",2001,166.300907,213.6002246,125.6785259,22.4290047704082
+"Incidence","Global","Both","Age-standardized","Syphilis","Rate",2002,165.8829928,213.0985229,125.527377,22.3395780357143
+"Incidence","Global","Both","Age-standardized","Syphilis","Rate",2003,165.3145215,212.4405146,125.3026049,22.2290585969388
+"Incidence","Global","Both","Age-standardized","Syphilis","Rate",2004,164.9204557,212.0643322,125.2242761,22.1530755357143
+"Incidence","Global","Both","Age-standardized","Syphilis","Rate",2005,164.9711162,212.337456,125.4612954,22.1622858673469
+"Incidence","Global","Both","Age-standardized","Syphilis","Rate",2006,164.4708126,211.8235747,124.91878,22.1695904846939
+"Incidence","Global","Both","Age-standardized","Syphilis","Rate",2007,162.8123592,209.8016598,123.6059093,21.9887118622449
+"Incidence","Global","Both","Age-standardized","Syphilis","Rate",2008,160.8303778,207.3718395,122.3781475,21.6820642857143
+"Incidence","Global","Both","Age-standardized","Syphilis","Rate",2009,159.4089604,205.6778274,121.5813658,21.4531789795918
+"Incidence","Global","Both","Age-standardized","Syphilis","Rate",2010,159.4147856,205.6343801,121.8123144,21.3831800255102
+"Incidence","Global","Both","Age-standardized","Syphilis","Rate",2011,160.4844721,207.0974938,122.4146692,21.602761377551
+"Incidence","Global","Both","Age-standardized","Syphilis","Rate",2012,161.6898209,208.7242264,123.0056334,21.8669880102041
+"Incidence","Global","Both","Age-standardized","Syphilis","Rate",2013,163.0498032,210.5449247,123.6231241,22.1739287244898
+"Incidence","Global","Both","Age-standardized","Syphilis","Rate",2014,164.609833,212.9419721,124.4299055,22.5796088265306
+"Incidence","Global","Both","Age-standardized","Syphilis","Rate",2015,166.3969879,215.3126658,125.8373433,22.825337372449
+"Incidence","Global","Both","Age-standardized","Syphilis","Rate",2016,169.1760746,219.8601789,128.0493857,23.4211207142857
+"Incidence","Global","Both","Age-standardized","Syphilis","Rate",2017,172.1563199,224.7042136,129.9503791,24.1718965561225
+"Incidence","Global","Both","Age-standardized","Syphilis","Rate",2018,174.9830787,227.9509541,132.1502007,24.4389677040816
+"Incidence","Global","Both","Age-standardized","Syphilis","Rate",2019,178.4814956,232.337208,134.9415348,24.845835
+"Incidence","Global","Female","Age-standardized","Syphilis","Rate",1990,119.9478918,156.340895,90.173398,16.8794635204082
+"Incidence","Global","Female","Age-standardized","Syphilis","Rate",1991,120.0001721,156.1748842,90.89382873,16.6533304770408
+"Incidence","Global","Female","Age-standardized","Syphilis","Rate",1992,120.1163355,155.9997136,91.48260032,16.4584472653061
+"Incidence","Global","Female","Age-standardized","Syphilis","Rate",1993,120.3750636,155.9297246,92.076629,16.289055
+"Incidence","Global","Female","Age-standardized","Syphilis","Rate",1994,120.77301,156.1537926,92.71819312,16.1825508877551
+"Incidence","Global","Female","Age-standardized","Syphilis","Rate",1995,121.2321439,156.1416266,93.27355862,16.0377724438776
+"Incidence","Global","Female","Age-standardized","Syphilis","Rate",1996,121.7585966,156.9475319,93.59889975,16.1603653443878
+"Incidence","Global","Female","Age-standardized","Syphilis","Rate",1997,122.3079744,157.5258403,93.8630774,16.2405007397959
+"Incidence","Global","Female","Age-standardized","Syphilis","Rate",1998,122.798345,157.7612567,94.01617981,16.2614992066327
+"Incidence","Global","Female","Age-standardized","Syphilis","Rate",1999,123.1603838,157.8497406,94.040487,16.2778708163265
+"Incidence","Global","Female","Age-standardized","Syphilis","Rate",2000,123.2789246,157.7425892,93.98378992,16.2649998163265
+"Incidence","Global","Female","Age-standardized","Syphilis","Rate",2001,122.6579443,157.3247974,93.50506376,16.2805442959184
+"Incidence","Global","Female","Age-standardized","Syphilis","Rate",2002,121.2304165,155.8623029,92.41439998,16.1856895204082
+"Incidence","Global","Female","Age-standardized","Syphilis","Rate",2003,119.5145782,153.9041809,91.05673436,16.032511872449
+"Incidence","Global","Female","Age-standardized","Syphilis","Rate",2004,118.0498421,151.8681287,89.94106132,15.7977212704082
+"Incidence","Global","Female","Age-standardized","Syphilis","Rate",2005,117.3595945,150.8258111,89.44361055,15.658724630102
+"Incidence","Global","Female","Age-standardized","Syphilis","Rate",2006,115.8557496,148.5181508,88.50906554,15.3084401173469
+"Incidence","Global","Female","Age-standardized","Syphilis","Rate",2007,112.4917236,143.5277335,86.30105715,14.5986419260204
+"Incidence","Global","Female","Age-standardized","Syphilis","Rate",2008,108.6282015,138.2312654,83.78962652,13.8881731836735
+"Incidence","Global","Female","Age-standardized","Syphilis","Rate",2009,105.644739,133.6804927,81.92393675,13.2032030484694
+"Incidence","Global","Female","Age-standardized","Syphilis","Rate",2010,104.9025169,132.7181238,81.64182918,13.029666994898
+"Incidence","Global","Female","Age-standardized","Syphilis","Rate",2011,106.0191187,134.1356183,82.66209974,13.1309996326531
+"Incidence","Global","Female","Age-standardized","Syphilis","Rate",2012,107.5720859,136.4253728,83.97851409,13.3793006913265
+"Incidence","Global","Female","Age-standardized","Syphilis","Rate",2013,109.4008443,139.0509796,85.49004989,13.6635024770408
+"Incidence","Global","Female","Age-standardized","Syphilis","Rate",2014,111.3538704,141.616206,86.96081277,13.9427023545918
+"Incidence","Global","Female","Age-standardized","Syphilis","Rate",2015,113.2486571,144.0686204,88.20814696,14.2501207755102
+"Incidence","Global","Female","Age-standardized","Syphilis","Rate",2016,114.949704,146.7126899,89.24612199,14.659838752551
+"Incidence","Global","Female","Age-standardized","Syphilis","Rate",2017,116.8487694,150.2935516,90.05782557,15.3662566403061
+"Incidence","Global","Female","Age-standardized","Syphilis","Rate",2018,120.1599724,154.4174418,92.58667163,15.7731556556122
+"Incidence","Global","Female","Age-standardized","Syphilis","Rate",2019,124.9774681,160.248064,96.68284201,16.2156178545918
+"Incidence","Global","Male","Age-standardized","Syphilis","Rate",1990,199.1388848,260.753153,149.8077482,28.3023991836735
+"Incidence","Global","Male","Age-standardized","Syphilis","Rate",1991,199.7927146,261.2460471,150.6794793,28.2057570918367
+"Incidence","Global","Male","Age-standardized","Syphilis","Rate",1992,200.5427463,261.785528,151.4556743,28.1453708418367
+"Incidence","Global","Male","Age-standardized","Syphilis","Rate",1993,201.3594312,263.04357,152.0581731,28.31260125
+"Incidence","Global","Male","Age-standardized","Syphilis","Rate",1994,202.2590437,264.1449658,153.1063401,28.3261800255102
+"Incidence","Global","Male","Age-standardized","Syphilis","Rate",1995,203.1957617,264.7847874,154.0323974,28.2531607142857
+"Incidence","Global","Male","Age-standardized","Syphilis","Rate",1996,204.2397351,266.6229424,154.5859853,28.5808564030612
+"Incidence","Global","Male","Age-standardized","Syphilis","Rate",1997,205.4029572,268.576438,155.1891757,28.9253220153061
+"Incidence","Global","Male","Age-standardized","Syphilis","Rate",1998,206.5816039,269.8633155,155.8019165,29.0972956632653
+"Incidence","Global","Male","Age-standardized","Syphilis","Rate",1999,207.7027497,271.1276588,156.5789571,29.2216075765306
+"Incidence","Global","Male","Age-standardized","Syphilis","Rate",2000,208.6557704,272.6819736,157.3093125,29.4318013010204
+"Incidence","Global","Male","Age-standardized","Syphilis","Rate",2001,209.4014357,273.4123255,157.8252626,29.4864956377551
+"Incidence","Global","Male","Age-standardized","Syphilis","Rate",2002,210.0442625,273.9462176,158.3947919,29.4774045153061
+"Incidence","Global","Male","Age-standardized","Syphilis","Rate",2003,210.6627217,274.6641772,158.9709299,29.513583494898
+"Incidence","Global","Male","Age-standardized","Syphilis","Rate",2004,211.3711131,275.5573394,159.6715837,29.5626927806122
+"Incidence","Global","Male","Age-standardized","Syphilis","Rate",2005,212.1873849,276.7200842,160.4145457,29.6697802295918
+"Incidence","Global","Male","Age-standardized","Syphilis","Rate",2006,212.6914809,277.4163741,160.9098056,29.7210633928571
+"Incidence","Global","Male","Age-standardized","Syphilis","Rate",2007,212.7037742,277.5866501,160.9427278,29.756102627551
+"Incidence","Global","Male","Age-standardized","Syphilis","Rate",2008,212.5503737,277.9116164,160.6461625,29.9146566071429
+"Incidence","Global","Male","Age-standardized","Syphilis","Rate",2009,212.6501306,278.51781,160.5742208,30.0876503061224
+"Incidence","Global","Male","Age-standardized","Syphilis","Rate",2010,213.3847954,279.8582328,161.0348488,30.312087755102
+"Incidence","Global","Male","Age-standardized","Syphilis","Rate",2011,214.4008438,281.5880882,161.6441009,30.5979559438776
+"Incidence","Global","Male","Age-standardized","Syphilis","Rate",2012,215.2551109,283.0018696,162.0026279,30.867153494898
+"Incidence","Global","Male","Age-standardized","Syphilis","Rate",2013,216.1465504,284.5502815,162.3240031,31.1801730612245
+"Incidence","Global","Male","Age-standardized","Syphilis","Rate",2014,217.3116599,286.6655652,162.6808285,31.6287593622449
+"Incidence","Global","Male","Age-standardized","Syphilis","Rate",2015,218.9741505,289.0628563,163.324817,32.0760304336735
+"Incidence","Global","Male","Age-standardized","Syphilis","Rate",2016,222.784097,294.5728449,165.5989786,32.901496505102
+"Incidence","Global","Male","Age-standardized","Syphilis","Rate",2017,226.7989285,300.2194002,168.1008207,33.7037192602041
+"Incidence","Global","Male","Age-standardized","Syphilis","Rate",2018,229.1287434,302.9620418,169.9436982,33.9332509183673
+"Incidence","Global","Male","Age-standardized","Syphilis","Rate",2019,231.3136975,305.2955063,171.875073,34.0358248214286
+"Incidence","Global","Both","Age-standardized","Trichomoniasis","Rate",1990,4157.140753,5439.335468,3061.972532,606.470136734694
+"Incidence","Global","Both","Age-standardized","Trichomoniasis","Rate",1991,4174.429358,5459.729194,3073.679355,608.686183418367
+"Incidence","Global","Both","Age-standardized","Trichomoniasis","Rate",1992,4188.552846,5475.778674,3082.449749,610.543093112245
+"Incidence","Global","Both","Age-standardized","Trichomoniasis","Rate",1993,4200.360933,5488.543992,3090.862691,611.653393112245
+"Incidence","Global","Both","Age-standardized","Trichomoniasis","Rate",1994,4210.527297,5499.037157,3099.241755,612.192704591837
+"Incidence","Global","Both","Age-standardized","Trichomoniasis","Rate",1995,4218.454667,5508.502208,3105.952219,612.895405357143
+"Incidence","Global","Both","Age-standardized","Trichomoniasis","Rate",1996,4219.512519,5511.226388,3106.722231,613.393917602041
+"Incidence","Global","Both","Age-standardized","Trichomoniasis","Rate",1997,4211.895379,5499.04923,3101.846185,611.531389030612
+"Incidence","Global","Both","Age-standardized","Trichomoniasis","Rate",1998,4200.39644,5481.718541,3094.180606,609.065799744898
+"Incidence","Global","Both","Age-standardized","Trichomoniasis","Rate",1999,4190.180747,5466.016846,3087.018519,606.887328316327
+"Incidence","Global","Both","Age-standardized","Trichomoniasis","Rate",2000,4186.346643,5458.949878,3083.693007,605.932875255102
+"Incidence","Global","Both","Age-standardized","Trichomoniasis","Rate",2001,4185.968949,5455.77122,3085.654201,604.621688520408
+"Incidence","Global","Both","Age-standardized","Trichomoniasis","Rate",2002,4183.89856,5450.251885,3086.509247,602.995570918367
+"Incidence","Global","Both","Age-standardized","Trichomoniasis","Rate",2003,4181.711712,5449.9307,3086.9372,602.804464285714
+"Incidence","Global","Both","Age-standardized","Trichomoniasis","Rate",2004,4181.088706,5451.335995,3087.83098,602.934952806123
+"Incidence","Global","Both","Age-standardized","Trichomoniasis","Rate",2005,4183.793622,5457.319892,3090.419589,603.801097704082
+"Incidence","Global","Both","Age-standardized","Trichomoniasis","Rate",2006,4191.220479,5468.207825,3094.040895,605.654829081633
+"Incidence","Global","Both","Age-standardized","Trichomoniasis","Rate",2007,4202.089091,5484.377776,3098.811659,608.56278494898
+"Incidence","Global","Both","Age-standardized","Trichomoniasis","Rate",2008,4213.945267,5502.195395,3103.827624,611.828513010204
+"Incidence","Global","Both","Age-standardized","Trichomoniasis","Rate",2009,4224.666164,5519.4165,3108.535486,615.020666836735
+"Incidence","Global","Both","Age-standardized","Trichomoniasis","Rate",2010,4232.243866,5529.399883,3112.87148,616.461327295918
+"Incidence","Global","Both","Age-standardized","Trichomoniasis","Rate",2011,4228.714796,5526.667013,3109.916044,616.518104336735
+"Incidence","Global","Both","Age-standardized","Trichomoniasis","Rate",2012,4213.360379,5507.795639,3099.406045,614.385100510204
+"Incidence","Global","Both","Age-standardized","Trichomoniasis","Rate",2013,4194.708377,5481.66839,3086.618329,610.982158418367
+"Incidence","Global","Both","Age-standardized","Trichomoniasis","Rate",2014,4181.195658,5460.860611,3079.188041,607.569533163265
+"Incidence","Global","Both","Age-standardized","Trichomoniasis","Rate",2015,4180.960295,5457.054045,3082.121259,605.850200510204
+"Incidence","Global","Both","Age-standardized","Trichomoniasis","Rate",2016,4234.793084,5528.396986,3111.46641,616.563922448979
+"Incidence","Global","Both","Age-standardized","Trichomoniasis","Rate",2017,4291.006626,5602.702794,3149.986415,625.692953826531
+"Incidence","Global","Both","Age-standardized","Trichomoniasis","Rate",2018,4309.010383,5621.937437,3161.069652,627.772394132653
+"Incidence","Global","Both","Age-standardized","Trichomoniasis","Rate",2019,4327.292093,5645.761808,3176.532302,629.90548622449
+"Incidence","Global","Female","Age-standardized","Trichomoniasis","Rate",1990,3526.669193,4680.890544,2549.784594,543.649477040816
+"Incidence","Global","Female","Age-standardized","Trichomoniasis","Rate",1991,3555.926957,4713.008128,2573.480878,545.797767857143
+"Incidence","Global","Female","Age-standardized","Trichomoniasis","Rate",1992,3579.30415,4746.134625,2593.294762,549.193842602041
+"Incidence","Global","Female","Age-standardized","Trichomoniasis","Rate",1993,3597.521672,4770.828745,2608.554081,551.600679591837
+"Incidence","Global","Female","Age-standardized","Trichomoniasis","Rate",1994,3611.737075,4781.661097,2620.703777,551.26462244898
+"Incidence","Global","Female","Age-standardized","Trichomoniasis","Rate",1995,3621.137637,4786.71381,2629.431561,550.327104336735
+"Incidence","Global","Female","Age-standardized","Trichomoniasis","Rate",1996,3616.126635,4776.463386,2624.898533,548.86858494898
+"Incidence","Global","Female","Age-standardized","Trichomoniasis","Rate",1997,3593.655911,4742.136455,2609.468058,544.048060459184
+"Incidence","Global","Female","Age-standardized","Trichomoniasis","Rate",1998,3563.970556,4698.379882,2589.330956,538.022685204082
+"Incidence","Global","Female","Age-standardized","Trichomoniasis","Rate",1999,3538.193958,4669.361857,2571.35887,535.204843622449
+"Incidence","Global","Female","Age-standardized","Trichomoniasis","Rate",2000,3526.769545,4650.062091,2562.302092,532.591836479592
+"Incidence","Global","Female","Age-standardized","Trichomoniasis","Rate",2001,3525.608962,4647.78168,2564.88814,531.350392857143
+"Incidence","Global","Female","Age-standardized","Trichomoniasis","Rate",2002,3523.918004,4644.850388,2566.69131,530.142621938775
+"Incidence","Global","Female","Age-standardized","Trichomoniasis","Rate",2003,3523.070492,4643.700826,2568.610298,529.359828571429
+"Incidence","Global","Female","Age-standardized","Trichomoniasis","Rate",2004,3524.647851,4642.193146,2571.750732,528.174085204082
+"Incidence","Global","Female","Age-standardized","Trichomoniasis","Rate",2005,3529.663193,4651.949906,2576.994476,529.325364795918
+"Incidence","Global","Female","Age-standardized","Trichomoniasis","Rate",2006,3541.434522,4670.377446,2583.409059,532.389894642857
+"Incidence","Global","Female","Age-standardized","Trichomoniasis","Rate",2007,3559.228403,4695.519079,2592.519799,536.479408163265
+"Incidence","Global","Female","Age-standardized","Trichomoniasis","Rate",2008,3578.967018,4723.575856,2602.263723,541.151054336735
+"Incidence","Global","Female","Age-standardized","Trichomoniasis","Rate",2009,3596.822241,4750.519258,2610.904101,545.820193112245
+"Incidence","Global","Female","Age-standardized","Trichomoniasis","Rate",2010,3608.556028,4769.161722,2616.580081,549.127969642857
+"Incidence","Global","Female","Age-standardized","Trichomoniasis","Rate",2011,3599.153214,4755.815588,2610.828277,547.190640561225
+"Incidence","Global","Female","Age-standardized","Trichomoniasis","Rate",2012,3567.185945,4715.543219,2589.47313,542.364818622449
+"Incidence","Global","Female","Age-standardized","Trichomoniasis","Rate",2013,3529.062177,4664.882686,2563.656245,536.027153316326
+"Incidence","Global","Female","Age-standardized","Trichomoniasis","Rate",2014,3501.009258,4626.741924,2544.700942,531.132903571429
+"Incidence","Global","Female","Age-standardized","Trichomoniasis","Rate",2015,3498.610925,4621.138668,2543.64023,529.97409132653
+"Incidence","Global","Female","Age-standardized","Trichomoniasis","Rate",2016,3610.400988,4774.346799,2607.591634,552.743664540816
+"Incidence","Global","Female","Age-standardized","Trichomoniasis","Rate",2017,3725.906072,4936.237166,2678.407087,575.977060969388
+"Incidence","Global","Female","Age-standardized","Trichomoniasis","Rate",2018,3755.396268,4973.45086,2701.238416,579.646031632653
+"Incidence","Global","Female","Age-standardized","Trichomoniasis","Rate",2019,3781.33987,5010.592463,2719.76551,584.394630867347
+"Incidence","Global","Male","Age-standardized","Trichomoniasis","Rate",1990,4783.296374,6265.412189,3546.744606,693.53764872449
+"Incidence","Global","Male","Age-standardized","Trichomoniasis","Rate",1991,4788.926857,6274.415627,3551.932803,694.510924489796
+"Incidence","Global","Male","Age-standardized","Trichomoniasis","Rate",1992,4794.007014,6281.724204,3556.102414,695.311681122449
+"Incidence","Global","Male","Age-standardized","Trichomoniasis","Rate",1993,4799.562783,6288.29222,3560.225744,695.935325510204
+"Incidence","Global","Male","Age-standardized","Trichomoniasis","Rate",1994,4805.838069,6291.096493,3564.442479,695.575003571429
+"Incidence","Global","Male","Age-standardized","Trichomoniasis","Rate",1995,4812.450138,6299.711121,3568.573999,696.718653571429
+"Incidence","Global","Male","Age-standardized","Trichomoniasis","Rate",1996,4819.594283,6313.726465,3571.253493,699.610452040816
+"Incidence","Global","Male","Age-standardized","Trichomoniasis","Rate",1997,4826.650395,6329.567403,3573.768245,703.009989285714
+"Incidence","Global","Male","Age-standardized","Trichomoniasis","Rate",1998,4833.221126,6337.528079,3578.451922,703.845958418367
+"Incidence","Global","Male","Age-standardized","Trichomoniasis","Rate",1999,4838.744469,6344.034731,3582.789968,704.399174234694
+"Incidence","Global","Male","Age-standardized","Trichomoniasis","Rate",2000,4842.99889,6349.379204,3586.187522,704.895837244898
+"Incidence","Global","Male","Age-standardized","Trichomoniasis","Rate",2001,4844.189659,6350.341205,3588.031359,704.670879081633
+"Incidence","Global","Male","Age-standardized","Trichomoniasis","Rate",2002,4842.634017,6348.641688,3588.107777,704.217834438775
+"Incidence","Global","Male","Age-standardized","Trichomoniasis","Rate",2003,4840.089669,6345.804476,3587.603442,703.622712755102
+"Incidence","Global","Male","Age-standardized","Trichomoniasis","Rate",2004,4838.284671,6343.664095,3587.587507,703.080762244898
+"Incidence","Global","Male","Age-standardized","Trichomoniasis","Rate",2005,4839.528825,6345.318191,3589.299692,703.065943622449
+"Incidence","Global","Male","Age-standardized","Trichomoniasis","Rate",2006,4843.282855,6348.318025,3590.129589,703.619498979592
+"Incidence","Global","Male","Age-standardized","Trichomoniasis","Rate",2007,4847.766081,6353.367586,3592.773497,704.233185969388
+"Incidence","Global","Male","Age-standardized","Trichomoniasis","Rate",2008,4852.240849,6359.177321,3593.956276,705.413531887755
+"Incidence","Global","Male","Age-standardized","Trichomoniasis","Rate",2009,4856.37951,6365.016412,3590.943597,707.671636479592
+"Incidence","Global","Male","Age-standardized","Trichomoniasis","Rate",2010,4860.241228,6370.78557,3590.67729,709.211295918367
+"Incidence","Global","Male","Age-standardized","Trichomoniasis","Rate",2011,4862.840295,6373.154941,3593.405282,709.119810969388
+"Incidence","Global","Male","Age-standardized","Trichomoniasis","Rate",2012,4864.146893,6374.804825,3597.041643,708.613056632653
+"Incidence","Global","Male","Age-standardized","Trichomoniasis","Rate",2013,4864.970919,6374.21769,3600.253143,707.644017091837
+"Incidence","Global","Male","Age-standardized","Trichomoniasis","Rate",2014,4866.016288,6372.804805,3603.397233,706.481523469388
+"Incidence","Global","Male","Age-standardized","Trichomoniasis","Rate",2015,4868.028798,6372.921085,3606.943094,705.606630357143
+"Incidence","Global","Male","Age-standardized","Trichomoniasis","Rate",2016,4864.58846,6384.259022,3605.70029,708.816003061224
+"Incidence","Global","Male","Age-standardized","Trichomoniasis","Rate",2017,4862.249221,6372.743689,3600.492655,707.206896428571
+"Incidence","Global","Male","Age-standardized","Trichomoniasis","Rate",2018,4868.968294,6381.072217,3604.915755,708.203179081633
+"Incidence","Global","Male","Age-standardized","Trichomoniasis","Rate",2019,4879.672549,6366.98697,3609.999724,703.313072959184

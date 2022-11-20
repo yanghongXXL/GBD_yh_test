@@ -1,0 +1,541 @@
+"measure","location","sex","age","cause","metric","year","val","upper","lower"
+"Incidence","Global","Both","All ages","Chlamydial infection","Number",1990,151695680,199144008,113998556
+"Incidence","Global","Both","All ages","Chlamydial infection","Number",1991,155078853,203406822,116448728
+"Incidence","Global","Both","All ages","Chlamydial infection","Number",1992,158523741,207940501,118905525
+"Incidence","Global","Both","All ages","Chlamydial infection","Number",1993,162061947,212648024,121521173
+"Incidence","Global","Both","All ages","Chlamydial infection","Number",1994,165601366,217022172,123993756
+"Incidence","Global","Both","All ages","Chlamydial infection","Number",1995,169208393,221727821,126721836
+"Incidence","Global","Both","All ages","Chlamydial infection","Number",1996,173773721,227758422,130076904
+"Incidence","Global","Both","All ages","Chlamydial infection","Number",1997,179817645,235519494,134580425
+"Incidence","Global","Both","All ages","Chlamydial infection","Number",1998,186347490,243916615,139720188
+"Incidence","Global","Both","All ages","Chlamydial infection","Number",1999,192201976,251455264,144131482
+"Incidence","Global","Both","All ages","Chlamydial infection","Number",2000,196503594,257057532,147491992
+"Incidence","Global","Both","All ages","Chlamydial infection","Number",2001,199298761,260246384,149630944
+"Incidence","Global","Both","All ages","Chlamydial infection","Number",2002,201851782,263088322,151759886
+"Incidence","Global","Both","All ages","Chlamydial infection","Number",2003,204246526,265996949,153785039
+"Incidence","Global","Both","All ages","Chlamydial infection","Number",2004,206486982,267828663,155856044
+"Incidence","Global","Both","All ages","Chlamydial infection","Number",2005,208819022,270723120,157991360
+"Incidence","Global","Both","All ages","Chlamydial infection","Number",2006,209413912,271459945,158081999
+"Incidence","Global","Both","All ages","Chlamydial infection","Number",2007,207623936,270154024,156453856
+"Incidence","Global","Both","All ages","Chlamydial infection","Number",2008,204928755,268124171,154336491
+"Incidence","Global","Both","All ages","Chlamydial infection","Number",2009,202938113,266251135,153011511
+"Incidence","Global","Both","All ages","Chlamydial infection","Number",2010,203604612,266802265,153532169
+"Incidence","Global","Both","All ages","Chlamydial infection","Number",2011,206237095,270113926,155356075
+"Incidence","Global","Both","All ages","Chlamydial infection","Number",2012,208891014,273620748,157345626
+"Incidence","Global","Both","All ages","Chlamydial infection","Number",2013,211464610,276699931,159365787
+"Incidence","Global","Both","All ages","Chlamydial infection","Number",2014,213879006,279524446,161083527
+"Incidence","Global","Both","All ages","Chlamydial infection","Number",2015,216110516,282019034,162681432
+"Incidence","Global","Both","All ages","Chlamydial infection","Number",2016,218050695,284209748,164060836
+"Incidence","Global","Both","All ages","Chlamydial infection","Number",2017,219856063,286391440,165555823
+"Incidence","Global","Both","All ages","Chlamydial infection","Number",2018,224496690,291701998,168544810
+"Incidence","Global","Both","All ages","Chlamydial infection","Number",2019,232534841,303009114,174269191
+"Incidence","Global","Female","All ages","Chlamydial infection","Number",1990,67716181,88169743,51485411
+"Incidence","Global","Female","All ages","Chlamydial infection","Number",1991,69086799,90020175,52521639
+"Incidence","Global","Female","All ages","Chlamydial infection","Number",1992,70469805,91848197,53544780
+"Incidence","Global","Female","All ages","Chlamydial infection","Number",1993,71903264,93807088,54577224
+"Incidence","Global","Female","All ages","Chlamydial infection","Number",1994,73380654,95790294,55645515
+"Incidence","Global","Female","All ages","Chlamydial infection","Number",1995,74916137,97705238,56751709
+"Incidence","Global","Female","All ages","Chlamydial infection","Number",1996,76956975,100376413,58289930
+"Incidence","Global","Female","All ages","Chlamydial infection","Number",1997,79734747,103945754,60448671
+"Incidence","Global","Female","All ages","Chlamydial infection","Number",1998,82796473,107792046,62837129
+"Incidence","Global","Female","All ages","Chlamydial infection","Number",1999,85603981,111223307,65042983
+"Incidence","Global","Female","All ages","Chlamydial infection","Number",2000,87686643,113678331,66686781
+"Incidence","Global","Female","All ages","Chlamydial infection","Number",2001,89091453,115372877,67904984
+"Incidence","Global","Female","All ages","Chlamydial infection","Number",2002,90424724,116951358,69063692
+"Incidence","Global","Female","All ages","Chlamydial infection","Number",2003,91706059,118488226,70048419
+"Incidence","Global","Female","All ages","Chlamydial infection","Number",2004,92912871,120069818,70975968
+"Incidence","Global","Female","All ages","Chlamydial infection","Number",2005,94125347,121706708,71893474
+"Incidence","Global","Female","All ages","Chlamydial infection","Number",2006,94531139,122150623,72186738
+"Incidence","Global","Female","All ages","Chlamydial infection","Number",2007,93862409,121299561,71738622
+"Incidence","Global","Female","All ages","Chlamydial infection","Number",2008,92796189,120136110,70925623
+"Incidence","Global","Female","All ages","Chlamydial infection","Number",2009,92048845,118987513,70315479
+"Incidence","Global","Female","All ages","Chlamydial infection","Number",2010,92471957,119543639,70431629
+"Incidence","Global","Female","All ages","Chlamydial infection","Number",2011,93705684,121290278,71347622
+"Incidence","Global","Female","All ages","Chlamydial infection","Number",2012,94887402,123125893,72256761
+"Incidence","Global","Female","All ages","Chlamydial infection","Number",2013,96024096,124754041,73046152
+"Incidence","Global","Female","All ages","Chlamydial infection","Number",2014,97116336,126200186,73779176
+"Incidence","Global","Female","All ages","Chlamydial infection","Number",2015,98186525,127670440,74537312
+"Incidence","Global","Female","All ages","Chlamydial infection","Number",2016,99342605,129420525,75255761
+"Incidence","Global","Female","All ages","Chlamydial infection","Number",2017,100431452,131084582,75948221
+"Incidence","Global","Female","All ages","Chlamydial infection","Number",2018,102834067,134699799,77906191
+"Incidence","Global","Female","All ages","Chlamydial infection","Number",2019,106935600,139409312,81029305
+"Incidence","Global","Male","All ages","Chlamydial infection","Number",1990,83979498,111433605,62121370
+"Incidence","Global","Male","All ages","Chlamydial infection","Number",1991,85992054,114029057,63616043
+"Incidence","Global","Male","All ages","Chlamydial infection","Number",1992,88053935,116697702,65146073
+"Incidence","Global","Male","All ages","Chlamydial infection","Number",1993,90158683,119543365,66824026
+"Incidence","Global","Male","All ages","Chlamydial infection","Number",1994,92220712,122354962,68384941
+"Incidence","Global","Male","All ages","Chlamydial infection","Number",1995,94292256,125104409,69770382
+"Incidence","Global","Male","All ages","Chlamydial infection","Number",1996,96816747,128585388,71620572
+"Incidence","Global","Male","All ages","Chlamydial infection","Number",1997,100082898,132796328,74118655
+"Incidence","Global","Male","All ages","Chlamydial infection","Number",1998,103551017,137219933,76752174
+"Incidence","Global","Male","All ages","Chlamydial infection","Number",1999,106597994,141132738,79082119
+"Incidence","Global","Male","All ages","Chlamydial infection","Number",2000,108816950,143910368,80801604
+"Incidence","Global","Male","All ages","Chlamydial infection","Number",2001,110207308,145645965,81802244
+"Incidence","Global","Male","All ages","Chlamydial infection","Number",2002,111427058,146964397,82722475
+"Incidence","Global","Male","All ages","Chlamydial infection","Number",2003,112540467,148297176,83419875
+"Incidence","Global","Male","All ages","Chlamydial infection","Number",2004,113574111,149611706,84296688
+"Incidence","Global","Male","All ages","Chlamydial infection","Number",2005,114693675,150909055,85130047
+"Incidence","Global","Male","All ages","Chlamydial infection","Number",2006,114882773,150886107,85351995
+"Incidence","Global","Male","All ages","Chlamydial infection","Number",2007,113761528,149065903,84646159
+"Incidence","Global","Male","All ages","Chlamydial infection","Number",2008,112132566,147156541,83495206
+"Incidence","Global","Male","All ages","Chlamydial infection","Number",2009,110889268,145749898,82594835
+"Incidence","Global","Male","All ages","Chlamydial infection","Number",2010,111132655,145939953,82778901
+"Incidence","Global","Male","All ages","Chlamydial infection","Number",2011,112531411,147614616,83865466
+"Incidence","Global","Male","All ages","Chlamydial infection","Number",2012,114003612,149261425,84980062
+"Incidence","Global","Male","All ages","Chlamydial infection","Number",2013,115440515,151067591,86047013
+"Incidence","Global","Male","All ages","Chlamydial infection","Number",2014,116762669,152836266,87227914
+"Incidence","Global","Male","All ages","Chlamydial infection","Number",2015,117923992,154411185,88149711
+"Incidence","Global","Male","All ages","Chlamydial infection","Number",2016,118708090,155658287,88625958
+"Incidence","Global","Male","All ages","Chlamydial infection","Number",2017,119424611,156292006,89032249
+"Incidence","Global","Male","All ages","Chlamydial infection","Number",2018,121662622,158941153,90240093
+"Incidence","Global","Male","All ages","Chlamydial infection","Number",2019,125599241,164518160,93186987
+"Incidence","Global","Both","All ages","Genital herpes","Number",1990,53051595,61934036,45029379
+"Incidence","Global","Both","All ages","Genital herpes","Number",1991,54619775,63626456,46486265
+"Incidence","Global","Both","All ages","Genital herpes","Number",1992,56091305,65066028,47837003
+"Incidence","Global","Both","All ages","Genital herpes","Number",1993,57472718,66616513,49097000
+"Incidence","Global","Both","All ages","Genital herpes","Number",1994,58756995,68096156,50254283
+"Incidence","Global","Both","All ages","Genital herpes","Number",1995,59943947,69487983,51296370
+"Incidence","Global","Both","All ages","Genital herpes","Number",1996,60930374,70548456,52204285
+"Incidence","Global","Both","All ages","Genital herpes","Number",1997,61728574,71377378,52962508
+"Incidence","Global","Both","All ages","Genital herpes","Number",1998,62448738,72268022,53643046
+"Incidence","Global","Both","All ages","Genital herpes","Number",1999,63210673,73185327,54302394
+"Incidence","Global","Both","All ages","Genital herpes","Number",2000,64159931,74210791,55072486
+"Incidence","Global","Both","All ages","Genital herpes","Number",2001,65182847,75357844,55985333
+"Incidence","Global","Both","All ages","Genital herpes","Number",2002,66128692,76365755,56778851
+"Incidence","Global","Both","All ages","Genital herpes","Number",2003,67031436,77376406,57534487
+"Incidence","Global","Both","All ages","Genital herpes","Number",2004,67924527,78436508,58285554
+"Incidence","Global","Both","All ages","Genital herpes","Number",2005,68871912,79573386,59091511
+"Incidence","Global","Both","All ages","Genital herpes","Number",2006,69744543,80596304,59745286
+"Incidence","Global","Both","All ages","Genital herpes","Number",2007,70453540,81482691,60258514
+"Incidence","Global","Both","All ages","Genital herpes","Number",2008,71060551,82321560,60644752
+"Incidence","Global","Both","All ages","Genital herpes","Number",2009,71660759,83174646,61077917
+"Incidence","Global","Both","All ages","Genital herpes","Number",2010,72414713,84097852,61687915
+"Incidence","Global","Both","All ages","Genital herpes","Number",2011,73312541,85136674,62456921
+"Incidence","Global","Both","All ages","Genital herpes","Number",2012,74243795,86208309,63341799
+"Incidence","Global","Both","All ages","Genital herpes","Number",2013,75182176,87502512,64238818
+"Incidence","Global","Both","All ages","Genital herpes","Number",2014,76100590,88528542,64967998
+"Incidence","Global","Both","All ages","Genital herpes","Number",2015,76981479,89545942,65614116
+"Incidence","Global","Both","All ages","Genital herpes","Number",2016,78039486,90870803,66377180
+"Incidence","Global","Both","All ages","Genital herpes","Number",2017,79101727,92215140,67212035
+"Incidence","Global","Both","All ages","Genital herpes","Number",2018,79946962,93183508,68014645
+"Incidence","Global","Both","All ages","Genital herpes","Number",2019,80784427,94200325,68810959
+"Incidence","Global","Female","All ages","Genital herpes","Number",1990,32826293,38105215,28066351
+"Incidence","Global","Female","All ages","Genital herpes","Number",1991,33800461,39132513,28937418
+"Incidence","Global","Female","All ages","Genital herpes","Number",1992,34720918,40158221,29714610
+"Incidence","Global","Female","All ages","Genital herpes","Number",1993,35587767,41119682,30472281
+"Incidence","Global","Female","All ages","Genital herpes","Number",1994,36394096,42029531,31180914
+"Incidence","Global","Female","All ages","Genital herpes","Number",1995,37130957,42886287,31890321
+"Incidence","Global","Female","All ages","Genital herpes","Number",1996,37746709,43577031,32463943
+"Incidence","Global","Female","All ages","Genital herpes","Number",1997,38261468,44094101,32874704
+"Incidence","Global","Female","All ages","Genital herpes","Number",1998,38732760,44569537,33329397
+"Incidence","Global","Female","All ages","Genital herpes","Number",1999,39224588,45099128,33747732
+"Incidence","Global","Female","All ages","Genital herpes","Number",2000,39814004,45757939,34275858
+"Incidence","Global","Female","All ages","Genital herpes","Number",2001,40442122,46474944,34802325
+"Incidence","Global","Female","All ages","Genital herpes","Number",2002,41029440,47171956,35324566
+"Incidence","Global","Female","All ages","Genital herpes","Number",2003,41590913,47825732,35829827
+"Incidence","Global","Female","All ages","Genital herpes","Number",2004,42142428,48457668,36290369
+"Incidence","Global","Female","All ages","Genital herpes","Number",2005,42715111,49151571,36769765
+"Incidence","Global","Female","All ages","Genital herpes","Number",2006,43258850,49835768,37222339
+"Incidence","Global","Female","All ages","Genital herpes","Number",2007,43735350,50455014,37576075
+"Incidence","Global","Female","All ages","Genital herpes","Number",2008,44156693,51034911,37885660
+"Incidence","Global","Female","All ages","Genital herpes","Number",2009,44562112,51576923,38177563
+"Incidence","Global","Female","All ages","Genital herpes","Number",2010,45026990,52171577,38535622
+"Incidence","Global","Female","All ages","Genital herpes","Number",2011,45511203,52709714,38952285
+"Incidence","Global","Female","All ages","Genital herpes","Number",2012,45959152,53239206,39313740
+"Incidence","Global","Female","All ages","Genital herpes","Number",2013,46394954,53733282,39652647
+"Incidence","Global","Female","All ages","Genital herpes","Number",2014,46840258,54312207,40032389
+"Incidence","Global","Female","All ages","Genital herpes","Number",2015,47321510,54832819,40425289
+"Incidence","Global","Female","All ages","Genital herpes","Number",2016,47937478,55510973,40917008
+"Incidence","Global","Female","All ages","Genital herpes","Number",2017,48554582,56206975,41366034
+"Incidence","Global","Female","All ages","Genital herpes","Number",2018,49055226,56816199,41883022
+"Incidence","Global","Female","All ages","Genital herpes","Number",2019,49547189,57406655,42417728
+"Incidence","Global","Male","All ages","Genital herpes","Number",1990,20225301,23827900,16909528
+"Incidence","Global","Male","All ages","Genital herpes","Number",1991,20819314,24442904,17503093
+"Incidence","Global","Male","All ages","Genital herpes","Number",1992,21370387,25025127,18050569
+"Incidence","Global","Male","All ages","Genital herpes","Number",1993,21884950,25620257,18484147
+"Incidence","Global","Male","All ages","Genital herpes","Number",1994,22362899,26188279,18894114
+"Incidence","Global","Male","All ages","Genital herpes","Number",1995,22812990,26699818,19313505
+"Incidence","Global","Male","All ages","Genital herpes","Number",1996,23183665,27122829,19608923
+"Incidence","Global","Male","All ages","Genital herpes","Number",1997,23467106,27448764,19864459
+"Incidence","Global","Male","All ages","Genital herpes","Number",1998,23715979,27717774,20070893
+"Incidence","Global","Male","All ages","Genital herpes","Number",1999,23986085,28051891,20309913
+"Incidence","Global","Male","All ages","Genital herpes","Number",2000,24345926,28460917,20623200
+"Incidence","Global","Male","All ages","Genital herpes","Number",2001,24740725,28927031,20997209
+"Incidence","Global","Male","All ages","Genital herpes","Number",2002,25099252,29335668,21339134
+"Incidence","Global","Male","All ages","Genital herpes","Number",2003,25440523,29720257,21610312
+"Incidence","Global","Male","All ages","Genital herpes","Number",2004,25782099,30152209,21926504
+"Incidence","Global","Male","All ages","Genital herpes","Number",2005,26156800,30631618,22261118
+"Incidence","Global","Male","All ages","Genital herpes","Number",2006,26485693,30989707,22512628
+"Incidence","Global","Male","All ages","Genital herpes","Number",2007,26718190,31263215,22707980
+"Incidence","Global","Male","All ages","Genital herpes","Number",2008,26903857,31494104,22860256
+"Incidence","Global","Male","All ages","Genital herpes","Number",2009,27098647,31695814,23052271
+"Incidence","Global","Male","All ages","Genital herpes","Number",2010,27387723,32026527,23263538
+"Incidence","Global","Male","All ages","Genital herpes","Number",2011,27801339,32538258,23578763
+"Incidence","Global","Male","All ages","Genital herpes","Number",2012,28284643,33149820,23989452
+"Incidence","Global","Male","All ages","Genital herpes","Number",2013,28787222,33719207,24366503
+"Incidence","Global","Male","All ages","Genital herpes","Number",2014,29260332,34324864,24720042
+"Incidence","Global","Male","All ages","Genital herpes","Number",2015,29659969,34783101,25076754
+"Incidence","Global","Male","All ages","Genital herpes","Number",2016,30102008,35329322,25500921
+"Incidence","Global","Male","All ages","Genital herpes","Number",2017,30547144,35948199,25881960
+"Incidence","Global","Male","All ages","Genital herpes","Number",2018,30891736,36365671,26158424
+"Incidence","Global","Male","All ages","Genital herpes","Number",2019,31237238,36801243,26476066
+"Incidence","Global","Both","All ages","Gonococcal infection","Number",1990,67732225,89251615,51820124
+"Incidence","Global","Both","All ages","Gonococcal infection","Number",1991,68891028,90895364,52802508
+"Incidence","Global","Both","All ages","Gonococcal infection","Number",1992,69942595,92028919,53714313
+"Incidence","Global","Both","All ages","Gonococcal infection","Number",1993,70897913,92986793,54512084
+"Incidence","Global","Both","All ages","Gonococcal infection","Number",1994,71787471,93831222,55224407
+"Incidence","Global","Both","All ages","Gonococcal infection","Number",1995,72631669,94605079,55879192
+"Incidence","Global","Both","All ages","Gonococcal infection","Number",1996,73396913,95570604,56517072
+"Incidence","Global","Both","All ages","Gonococcal infection","Number",1997,74078537,96355673,57080664
+"Incidence","Global","Both","All ages","Gonococcal infection","Number",1998,74748480,97222700,57631577
+"Incidence","Global","Both","All ages","Gonococcal infection","Number",1999,75485539,98057122,58347229
+"Incidence","Global","Both","All ages","Gonococcal infection","Number",2000,76400362,99094163,59089102
+"Incidence","Global","Both","All ages","Gonococcal infection","Number",2001,77641950,100654408,60008743
+"Incidence","Global","Both","All ages","Gonococcal infection","Number",2002,79205442,102725971,61279151
+"Incidence","Global","Both","All ages","Gonococcal infection","Number",2003,80907193,105011532,62738192
+"Incidence","Global","Both","All ages","Gonococcal infection","Number",2004,82524015,107360692,63982501
+"Incidence","Global","Both","All ages","Gonococcal infection","Number",2005,83870399,109460842,64982480
+"Incidence","Global","Both","All ages","Gonococcal infection","Number",2006,84796648,110839274,65707678
+"Incidence","Global","Both","All ages","Gonococcal infection","Number",2007,85408169,111802287,66119252
+"Incidence","Global","Both","All ages","Gonococcal infection","Number",2008,85810030,112272136,66317103
+"Incidence","Global","Both","All ages","Gonococcal infection","Number",2009,86151112,112536062,66576389
+"Incidence","Global","Both","All ages","Gonococcal infection","Number",2010,86672866,112925659,67071506
+"Incidence","Global","Both","All ages","Gonococcal infection","Number",2011,87367260,113759688,67550494
+"Incidence","Global","Both","All ages","Gonococcal infection","Number",2012,88062414,114297275,68045030
+"Incidence","Global","Both","All ages","Gonococcal infection","Number",2013,88710091,114866062,68733126
+"Incidence","Global","Both","All ages","Gonococcal infection","Number",2014,89262147,115766635,69164913
+"Incidence","Global","Both","All ages","Gonococcal infection","Number",2015,89675524,116402618,69508514
+"Incidence","Global","Both","All ages","Gonococcal infection","Number",2016,88414611,114299593,68590788
+"Incidence","Global","Both","All ages","Gonococcal infection","Number",2017,86963170,111902495,67789497
+"Incidence","Global","Both","All ages","Gonococcal infection","Number",2018,87199942,111812695,67924815
+"Incidence","Global","Both","All ages","Gonococcal infection","Number",2019,87951953,112961839,68461024
+"Incidence","Global","Female","All ages","Gonococcal infection","Number",1990,24249595,32574080,18176836
+"Incidence","Global","Female","All ages","Gonococcal infection","Number",1991,24563670,32963729,18438655
+"Incidence","Global","Female","All ages","Gonococcal infection","Number",1992,24829040,33188341,18650505
+"Incidence","Global","Female","All ages","Gonococcal infection","Number",1993,25057920,33518243,18893808
+"Incidence","Global","Female","All ages","Gonococcal infection","Number",1994,25271256,33841078,19043305
+"Incidence","Global","Female","All ages","Gonococcal infection","Number",1995,25473886,34093036,19264719
+"Incidence","Global","Female","All ages","Gonococcal infection","Number",1996,25699159,34141235,19557790
+"Incidence","Global","Female","All ages","Gonococcal infection","Number",1997,25963703,34278251,19862573
+"Incidence","Global","Female","All ages","Gonococcal infection","Number",1998,26245707,34450962,20181258
+"Incidence","Global","Female","All ages","Gonococcal infection","Number",1999,26532511,34650530,20439541
+"Incidence","Global","Female","All ages","Gonococcal infection","Number",2000,26825486,35018677,20796724
+"Incidence","Global","Female","All ages","Gonococcal infection","Number",2001,27143988,35462245,21046173
+"Incidence","Global","Female","All ages","Gonococcal infection","Number",2002,27497323,35971142,21320787
+"Incidence","Global","Female","All ages","Gonococcal infection","Number",2003,27862515,36498145,21639248
+"Incidence","Global","Female","All ages","Gonococcal infection","Number",2004,28209059,37022695,21930320
+"Incidence","Global","Female","All ages","Gonococcal infection","Number",2005,28527188,37463706,22159173
+"Incidence","Global","Female","All ages","Gonococcal infection","Number",2006,28685207,37683380,22199815
+"Incidence","Global","Female","All ages","Gonococcal infection","Number",2007,28636293,37661425,22071052
+"Incidence","Global","Female","All ages","Gonococcal infection","Number",2008,28479737,37509288,21862173
+"Incidence","Global","Female","All ages","Gonococcal infection","Number",2009,28326377,37472977,21674485
+"Incidence","Global","Female","All ages","Gonococcal infection","Number",2010,28308803,37532344,21634369
+"Incidence","Global","Female","All ages","Gonococcal infection","Number",2011,28380201,37701053,21674372
+"Incidence","Global","Female","All ages","Gonococcal infection","Number",2012,28426009,37554921,21728325
+"Incidence","Global","Female","All ages","Gonococcal infection","Number",2013,28455051,37428088,21709646
+"Incidence","Global","Female","All ages","Gonococcal infection","Number",2014,28470201,37378281,21760795
+"Incidence","Global","Female","All ages","Gonococcal infection","Number",2015,28468706,37348204,21799776
+"Incidence","Global","Female","All ages","Gonococcal infection","Number",2016,28220547,36943354,21672874
+"Incidence","Global","Female","All ages","Gonococcal infection","Number",2017,27978709,36578389,21573886
+"Incidence","Global","Female","All ages","Gonococcal infection","Number",2018,28170415,36595959,21740648
+"Incidence","Global","Female","All ages","Gonococcal infection","Number",2019,28632695,37000146,22146973
+"Incidence","Global","Male","All ages","Gonococcal infection","Number",1990,43482629,57318572,33232927
+"Incidence","Global","Male","All ages","Gonococcal infection","Number",1991,44327359,58472144,33963335
+"Incidence","Global","Male","All ages","Gonococcal infection","Number",1992,45113555,59370130,34593703
+"Incidence","Global","Male","All ages","Gonococcal infection","Number",1993,45839993,60204905,35141119
+"Incidence","Global","Male","All ages","Gonococcal infection","Number",1994,46516215,61053990,35741813
+"Incidence","Global","Male","All ages","Gonococcal infection","Number",1995,47157783,61808880,36305556
+"Incidence","Global","Male","All ages","Gonococcal infection","Number",1996,47697754,62445321,36791560
+"Incidence","Global","Male","All ages","Gonococcal infection","Number",1997,48114834,62925774,37151739
+"Incidence","Global","Male","All ages","Gonococcal infection","Number",1998,48502773,63387901,37519176
+"Incidence","Global","Male","All ages","Gonococcal infection","Number",1999,48953028,63986472,37900173
+"Incidence","Global","Male","All ages","Gonococcal infection","Number",2000,49574876,64870722,38411033
+"Incidence","Global","Male","All ages","Gonococcal infection","Number",2001,50497962,66094958,39070839
+"Incidence","Global","Male","All ages","Gonococcal infection","Number",2002,51708120,67638422,40122492
+"Incidence","Global","Male","All ages","Gonococcal infection","Number",2003,53044677,69430276,41089865
+"Incidence","Global","Male","All ages","Gonococcal infection","Number",2004,54314956,71051679,41965160
+"Incidence","Global","Male","All ages","Gonococcal infection","Number",2005,55343211,72296661,42666291
+"Incidence","Global","Male","All ages","Gonococcal infection","Number",2006,56111441,73321053,43292744
+"Incidence","Global","Male","All ages","Gonococcal infection","Number",2007,56771876,74196876,43842075
+"Incidence","Global","Male","All ages","Gonococcal infection","Number",2008,57330293,74941625,44303906
+"Incidence","Global","Male","All ages","Gonococcal infection","Number",2009,57824735,75744633,44707737
+"Incidence","Global","Male","All ages","Gonococcal infection","Number",2010,58364063,76393710,45104183
+"Incidence","Global","Male","All ages","Gonococcal infection","Number",2011,58987059,77345441,45581516
+"Incidence","Global","Male","All ages","Gonococcal infection","Number",2012,59636405,78336707,46054601
+"Incidence","Global","Male","All ages","Gonococcal infection","Number",2013,60255039,79030705,46494426
+"Incidence","Global","Male","All ages","Gonococcal infection","Number",2014,60791946,79520428,46886599
+"Incidence","Global","Male","All ages","Gonococcal infection","Number",2015,61206818,79981402,47176839
+"Incidence","Global","Male","All ages","Gonococcal infection","Number",2016,60194064,78041738,46531427
+"Incidence","Global","Male","All ages","Gonococcal infection","Number",2017,58984460,76149421,45623034
+"Incidence","Global","Male","All ages","Gonococcal infection","Number",2018,59029527,76058794,45705886
+"Incidence","Global","Male","All ages","Gonococcal infection","Number",2019,59319258,76110797,45872400
+"Incidence","Global","Both","All ages","HIV/AIDS","Number",1990,2057710,2430844,1708166
+"Incidence","Global","Both","All ages","HIV/AIDS","Number",1991,2367711,2799763,1953595
+"Incidence","Global","Both","All ages","HIV/AIDS","Number",1992,2622310,3132251,2164256
+"Incidence","Global","Both","All ages","HIV/AIDS","Number",1993,2838687,3412416,2339228
+"Incidence","Global","Both","All ages","HIV/AIDS","Number",1994,3010169,3613185,2504570
+"Incidence","Global","Both","All ages","HIV/AIDS","Number",1995,3155028,3789797,2648730
+"Incidence","Global","Both","All ages","HIV/AIDS","Number",1996,3268622,3921147,2769548
+"Incidence","Global","Both","All ages","HIV/AIDS","Number",1997,3310627,3991402,2802281
+"Incidence","Global","Both","All ages","HIV/AIDS","Number",1998,3269299,3959091,2770325
+"Incidence","Global","Both","All ages","HIV/AIDS","Number",1999,3189447,3866467,2717148
+"Incidence","Global","Both","All ages","HIV/AIDS","Number",2000,3077182,3729161,2625305
+"Incidence","Global","Both","All ages","HIV/AIDS","Number",2001,2947981,3568735,2519682
+"Incidence","Global","Both","All ages","HIV/AIDS","Number",2002,2834016,3406993,2438719
+"Incidence","Global","Both","All ages","HIV/AIDS","Number",2003,2734759,3264110,2367980
+"Incidence","Global","Both","All ages","HIV/AIDS","Number",2004,2646640,3124825,2312992
+"Incidence","Global","Both","All ages","HIV/AIDS","Number",2005,2575750,3015460,2266879
+"Incidence","Global","Both","All ages","HIV/AIDS","Number",2006,2523098,2930698,2230262
+"Incidence","Global","Both","All ages","HIV/AIDS","Number",2007,2475900,2864539,2203109
+"Incidence","Global","Both","All ages","HIV/AIDS","Number",2008,2432604,2805194,2178002
+"Incidence","Global","Both","All ages","HIV/AIDS","Number",2009,2399929,2753615,2172302
+"Incidence","Global","Both","All ages","HIV/AIDS","Number",2010,2370918,2702318,2161430
+"Incidence","Global","Both","All ages","HIV/AIDS","Number",2011,2342046,2657785,2134965
+"Incidence","Global","Both","All ages","HIV/AIDS","Number",2012,2314238,2629405,2107647
+"Incidence","Global","Both","All ages","HIV/AIDS","Number",2013,2285709,2592980,2071494
+"Incidence","Global","Both","All ages","HIV/AIDS","Number",2014,2265234,2561521,2049854
+"Incidence","Global","Both","All ages","HIV/AIDS","Number",2015,2243665,2532703,2025169
+"Incidence","Global","Both","All ages","HIV/AIDS","Number",2016,2196714,2472186,1971568
+"Incidence","Global","Both","All ages","HIV/AIDS","Number",2017,2131659,2406847,1901621
+"Incidence","Global","Both","All ages","HIV/AIDS","Number",2018,2042488,2314204,1813836
+"Incidence","Global","Both","All ages","HIV/AIDS","Number",2019,1989282,2259348,1760907
+"Incidence","Global","Female","All ages","HIV/AIDS","Number",1990,1137890,1371008,916513
+"Incidence","Global","Female","All ages","HIV/AIDS","Number",1991,1313369,1579485,1060693
+"Incidence","Global","Female","All ages","HIV/AIDS","Number",1992,1459152,1767029,1176225
+"Incidence","Global","Female","All ages","HIV/AIDS","Number",1993,1580262,1926502,1278368
+"Incidence","Global","Female","All ages","HIV/AIDS","Number",1994,1675347,2048598,1378060
+"Incidence","Global","Female","All ages","HIV/AIDS","Number",1995,1748813,2129508,1447794
+"Incidence","Global","Female","All ages","HIV/AIDS","Number",1996,1798664,2190548,1496274
+"Incidence","Global","Female","All ages","HIV/AIDS","Number",1997,1812977,2211304,1513682
+"Incidence","Global","Female","All ages","HIV/AIDS","Number",1998,1788931,2195326,1491902
+"Incidence","Global","Female","All ages","HIV/AIDS","Number",1999,1743849,2141775,1461628
+"Incidence","Global","Female","All ages","HIV/AIDS","Number",2000,1681335,2064831,1409432
+"Incidence","Global","Female","All ages","HIV/AIDS","Number",2001,1608951,1967649,1353754
+"Incidence","Global","Female","All ages","HIV/AIDS","Number",2002,1542739,1872915,1302491
+"Incidence","Global","Female","All ages","HIV/AIDS","Number",2003,1485260,1786762,1261499
+"Incidence","Global","Female","All ages","HIV/AIDS","Number",2004,1434948,1713937,1227628
+"Incidence","Global","Female","All ages","HIV/AIDS","Number",2005,1394163,1656088,1200408
+"Incidence","Global","Female","All ages","HIV/AIDS","Number",2006,1362327,1604565,1180888
+"Incidence","Global","Female","All ages","HIV/AIDS","Number",2007,1334023,1567497,1162691
+"Incidence","Global","Female","All ages","HIV/AIDS","Number",2008,1307682,1530864,1145935
+"Incidence","Global","Female","All ages","HIV/AIDS","Number",2009,1285389,1494959,1133448
+"Incidence","Global","Female","All ages","HIV/AIDS","Number",2010,1265504,1469705,1122109
+"Incidence","Global","Female","All ages","HIV/AIDS","Number",2011,1244599,1447381,1105374
+"Incidence","Global","Female","All ages","HIV/AIDS","Number",2012,1222720,1417644,1085662
+"Incidence","Global","Female","All ages","HIV/AIDS","Number",2013,1199674,1385831,1061072
+"Incidence","Global","Female","All ages","HIV/AIDS","Number",2014,1177466,1350052,1039940
+"Incidence","Global","Female","All ages","HIV/AIDS","Number",2015,1156198,1324864,1018823
+"Incidence","Global","Female","All ages","HIV/AIDS","Number",2016,1125125,1288953,989985
+"Incidence","Global","Female","All ages","HIV/AIDS","Number",2017,1084555,1249595,947593
+"Incidence","Global","Female","All ages","HIV/AIDS","Number",2018,1029916,1196889,894141
+"Incidence","Global","Female","All ages","HIV/AIDS","Number",2019,998585,1165358,861840
+"Incidence","Global","Male","All ages","HIV/AIDS","Number",1990,919820,1063665,780544
+"Incidence","Global","Male","All ages","HIV/AIDS","Number",1991,1054341,1226338,888662
+"Incidence","Global","Male","All ages","HIV/AIDS","Number",1992,1163158,1373037,978458
+"Incidence","Global","Male","All ages","HIV/AIDS","Number",1993,1258425,1491024,1054969
+"Incidence","Global","Male","All ages","HIV/AIDS","Number",1994,1334822,1582749,1121995
+"Incidence","Global","Male","All ages","HIV/AIDS","Number",1995,1406215,1675731,1198499
+"Incidence","Global","Male","All ages","HIV/AIDS","Number",1996,1469958,1747408,1262004
+"Incidence","Global","Male","All ages","HIV/AIDS","Number",1997,1497650,1785654,1283371
+"Incidence","Global","Male","All ages","HIV/AIDS","Number",1998,1480368,1785296,1270065
+"Incidence","Global","Male","All ages","HIV/AIDS","Number",1999,1445598,1741574,1241470
+"Incidence","Global","Male","All ages","HIV/AIDS","Number",2000,1395847,1682736,1203178
+"Incidence","Global","Male","All ages","HIV/AIDS","Number",2001,1339030,1606963,1157962
+"Incidence","Global","Male","All ages","HIV/AIDS","Number",2002,1291277,1539303,1122787
+"Incidence","Global","Male","All ages","HIV/AIDS","Number",2003,1249498,1480992,1091953
+"Incidence","Global","Male","All ages","HIV/AIDS","Number",2004,1211692,1424906,1068636
+"Incidence","Global","Male","All ages","HIV/AIDS","Number",2005,1181587,1377998,1047704
+"Incidence","Global","Male","All ages","HIV/AIDS","Number",2006,1160770,1340574,1032110
+"Incidence","Global","Male","All ages","HIV/AIDS","Number",2007,1141877,1309836,1023698
+"Incidence","Global","Male","All ages","HIV/AIDS","Number",2008,1124922,1283491,1016210
+"Incidence","Global","Male","All ages","HIV/AIDS","Number",2009,1114541,1260162,1015879
+"Incidence","Global","Male","All ages","HIV/AIDS","Number",2010,1105414,1246080,1013585
+"Incidence","Global","Male","All ages","HIV/AIDS","Number",2011,1097447,1236203,1004709
+"Incidence","Global","Male","All ages","HIV/AIDS","Number",2012,1091518,1227448,995973
+"Incidence","Global","Male","All ages","HIV/AIDS","Number",2013,1086035,1220736,984594
+"Incidence","Global","Male","All ages","HIV/AIDS","Number",2014,1087769,1222293,980752
+"Incidence","Global","Male","All ages","HIV/AIDS","Number",2015,1087468,1220698,976278
+"Incidence","Global","Male","All ages","HIV/AIDS","Number",2016,1071588,1196660,959898
+"Incidence","Global","Male","All ages","HIV/AIDS","Number",2017,1047104,1169769,932959
+"Incidence","Global","Male","All ages","HIV/AIDS","Number",2018,1012571,1128822,899417
+"Incidence","Global","Male","All ages","HIV/AIDS","Number",2019,990697,1110287,877731
+"Incidence","Global","Both","All ages","Syphilis","Number",1990,8845218,11588860,6562506
+"Incidence","Global","Both","All ages","Syphilis","Number",1991,9019849,11751186,6709465
+"Incidence","Global","Both","All ages","Syphilis","Number",1992,9196728,11913198,6879283
+"Incidence","Global","Both","All ages","Syphilis","Number",1993,9378610,12109357,7054090
+"Incidence","Global","Both","All ages","Syphilis","Number",1994,9566090,12320652,7210331
+"Incidence","Global","Both","All ages","Syphilis","Number",1995,9757660,12544489,7360801
+"Incidence","Global","Both","All ages","Syphilis","Number",1996,9954916,12795648,7520166
+"Incidence","Global","Both","All ages","Syphilis","Number",1997,10158508,13053734,7665023
+"Incidence","Global","Both","All ages","Syphilis","Number",1998,10361788,13323850,7808402
+"Incidence","Global","Both","All ages","Syphilis","Number",1999,10559167,13592935,7946229
+"Incidence","Global","Both","All ages","Syphilis","Number",2000,10747326,13852058,8076708
+"Incidence","Global","Both","All ages","Syphilis","Number",2001,10906742,14051525,8200170
+"Incidence","Global","Both","All ages","Syphilis","Number",2002,11038069,14219801,8306091
+"Incidence","Global","Both","All ages","Syphilis","Number",2003,11158629,14365096,8403291
+"Incidence","Global","Both","All ages","Syphilis","Number",2004,11286632,14526006,8519377
+"Incidence","Global","Both","All ages","Syphilis","Number",2005,11442873,14722239,8655444
+"Incidence","Global","Both","All ages","Syphilis","Number",2006,11558810,14867853,8732680
+"Incidence","Global","Both","All ages","Syphilis","Number",2007,11591208,14912737,8771958
+"Incidence","Global","Both","All ages","Syphilis","Number",2008,11590199,14913692,8789349
+"Incidence","Global","Both","All ages","Syphilis","Number",2009,11614018,14943154,8823967
+"Incidence","Global","Both","All ages","Syphilis","Number",2010,11735021,15119052,8930516
+"Incidence","Global","Both","All ages","Syphilis","Number",2011,11929787,15369473,9061721
+"Incidence","Global","Both","All ages","Syphilis","Number",2012,12131156,15638152,9191355
+"Incidence","Global","Both","All ages","Syphilis","Number",2013,12340254,15921155,9321781
+"Incidence","Global","Both","All ages","Syphilis","Number",2014,12559933,16219997,9482639
+"Incidence","Global","Both","All ages","Syphilis","Number",2015,12794580,16553893,9660592
+"Incidence","Global","Both","All ages","Syphilis","Number",2016,13106648,17058283,9884245
+"Incidence","Global","Both","All ages","Syphilis","Number",2017,13434748,17501816,10099250
+"Incidence","Global","Both","All ages","Syphilis","Number",2018,13748451,17915371,10341223
+"Incidence","Global","Both","All ages","Syphilis","Number",2019,14114108,18415967,10648495
+"Incidence","Global","Female","All ages","Syphilis","Number",1990,3355446,4388064,2502207
+"Incidence","Global","Female","All ages","Syphilis","Number",1991,3407065,4439365,2552974
+"Incidence","Global","Female","All ages","Syphilis","Number",1992,3459322,4497503,2608917
+"Incidence","Global","Female","All ages","Syphilis","Number",1993,3515712,4563087,2664433
+"Incidence","Global","Female","All ages","Syphilis","Number",1994,3577219,4636975,2719027
+"Incidence","Global","Female","All ages","Syphilis","Number",1995,3642321,4717807,2775168
+"Incidence","Global","Female","All ages","Syphilis","Number",1996,3711339,4797503,2829434
+"Incidence","Global","Female","All ages","Syphilis","Number",1997,3783323,4884806,2883924
+"Incidence","Global","Female","All ages","Syphilis","Number",1998,3854717,4984429,2936672
+"Incidence","Global","Female","All ages","Syphilis","Number",1999,3922511,5061166,2985898
+"Incidence","Global","Female","All ages","Syphilis","Number",2000,3983596,5129220,3029297
+"Incidence","Global","Female","All ages","Syphilis","Number",2001,4020899,5170540,3055754
+"Incidence","Global","Female","All ages","Syphilis","Number",2002,4031147,5178101,3060909
+"Incidence","Global","Female","All ages","Syphilis","Number",2003,4029889,5187020,3060095
+"Incidence","Global","Female","All ages","Syphilis","Number",2004,4033906,5202454,3063487
+"Incidence","Global","Female","All ages","Syphilis","Number",2005,4061862,5248818,3085867
+"Incidence","Global","Female","All ages","Syphilis","Number",2006,4058692,5233596,3092955
+"Incidence","Global","Female","All ages","Syphilis","Number",2007,3986398,5113983,3059155
+"Incidence","Global","Female","All ages","Syphilis","Number",2008,3889569,4960763,2995677
+"Incidence","Global","Female","All ages","Syphilis","Number",2009,3817282,4843019,2950703
+"Incidence","Global","Female","All ages","Syphilis","Number",2010,3822975,4852541,2961209
+"Incidence","Global","Female","All ages","Syphilis","Number",2011,3894552,4935600,3017940
+"Incidence","Global","Female","All ages","Syphilis","Number",2012,3980840,5040465,3085050
+"Incidence","Global","Female","All ages","Syphilis","Number",2013,4076229,5168039,3159236
+"Incidence","Global","Female","All ages","Syphilis","Number",2014,4175166,5301912,3234244
+"Incidence","Global","Female","All ages","Syphilis","Number",2015,4271503,5433133,3312741
+"Incidence","Global","Female","All ages","Syphilis","Number",2016,4360852,5569572,3375424
+"Incidence","Global","Female","All ages","Syphilis","Number",2017,4458705,5709078,3429191
+"Incidence","Global","Female","All ages","Syphilis","Number",2018,4611970,5920310,3546722
+"Incidence","Global","Female","All ages","Syphilis","Number",2019,4824855,6182484,3725829
+"Incidence","Global","Male","All ages","Syphilis","Number",1990,5489771,7208417,4066355
+"Incidence","Global","Male","All ages","Syphilis","Number",1991,5612785,7358025,4164869
+"Incidence","Global","Male","All ages","Syphilis","Number",1992,5737407,7514216,4269058
+"Incidence","Global","Male","All ages","Syphilis","Number",1993,5862898,7676377,4371846
+"Incidence","Global","Male","All ages","Syphilis","Number",1994,5988871,7839311,4476010
+"Incidence","Global","Male","All ages","Syphilis","Number",1995,6115339,8000342,4576252
+"Incidence","Global","Male","All ages","Syphilis","Number",1996,6243576,8169130,4677715
+"Incidence","Global","Male","All ages","Syphilis","Number",1997,6375185,8347902,4783291
+"Incidence","Global","Male","All ages","Syphilis","Number",1998,6507070,8537706,4889498
+"Incidence","Global","Male","All ages","Syphilis","Number",1999,6636656,8713851,4982552
+"Incidence","Global","Male","All ages","Syphilis","Number",2000,6763729,8882876,5072893
+"Incidence","Global","Male","All ages","Syphilis","Number",2001,6885843,9037445,5158111
+"Incidence","Global","Male","All ages","Syphilis","Number",2002,7006921,9187791,5252575
+"Incidence","Global","Male","All ages","Syphilis","Number",2003,7128740,9336745,5359466
+"Incidence","Global","Male","All ages","Syphilis","Number",2004,7252726,9487408,5467829
+"Incidence","Global","Male","All ages","Syphilis","Number",2005,7381011,9644531,5577921
+"Incidence","Global","Male","All ages","Syphilis","Number",2006,7500118,9801816,5664894
+"Incidence","Global","Male","All ages","Syphilis","Number",2007,7604811,9941876,5738411
+"Incidence","Global","Male","All ages","Syphilis","Number",2008,7700630,10071652,5804904
+"Incidence","Global","Male","All ages","Syphilis","Number",2009,7796736,10202219,5872718
+"Incidence","Global","Male","All ages","Syphilis","Number",2010,7912046,10355248,5958202
+"Incidence","Global","Male","All ages","Syphilis","Number",2011,8035235,10528046,6047401
+"Incidence","Global","Male","All ages","Syphilis","Number",2012,8150316,10697974,6126712
+"Incidence","Global","Male","All ages","Syphilis","Number",2013,8264025,10872534,6193874
+"Incidence","Global","Male","All ages","Syphilis","Number",2014,8384768,11058231,6273439
+"Incidence","Global","Male","All ages","Syphilis","Number",2015,8523076,11251155,6367622
+"Incidence","Global","Male","All ages","Syphilis","Number",2016,8745796,11556914,6508028
+"Incidence","Global","Male","All ages","Syphilis","Number",2017,8976043,11867920,6686126
+"Incidence","Global","Male","All ages","Syphilis","Number",2018,9136481,12080236,6807260
+"Incidence","Global","Male","All ages","Syphilis","Number",2019,9289253,12282792,6919196
+"Incidence","Global","Both","All ages","Trichomoniasis","Number",1990,205446488,273107877,151261121
+"Incidence","Global","Both","All ages","Trichomoniasis","Number",1991,211099835,280354220,155683394
+"Incidence","Global","Both","All ages","Trichomoniasis","Number",1992,216644644,287387708,160021368
+"Incidence","Global","Both","All ages","Trichomoniasis","Number",1993,222153640,294969951,164143502
+"Incidence","Global","Both","All ages","Trichomoniasis","Number",1994,227633780,302172936,168057438
+"Incidence","Global","Both","All ages","Trichomoniasis","Number",1995,233092134,309093134,171923529
+"Incidence","Global","Both","All ages","Trichomoniasis","Number",1996,238093875,315233928,175485294
+"Incidence","Global","Both","All ages","Trichomoniasis","Number",1997,242541878,320552112,178587243
+"Incidence","Global","Both","All ages","Trichomoniasis","Number",1998,246742253,325464546,181571956
+"Incidence","Global","Both","All ages","Trichomoniasis","Number",1999,250948664,330477282,184440716
+"Incidence","Global","Both","All ages","Trichomoniasis","Number",2000,255629252,336317952,187571542
+"Incidence","Global","Both","All ages","Trichomoniasis","Number",2001,260407438,342767458,191105412
+"Incidence","Global","Both","All ages","Trichomoniasis","Number",2002,265045662,348961479,194547124
+"Incidence","Global","Both","All ages","Trichomoniasis","Number",2003,269692730,354973442,198188708
+"Incidence","Global","Both","All ages","Trichomoniasis","Number",2004,274403382,360934998,201696556
+"Incidence","Global","Both","All ages","Trichomoniasis","Number",2005,279423151,367065176,205572686
+"Incidence","Global","Both","All ages","Trichomoniasis","Number",2006,284736332,373796006,209415116
+"Incidence","Global","Both","All ages","Trichomoniasis","Number",2007,290374604,380975818,213428545
+"Incidence","Global","Both","All ages","Trichomoniasis","Number",2008,296059761,388239058,217425382
+"Incidence","Global","Both","All ages","Trichomoniasis","Number",2009,301533014,395241428,221239402
+"Incidence","Global","Both","All ages","Trichomoniasis","Number",2010,306811246,401929460,224904608
+"Incidence","Global","Both","All ages","Trichomoniasis","Number",2011,311253986,407671210,228361469
+"Incidence","Global","Both","All ages","Trichomoniasis","Number",2012,314790566,412123744,231259805
+"Incidence","Global","Both","All ages","Trichomoniasis","Number",2013,317979130,415821712,233897772
+"Incidence","Global","Both","All ages","Trichomoniasis","Number",2014,321426417,419830841,236671102
+"Incidence","Global","Both","All ages","Trichomoniasis","Number",2015,325817510,425030223,240045196
+"Incidence","Global","Both","All ages","Trichomoniasis","Number",2016,334407004,435538868,245423170
+"Incidence","Global","Both","All ages","Trichomoniasis","Number",2017,343191839,446691800,251571595
+"Incidence","Global","Both","All ages","Trichomoniasis","Number",2018,348867396,453877225,255791954
+"Incidence","Global","Both","All ages","Trichomoniasis","Number",2019,354466575,461359678,260117335
+"Incidence","Global","Female","All ages","Trichomoniasis","Number",1990,87515337,116821703,64115943
+"Incidence","Global","Female","All ages","Trichomoniasis","Number",1991,90229148,120339597,66049314
+"Incidence","Global","Female","All ages","Trichomoniasis","Number",1992,92831175,123927354,67965356
+"Incidence","Global","Female","All ages","Trichomoniasis","Number",1993,95351456,127436323,69815306
+"Incidence","Global","Female","All ages","Trichomoniasis","Number",1994,97812616,130848159,71635691
+"Incidence","Global","Female","All ages","Trichomoniasis","Number",1995,100190828,134144591,73311505
+"Incidence","Global","Female","All ages","Trichomoniasis","Number",1996,102147594,136830396,74585309
+"Incidence","Global","Female","All ages","Trichomoniasis","Number",1997,103587224,138704206,75535578
+"Incidence","Global","Female","All ages","Trichomoniasis","Number",1998,104795195,140227941,76329496
+"Incidence","Global","Female","All ages","Trichomoniasis","Number",1999,106075433,141821000,77223199
+"Incidence","Global","Female","All ages","Trichomoniasis","Number",2000,107796067,144049059,78301974
+"Incidence","Global","Female","All ages","Trichomoniasis","Number",2001,109778935,146509653,79730689
+"Incidence","Global","Female","All ages","Trichomoniasis","Number",2002,111734092,148766985,81167158
+"Incidence","Global","Female","All ages","Trichomoniasis","Number",2003,113725271,151087153,82591761
+"Incidence","Global","Female","All ages","Trichomoniasis","Number",2004,115783735,153534713,84056123
+"Incidence","Global","Female","All ages","Trichomoniasis","Number",2005,117981124,156456383,85636437
+"Incidence","Global","Female","All ages","Trichomoniasis","Number",2006,120393333,159360120,87317312
+"Incidence","Global","Female","All ages","Trichomoniasis","Number",2007,123044360,162881257,89278502
+"Incidence","Global","Female","All ages","Trichomoniasis","Number",2008,125753649,166488416,91228816
+"Incidence","Global","Female","All ages","Trichomoniasis","Number",2009,128350376,169847875,93052592
+"Incidence","Global","Female","All ages","Trichomoniasis","Number",2010,130736709,172861606,94767803
+"Incidence","Global","Female","All ages","Trichomoniasis","Number",2011,132328482,174660274,96040540
+"Incidence","Global","Female","All ages","Trichomoniasis","Number",2012,133049296,175464562,96695305
+"Incidence","Global","Female","All ages","Trichomoniasis","Number",2013,133473606,175939161,97123164
+"Incidence","Global","Female","All ages","Trichomoniasis","Number",2014,134198396,176885384,97736014
+"Incidence","Global","Female","All ages","Trichomoniasis","Number",2015,135848648,179070427,98969917
+"Incidence","Global","Female","All ages","Trichomoniasis","Number",2016,141938639,187134456,102550675
+"Incidence","Global","Female","All ages","Trichomoniasis","Number",2017,148236459,195080079,106495778
+"Incidence","Global","Female","All ages","Trichomoniasis","Number",2018,151127736,199236823,108526562
+"Incidence","Global","Female","All ages","Trichomoniasis","Number",2019,153839494,202493340,110414264
+"Incidence","Global","Male","All ages","Trichomoniasis","Number",1990,117931151,157404936,87212233
+"Incidence","Global","Male","All ages","Trichomoniasis","Number",1991,120870687,161340060,89516319
+"Incidence","Global","Male","All ages","Trichomoniasis","Number",1992,123813469,165113411,91668539
+"Incidence","Global","Male","All ages","Trichomoniasis","Number",1993,126802184,168921870,93785848
+"Incidence","Global","Male","All ages","Trichomoniasis","Number",1994,129821164,172787207,96053843
+"Incidence","Global","Male","All ages","Trichomoniasis","Number",1995,132901306,176964168,98251517
+"Incidence","Global","Male","All ages","Trichomoniasis","Number",1996,135946281,180487194,100455352
+"Incidence","Global","Male","All ages","Trichomoniasis","Number",1997,138954654,184073611,102546885
+"Incidence","Global","Male","All ages","Trichomoniasis","Number",1998,141947059,187656810,104478325
+"Incidence","Global","Male","All ages","Trichomoniasis","Number",1999,144873231,191096706,106277478
+"Incidence","Global","Male","All ages","Trichomoniasis","Number",2000,147833185,194548146,108366873
+"Incidence","Global","Male","All ages","Trichomoniasis","Number",2001,150628503,197840562,110466944
+"Incidence","Global","Male","All ages","Trichomoniasis","Number",2002,153311569,201063711,112467907
+"Incidence","Global","Male","All ages","Trichomoniasis","Number",2003,155967458,204294258,114476134
+"Incidence","Global","Male","All ages","Trichomoniasis","Number",2004,158619647,207883588,116475961
+"Incidence","Global","Male","All ages","Trichomoniasis","Number",2005,161442027,211862862,118662987
+"Incidence","Global","Male","All ages","Trichomoniasis","Number",2006,164342999,215834854,120895935
+"Incidence","Global","Male","All ages","Trichomoniasis","Number",2007,167330244,219847712,123070588
+"Incidence","Global","Male","All ages","Trichomoniasis","Number",2008,170306112,224007353,125138920
+"Incidence","Global","Male","All ages","Trichomoniasis","Number",2009,173182638,227492338,127082901
+"Incidence","Global","Male","All ages","Trichomoniasis","Number",2010,176074537,231428184,129082540
+"Incidence","Global","Male","All ages","Trichomoniasis","Number",2011,178925505,235485249,131184622
+"Incidence","Global","Male","All ages","Trichomoniasis","Number",2012,181741269,238761486,133340795
+"Incidence","Global","Male","All ages","Trichomoniasis","Number",2013,184505523,241872064,135595961
+"Incidence","Global","Male","All ages","Trichomoniasis","Number",2014,187228022,245629332,137908050
+"Incidence","Global","Male","All ages","Trichomoniasis","Number",2015,189968862,249130005,140205998
+"Incidence","Global","Male","All ages","Trichomoniasis","Number",2016,192468365,252469332,142114839
+"Incidence","Global","Male","All ages","Trichomoniasis","Number",2017,194955380,255447558,143858538
+"Incidence","Global","Male","All ages","Trichomoniasis","Number",2018,197739660,259079799,145806837
+"Incidence","Global","Male","All ages","Trichomoniasis","Number",2019,200627081,262592845,147915656

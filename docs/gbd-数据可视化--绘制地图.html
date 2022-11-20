@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>第 5 章 GBD 数据可视化 -绘制地图 | GBD 笔记总结</title>
+
+    <meta name="author" content="杨 弘" />
+  
+   <meta name="description" content="This book is an overview of how practitioners can acquire, wrangle, visualize, and model data with the R and Stan." />
+   <meta name="generator" content="placeholder" />
+  <meta property="og:title" content="第 5 章 GBD 数据可视化 -绘制地图 | GBD 笔记总结" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://yanghongxxl.github.com/GBD_yh_test/" />
+  
+  <meta property="og:description" content="This book is an overview of how practitioners can acquire, wrangle, visualize, and model data with the R and Stan." />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="第 5 章 GBD 数据可视化 -绘制地图 | GBD 笔记总结" />
+  
+  <meta name="twitter:description" content="This book is an overview of how practitioners can acquire, wrangle, visualize, and model data with the R and Stan." />
+  
+  <!-- JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script>
+    <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet" />
+    <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script>
+    <script src="libs/bs3compat-0.4.1/transition.js"></script>
+    <script src="libs/bs3compat-0.4.1/tabs.js"></script>
+    <script src="libs/bs3compat-0.4.1/bs3compat.js"></script>
+    <link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet" />
+    <script src="libs/bs4_book-1.0.0/bs4_book.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script>
+
+  <!-- CSS -->
+  <style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+    
+</head>
+
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book">
+    <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">GBD 笔记总结</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+      </form>
+
+      <nav aria-label="Table of contents">
+        <h2>Table of contents</h2>
+        <div id="book-toc"></div>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="#">View book source <i class="fab fa-github"></i></a></li></p>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="col-sm-12 col-md-9 col-lg-7" id="content">
+<div id="gbd-数据可视化--绘制地图" class="section level1" number="5">
+<h1><span class="header-section-number">第 5 章</span> GBD 数据可视化 -绘制地图</h1>
+<div id="sf包" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> sf包</h2>
+<div id="读取文件" class="section level3" number="5.1.1">
+<h3><span class="header-section-number">5.1.1</span> 读取文件</h3>
+<div class="sourceCode" id="cb260"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb260-1"><a href="gbd-数据可视化--绘制地图.html#cb260-1" aria-hidden="true" tabindex="-1"></a>map <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">&quot;data/世界国家/世界国家.shp&quot;</span>)</span></code></pre></div>
+<pre><code>## Reading layer `世界国家&#39; from data source 
+##   `D:\OneDrive - b.sxmu.edu.cn\03-yh学习\00-小论文\03-GBD\GBD_yh_test\data\世界国家\世界国家.shp&#39; 
+##   using driver `ESRI Shapefile&#39;
+## Simple feature collection with 247 features and 10 fields
+## Geometry type: MULTIPOLYGON
+## Dimension:     XY
+## Bounding box:  xmin: -180 ymin: -90 xmax: 180 ymax: 83.63
+## CRS:           NA</code></pre>
+<div class="sourceCode" id="cb262"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb262-1"><a href="gbd-数据可视化--绘制地图.html#cb262-1" aria-hidden="true" tabindex="-1"></a>map2 <span class="ot">&lt;-</span> <span class="fu">read_sf</span>(<span class="st">&quot;data/世界国家/世界国家.shp&quot;</span>) <span class="co"># 推荐读取方式</span></span>
+<span id="cb262-2"><a href="gbd-数据可视化--绘制地图.html#cb262-2" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(map)</span></code></pre></div>
+<pre><code>## [1] &quot;sf&quot;         &quot;data.frame&quot;</code></pre>
+<div class="sourceCode" id="cb264"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb264-1"><a href="gbd-数据可视化--绘制地图.html#cb264-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(map2)</span></code></pre></div>
+<pre><code>## [1] &quot;sf&quot;         &quot;tbl_df&quot;     &quot;tbl&quot;        &quot;data.frame&quot;</code></pre>
+</div>
+<div id="查看shp文件" class="section level3" number="5.1.2">
+<h3><span class="header-section-number">5.1.2</span> 查看shp文件</h3>
+<div class="sourceCode" id="cb266"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb266-1"><a href="gbd-数据可视化--绘制地图.html#cb266-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(map)</span></code></pre></div>
+<pre><code>##  [1] &quot;OBJECTID&quot;   &quot;NAME&quot;       &quot;FENAME&quot;    
+##  [4] &quot;FCNAME&quot;     &quot;SOC&quot;        &quot;POP&quot;       
+##  [7] &quot;ELEMID&quot;     &quot;SHAPE_LENG&quot; &quot;SHAPE_AREA&quot;
+## [10] &quot;ID1&quot;        &quot;geometry&quot;</code></pre>
+</div>
+<div id="设定地图文件的坐标参考系" class="section level3" number="5.1.3">
+<h3><span class="header-section-number">5.1.3</span> 设定地图文件的坐标参考系</h3>
+<div class="sourceCode" id="cb268"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb268-1"><a href="gbd-数据可视化--绘制地图.html#cb268-1" aria-hidden="true" tabindex="-1"></a>map <span class="ot">&lt;-</span> <span class="fu">st_set_crs</span>(map,<span class="dv">4326</span>)</span></code></pre></div>
+</div>
+<div id="简单绘制世界地图" class="section level3" number="5.1.4">
+<h3><span class="header-section-number">5.1.4</span> 简单绘制世界地图</h3>
+<div class="sourceCode" id="cb269"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb269-1"><a href="gbd-数据可视化--绘制地图.html#cb269-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>map)<span class="sc">+</span></span>
+<span id="cb269-2"><a href="gbd-数据可视化--绘制地图.html#cb269-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_sf</span>()</span></code></pre></div>
+<p><img src="05_%E5%9C%B0%E5%9B%BE%E7%BB%98%E5%88%B6_files/figure-html/unnamed-chunk-4-1.png" width="576" /></p>
+</div>
+</div>
+<div id="利用-ggplot2-绘制地图" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> 利用 ggplot2 绘制地图</h2>
+<div id="读取-gbd-数据" class="section level3" number="5.2.1">
+<h3><span class="header-section-number">5.2.1</span> 读取 GBD 数据</h3>
+<div class="sourceCode" id="cb270"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb270-1"><a href="gbd-数据可视化--绘制地图.html#cb270-1" aria-hidden="true" tabindex="-1"></a>GBD <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/national HIV.csv&quot;</span>)</span>
+<span id="cb270-2"><a href="gbd-数据可视化--绘制地图.html#cb270-2" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(GBD)</span></code></pre></div>
+<pre><code>##  [1] &quot;measure&quot;  &quot;location&quot; &quot;sex&quot;      &quot;age&quot;     
+##  [5] &quot;cause&quot;    &quot;metric&quot;   &quot;year&quot;     &quot;val&quot;     
+##  [9] &quot;upper&quot;    &quot;lower&quot;</code></pre>
+</div>
+<div id="读取-location-数据" class="section level3" number="5.2.2">
+<h3><span class="header-section-number">5.2.2</span> 读取 location 数据</h3>
+<p>GBD 的国家（或地区）名与地图上的国家（或地区）名并不能完全匹配，因此通过两个数据的地区直接连接会产生大量的 NA 值。 location 数据是我已经整理好的，用于连接 GBD 和地图数据的中间数据。它有三列，分别为 location,location2,location3。其中 location 与 GBD 的 location 完全一致;location2 与 map 数据的 FENAME 列完全一致； location3 与 map 数据的 NAME 列完全一致。</p>
+<div class="sourceCode" id="cb272"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb272-1"><a href="gbd-数据可视化--绘制地图.html#cb272-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 读取 location 数据</span></span>
+<span id="cb272-2"><a href="gbd-数据可视化--绘制地图.html#cb272-2" aria-hidden="true" tabindex="-1"></a>location <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/location.csv&quot;</span>)</span>
+<span id="cb272-3"><a href="gbd-数据可视化--绘制地图.html#cb272-3" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(location)</span></code></pre></div>
+<pre><code>## [1] &quot;location&quot;  &quot;location2&quot; &quot;location3&quot;</code></pre>
+<p>我们可以通过这个 location 数据实现 GBD 数据与 map 数据的连接合并。</p>
+</div>
+<div id="数据的合并联接" class="section level3" number="5.2.3">
+<h3><span class="header-section-number">5.2.3</span> 数据的合并联接</h3>
+<p>tidyverse 包中的 join 函数可以实现两个数据的合并联接。根据目的不同，join 函数可以分为： left_join(),inner_join(),full_join() 等多个函数。它们的具体功能可以参考本次教案 join 函数讲解 ppt。</p>
+<p>首先，我们合并 GBD 数据与 location 数据：</p>
+<div class="sourceCode" id="cb274"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb274-1"><a href="gbd-数据可视化--绘制地图.html#cb274-1" aria-hidden="true" tabindex="-1"></a>GBD <span class="ot">&lt;-</span> <span class="fu">left_join</span>(GBD,location,<span class="at">by=</span><span class="st">&quot;location&quot;</span>)</span>
+<span id="cb274-2"><a href="gbd-数据可视化--绘制地图.html#cb274-2" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(GBD)</span></code></pre></div>
+<pre><code>##  [1] &quot;measure&quot;   &quot;location&quot;  &quot;sex&quot;       &quot;age&quot;      
+##  [5] &quot;cause&quot;     &quot;metric&quot;    &quot;year&quot;      &quot;val&quot;      
+##  [9] &quot;upper&quot;     &quot;lower&quot;     &quot;location2&quot; &quot;location3&quot;</code></pre>
+<p>然后，我们再通过 location2/location3 与 map 数据合并。</p>
+<div class="sourceCode" id="cb276"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb276-1"><a href="gbd-数据可视化--绘制地图.html#cb276-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">left_join</span>(map,GBD,<span class="at">by=</span><span class="fu">c</span>(<span class="st">&quot;NAME&quot;</span><span class="ot">=</span><span class="st">&quot;location3&quot;</span>))</span>
+<span id="cb276-2"><a href="gbd-数据可视化--绘制地图.html#cb276-2" aria-hidden="true" tabindex="-1"></a><span class="co"># df &lt;- na.omit(df) # 直接删除不太好, 南极洲都被删除了</span></span>
+<span id="cb276-3"><a href="gbd-数据可视化--绘制地图.html#cb276-3" aria-hidden="true" tabindex="-1"></a>df</span></code></pre></div>
+<pre><code>## Simple feature collection with 2657 features and 21 fields
+## Geometry type: MULTIPOLYGON
+## Dimension:     XY
+## Bounding box:  xmin: -180 ymin: -90 xmax: 180 ymax: 83.63
+## Geodetic CRS:  WGS 84
+## First 10 features:
+##    OBJECTID NAME FENAME FCNAME  SOC POP ELEMID
+## 1         1 &lt;NA&gt;   &lt;NA&gt;   &lt;NA&gt; &lt;NA&gt;   0      0
+## 2         1 &lt;NA&gt;   &lt;NA&gt;   &lt;NA&gt; &lt;NA&gt;   0      0
+## 3         1 &lt;NA&gt;   &lt;NA&gt;   &lt;NA&gt; &lt;NA&gt;   0      0
+## 4         1 &lt;NA&gt;   &lt;NA&gt;   &lt;NA&gt; &lt;NA&gt;   0      0
+## 5         1 &lt;NA&gt;   &lt;NA&gt;   &lt;NA&gt; &lt;NA&gt;   0      0
+## 6         1 &lt;NA&gt;   &lt;NA&gt;   &lt;NA&gt; &lt;NA&gt;   0      0
+## 7         1 &lt;NA&gt;   &lt;NA&gt;   &lt;NA&gt; &lt;NA&gt;   0      0
+## 8         1 &lt;NA&gt;   &lt;NA&gt;   &lt;NA&gt; &lt;NA&gt;   0      0
+## 9         1 &lt;NA&gt;   &lt;NA&gt;   &lt;NA&gt; &lt;NA&gt;   0      0
+## 10        1 &lt;NA&gt;   &lt;NA&gt;   &lt;NA&gt; &lt;NA&gt;   0      0
+##    SHAPE_LENG SHAPE_AREA ID1 measure
+## 1         154      27.51   1  Deaths
+## 2         154      27.51   1  Deaths
+## 3         154      27.51   1  Deaths
+## 4         154      27.51   1  Deaths
+## 5         154      27.51   1  Deaths
+## 6         154      27.51   1  Deaths
+## 7         154      27.51   1  Deaths
+## 8         154      27.51   1  Deaths
+## 9         154      27.51   1  Deaths
+## 10        154      27.51   1  Deaths
+##                      location    sex              age
+## 1                        Guam   Male Age-standardized
+## 2                        Guam Female Age-standardized
+## 3                        Guam   Both Age-standardized
+## 4                 South Sudan   Male Age-standardized
+## 5                 South Sudan Female Age-standardized
+## 6                 South Sudan   Both Age-standardized
+## 7  Taiwan (Province of China)   Male Age-standardized
+## 8  Taiwan (Province of China) Female Age-standardized
+## 9  Taiwan (Province of China)   Both Age-standardized
+## 10                  Palestine   Male Age-standardized
+##       cause metric year     val    upper   lower
+## 1  HIV/AIDS   Rate 1990 1.62013  3.48241 0.38473
+## 2  HIV/AIDS   Rate 1990 0.18891  0.43887 0.04390
+## 3  HIV/AIDS   Rate 1990 0.95707  2.04443 0.22247
+## 4  HIV/AIDS   Rate 1990 4.83394 15.15071 1.76827
+## 5  HIV/AIDS   Rate 1990 5.73258 16.86650 2.20436
+## 6  HIV/AIDS   Rate 1990 5.24118 16.24245 1.96614
+## 7  HIV/AIDS   Rate 1990 0.05882  0.06455 0.05331
+## 8  HIV/AIDS   Rate 1990 0.02084  0.02287 0.01900
+## 9  HIV/AIDS   Rate 1990 0.04046  0.04352 0.03762
+## 10 HIV/AIDS   Rate 1990 0.08099  0.09625 0.06313
+##    location2                       geometry
+## 1       &lt;NA&gt; MULTIPOLYGON (((-88.73 48.3...
+## 2       &lt;NA&gt; MULTIPOLYGON (((-88.73 48.3...
+## 3       &lt;NA&gt; MULTIPOLYGON (((-88.73 48.3...
+## 4       &lt;NA&gt; MULTIPOLYGON (((-88.73 48.3...
+## 5       &lt;NA&gt; MULTIPOLYGON (((-88.73 48.3...
+## 6       &lt;NA&gt; MULTIPOLYGON (((-88.73 48.3...
+## 7       &lt;NA&gt; MULTIPOLYGON (((-88.73 48.3...
+## 8       &lt;NA&gt; MULTIPOLYGON (((-88.73 48.3...
+## 9       &lt;NA&gt; MULTIPOLYGON (((-88.73 48.3...
+## 10      &lt;NA&gt; MULTIPOLYGON (((-88.73 48.3...</code></pre>
+</div>
+<div id="绘制属性地图" class="section level3" number="5.2.4">
+<h3><span class="header-section-number">5.2.4</span> 绘制属性地图</h3>
+<div class="sourceCode" id="cb278"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb278-1"><a href="gbd-数据可视化--绘制地图.html#cb278-1" aria-hidden="true" tabindex="-1"></a>fig1 <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span></span>
+<span id="cb278-2"><a href="gbd-数据可视化--绘制地图.html#cb278-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(measure<span class="sc">==</span><span class="st">&quot;Incidence&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb278-3"><a href="gbd-数据可视化--绘制地图.html#cb278-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(year<span class="sc">==</span><span class="dv">2019</span>) <span class="sc">|&gt;</span></span>
+<span id="cb278-4"><a href="gbd-数据可视化--绘制地图.html#cb278-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(sex<span class="sc">==</span><span class="st">&quot;Both&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb278-5"><a href="gbd-数据可视化--绘制地图.html#cb278-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>()<span class="sc">+</span></span>
+<span id="cb278-6"><a href="gbd-数据可视化--绘制地图.html#cb278-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">group=</span>NAME,<span class="at">fill=</span>val),<span class="at">color=</span><span class="fu">alpha</span>(<span class="st">&quot;white&quot;</span>,<span class="fl">0.2</span>))</span>
+<span id="cb278-7"><a href="gbd-数据可视化--绘制地图.html#cb278-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb278-8"><a href="gbd-数据可视化--绘制地图.html#cb278-8" aria-hidden="true" tabindex="-1"></a>fig1</span></code></pre></div>
+<p><img src="05_%E5%9C%B0%E5%9B%BE%E7%BB%98%E5%88%B6_files/figure-html/unnamed-chunk-9-1.png" width="576" /></p>
+</div>
+<div id="尺度变换限制经纬度获得小地图" class="section level3" number="5.2.5">
+<h3><span class="header-section-number">5.2.5</span> 尺度变换：限制经纬度获得小地图</h3>
+<div class="sourceCode" id="cb279"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb279-1"><a href="gbd-数据可视化--绘制地图.html#cb279-1" aria-hidden="true" tabindex="-1"></a>fig2 <span class="ot">&lt;-</span> fig1<span class="sc">+</span></span>
+<span id="cb279-2"><a href="gbd-数据可视化--绘制地图.html#cb279-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">coord_sf</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">50</span>),<span class="at">ylim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">30</span>,<span class="dv">0</span>))</span>
+<span id="cb279-3"><a href="gbd-数据可视化--绘制地图.html#cb279-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb279-4"><a href="gbd-数据可视化--绘制地图.html#cb279-4" aria-hidden="true" tabindex="-1"></a>fig2</span></code></pre></div>
+<p><img src="05_%E5%9C%B0%E5%9B%BE%E7%BB%98%E5%88%B6_files/figure-html/unnamed-chunk-10-1.png" width="576" /></p>
+<p>后续可以通过 patchwork 进行图片的拼接。</p>
+</div>
+<div id="颜色变换" class="section level3" number="5.2.6">
+<h3><span class="header-section-number">5.2.6</span> 颜色变换</h3>
+<div id="scale_fill_gradient2" class="section level4" number="5.2.6.1">
+<h4><span class="header-section-number">5.2.6.1</span> scale_fill_gradient2()</h4>
+<div class="sourceCode" id="cb280"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb280-1"><a href="gbd-数据可视化--绘制地图.html#cb280-1" aria-hidden="true" tabindex="-1"></a>fig2<span class="sc">+</span><span class="fu">scale_fill_gradient2</span>(<span class="at">low =</span> <span class="st">&quot;green&quot;</span>,</span>
+<span id="cb280-2"><a href="gbd-数据可视化--绘制地图.html#cb280-2" aria-hidden="true" tabindex="-1"></a>                          <span class="at">mid =</span> <span class="st">&quot;yellow&quot;</span>,<span class="at">midpoint =</span> <span class="dv">250</span>,</span>
+<span id="cb280-3"><a href="gbd-数据可视化--绘制地图.html#cb280-3" aria-hidden="true" tabindex="-1"></a>                          <span class="at">high =</span> <span class="st">&quot;darkred&quot;</span>)</span></code></pre></div>
+<p><img src="05_%E5%9C%B0%E5%9B%BE%E7%BB%98%E5%88%B6_files/figure-html/unnamed-chunk-11-1.png" width="576" /></p>
+</div>
+<div id="scale_fill_distiller" class="section level4" number="5.2.6.2">
+<h4><span class="header-section-number">5.2.6.2</span> scale_fill_distiller()</h4>
+<div class="sourceCode" id="cb281"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb281-1"><a href="gbd-数据可视化--绘制地图.html#cb281-1" aria-hidden="true" tabindex="-1"></a>fig2<span class="sc">+</span><span class="fu">scale_fill_distiller</span>(<span class="at">palette=</span><span class="st">&quot;Spectral&quot;</span>,<span class="co"># 色盘</span></span>
+<span id="cb281-2"><a href="gbd-数据可视化--绘制地图.html#cb281-2" aria-hidden="true" tabindex="-1"></a>                          <span class="at">name=</span><span class="st">&quot;ASR&quot;</span>)</span></code></pre></div>
+<p><img src="05_%E5%9C%B0%E5%9B%BE%E7%BB%98%E5%88%B6_files/figure-html/unnamed-chunk-12-1.png" width="576" /></p>
+</div>
+<div id="scale_fill_manual-离散颜色" class="section level4" number="5.2.6.3">
+<h4><span class="header-section-number">5.2.6.3</span> scale_fill_manual() 离散颜色</h4>
+<p>包括前面讲过的 scale_fill_lancet 等函数也可以用在这里。但是我们的数据val 本身是离散的，需要进行数据变换，转换成分类变量，然后转化为因子，才能用离散颜色。</p>
+<div class="sourceCode" id="cb282"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb282-1"><a href="gbd-数据可视化--绘制地图.html#cb282-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggsci)</span>
+<span id="cb282-2"><a href="gbd-数据可视化--绘制地图.html#cb282-2" aria-hidden="true" tabindex="-1"></a>fig2<span class="sc">+</span><span class="fu">scale_fill_manual</span>()</span></code></pre></div>
+<p>简书上有关于地图配色的文章，讲得挺完善的，大家可以去学习一下：<a href="https:/www.jianshu.com/p/d85aa0b4fb1c">https: /www.jianshu.com/p/d85aa0b4fb1c</a></p>
+</div>
+</div>
+</div>
+<div id="课后作业-2" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> 课后作业</h2>
+<ol style="list-style-type: decimal">
+<li>文档里有一份胃癌的数据，请绘制疾病地图，展示 2019 年男性胃癌年龄标准化发病率的空间分布</li>
+</ol>
+<div class="sourceCode" id="cb283"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb283-1"><a href="gbd-数据可视化--绘制地图.html#cb283-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list=</span><span class="fu">ls</span>())</span>
+<span id="cb283-2"><a href="gbd-数据可视化--绘制地图.html#cb283-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb283-3"><a href="gbd-数据可视化--绘制地图.html#cb283-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
+<span id="cb283-4"><a href="gbd-数据可视化--绘制地图.html#cb283-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 读取GBD数据</span></span>
+<span id="cb283-5"><a href="gbd-数据可视化--绘制地图.html#cb283-5" aria-hidden="true" tabindex="-1"></a>GBD <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/stomach cancer.csv&quot;</span>,<span class="at">header =</span> T)</span>
+<span id="cb283-6"><a href="gbd-数据可视化--绘制地图.html#cb283-6" aria-hidden="true" tabindex="-1"></a>location <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/location.csv&quot;</span>,<span class="at">header =</span> T)</span>
+<span id="cb283-7"><a href="gbd-数据可视化--绘制地图.html#cb283-7" aria-hidden="true" tabindex="-1"></a>GBD <span class="ot">&lt;-</span> <span class="fu">left_join</span>(GBD,location,<span class="at">by=</span><span class="st">&quot;location&quot;</span>)</span>
+<span id="cb283-8"><a href="gbd-数据可视化--绘制地图.html#cb283-8" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(GBD)</span></code></pre></div>
+<pre><code>##  [1] &quot;measure&quot;   &quot;location&quot;  &quot;sex&quot;       &quot;age&quot;      
+##  [5] &quot;cause&quot;     &quot;metric&quot;    &quot;year&quot;      &quot;val&quot;      
+##  [9] &quot;upper&quot;     &quot;lower&quot;     &quot;location2&quot; &quot;location3&quot;</code></pre>
+<div class="sourceCode" id="cb285"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb285-1"><a href="gbd-数据可视化--绘制地图.html#cb285-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 读取地图数据</span></span>
+<span id="cb285-2"><a href="gbd-数据可视化--绘制地图.html#cb285-2" aria-hidden="true" tabindex="-1"></a>map <span class="ot">&lt;-</span> <span class="fu">read_sf</span>(<span class="st">&quot;data/世界国家/世界国家.shp&quot;</span>)</span>
+<span id="cb285-3"><a href="gbd-数据可视化--绘制地图.html#cb285-3" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(map)</span></code></pre></div>
+<pre><code>##  [1] &quot;OBJECTID&quot;   &quot;NAME&quot;       &quot;FENAME&quot;    
+##  [4] &quot;FCNAME&quot;     &quot;SOC&quot;        &quot;POP&quot;       
+##  [7] &quot;ELEMID&quot;     &quot;SHAPE_LENG&quot; &quot;SHAPE_AREA&quot;
+## [10] &quot;ID1&quot;        &quot;geometry&quot;</code></pre>
+<div class="sourceCode" id="cb287"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb287-1"><a href="gbd-数据可视化--绘制地图.html#cb287-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 合并，筛选</span></span>
+<span id="cb287-2"><a href="gbd-数据可视化--绘制地图.html#cb287-2" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> map <span class="sc">|&gt;</span> </span>
+<span id="cb287-3"><a href="gbd-数据可视化--绘制地图.html#cb287-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(GBD,<span class="at">by=</span><span class="fu">c</span>(<span class="st">&quot;NAME&quot;</span><span class="ot">=</span> <span class="st">&quot;location3&quot;</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb287-4"><a href="gbd-数据可视化--绘制地图.html#cb287-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year<span class="sc">==</span><span class="dv">1990</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb287-5"><a href="gbd-数据可视化--绘制地图.html#cb287-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(sex<span class="sc">==</span><span class="st">&quot;Male&quot;</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb287-6"><a href="gbd-数据可视化--绘制地图.html#cb287-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(age<span class="sc">==</span><span class="st">&quot;Age-standardized&quot;</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb287-7"><a href="gbd-数据可视化--绘制地图.html#cb287-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(measure<span class="sc">==</span><span class="st">&quot;Incidence&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb288"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb288-1"><a href="gbd-数据可视化--绘制地图.html#cb288-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 画图</span></span>
+<span id="cb288-2"><a href="gbd-数据可视化--绘制地图.html#cb288-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df) <span class="sc">+</span> </span>
+<span id="cb288-3"><a href="gbd-数据可视化--绘制地图.html#cb288-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill=</span>val))<span class="sc">+</span></span>
+<span id="cb288-4"><a href="gbd-数据可视化--绘制地图.html#cb288-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_distiller</span>(<span class="at">palette=</span><span class="st">&quot;Spectral&quot;</span>) </span></code></pre></div>
+<p><img src="05_%E5%9C%B0%E5%9B%BE%E7%BB%98%E5%88%B6_files/figure-html/unnamed-chunk-15-1.png" width="576" /></p>
+<ol start="2" style="list-style-type: decimal">
+<li>使用 facet 分面系统，同时展示 1990 和 2019 两年男性胃癌不同测量指标（包括 incidence,precalence 等）的全球分布。</li>
+</ol>
+<div class="sourceCode" id="cb289"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb289-1"><a href="gbd-数据可视化--绘制地图.html#cb289-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list=</span><span class="fu">ls</span>())</span>
+<span id="cb289-2"><a href="gbd-数据可视化--绘制地图.html#cb289-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 读取GBD数据</span></span>
+<span id="cb289-3"><a href="gbd-数据可视化--绘制地图.html#cb289-3" aria-hidden="true" tabindex="-1"></a>GBD <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/stomach cancer.csv&quot;</span>,<span class="at">header =</span> T)</span>
+<span id="cb289-4"><a href="gbd-数据可视化--绘制地图.html#cb289-4" aria-hidden="true" tabindex="-1"></a>location <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/location.csv&quot;</span>,<span class="at">header =</span> T)</span>
+<span id="cb289-5"><a href="gbd-数据可视化--绘制地图.html#cb289-5" aria-hidden="true" tabindex="-1"></a>GBD <span class="ot">&lt;-</span> <span class="fu">left_join</span>(GBD,location,<span class="at">by=</span><span class="st">&quot;location&quot;</span>)</span>
+<span id="cb289-6"><a href="gbd-数据可视化--绘制地图.html#cb289-6" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(GBD)</span></code></pre></div>
+<pre><code>##  [1] &quot;measure&quot;   &quot;location&quot;  &quot;sex&quot;       &quot;age&quot;      
+##  [5] &quot;cause&quot;     &quot;metric&quot;    &quot;year&quot;      &quot;val&quot;      
+##  [9] &quot;upper&quot;     &quot;lower&quot;     &quot;location2&quot; &quot;location3&quot;</code></pre>
+<div class="sourceCode" id="cb291"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb291-1"><a href="gbd-数据可视化--绘制地图.html#cb291-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(GBD<span class="sc">$</span>cause)</span></code></pre></div>
+<pre><code>## [1] &quot;Stomach cancer&quot;</code></pre>
+<div class="sourceCode" id="cb293"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb293-1"><a href="gbd-数据可视化--绘制地图.html#cb293-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(GBD<span class="sc">$</span>measure)</span></code></pre></div>
+<pre><code>## [1] &quot;Deaths&quot;                                
+## [2] &quot;Prevalence&quot;                            
+## [3] &quot;DALYs (Disability-Adjusted Life Years)&quot;
+## [4] &quot;YLDs (Years Lived with Disability)&quot;    
+## [5] &quot;Incidence&quot;                             
+## [6] &quot;YLLs (Years of Life Lost)&quot;</code></pre>
+<div class="sourceCode" id="cb295"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb295-1"><a href="gbd-数据可视化--绘制地图.html#cb295-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 读取地图数据</span></span>
+<span id="cb295-2"><a href="gbd-数据可视化--绘制地图.html#cb295-2" aria-hidden="true" tabindex="-1"></a>map <span class="ot">&lt;-</span> <span class="fu">read_sf</span>(<span class="st">&quot;data/世界国家/世界国家.shp&quot;</span>)</span>
+<span id="cb295-3"><a href="gbd-数据可视化--绘制地图.html#cb295-3" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(map)</span></code></pre></div>
+<pre><code>##  [1] &quot;OBJECTID&quot;   &quot;NAME&quot;       &quot;FENAME&quot;    
+##  [4] &quot;FCNAME&quot;     &quot;SOC&quot;        &quot;POP&quot;       
+##  [7] &quot;ELEMID&quot;     &quot;SHAPE_LENG&quot; &quot;SHAPE_AREA&quot;
+## [10] &quot;ID1&quot;        &quot;geometry&quot;</code></pre>
+<div class="sourceCode" id="cb297"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb297-1"><a href="gbd-数据可视化--绘制地图.html#cb297-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 合并，筛选</span></span>
+<span id="cb297-2"><a href="gbd-数据可视化--绘制地图.html#cb297-2" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> map <span class="sc">|&gt;</span> </span>
+<span id="cb297-3"><a href="gbd-数据可视化--绘制地图.html#cb297-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(GBD,<span class="at">by=</span><span class="fu">c</span>(<span class="st">&quot;NAME&quot;</span><span class="ot">=</span> <span class="st">&quot;location3&quot;</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb297-4"><a href="gbd-数据可视化--绘制地图.html#cb297-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year<span class="sc">%in%</span><span class="fu">c</span>(<span class="dv">1990</span>,<span class="dv">2019</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb297-5"><a href="gbd-数据可视化--绘制地图.html#cb297-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(sex<span class="sc">==</span><span class="st">&quot;Male&quot;</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb297-6"><a href="gbd-数据可视化--绘制地图.html#cb297-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(age<span class="sc">==</span><span class="st">&quot;Age-standardized&quot;</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb297-7"><a href="gbd-数据可视化--绘制地图.html#cb297-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">year=</span><span class="fu">factor</span>(year)) <span class="sc">|&gt;</span> </span>
+<span id="cb297-8"><a href="gbd-数据可视化--绘制地图.html#cb297-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">measure=</span><span class="fu">factor</span>(measure,</span>
+<span id="cb297-9"><a href="gbd-数据可视化--绘制地图.html#cb297-9" aria-hidden="true" tabindex="-1"></a>                        <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">&quot;Incidence&quot;</span>,<span class="st">&quot;Prevalence&quot;</span>,<span class="st">&quot;Deaths&quot;</span>,</span>
+<span id="cb297-10"><a href="gbd-数据可视化--绘制地图.html#cb297-10" aria-hidden="true" tabindex="-1"></a>                                   <span class="st">&quot;YLDs (Years Lived with Disability)&quot;</span>,</span>
+<span id="cb297-11"><a href="gbd-数据可视化--绘制地图.html#cb297-11" aria-hidden="true" tabindex="-1"></a>                                   <span class="st">&quot;YLLs (Years of Life Lost)&quot;</span>,<span class="st">&quot;Deaths&quot;</span>),</span>
+<span id="cb297-12"><a href="gbd-数据可视化--绘制地图.html#cb297-12" aria-hidden="true" tabindex="-1"></a>                        <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;Incidence&quot;</span>,<span class="st">&quot;Prevalence&quot;</span>,<span class="st">&quot;Deaths&quot;</span>,</span>
+<span id="cb297-13"><a href="gbd-数据可视化--绘制地图.html#cb297-13" aria-hidden="true" tabindex="-1"></a>                                   <span class="st">&quot;YLDs (Years Lived with Disability)&quot;</span>,</span>
+<span id="cb297-14"><a href="gbd-数据可视化--绘制地图.html#cb297-14" aria-hidden="true" tabindex="-1"></a>                                   <span class="st">&quot;YLLs (Years of Life Lost)&quot;</span>,<span class="st">&quot;Deaths&quot;</span>))) <span class="sc">|&gt;</span> </span>
+<span id="cb297-15"><a href="gbd-数据可视化--绘制地图.html#cb297-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">na.omit</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb298"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb298-1"><a href="gbd-数据可视化--绘制地图.html#cb298-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 画图</span></span>
+<span id="cb298-2"><a href="gbd-数据可视化--绘制地图.html#cb298-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df) <span class="sc">+</span> </span>
+<span id="cb298-3"><a href="gbd-数据可视化--绘制地图.html#cb298-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill=</span>val))<span class="sc">+</span></span>
+<span id="cb298-4"><a href="gbd-数据可视化--绘制地图.html#cb298-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(measure<span class="sc">~</span>year)<span class="sc">+</span></span>
+<span id="cb298-5"><a href="gbd-数据可视化--绘制地图.html#cb298-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_distiller</span>(<span class="at">palette=</span><span class="st">&quot;Spectral&quot;</span>)  </span></code></pre></div>
+<p><img src="05_%E5%9C%B0%E5%9B%BE%E7%BB%98%E5%88%B6_files/figure-html/unnamed-chunk-17-1.png" width="576" /></p>
+<ol start="3" style="list-style-type: decimal">
+<li>说说如何实现下面图的绘制？</li>
+</ol>
+<p><img src="images/050z.png" width="90%" style="display: block; margin: auto;" /></p>
+
+</div>
+</div>
+  </main>
+
+  <div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page">
+      <h2>On this page</h2>
+      <div id="book-on-this-page"></div>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          <li><a id="book-source" href="#">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="#">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5">
+  <div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>GBD 笔记总结</strong>" was written by 杨 弘. It was last built on 2022-11-20.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+
+
+</body>
+
+</html>

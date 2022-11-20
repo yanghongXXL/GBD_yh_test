@@ -46,7 +46,10 @@
 <li><a class="" href="index.html">前言</a></li>
 <li><a class="active" href="base_r%E5%9F%BA%E7%A1%80.html"><span class="header-section-number">1</span> Base_R基础</a></li>
 <li><a class="" href="%E7%BB%9F%E8%AE%A1%E5%9F%BA%E7%A1%80.html"><span class="header-section-number">2</span> 统计基础</a></li>
-<li><a class="" href="ggplot%E5%9B%BE%E5%B1%82%E8%AF%AD%E6%B3%95%E4%B8%8Egbd%E6%95%B0%E6%8D%AE%E5%B1%95%E7%A4%BA%E4%B8%80.html"><span class="header-section-number">3</span> ggplot图层语法与GBD数据展示一</a></li>
+<li><a class="" href="ggplot2%E5%9B%BE%E5%B1%82%E8%AF%AD%E6%B3%95%E4%B8%8Egbd%E6%95%B0%E6%8D%AE%E5%B1%95%E7%A4%BA%E4%B8%80.html"><span class="header-section-number">3</span> ggplot2图层语法与GBD数据展示一</a></li>
+<li><a class="" href="ggplot2%E5%9B%BE%E5%B1%82%E8%AF%AD%E6%B3%95%E4%B8%8Egbd%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E4%BA%8C.html"><span class="header-section-number">4</span> ggplot2图层语法与GBD数据可视化二</a></li>
+<li><a class="" href="gbd-%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96--%E7%BB%98%E5%88%B6%E5%9C%B0%E5%9B%BE.html"><span class="header-section-number">5</span> GBD 数据可视化 -绘制地图</a></li>
+<li><a class="" href="joinpoint-%E8%81%94%E7%BB%93%E7%82%B9%E5%9B%9E%E5%BD%92%E6%A8%A1%E5%9E%8B.html"><span class="header-section-number">6</span> Joinpoint 联结点回归模型</a></li>
 </ul>
 
         <div class="book-extra">
@@ -713,15 +716,15 @@
 <span></span>
 <span><span class="co"># 分组统计</span></span>
 <span><span class="va">temp</span> <span class="op">&lt;-</span> <span class="va">ToothGrowth</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu"><a href="https://rdrr.io/pkg/dplyr/man/group_by.html">group_by</a></span><span class="op">(</span><span class="va">supp</span>, <span class="va">dose</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu"><a href="https://rdrr.io/pkg/dplyr/man/summarise.html">summarise</a></span><span class="op">(</span>len_mean <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">len</span><span class="op">)</span>,</span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">supp</span>, <span class="va">dose</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>len_mean <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">len</span><span class="op">)</span>,</span>
 <span>            len_sd <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/sd.html">sd</a></span><span class="op">(</span><span class="va">len</span><span class="op">)</span>, <span class="fl">1</span><span class="op">)</span>,</span>
 <span>            len_median <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/median.html">median</a></span><span class="op">(</span><span class="va">len</span><span class="op">)</span>,</span>
 <span>            len_IQR_lower <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/quantile.html">quantile</a></span><span class="op">(</span><span class="va">len</span>, <span class="fl">0.25</span><span class="op">)</span>,</span>
 <span>            len_IQR_upper <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/quantile.html">quantile</a></span><span class="op">(</span><span class="va">len</span>, <span class="fl">0.75</span><span class="op">)</span>,</span>
 <span>            len_min <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">len</span><span class="op">)</span>,</span>
 <span>            len_max <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="va">len</span><span class="op">)</span>,</span>
-<span>            mice_number <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/dplyr/man/context.html">n</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span>            mice_number <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/context.html">n</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="va">temp</span><span class="op">)</span> <span class="co"># 展示数据</span></span></code></pre></div>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
@@ -886,7 +889,7 @@
 <li>将 data.csv 的年龄，年份都设置为因子。</li>
 </ul>
 <div class="sourceCode" id="cb130"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">temp</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/data.csv"</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="va">temp</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/readr/man/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/data.csv"</span><span class="op">)</span></span>
 <span><span class="co"># R 默认按照数值或字母先后顺序排序，因此这里不需要设定 levels</span></span>
 <span><span class="co"># 但是其他离散的分类变量，一定要检查顺序对不对，设定好 levels</span></span>
 <span><span class="va">temp</span><span class="op">$</span><span class="va">year</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">temp</span><span class="op">$</span><span class="va">year</span><span class="op">)</span></span>
@@ -896,8 +899,8 @@
 </ul>
 <div class="sourceCode" id="cb131"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">temp</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu"><a href="https://rdrr.io/pkg/dplyr/man/filter.html">filter</a></span><span class="op">(</span><span class="va">age</span> <span class="op">==</span> <span class="st">'Age-standardized'</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu"><a href="https://rdrr.io/pkg/dplyr/man/mutate.html">mutate</a></span><span class="op">(</span>se <span class="op">=</span> <span class="op">(</span><span class="va">upper</span><span class="op">-</span> <span class="va">lower</span><span class="op">)</span><span class="op">/</span><span class="op">(</span><span class="fl">1.96</span><span class="op">*</span><span class="fl">2</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">age</span> <span class="op">==</span> <span class="st">'Age-standardized'</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>se <span class="op">=</span> <span class="op">(</span><span class="va">upper</span><span class="op">-</span> <span class="va">lower</span><span class="op">)</span><span class="op">/</span><span class="op">(</span><span class="fl">1.96</span><span class="op">*</span><span class="fl">2</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## # A tibble: 360 × 11
 ##   measure    location sex    age     cause metric year 
 ##   &lt;chr&gt;      &lt;chr&gt;    &lt;chr&gt;  &lt;fct&gt;   &lt;chr&gt; &lt;chr&gt;  &lt;fct&gt;
@@ -915,7 +918,7 @@
 <div class="sourceCode" id="cb133"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## 方法一，用 ifelse：</span></span>
 <span><span class="va">temp</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu"><a href="https://rdrr.io/pkg/dplyr/man/mutate.html">mutate</a></span><span class="op">(</span>year2 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="va">year</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1990</span><span class="op">:</span><span class="fl">1994</span><span class="op">)</span>,<span class="st">"year:1990_94"</span>,</span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>year2 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="va">year</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1990</span><span class="op">:</span><span class="fl">1994</span><span class="op">)</span>,<span class="st">"year:1990_94"</span>,</span>
 <span>                        <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="va">year</span><span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1995</span><span class="op">:</span><span class="fl">1999</span><span class="op">)</span>,<span class="st">"year:1995_99"</span>,</span>
 <span>                        <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="va">year</span><span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2000</span><span class="op">:</span><span class="fl">2004</span><span class="op">)</span>,<span class="st">"year:2000_04"</span>,</span>
 <span>                        <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="va">year</span><span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2005</span><span class="op">:</span><span class="fl">2009</span><span class="op">)</span>,<span class="st">"year:2005_09"</span>,</span>
@@ -935,7 +938,7 @@
 <div class="sourceCode" id="cb135"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## 方法二，用 case_when:</span></span>
 <span><span class="va">temp</span> <span class="op">&lt;-</span> <span class="va">temp</span> <span class="op">|&gt;</span></span>
-<span><span class="fu"><a href="https://rdrr.io/pkg/dplyr/man/mutate.html">mutate</a></span><span class="op">(</span>year2<span class="op">=</span><span class="fu"><a href="https://rdrr.io/pkg/dplyr/man/case_when.html">case_when</a></span><span class="op">(</span><span class="va">year</span><span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1990</span><span class="op">:</span><span class="fl">1994</span><span class="op">)</span><span class="op">~</span><span class="st">"year:1990_94"</span>,</span>
+<span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>year2<span class="op">=</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/case_when.html">case_when</a></span><span class="op">(</span><span class="va">year</span><span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1990</span><span class="op">:</span><span class="fl">1994</span><span class="op">)</span><span class="op">~</span><span class="st">"year:1990_94"</span>,</span>
 <span>                       <span class="va">year</span><span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1995</span><span class="op">:</span><span class="fl">1999</span><span class="op">)</span><span class="op">~</span><span class="st">"year:1995_99"</span>,</span>
 <span>                       <span class="va">year</span><span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2000</span><span class="op">:</span><span class="fl">2004</span><span class="op">)</span><span class="op">~</span><span class="st">"year:2000_04"</span>,</span>
 <span>                       <span class="va">year</span><span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2005</span><span class="op">:</span><span class="fl">2009</span><span class="op">)</span><span class="op">~</span><span class="st">"year:2005_09"</span>,</span>
@@ -1073,7 +1076,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>GBD 笔记总结</strong>" was written by 杨 弘. It was last built on 2022-11-13.</p>
+    <p>"<strong>GBD 笔记总结</strong>" was written by 杨 弘. It was last built on 2022-11-20.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

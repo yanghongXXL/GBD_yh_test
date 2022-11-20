@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>第 3 章 ggplot2图层语法与GBD数据展示一 | GBD 笔记总结</title>
+
+    <meta name="author" content="杨 弘" />
+  
+   <meta name="description" content="This book is an overview of how practitioners can acquire, wrangle, visualize, and model data with the R and Stan." />
+   <meta name="generator" content="placeholder" />
+  <meta property="og:title" content="第 3 章 ggplot2图层语法与GBD数据展示一 | GBD 笔记总结" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://yanghongxxl.github.com/GBD_yh_test/" />
+  
+  <meta property="og:description" content="This book is an overview of how practitioners can acquire, wrangle, visualize, and model data with the R and Stan." />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="第 3 章 ggplot2图层语法与GBD数据展示一 | GBD 笔记总结" />
+  
+  <meta name="twitter:description" content="This book is an overview of how practitioners can acquire, wrangle, visualize, and model data with the R and Stan." />
+  
+  <!-- JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script>
+    <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet" />
+    <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script>
+    <script src="libs/bs3compat-0.4.1/transition.js"></script>
+    <script src="libs/bs3compat-0.4.1/tabs.js"></script>
+    <script src="libs/bs3compat-0.4.1/bs3compat.js"></script>
+    <link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet" />
+    <script src="libs/bs4_book-1.0.0/bs4_book.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script>
+
+  <!-- CSS -->
+  <style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+    
+</head>
+
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book">
+    <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">GBD 笔记总结</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+      </form>
+
+      <nav aria-label="Table of contents">
+        <h2>Table of contents</h2>
+        <div id="book-toc"></div>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="#">View book source <i class="fab fa-github"></i></a></li></p>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="col-sm-12 col-md-9 col-lg-7" id="content">
+<div id="ggplot2图层语法与gbd数据展示一" class="section level1" number="3">
+<h1><span class="header-section-number">第 3 章</span> ggplot2图层语法与GBD数据展示一</h1>
+<div id="图层的基本概念" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> 图层的基本概念</h2>
+<p>ggplot2 图层语法，可以类比于 photoshop 中图层的概念：</p>
+<p><img src="images/0301.png" width="90%" style="display: block; margin: auto;" /></p>
+<p>ggplot2 绘制的图形，也是由一个个图层叠加而成的。</p>
+<p>每一个图层，都可以指定用于画图的数据，指定需要绘制的几何图案，以及图像的美学属性映射，包括颜色、坐标、位置、尺度等等；图层代码与图层 代码之间，则用加号”+“进行连接。</p>
+<p>图层语法模板</p>
+<div class="sourceCode" id="cb208"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb208-1"><a href="ggplot2图层语法与gbd数据展示一.html#cb208-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 加载 ggplot2 包</span></span>
+<span id="cb208-2"><a href="ggplot2图层语法与gbd数据展示一.html#cb208-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb208-3"><a href="ggplot2图层语法与gbd数据展示一.html#cb208-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 打开画板</span></span>
+<span id="cb208-4"><a href="ggplot2图层语法与gbd数据展示一.html#cb208-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>df1, <span class="co"># 指定数据</span></span>
+<span id="cb208-5"><a href="ggplot2图层语法与gbd数据展示一.html#cb208-5" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x=</span>x1,<span class="at">y=</span>y1,<span class="at">color=</span>group1))<span class="sc">+</span> <span class="co"># 美学属性映射</span></span>
+<span id="cb208-6"><a href="ggplot2图层语法与gbd数据展示一.html#cb208-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 图层 1</span></span>
+<span id="cb208-7"><a href="ggplot2图层语法与gbd数据展示一.html#cb208-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>()<span class="sc">+</span></span>
+<span id="cb208-8"><a href="ggplot2图层语法与gbd数据展示一.html#cb208-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 图层 2</span></span>
+<span id="cb208-9"><a href="ggplot2图层语法与gbd数据展示一.html#cb208-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="at">data=</span>df2,<span class="fu">aes</span>(<span class="at">x=</span>x2,<span class="at">y=</span>y2,<span class="at">color=</span>group2))<span class="sc">+</span> </span>
+<span id="cb208-10"><a href="ggplot2图层语法与gbd数据展示一.html#cb208-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 其他</span></span>
+<span id="cb208-11"><a href="ggplot2图层语法与gbd数据展示一.html#cb208-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_y_continues</span>()<span class="sc">+</span> <span class="co"># 尺度设定</span></span>
+<span id="cb208-12"><a href="ggplot2图层语法与gbd数据展示一.html#cb208-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">facet_wrap</span>()<span class="sc">+</span> <span class="co"># 分面</span></span>
+<span id="cb208-13"><a href="ggplot2图层语法与gbd数据展示一.html#cb208-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>() <span class="co"># 主题风格设定</span></span></code></pre></div>
+</div>
+<div id="ggplot2-基本元素" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> ggplot2 基本元素</h2>
+<div id="数据" class="section level3" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> 数据</h3>
+<p>画图第一件事，肯定是指定用于画图的数据。一般用于 ggplot2 画图的数据，是长数据 (整洁的数据)。</p>
+</div>
+<div id="几何图形" class="section level3" number="3.2.2">
+<h3><span class="header-section-number">3.2.2</span> 几何图形</h3>
+<p>统计图中最常见的几种几何图案：点、线、柱状图、条形图、直方图、误差图、箱图……</p>
+<p>ggplot2 用 geometry 函数指定所需绘制的图案，比如 geom_point(),geom_line(),geom_bar(),geom_errorb</p>
+<p>geom 是 geometry 的前四个字母， geom_ 下划线后连接几何图形比如point,bar,box 等。 geometry 函数可以设定不同的参数，包括坐标，位置，颜色，尺度等。</p>
+</div>
+<div id="美学属性映射" class="section level3" number="3.2.3">
+<h3><span class="header-section-number">3.2.3</span> 美学属性映射</h3>
+<p>美学的英文单词： aesthetic。 aes() 函数将某个变量的数据映射给某种美学属性。美学属性可以在画板处进行全局映射，也可以在某个图层中进行局部映射。</p>
+<div class="sourceCode" id="cb209"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb209-1"><a href="ggplot2图层语法与gbd数据展示一.html#cb209-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 打开画板</span></span>
+<span id="cb209-2"><a href="ggplot2图层语法与gbd数据展示一.html#cb209-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>df1,</span>
+<span id="cb209-3"><a href="ggplot2图层语法与gbd数据展示一.html#cb209-3" aria-hidden="true" tabindex="-1"></a><span class="fu">aes</span>(<span class="at">x=</span>x1,<span class="at">y=</span>y1,<span class="at">color=</span>group1))<span class="sc">+</span> <span class="co"># 全局映射</span></span>
+<span id="cb209-4"><a href="ggplot2图层语法与gbd数据展示一.html#cb209-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 图层 1</span></span>
+<span id="cb209-5"><a href="ggplot2图层语法与gbd数据展示一.html#cb209-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>()<span class="sc">+</span> <span class="co"># 受全局映射的控制</span></span>
+<span id="cb209-6"><a href="ggplot2图层语法与gbd数据展示一.html#cb209-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 图层 2</span></span>
+<span id="cb209-7"><a href="ggplot2图层语法与gbd数据展示一.html#cb209-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="at">data=</span>df2,<span class="fu">aes</span>(<span class="at">x=</span>x2,<span class="at">y=</span>y2,<span class="at">group=</span>group2))<span class="sc">+</span> <span class="co">#局部映射不受控制</span></span>
+<span id="cb209-8"><a href="ggplot2图层语法与gbd数据展示一.html#cb209-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 其他</span></span>
+<span id="cb209-9"><a href="ggplot2图层语法与gbd数据展示一.html#cb209-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_y_continues</span>()<span class="sc">+</span></span>
+<span id="cb209-10"><a href="ggplot2图层语法与gbd数据展示一.html#cb209-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">facet_wrap</span>()<span class="sc">+</span></span>
+<span id="cb209-11"><a href="ggplot2图层语法与gbd数据展示一.html#cb209-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>()</span></code></pre></div>
+</div>
+</div>
+<div id="我的第一个图" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> 我的第一个图</h2>
+<p>这里我们用 Global_HIV.csv 数据进行第一个图的绘制：</p>
+<p>使用线图展示 <strong>1990 到 2019</strong> 年全球<strong>男</strong>、<strong>女</strong> <strong>HIV 发病人数</strong>的变化趋势。</p>
+<div id="准备画图数据" class="section level3" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> 准备画图数据</h3>
+<ul>
+<li>加载需要的R包</li>
+</ul>
+<div class="sourceCode" id="cb210"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb210-1"><a href="ggplot2图层语法与gbd数据展示一.html#cb210-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb210-2"><a href="ggplot2图层语法与gbd数据展示一.html#cb210-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
+<ul>
+<li>读取数据</li>
+</ul>
+<div class="sourceCode" id="cb211"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb211-1"><a href="ggplot2图层语法与gbd数据展示一.html#cb211-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data/Global_HIV.csv&quot;</span>)</span></code></pre></div>
+<ul>
+<li>查看数据</li>
+</ul>
+<div class="sourceCode" id="cb212"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb212-1"><a href="ggplot2图层语法与gbd数据展示一.html#cb212-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(df)</span></code></pre></div>
+<pre><code>##  [1] &quot;measure&quot;  &quot;location&quot; &quot;sex&quot;      &quot;age&quot;     
+##  [5] &quot;cause&quot;    &quot;metric&quot;   &quot;year&quot;     &quot;val&quot;     
+##  [9] &quot;upper&quot;    &quot;lower&quot;</code></pre>
+<div class="sourceCode" id="cb214"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb214-1"><a href="ggplot2图层语法与gbd数据展示一.html#cb214-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(df<span class="sc">$</span>measure)</span></code></pre></div>
+<pre><code>## [1] &quot;Deaths&quot;                                
+## [2] &quot;YLLs (Years of Life Lost)&quot;             
+## [3] &quot;Incidence&quot;                             
+## [4] &quot;DALYs (Disability-Adjusted Life Years)&quot;
+## [5] &quot;YLDs (Years Lived with Disability)&quot;    
+## [6] &quot;Prevalence&quot;</code></pre>
+<div class="sourceCode" id="cb216"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb216-1"><a href="ggplot2图层语法与gbd数据展示一.html#cb216-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(df<span class="sc">$</span>sex)</span></code></pre></div>
+<pre><code>## [1] &quot;Male&quot;   &quot;Female&quot; &quot;Both&quot;</code></pre>
+<div class="sourceCode" id="cb218"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb218-1"><a href="ggplot2图层语法与gbd数据展示一.html#cb218-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(df<span class="sc">$</span>age)</span></code></pre></div>
+<pre><code>##  [1] &quot;&lt;5 years&quot;         &quot;5-9 years&quot;       
+##  [3] &quot;10-14 years&quot;      &quot;15-19 years&quot;     
+##  [5] &quot;20-24 years&quot;      &quot;25-29 years&quot;     
+##  [7] &quot;30-34 years&quot;      &quot;35-39 years&quot;     
+##  [9] &quot;40-44 years&quot;      &quot;45-49 years&quot;     
+## [11] &quot;50-54 years&quot;      &quot;55-59 years&quot;     
+## [13] &quot;60-64 years&quot;      &quot;65-69 years&quot;     
+## [15] &quot;70-74 years&quot;      &quot;75-79 years&quot;     
+## [17] &quot;All ages&quot;         &quot;Age-standardized&quot;
+## [19] &quot;80-84 years&quot;      &quot;85-89 years&quot;     
+## [21] &quot;90-94 years&quot;      &quot;95+ years&quot;</code></pre>
+<div class="sourceCode" id="cb220"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb220-1"><a href="ggplot2图层语法与gbd数据展示一.html#cb220-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(df<span class="sc">$</span>cause)</span></code></pre></div>
+<pre><code>## [1] &quot;HIV/AIDS and sexually transmitted infections&quot; 
+## [2] &quot;HIV/AIDS&quot;                                     
+## [3] &quot;Sexually transmitted infections excluding HIV&quot;
+## [4] &quot;Syphilis&quot;                                     
+## [5] &quot;Chlamydial infection&quot;                         
+## [6] &quot;Gonococcal infection&quot;                         
+## [7] &quot;Other sexually transmitted infections&quot;        
+## [8] &quot;Trichomoniasis&quot;                               
+## [9] &quot;Genital herpes&quot;</code></pre>
+<div class="sourceCode" id="cb222"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb222-1"><a href="ggplot2图层语法与gbd数据展示一.html#cb222-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(df<span class="sc">$</span>metric)</span></code></pre></div>
+<pre><code>## [1] &quot;Number&quot;  &quot;Percent&quot; &quot;Rate&quot;</code></pre>
+<ul>
+<li>选择数据</li>
+</ul>
+<div class="sourceCode" id="cb224"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb224-1"><a href="ggplot2图层语法与gbd数据展示一.html#cb224-1" aria-hidden="true" tabindex="-1"></a>temp <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span></span>
+<span id="cb224-2"><a href="ggplot2图层语法与gbd数据展示一.html#cb224-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(measure<span class="sc">==</span><span class="st">&quot;Incidence&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb224-3"><a href="ggplot2图层语法与gbd数据展示一.html#cb224-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(sex<span class="sc">%in%</span><span class="fu">c</span>(<span class="st">&quot;Male&quot;</span>,<span class="st">&quot;Female&quot;</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb224-4"><a href="ggplot2图层语法与gbd数据展示一.html#cb224-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(age<span class="sc">==</span><span class="st">&quot;All ages&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb224-5"><a href="ggplot2图层语法与gbd数据展示一.html#cb224-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(cause<span class="sc">==</span><span class="st">&quot;HIV/AIDS&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb224-6"><a href="ggplot2图层语法与gbd数据展示一.html#cb224-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(metric<span class="sc">==</span><span class="st">&quot;Number&quot;</span>)</span>
+<span id="cb224-7"><a href="ggplot2图层语法与gbd数据展示一.html#cb224-7" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(temp)</span></code></pre></div>
+<pre><code>## spc_tbl_ [60 × 10] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+##  $ measure : chr [1:60] &quot;Incidence&quot; &quot;Incidence&quot; &quot;Incidence&quot; &quot;Incidence&quot; ...
+##  $ location: chr [1:60] &quot;Global&quot; &quot;Global&quot; &quot;Global&quot; &quot;Global&quot; ...
+##  $ sex     : chr [1:60] &quot;Male&quot; &quot;Female&quot; &quot;Male&quot; &quot;Female&quot; ...
+##  $ age     : chr [1:60] &quot;All ages&quot; &quot;All ages&quot; &quot;All ages&quot; &quot;All ages&quot; ...
+##  $ cause   : chr [1:60] &quot;HIV/AIDS&quot; &quot;HIV/AIDS&quot; &quot;HIV/AIDS&quot; &quot;HIV/AIDS&quot; ...
+##  $ metric  : chr [1:60] &quot;Number&quot; &quot;Number&quot; &quot;Number&quot; &quot;Number&quot; ...
+##  $ year    : num [1:60] 1991 1991 1990 1990 1994 ...
+##  $ val     : num [1:60] 1054341 1313369 919820 1137890 1334822 ...
+##  $ upper   : num [1:60] 1226338 1579485 1063665 1371008 1582749 ...
+##  $ lower   : num [1:60] 888662 1060693 780544 916513 1121995 ...
+##  - attr(*, &quot;spec&quot;)=
+##   .. cols(
+##   ..   measure = col_character(),
+##   ..   location = col_character(),
+##   ..   sex = col_character(),
+##   ..   age = col_character(),
+##   ..   cause = col_character(),
+##   ..   metric = col_character(),
+##   ..   year = col_double(),
+##   ..   val = col_double(),
+##   ..   upper = col_double(),
+##   ..   lower = col_double()
+##   .. )
+##  - attr(*, &quot;problems&quot;)=&lt;externalptr&gt;</code></pre>
+</div>
+<div id="画图" class="section level3" number="3.3.2">
+<h3><span class="header-section-number">3.3.2</span> 画图</h3>
+<p>思考：我们想直观地对比男性、女性 HIV 发病人数发展变化趋势，需要将两条线放在同一个图案中，该怎么做？</p>
+<p>方法：使用不同的颜色进行区分。用 ggplot2 美学属性映射的思维，就是将性别这个变量映射到颜色中去。</p>
+<div class="sourceCode" id="cb226"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb226-1"><a href="ggplot2图层语法与gbd数据展示一.html#cb226-1" aria-hidden="true" tabindex="-1"></a>fig1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> temp,<span class="fu">aes</span>(<span class="at">x=</span>year,<span class="at">y=</span>val,<span class="at">color=</span>sex))<span class="sc">+</span></span>
+<span id="cb226-2"><a href="ggplot2图层语法与gbd数据展示一.html#cb226-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>()</span>
+<span id="cb226-3"><a href="ggplot2图层语法与gbd数据展示一.html#cb226-3" aria-hidden="true" tabindex="-1"></a>fig1</span></code></pre></div>
+<p><img src="03_ggplot2_files/figure-html/unnamed-chunk-7-1.png" width="576" /></p>
+</div>
+<div id="如何查看-ggplot2-内部函数参数的种类及作用" class="section level3" number="3.3.3">
+<h3><span class="header-section-number">3.3.3</span> 如何查看 ggplot2 内部函数参数的种类及作用？</h3>
+<div class="sourceCode" id="cb227"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb227-1"><a href="ggplot2图层语法与gbd数据展示一.html#cb227-1" aria-hidden="true" tabindex="-1"></a>?ggplot</span>
+<span id="cb227-2"><a href="ggplot2图层语法与gbd数据展示一.html#cb227-2" aria-hidden="true" tabindex="-1"></a>?aes</span>
+<span id="cb227-3"><a href="ggplot2图层语法与gbd数据展示一.html#cb227-3" aria-hidden="true" tabindex="-1"></a>?geom_line</span></code></pre></div>
+</div>
+<div id="图片的保存" class="section level3" number="3.3.4">
+<h3><span class="header-section-number">3.3.4</span> 图片的保存</h3>
+<p>两种保存图片的方式：</p>
+<p>1、使用 export 导出 (不推荐)；【直接再窗口保存，不推荐】</p>
+<p>2、使用 ggsave() 函数导出：</p>
+<div class="sourceCode" id="cb228"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb228-1"><a href="ggplot2图层语法与gbd数据展示一.html#cb228-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot; 我的第一个图.jpeg&quot;</span>,<span class="at">width =</span> <span class="dv">8</span>,<span class="at">height =</span> <span class="dv">6</span>,<span class="at">dpi =</span> <span class="dv">300</span>)</span></code></pre></div>
+</div>
+<div id="作业一" class="section level3" number="3.3.5">
+<h3><span class="header-section-number">3.3.5</span> 作业一</h3>
+<ol style="list-style-type: decimal">
+<li>给 fig1 增加一个点图层，点为各个年份的发病人数，将每个点的大小设定为 1.2(size=1.2)，并将生成的图片对象赋值给 fig2。</li>
+</ol>
+<div class="sourceCode" id="cb229"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb229-1"><a href="ggplot2图层语法与gbd数据展示一.html#cb229-1" aria-hidden="true" tabindex="-1"></a>fig2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> temp,<span class="fu">aes</span>(<span class="at">x=</span>year,<span class="at">y=</span>val,<span class="at">color=</span>sex))<span class="sc">+</span></span>
+<span id="cb229-2"><a href="ggplot2图层语法与gbd数据展示一.html#cb229-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>()<span class="sc">+</span></span>
+<span id="cb229-3"><a href="ggplot2图层语法与gbd数据展示一.html#cb229-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="at">size=</span> <span class="fl">1.2</span>)</span>
+<span id="cb229-4"><a href="ggplot2图层语法与gbd数据展示一.html#cb229-4" aria-hidden="true" tabindex="-1"></a>fig2</span></code></pre></div>
+<p><img src="03_ggplot2_files/figure-html/unnamed-chunk-10-1.png" width="576" /></p>
+<ol start="2" style="list-style-type: decimal">
+<li>给 fig2 增加一个图层, 展示发病人数的 95%UI, 提示：geom_ribbon(aes(ymin=?,ymax=?)), 将 95%UI 的填充颜色按照性别区分（提示：将性别这个变量映射到填充颜色中去，设置 fill=?）；并将填充颜色的透明度设置为 0.1（alpha=?）。最终将生成的图片对象赋值给 fig3.</li>
+</ol>
+<div class="sourceCode" id="cb230"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb230-1"><a href="ggplot2图层语法与gbd数据展示一.html#cb230-1" aria-hidden="true" tabindex="-1"></a><span class="co"># fig3 &lt;- ggplot(data = temp,aes(x=year,y=val,color=sex))+</span></span>
+<span id="cb230-2"><a href="ggplot2图层语法与gbd数据展示一.html#cb230-2" aria-hidden="true" tabindex="-1"></a><span class="co">#     geom_line()+</span></span>
+<span id="cb230-3"><a href="ggplot2图层语法与gbd数据展示一.html#cb230-3" aria-hidden="true" tabindex="-1"></a><span class="co">#     geom_point(size= 1.2)+</span></span>
+<span id="cb230-4"><a href="ggplot2图层语法与gbd数据展示一.html#cb230-4" aria-hidden="true" tabindex="-1"></a><span class="co">#     geom_ribbon(aes(ymin=lower,ymax=upper,fill=sex),alpha=0.1)</span></span>
+<span id="cb230-5"><a href="ggplot2图层语法与gbd数据展示一.html#cb230-5" aria-hidden="true" tabindex="-1"></a><span class="co"># fig3</span></span>
+<span id="cb230-6"><a href="ggplot2图层语法与gbd数据展示一.html#cb230-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb230-7"><a href="ggplot2图层语法与gbd数据展示一.html#cb230-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 或者</span></span>
+<span id="cb230-8"><a href="ggplot2图层语法与gbd数据展示一.html#cb230-8" aria-hidden="true" tabindex="-1"></a>fig3 <span class="ot">&lt;-</span> fig2 <span class="sc">+</span> <span class="fu">geom_ribbon</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> lower, <span class="at">ymax =</span> upper, <span class="at">fill =</span> sex), </span>
+<span id="cb230-9"><a href="ggplot2图层语法与gbd数据展示一.html#cb230-9" aria-hidden="true" tabindex="-1"></a>                           <span class="at">alpha =</span> <span class="fl">0.1</span>)</span>
+<span id="cb230-10"><a href="ggplot2图层语法与gbd数据展示一.html#cb230-10" aria-hidden="true" tabindex="-1"></a>fig3</span></code></pre></div>
+<p><img src="03_ggplot2_files/figure-html/unnamed-chunk-11-1.png" width="576" /></p>
+<ol start="3" style="list-style-type: decimal">
+<li>去除 fig3 图片中 95%UI 的颜色边框（提示：设置 color=NA），并大胆猜测 fill 和 color 参数的作用范围。然后赋值给 fig4。</li>
+</ol>
+<div class="sourceCode" id="cb231"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb231-1"><a href="ggplot2图层语法与gbd数据展示一.html#cb231-1" aria-hidden="true" tabindex="-1"></a>fig4 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> temp,<span class="fu">aes</span>(<span class="at">x=</span>year,<span class="at">y=</span>val,<span class="at">color=</span>sex))<span class="sc">+</span></span>
+<span id="cb231-2"><a href="ggplot2图层语法与gbd数据展示一.html#cb231-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>()<span class="sc">+</span></span>
+<span id="cb231-3"><a href="ggplot2图层语法与gbd数据展示一.html#cb231-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="at">size=</span> <span class="fl">1.2</span>)<span class="sc">+</span></span>
+<span id="cb231-4"><a href="ggplot2图层语法与gbd数据展示一.html#cb231-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_ribbon</span>(<span class="fu">aes</span>(<span class="at">ymin=</span>lower,<span class="at">ymax=</span>upper,<span class="at">fill=</span>sex),<span class="at">alpha=</span><span class="fl">0.1</span>,<span class="at">color=</span><span class="cn">NA</span>)</span>
+<span id="cb231-5"><a href="ggplot2图层语法与gbd数据展示一.html#cb231-5" aria-hidden="true" tabindex="-1"></a>fig4</span></code></pre></div>
+<p><img src="03_ggplot2_files/figure-html/unnamed-chunk-12-1.png" width="576" /></p>
+<ol start="4" style="list-style-type: decimal">
+<li>使用线图展示全球因艾滋病死亡人数的发展变化趋势，并用 ggsave 函数保存到工作路径中。</li>
+</ol>
+<div class="sourceCode" id="cb232"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb232-1"><a href="ggplot2图层语法与gbd数据展示一.html#cb232-1" aria-hidden="true" tabindex="-1"></a>fig5 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> df,<span class="fu">aes</span>(<span class="at">x=</span>year,<span class="at">y=</span>val,<span class="at">color=</span>sex))<span class="sc">+</span></span>
+<span id="cb232-2"><a href="ggplot2图层语法与gbd数据展示一.html#cb232-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>()</span>
+<span id="cb232-3"><a href="ggplot2图层语法与gbd数据展示一.html#cb232-3" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb232-4"><a href="ggplot2图层语法与gbd数据展示一.html#cb232-4" aria-hidden="true" tabindex="-1"></a>fig5</span></code></pre></div>
+<p><img src="03_ggplot2_files/figure-html/unnamed-chunk-13-1.png" width="576" /></p>
+<div class="sourceCode" id="cb233"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb233-1"><a href="ggplot2图层语法与gbd数据展示一.html#cb233-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ggsave(filename = &quot;AIDs线图.jpeg&quot;,width = 8,height = 6,dpi = 300)</span></span></code></pre></div>
+</div>
+</div>
+<div id="图片的标题与注脚" class="section level2" number="3.4">
+<h2><span class="header-section-number">3.4</span> 图片的标题与注脚</h2>
+<div id="增加标题副标题注脚标签" class="section level3" number="3.4.1">
+<h3><span class="header-section-number">3.4.1</span> 增加标题、副标题、注脚、标签</h3>
+<p>前面我们生成了 fig4：</p>
+<p>现在要在图片上方增加一个图片标题 (title)： Temporal trend of global incidence number of HIV; 副标题 subtitle: from 1990 to 2019; 在图片下方增加</p>
+<p>注脚 (caption)： base on data from GBD 2019；最后打上一个”A” 的标签。</p>
+<div class="sourceCode" id="cb234"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb234-1"><a href="ggplot2图层语法与gbd数据展示一.html#cb234-1" aria-hidden="true" tabindex="-1"></a>fig5 <span class="ot">&lt;-</span> fig4 <span class="sc">+</span></span>
+<span id="cb234-2"><a href="ggplot2图层语法与gbd数据展示一.html#cb234-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Temporal trend of global incidence number of HIV&quot;</span>,</span>
+<span id="cb234-3"><a href="ggplot2图层语法与gbd数据展示一.html#cb234-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">subtitle =</span> <span class="st">&quot;from 1990 to 2019&quot;</span>,</span>
+<span id="cb234-4"><a href="ggplot2图层语法与gbd数据展示一.html#cb234-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">caption =</span> <span class="st">&quot;base on data from GBD 2019&quot;</span>,</span>
+<span id="cb234-5"><a href="ggplot2图层语法与gbd数据展示一.html#cb234-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">tag=</span><span class="st">&quot;A&quot;</span>)</span>
+<span id="cb234-6"><a href="ggplot2图层语法与gbd数据展示一.html#cb234-6" aria-hidden="true" tabindex="-1"></a>fig5</span></code></pre></div>
+<p><img src="03_ggplot2_files/figure-html/unnamed-chunk-14-1.png" width="576" /></p>
+</div>
+<div id="修改图片标题的字体大小位置" class="section level3" number="3.4.2">
+<h3><span class="header-section-number">3.4.2</span> 修改图片标题的字体大小、位置</h3>
+<div class="sourceCode" id="cb235"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb235-1"><a href="ggplot2图层语法与gbd数据展示一.html#cb235-1" aria-hidden="true" tabindex="-1"></a>fig5 <span class="ot">&lt;-</span> fig4 <span class="sc">+</span></span>
+<span id="cb235-2"><a href="ggplot2图层语法与gbd数据展示一.html#cb235-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Temporal trend of global incidence number of HIV&quot;</span>,</span>
+<span id="cb235-3"><a href="ggplot2图层语法与gbd数据展示一.html#cb235-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">subtitle =</span> <span class="st">&quot;from 1990 to 2019&quot;</span>,</span>
+<span id="cb235-4"><a href="ggplot2图层语法与gbd数据展示一.html#cb235-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">caption =</span> <span class="st">&quot;base on data from GBD 2019&quot;</span>,</span>
+<span id="cb235-5"><a href="ggplot2图层语法与gbd数据展示一.html#cb235-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">tag=</span><span class="st">&quot;A&quot;</span>)<span class="sc">+</span></span>
+<span id="cb235-6"><a href="ggplot2图层语法与gbd数据展示一.html#cb235-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">10</span>,</span>
+<span id="cb235-7"><a href="ggplot2图层语法与gbd数据展示一.html#cb235-7" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">hjust =</span> <span class="fl">0.5</span>)) <span class="co"># h表示横向，just表示矫正；vjust表示垂直矫正。 0--&gt;1   左--&gt;右</span></span>
+<span id="cb235-8"><a href="ggplot2图层语法与gbd数据展示一.html#cb235-8" aria-hidden="true" tabindex="-1"></a>fig5</span></code></pre></div>
+<p><img src="03_ggplot2_files/figure-html/unnamed-chunk-15-1.png" width="576" /></p>
+</div>
+<div id="作业二" class="section level3" number="3.4.3">
+<h3><span class="header-section-number">3.4.3</span> 作业二</h3>
+<p>将 fig5 的图片标题，副标题字体大小均设定为 12，居中显示。</p>
+<div class="sourceCode" id="cb236"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb236-1"><a href="ggplot2图层语法与gbd数据展示一.html#cb236-1" aria-hidden="true" tabindex="-1"></a>fig5 <span class="ot">&lt;-</span> fig4 <span class="sc">+</span></span>
+<span id="cb236-2"><a href="ggplot2图层语法与gbd数据展示一.html#cb236-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Temporal trend of global incidence number of HIV&quot;</span>,</span>
+<span id="cb236-3"><a href="ggplot2图层语法与gbd数据展示一.html#cb236-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">subtitle =</span> <span class="st">&quot;from 1990 to 2019&quot;</span>,</span>
+<span id="cb236-4"><a href="ggplot2图层语法与gbd数据展示一.html#cb236-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">caption =</span> <span class="st">&quot;base on data from GBD 2019&quot;</span>,</span>
+<span id="cb236-5"><a href="ggplot2图层语法与gbd数据展示一.html#cb236-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">tag=</span><span class="st">&quot;A&quot;</span>)<span class="sc">+</span></span>
+<span id="cb236-6"><a href="ggplot2图层语法与gbd数据展示一.html#cb236-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">10</span>,</span>
+<span id="cb236-7"><a href="ggplot2图层语法与gbd数据展示一.html#cb236-7" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">hjust =</span> <span class="fl">0.5</span>)) <span class="sc">+</span><span class="co"># h表示横向，just表示矫正；vjust表示垂直矫正。 0--&gt;1   左--&gt;右</span></span>
+<span id="cb236-8"><a href="ggplot2图层语法与gbd数据展示一.html#cb236-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>,</span>
+<span id="cb236-9"><a href="ggplot2图层语法与gbd数据展示一.html#cb236-9" aria-hidden="true" tabindex="-1"></a>                                       <span class="at">hjust =</span> <span class="fl">0.5</span>))</span>
+<span id="cb236-10"><a href="ggplot2图层语法与gbd数据展示一.html#cb236-10" aria-hidden="true" tabindex="-1"></a>fig5</span></code></pre></div>
+<p><img src="03_ggplot2_files/figure-html/unnamed-chunk-16-1.png" width="576" /></p>
+</div>
+</div>
+<div id="坐标轴设定" class="section level2" number="3.5">
+<h2><span class="header-section-number">3.5</span> 坐标轴设定</h2>
+<div id="坐标轴标题修改" class="section level3" number="3.5.1">
+<h3><span class="header-section-number">3.5.1</span> 坐标轴标题修改</h3>
+<p>修改 fig5 坐标轴的标题, 将 Y 轴的设为 Incidence number，将 X 轴的标题去掉.</p>
+<div class="sourceCode" id="cb237"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb237-1"><a href="ggplot2图层语法与gbd数据展示一.html#cb237-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 方法一：</span></span>
+<span id="cb237-2"><a href="ggplot2图层语法与gbd数据展示一.html#cb237-2" aria-hidden="true" tabindex="-1"></a>fig5<span class="sc">+</span></span>
+<span id="cb237-3"><a href="ggplot2图层语法与gbd数据展示一.html#cb237-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlab</span>(<span class="at">label =</span> <span class="st">&quot;&quot;</span>)<span class="sc">+</span></span>
+<span id="cb237-4"><a href="ggplot2图层语法与gbd数据展示一.html#cb237-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ylab</span>(<span class="at">label=</span><span class="st">&quot;Incidence number&quot;</span>)</span></code></pre></div>
+<p><img src="03_ggplot2_files/figure-html/unnamed-chunk-17-1.png" width="576" /></p>
+<div class="sourceCode" id="cb238"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb238-1"><a href="ggplot2图层语法与gbd数据展示一.html#cb238-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 方法二：</span></span>
+<span id="cb238-2"><a href="ggplot2图层语法与gbd数据展示一.html#cb238-2" aria-hidden="true" tabindex="-1"></a>fig5<span class="sc">+</span></span>
+<span id="cb238-3"><a href="ggplot2图层语法与gbd数据展示一.html#cb238-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;&quot;</span>,<span class="at">y=</span><span class="st">&quot;Incidence number&quot;</span>)</span></code></pre></div>
+<p><img src="03_ggplot2_files/figure-html/unnamed-chunk-18-1.png" width="576" /></p>
+<ul>
+<li>坐标轴标题 (title) 字体大小设定</li>
+</ul>
+<p>字体大小一般都在 theme 里面设定：</p>
+<div class="sourceCode" id="cb239"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb239-1"><a href="ggplot2图层语法与gbd数据展示一.html#cb239-1" aria-hidden="true" tabindex="-1"></a>fig5<span class="sc">+</span></span>
+<span id="cb239-2"><a href="ggplot2图层语法与gbd数据展示一.html#cb239-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlab</span>(<span class="at">label =</span> <span class="st">&quot;&quot;</span>)<span class="sc">+</span></span>
+<span id="cb239-3"><a href="ggplot2图层语法与gbd数据展示一.html#cb239-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ylab</span>(<span class="at">label=</span><span class="st">&quot;Incidence number&quot;</span>)<span class="sc">+</span></span>
+<span id="cb239-4"><a href="ggplot2图层语法与gbd数据展示一.html#cb239-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">6</span>))</span></code></pre></div>
+<p><img src="03_ggplot2_files/figure-html/unnamed-chunk-19-1.png" width="576" /></p>
+</div>
+<div id="坐标轴尺度分段标签设定" class="section level3" number="3.5.2">
+<h3><span class="header-section-number">3.5.2</span> 坐标轴尺度、分段、标签设定</h3>
+<p>将 fig5 的 x 轴限度设置在 1990 年到 2019 年之间，间隔 5 年分段, 并改变每段标签为”year:1990”。</p>
+<div class="sourceCode" id="cb240"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb240-1"><a href="ggplot2图层语法与gbd数据展示一.html#cb240-1" aria-hidden="true" tabindex="-1"></a>fig5<span class="sc">+</span></span>
+<span id="cb240-2"><a href="ggplot2图层语法与gbd数据展示一.html#cb240-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;&quot;</span>, <span class="at">y=</span><span class="st">&quot;Incidence number&quot;</span>)<span class="sc">+</span></span>
+<span id="cb240-3"><a href="ggplot2图层语法与gbd数据展示一.html#cb240-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_x_continuous</span>(<span class="at">limits=</span><span class="fu">c</span>(<span class="dv">1990</span>,<span class="dv">2020</span>),</span>
+<span id="cb240-4"><a href="ggplot2图层语法与gbd数据展示一.html#cb240-4" aria-hidden="true" tabindex="-1"></a>                       <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">1990</span>,<span class="dv">2020</span>,<span class="at">by=</span><span class="dv">5</span>),</span>
+<span id="cb240-5"><a href="ggplot2图层语法与gbd数据展示一.html#cb240-5" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">paste</span>(<span class="st">&quot;year:&quot;</span>,</span>
+<span id="cb240-6"><a href="ggplot2图层语法与gbd数据展示一.html#cb240-6" aria-hidden="true" tabindex="-1"></a>                                      <span class="fu">seq</span>(<span class="dv">1990</span>,<span class="dv">2020</span>,<span class="at">by=</span><span class="dv">5</span>)))</span></code></pre></div>
+<p><img src="03_ggplot2_files/figure-html/unnamed-chunk-20-1.png" width="576" /></p>
+</div>
+<div id="坐标轴文字text大小旋转设定" class="section level3" number="3.5.3">
+<h3><span class="header-section-number">3.5.3</span> 坐标轴文字（text）大小、旋转设定</h3>
+<p>将上图 x 轴文字大小设定为 8，旋转为 45° 排列，同样在 theme 里面设定。</p>
+<div class="sourceCode" id="cb241"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb241-1"><a href="ggplot2图层语法与gbd数据展示一.html#cb241-1" aria-hidden="true" tabindex="-1"></a>fig5<span class="sc">+</span></span>
+<span id="cb241-2"><a href="ggplot2图层语法与gbd数据展示一.html#cb241-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;&quot;</span>, <span class="at">y=</span><span class="st">&quot;Incidence number&quot;</span>)<span class="sc">+</span></span>
+<span id="cb241-3"><a href="ggplot2图层语法与gbd数据展示一.html#cb241-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_x_continuous</span>(<span class="at">limits=</span><span class="fu">c</span>(<span class="dv">1990</span>,<span class="dv">2020</span>),</span>
+<span id="cb241-4"><a href="ggplot2图层语法与gbd数据展示一.html#cb241-4" aria-hidden="true" tabindex="-1"></a>                       <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">1990</span>,<span class="dv">2020</span>,<span class="at">by=</span><span class="dv">5</span>),</span>
+<span id="cb241-5"><a href="ggplot2图层语法与gbd数据展示一.html#cb241-5" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">paste</span>(<span class="st">&quot;year:&quot;</span>,</span>
+<span id="cb241-6"><a href="ggplot2图层语法与gbd数据展示一.html#cb241-6" aria-hidden="true" tabindex="-1"></a>                                      <span class="fu">seq</span>(<span class="dv">1990</span>,<span class="dv">2020</span>,<span class="at">by=</span><span class="dv">5</span>)))<span class="sc">+</span></span>
+<span id="cb241-7"><a href="ggplot2图层语法与gbd数据展示一.html#cb241-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">8</span>,</span>
+<span id="cb241-8"><a href="ggplot2图层语法与gbd数据展示一.html#cb241-8" aria-hidden="true" tabindex="-1"></a>                                     <span class="at">angle =</span> <span class="dv">45</span>,</span>
+<span id="cb241-9"><a href="ggplot2图层语法与gbd数据展示一.html#cb241-9" aria-hidden="true" tabindex="-1"></a>                                     <span class="at">hjust=</span><span class="dv">1</span>,</span>
+<span id="cb241-10"><a href="ggplot2图层语法与gbd数据展示一.html#cb241-10" aria-hidden="true" tabindex="-1"></a>                                     <span class="at">vjust =</span> <span class="dv">1</span>))</span></code></pre></div>
+<p><img src="03_ggplot2_files/figure-html/unnamed-chunk-21-1.png" width="576" /></p>
+</div>
+<div id="作业三" class="section level3" number="3.5.4">
+<h3><span class="header-section-number">3.5.4</span> 作业三</h3>
+<p>设定 fig5 的 y 轴，将它的限度设置在 0 到 2.5 million 之间，间隔为 0.5 million，尺度缩小 1 百万倍，同时 y 轴的标题变为 Incidence number(million)</p>
+<div class="sourceCode" id="cb242"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb242-1"><a href="ggplot2图层语法与gbd数据展示一.html#cb242-1" aria-hidden="true" tabindex="-1"></a>fig5 <span class="sc">+</span></span>
+<span id="cb242-2"><a href="ggplot2图层语法与gbd数据展示一.html#cb242-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;&quot;</span>, <span class="at">y=</span><span class="st">&quot;Incidence number&quot;</span>)<span class="sc">+</span></span>
+<span id="cb242-3"><a href="ggplot2图层语法与gbd数据展示一.html#cb242-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">8</span>,</span>
+<span id="cb242-4"><a href="ggplot2图层语法与gbd数据展示一.html#cb242-4" aria-hidden="true" tabindex="-1"></a>                                     <span class="at">angle =</span> <span class="dv">45</span>,</span>
+<span id="cb242-5"><a href="ggplot2图层语法与gbd数据展示一.html#cb242-5" aria-hidden="true" tabindex="-1"></a>                                     <span class="at">hjust=</span><span class="dv">1</span>,</span>
+<span id="cb242-6"><a href="ggplot2图层语法与gbd数据展示一.html#cb242-6" aria-hidden="true" tabindex="-1"></a>                                     <span class="at">vjust =</span> <span class="dv">1</span>))<span class="sc">+</span></span>
+<span id="cb242-7"><a href="ggplot2图层语法与gbd数据展示一.html#cb242-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_x_continuous</span>(<span class="at">limits=</span><span class="fu">c</span>(<span class="dv">1990</span>,<span class="dv">2020</span>),</span>
+<span id="cb242-8"><a href="ggplot2图层语法与gbd数据展示一.html#cb242-8" aria-hidden="true" tabindex="-1"></a>                       <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">1990</span>,<span class="dv">2020</span>,<span class="at">by=</span><span class="dv">5</span>),</span>
+<span id="cb242-9"><a href="ggplot2图层语法与gbd数据展示一.html#cb242-9" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">paste</span>(<span class="st">&quot;year:&quot;</span>,</span>
+<span id="cb242-10"><a href="ggplot2图层语法与gbd数据展示一.html#cb242-10" aria-hidden="true" tabindex="-1"></a>                                      <span class="fu">seq</span>(<span class="dv">1990</span>,<span class="dv">2020</span>,<span class="at">by=</span><span class="dv">5</span>)))<span class="sc">+</span></span>
+<span id="cb242-11"><a href="ggplot2图层语法与gbd数据展示一.html#cb242-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_y_continuous</span>(<span class="at">limits=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">2500000</span>),</span>
+<span id="cb242-12"><a href="ggplot2图层语法与gbd数据展示一.html#cb242-12" aria-hidden="true" tabindex="-1"></a>                       <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">2500000</span>,<span class="at">by=</span><span class="dv">500000</span>),</span>
+<span id="cb242-13"><a href="ggplot2图层语法与gbd数据展示一.html#cb242-13" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">paste</span>(<span class="fu">seq</span>(<span class="dv">0</span>,<span class="fl">2.5</span>, <span class="at">by =</span> <span class="fl">0.5</span>), <span class="st">&quot;millon&quot;</span>)) </span></code></pre></div>
+<p><img src="03_ggplot2_files/figure-html/unnamed-chunk-22-1.png" width="576" /></p>
+</div>
+</div>
+<div id="颜色尺度的调整" class="section level2" number="3.6">
+<h2><span class="header-section-number">3.6</span> 颜色尺度的调整</h2>
+<div id="手工调整颜色" class="section level3" number="3.6.1">
+<h3><span class="header-section-number">3.6.1</span> 手工调整颜色</h3>
+<p>手动调整颜色，将男性颜色设置为蓝色，女性颜色设置为红色</p>
+<p>常用颜色代码：＃号后面 6 位数。<a href="https://www.cnblogs.com/biostat-yu/p/13839621.html" class="uri">https://www.cnblogs.com/biostat-yu/p/13839621.html</a></p>
+<div class="sourceCode" id="cb243"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb243-1"><a href="ggplot2图层语法与gbd数据展示一.html#cb243-1" aria-hidden="true" tabindex="-1"></a>fig5<span class="sc">+</span></span>
+<span id="cb243-2"><a href="ggplot2图层语法与gbd数据展示一.html#cb243-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_fill_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;red&quot;</span>,<span class="st">&quot;blue&quot;</span>))<span class="sc">+</span></span>
+<span id="cb243-3"><a href="ggplot2图层语法与gbd数据展示一.html#cb243-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_color_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;red&quot;</span>,<span class="st">&quot;blue&quot;</span>))</span></code></pre></div>
+<p><img src="03_ggplot2_files/figure-html/unnamed-chunk-23-1.png" width="576" /></p>
+</div>
+<div id="使用-ggsci-代替-scale_fillcolor_manual" class="section level3" number="3.6.2">
+<h3><span class="header-section-number">3.6.2</span> 使用 ggsci() 代替 scale_fill/color_manual</h3>
+<div class="sourceCode" id="cb244"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb244-1"><a href="ggplot2图层语法与gbd数据展示一.html#cb244-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages(&quot;ggsci&quot;)</span></span>
+<span id="cb244-2"><a href="ggplot2图层语法与gbd数据展示一.html#cb244-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggsci)</span>
+<span id="cb244-3"><a href="ggplot2图层语法与gbd数据展示一.html#cb244-3" aria-hidden="true" tabindex="-1"></a>fig5<span class="sc">+</span></span>
+<span id="cb244-4"><a href="ggplot2图层语法与gbd数据展示一.html#cb244-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_fill_nejm</span>()<span class="sc">+</span> <span class="co"># 使用新英格兰配色</span></span>
+<span id="cb244-5"><a href="ggplot2图层语法与gbd数据展示一.html#cb244-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_color_nejm</span>()</span></code></pre></div>
+<p><img src="03_ggplot2_files/figure-html/unnamed-chunk-24-1.png" width="576" /></p>
+<div class="sourceCode" id="cb245"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb245-1"><a href="ggplot2图层语法与gbd数据展示一.html#cb245-1" aria-hidden="true" tabindex="-1"></a>fig5<span class="sc">+</span></span>
+<span id="cb245-2"><a href="ggplot2图层语法与gbd数据展示一.html#cb245-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_fill_lancet</span>()<span class="sc">+</span> <span class="co"># 使用柳叶刀配色</span></span>
+<span id="cb245-3"><a href="ggplot2图层语法与gbd数据展示一.html#cb245-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_color_lancet</span>()</span></code></pre></div>
+<p><img src="03_ggplot2_files/figure-html/unnamed-chunk-25-1.png" width="576" /></p>
+</div>
+</div>
+<div id="修改主题的其他元素-theme" class="section level2" number="3.7">
+<h2><span class="header-section-number">3.7</span> 修改主题的其他元素： theme()</h2>
+<p>前面已经提到，图片的 title, 轴的 title、 text，字体大小等都在 theme 里面设定，这里还可以修改其他元素：</p>
+<ul>
+<li>常用主题</li>
+</ul>
+<div class="sourceCode" id="cb246"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb246-1"><a href="ggplot2图层语法与gbd数据展示一.html#cb246-1" aria-hidden="true" tabindex="-1"></a><span class="co"># theme_bw()</span></span>
+<span id="cb246-2"><a href="ggplot2图层语法与gbd数据展示一.html#cb246-2" aria-hidden="true" tabindex="-1"></a>fig7 <span class="ot">&lt;-</span> fig5<span class="sc">+</span></span>
+<span id="cb246-3"><a href="ggplot2图层语法与gbd数据展示一.html#cb246-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;&quot;</span>, <span class="at">y=</span><span class="st">&quot;Incidence number&quot;</span>)<span class="sc">+</span></span>
+<span id="cb246-4"><a href="ggplot2图层语法与gbd数据展示一.html#cb246-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_x_continuous</span>(<span class="at">limits=</span><span class="fu">c</span>(<span class="dv">1990</span>,<span class="dv">2020</span>),</span>
+<span id="cb246-5"><a href="ggplot2图层语法与gbd数据展示一.html#cb246-5" aria-hidden="true" tabindex="-1"></a>                       <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">1990</span>,<span class="dv">2020</span>,<span class="at">by=</span><span class="dv">5</span>),</span>
+<span id="cb246-6"><a href="ggplot2图层语法与gbd数据展示一.html#cb246-6" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">seq</span>(<span class="dv">1990</span>,<span class="dv">2020</span>,<span class="at">by=</span><span class="dv">5</span>))<span class="sc">+</span></span>
+<span id="cb246-7"><a href="ggplot2图层语法与gbd数据展示一.html#cb246-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_fill_nejm</span>()<span class="sc">+</span></span>
+<span id="cb246-8"><a href="ggplot2图层语法与gbd数据展示一.html#cb246-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_color_nejm</span>()<span class="sc">+</span></span>
+<span id="cb246-9"><a href="ggplot2图层语法与gbd数据展示一.html#cb246-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_bw</span>()</span>
+<span id="cb246-10"><a href="ggplot2图层语法与gbd数据展示一.html#cb246-10" aria-hidden="true" tabindex="-1"></a>fig7</span></code></pre></div>
+<p><img src="03_ggplot2_files/figure-html/unnamed-chunk-26-1.png" width="576" /></p>
+<div class="sourceCode" id="cb247"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb247-1"><a href="ggplot2图层语法与gbd数据展示一.html#cb247-1" aria-hidden="true" tabindex="-1"></a><span class="co"># theme_classic()</span></span>
+<span id="cb247-2"><a href="ggplot2图层语法与gbd数据展示一.html#cb247-2" aria-hidden="true" tabindex="-1"></a>fig7<span class="sc">+</span><span class="fu">theme_classic</span>()</span></code></pre></div>
+<p><img src="03_ggplot2_files/figure-html/unnamed-chunk-27-1.png" width="576" /></p>
+<div class="sourceCode" id="cb248"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb248-1"><a href="ggplot2图层语法与gbd数据展示一.html#cb248-1" aria-hidden="true" tabindex="-1"></a><span class="co"># theme_gray()</span></span>
+<span id="cb248-2"><a href="ggplot2图层语法与gbd数据展示一.html#cb248-2" aria-hidden="true" tabindex="-1"></a>fig7<span class="sc">+</span><span class="fu">theme_gray</span>()</span></code></pre></div>
+<p><img src="03_ggplot2_files/figure-html/unnamed-chunk-28-1.png" width="576" /></p>
+<div id="图例-legend-的修改" class="section level3" number="3.7.1">
+<h3><span class="header-section-number">3.7.1</span> 图例 legend 的修改</h3>
+<div id="legend-可以放在图片的上下左右" class="section level4" number="3.7.1.1">
+<h4><span class="header-section-number">3.7.1.1</span> legend 可以放在图片的上下左右：</h4>
+<div class="sourceCode" id="cb249"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb249-1"><a href="ggplot2图层语法与gbd数据展示一.html#cb249-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 没有 legend</span></span>
+<span id="cb249-2"><a href="ggplot2图层语法与gbd数据展示一.html#cb249-2" aria-hidden="true" tabindex="-1"></a>fig7<span class="sc">+</span><span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;none&quot;</span>)<span class="co"># 没有 legend</span></span></code></pre></div>
+<p><img src="03_ggplot2_files/figure-html/unnamed-chunk-29-1.png" width="576" /></p>
+<div class="sourceCode" id="cb250"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb250-1"><a href="ggplot2图层语法与gbd数据展示一.html#cb250-1" aria-hidden="true" tabindex="-1"></a><span class="co"># legend 在上方</span></span>
+<span id="cb250-2"><a href="ggplot2图层语法与gbd数据展示一.html#cb250-2" aria-hidden="true" tabindex="-1"></a>fig7<span class="sc">+</span><span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;top&quot;</span>)</span></code></pre></div>
+<p><img src="03_ggplot2_files/figure-html/unnamed-chunk-30-1.png" width="576" /></p>
+<p><strong>legend 还可以在左边, 下方，右边，相应的参数取值为 legend.position =“left”,“bottom”,“right”。</strong></p>
+</div>
+<div id="legend-也可以放在图片的内部" class="section level4" number="3.7.1.2">
+<h4><span class="header-section-number">3.7.1.2</span> legend 也可以放在图片的内部：</h4>
+<div class="sourceCode" id="cb251"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb251-1"><a href="ggplot2图层语法与gbd数据展示一.html#cb251-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 比如在左下角：</span></span>
+<span id="cb251-2"><a href="ggplot2图层语法与gbd数据展示一.html#cb251-2" aria-hidden="true" tabindex="-1"></a>fig5<span class="sc">+</span><span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>),</span>
+<span id="cb251-3"><a href="ggplot2图层语法与gbd数据展示一.html#cb251-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">legend.justification=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>))</span></code></pre></div>
+<p><img src="03_ggplot2_files/figure-html/unnamed-chunk-31-1.png" width="576" /></p>
+<div class="sourceCode" id="cb252"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb252-1"><a href="ggplot2图层语法与gbd数据展示一.html#cb252-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 比如在右上角：</span></span>
+<span id="cb252-2"><a href="ggplot2图层语法与gbd数据展示一.html#cb252-2" aria-hidden="true" tabindex="-1"></a>fig5<span class="sc">+</span><span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>),</span>
+<span id="cb252-3"><a href="ggplot2图层语法与gbd数据展示一.html#cb252-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">legend.justification=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>))</span></code></pre></div>
+<p><img src="03_ggplot2_files/figure-html/unnamed-chunk-32-1.png" width="576" /></p>
+<p>参数设定规则： legend.position = c(0,1) 中 c(0,1) 逗号前面的值设定 legend在 x 轴的相对位置；逗号后面的值设定 legend 在 y 轴的相对位置，另外，legend.justification 设定与 legend.position 一致即可。比如设定 legend 在图片<strong>内左下角，左上角，右上角，右下角分别为 c(0,0),c(0,1),c(1,0),c(1,1)。</strong></p>
+</div>
+</div>
+<div id="作业四" class="section level3" number="3.7.2">
+<h3><span class="header-section-number">3.7.2</span> 作业四</h3>
+<p>将 fig5 的背景主题设置为 theme_bw()，并将 legend 设置在图片内正中间。</p>
+<div class="sourceCode" id="cb253"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb253-1"><a href="ggplot2图层语法与gbd数据展示一.html#cb253-1" aria-hidden="true" tabindex="-1"></a>fig5<span class="sc">+</span><span class="fu">theme_bw</span>()<span class="sc">+</span></span>
+<span id="cb253-2"><a href="ggplot2图层语法与gbd数据展示一.html#cb253-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="fu">c</span>(<span class="fl">0.5</span>,<span class="fl">0.5</span>),</span>
+<span id="cb253-3"><a href="ggplot2图层语法与gbd数据展示一.html#cb253-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">legend.justification=</span><span class="fu">c</span>(<span class="fl">0.5</span>,<span class="fl">0.5</span>))</span></code></pre></div>
+<p><img src="03_ggplot2_files/figure-html/unnamed-chunk-33-1.png" width="576" /></p>
+</div>
+</div>
+<div id="总结" class="section level2" number="3.8">
+<h2><span class="header-section-number">3.8</span> 总结</h2>
+<ol style="list-style-type: decimal">
+<li><p>画图之前查看数据；</p></li>
+<li><p>想好用什么几何图形展示数据：点？线？柱？条？</p></li>
+<li><p>设定 aes(), 指定 x、 y、 color、 fill 等参数的映射；</p></li>
+<li><p>映射可通过画板全局设定，也可以在单个图层设定；</p></li>
+<li><p>图层以 + 号连接；</p></li>
+<li><p>坐标轴、颜色等尺度可以通过 scale_ 图层指定；</p></li>
+<li><p>字体大小、位置、旋转等可以通过 theme 图层设定。</p></li>
+</ol>
+</div>
+<div id="课后作业" class="section level2" number="3.9">
+<h2><span class="header-section-number">3.9</span> 课后作业</h2>
+<p>使用线图展示全球 HIV 的 DALY number 数据，要求：</p>
+<ol style="list-style-type: decimal">
+<li><p>有图片 title,caption,tag，</p></li>
+<li><p>x 轴的尺度在 1990-2020 之间，间隔为 5 年， 45° 旋转</p></li>
+<li><p>不同颜色表示男性、女性；</p></li>
+<li><p>展示 95%UI，有透明度、边框颜色参数的设定；</p></li>
+<li><p>设定 legend 位置为图片内，右下角；</p></li>
+<li><p>使用 ggsave 导出 jpeg 格式， dpi=300。</p></li>
+</ol>
+<div class="sourceCode" id="cb254"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb254-1"><a href="ggplot2图层语法与gbd数据展示一.html#cb254-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data/Global_HIV.csv&quot;</span>)</span>
+<span id="cb254-2"><a href="ggplot2图层语法与gbd数据展示一.html#cb254-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb254-3"><a href="ggplot2图层语法与gbd数据展示一.html#cb254-3" aria-hidden="true" tabindex="-1"></a>temp3 <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span></span>
+<span id="cb254-4"><a href="ggplot2图层语法与gbd数据展示一.html#cb254-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(measure<span class="sc">==</span><span class="st">&quot;DALYs (Disability-Adjusted Life Years)&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb254-5"><a href="ggplot2图层语法与gbd数据展示一.html#cb254-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(sex<span class="sc">%in%</span><span class="fu">c</span>(<span class="st">&quot;Male&quot;</span>,<span class="st">&quot;Female&quot;</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb254-6"><a href="ggplot2图层语法与gbd数据展示一.html#cb254-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(age<span class="sc">==</span><span class="st">&quot;All ages&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb254-7"><a href="ggplot2图层语法与gbd数据展示一.html#cb254-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(cause<span class="sc">==</span><span class="st">&quot;HIV/AIDS&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb254-8"><a href="ggplot2图层语法与gbd数据展示一.html#cb254-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(metric<span class="sc">==</span><span class="st">&quot;Number&quot;</span>)</span>
+<span id="cb254-9"><a href="ggplot2图层语法与gbd数据展示一.html#cb254-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 看看最大值有多大</span></span>
+<span id="cb254-10"><a href="ggplot2图层语法与gbd数据展示一.html#cb254-10" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(temp3<span class="sc">$</span>val)</span></code></pre></div>
+<pre><code>## [1] 58206725</code></pre>
+<div class="sourceCode" id="cb256"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb256-1"><a href="ggplot2图层语法与gbd数据展示一.html#cb256-1" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(temp3<span class="sc">$</span>upper) <span class="co">#72,576,395</span></span></code></pre></div>
+<pre><code>## [1] 72576395</code></pre>
+<div class="sourceCode" id="cb258"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb258-1"><a href="ggplot2图层语法与gbd数据展示一.html#cb258-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 绘图</span></span>
+<span id="cb258-2"><a href="ggplot2图层语法与gbd数据展示一.html#cb258-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggsci)</span>
+<span id="cb258-3"><a href="ggplot2图层语法与gbd数据展示一.html#cb258-3" aria-hidden="true" tabindex="-1"></a>pic <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> temp3,<span class="fu">aes</span>(<span class="at">x=</span>year,<span class="at">y=</span>val,<span class="at">color=</span>sex))<span class="sc">+</span></span>
+<span id="cb258-4"><a href="ggplot2图层语法与gbd数据展示一.html#cb258-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>()<span class="sc">+</span></span>
+<span id="cb258-5"><a href="ggplot2图层语法与gbd数据展示一.html#cb258-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_ribbon</span>(<span class="fu">aes</span>(<span class="at">ymin=</span>lower,<span class="at">ymax=</span>upper,<span class="at">fill=</span>sex),</span>
+<span id="cb258-6"><a href="ggplot2图层语法与gbd数据展示一.html#cb258-6" aria-hidden="true" tabindex="-1"></a>              <span class="at">alpha=</span><span class="fl">0.1</span>,</span>
+<span id="cb258-7"><a href="ggplot2图层语法与gbd数据展示一.html#cb258-7" aria-hidden="true" tabindex="-1"></a>              <span class="at">color=</span><span class="cn">NA</span>)<span class="sc">+</span></span>
+<span id="cb258-8"><a href="ggplot2图层语法与gbd数据展示一.html#cb258-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">1990</span>,<span class="dv">2020</span>),</span>
+<span id="cb258-9"><a href="ggplot2图层语法与gbd数据展示一.html#cb258-9" aria-hidden="true" tabindex="-1"></a>                     <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">1990</span>,<span class="dv">2020</span>,<span class="at">by=</span><span class="dv">5</span>),</span>
+<span id="cb258-10"><a href="ggplot2图层语法与gbd数据展示一.html#cb258-10" aria-hidden="true" tabindex="-1"></a>                     <span class="at">labels =</span> <span class="fu">seq</span>(<span class="dv">1990</span>,<span class="dv">2020</span>,<span class="at">by=</span><span class="dv">5</span>))<span class="sc">+</span></span>
+<span id="cb258-11"><a href="ggplot2图层语法与gbd数据展示一.html#cb258-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">80000000</span>),</span>
+<span id="cb258-12"><a href="ggplot2图层语法与gbd数据展示一.html#cb258-12" aria-hidden="true" tabindex="-1"></a>                     <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">80000000</span>,<span class="at">by=</span><span class="dv">20000000</span>),</span>
+<span id="cb258-13"><a href="ggplot2图层语法与gbd数据展示一.html#cb258-13" aria-hidden="true" tabindex="-1"></a>                     <span class="at">labels =</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">80</span>,<span class="at">by=</span><span class="dv">20</span>))<span class="sc">+</span></span>
+<span id="cb258-14"><a href="ggplot2图层语法与gbd数据展示一.html#cb258-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_nejm</span>()<span class="sc">+</span></span>
+<span id="cb258-15"><a href="ggplot2图层语法与gbd数据展示一.html#cb258-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_nejm</span>()<span class="sc">+</span></span>
+<span id="cb258-16"><a href="ggplot2图层语法与gbd数据展示一.html#cb258-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title=</span><span class="st">&quot;Temporal trend of golobal DALY number&quot;</span>,</span>
+<span id="cb258-17"><a href="ggplot2图层语法与gbd数据展示一.html#cb258-17" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">&quot;of HIV from 1990 to 2019&quot;</span>,</span>
+<span id="cb258-18"><a href="ggplot2图层语法与gbd数据展示一.html#cb258-18" aria-hidden="true" tabindex="-1"></a>       <span class="at">x=</span><span class="st">&quot;&quot;</span>,</span>
+<span id="cb258-19"><a href="ggplot2图层语法与gbd数据展示一.html#cb258-19" aria-hidden="true" tabindex="-1"></a>       <span class="at">y=</span><span class="st">&quot;DALY number (million)&quot;</span>)<span class="sc">+</span></span>
+<span id="cb258-20"><a href="ggplot2图层语法与gbd数据展示一.html#cb258-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()<span class="sc">+</span></span>
+<span id="cb258-21"><a href="ggplot2图层语法与gbd数据展示一.html#cb258-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">0</span>),</span>
+<span id="cb258-22"><a href="ggplot2图层语法与gbd数据展示一.html#cb258-22" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.justification=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">0</span>),</span>
+<span id="cb258-23"><a href="ggplot2图层语法与gbd数据展示一.html#cb258-23" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.background  =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb258-24"><a href="ggplot2图层语法与gbd数据展示一.html#cb258-24" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>,<span class="at">hjust =</span> <span class="dv">1</span>,<span class="at">vjust=</span><span class="dv">1</span>))</span>
+<span id="cb258-25"><a href="ggplot2图层语法与gbd数据展示一.html#cb258-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb258-26"><a href="ggplot2图层语法与gbd数据展示一.html#cb258-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb258-27"><a href="ggplot2图层语法与gbd数据展示一.html#cb258-27" aria-hidden="true" tabindex="-1"></a>pic</span></code></pre></div>
+<p><img src="03_ggplot2_files/figure-html/unnamed-chunk-34-1.png" width="576" /></p>
+
+</div>
+</div>
+  </main>
+
+  <div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page">
+      <h2>On this page</h2>
+      <div id="book-on-this-page"></div>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          <li><a id="book-source" href="#">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="#">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5">
+  <div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>GBD 笔记总结</strong>" was written by 杨 弘. It was last built on 2022-11-20.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+
+
+</body>
+
+</html>

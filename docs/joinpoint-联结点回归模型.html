@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>第 6 章 Joinpoint 联结点回归模型 | GBD 笔记总结</title>
+
+    <meta name="author" content="杨 弘" />
+  
+   <meta name="description" content="This book is an overview of how practitioners can acquire, wrangle, visualize, and model data with the R and Stan." />
+   <meta name="generator" content="placeholder" />
+  <meta property="og:title" content="第 6 章 Joinpoint 联结点回归模型 | GBD 笔记总结" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://yanghongxxl.github.com/GBD_yh_test/" />
+  
+  <meta property="og:description" content="This book is an overview of how practitioners can acquire, wrangle, visualize, and model data with the R and Stan." />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="第 6 章 Joinpoint 联结点回归模型 | GBD 笔记总结" />
+  
+  <meta name="twitter:description" content="This book is an overview of how practitioners can acquire, wrangle, visualize, and model data with the R and Stan." />
+  
+  <!-- JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script>
+    <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet" />
+    <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script>
+    <script src="libs/bs3compat-0.4.1/transition.js"></script>
+    <script src="libs/bs3compat-0.4.1/tabs.js"></script>
+    <script src="libs/bs3compat-0.4.1/bs3compat.js"></script>
+    <link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet" />
+    <script src="libs/bs4_book-1.0.0/bs4_book.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script>
+
+  <!-- CSS -->
+  <style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+    
+</head>
+
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book">
+    <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">GBD 笔记总结</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+      </form>
+
+      <nav aria-label="Table of contents">
+        <h2>Table of contents</h2>
+        <div id="book-toc"></div>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="#">View book source <i class="fab fa-github"></i></a></li></p>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="col-sm-12 col-md-9 col-lg-7" id="content">
+<div id="joinpoint-联结点回归模型" class="section level1" number="6">
+<h1><span class="header-section-number">第 6 章</span> Joinpoint 联结点回归模型</h1>
+<div id="实战-数据处理" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> 实战-数据处理</h2>
+<div class="sourceCode" id="cb299"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb299-1"><a href="joinpoint-联结点回归模型.html#cb299-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 读取并查看数据</span></span>
+<span id="cb299-2"><a href="joinpoint-联结点回归模型.html#cb299-2" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/Global_HIV.csv&quot;</span>,<span class="at">header =</span> T)</span>
+<span id="cb299-3"><a href="joinpoint-联结点回归模型.html#cb299-3" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(df)</span>
+<span id="cb299-4"><a href="joinpoint-联结点回归模型.html#cb299-4" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(df<span class="sc">$</span>measure)</span>
+<span id="cb299-5"><a href="joinpoint-联结点回归模型.html#cb299-5" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(df<span class="sc">$</span>location)</span>
+<span id="cb299-6"><a href="joinpoint-联结点回归模型.html#cb299-6" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(df<span class="sc">$</span>sex)</span>
+<span id="cb299-7"><a href="joinpoint-联结点回归模型.html#cb299-7" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(df<span class="sc">$</span>age)</span>
+<span id="cb299-8"><a href="joinpoint-联结点回归模型.html#cb299-8" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(df<span class="sc">$</span>cause)</span>
+<span id="cb299-9"><a href="joinpoint-联结点回归模型.html#cb299-9" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(df<span class="sc">$</span>metric)</span>
+<span id="cb299-10"><a href="joinpoint-联结点回归模型.html#cb299-10" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(df<span class="sc">$</span>year)</span></code></pre></div>
+<div class="sourceCode" id="cb300"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb300-1"><a href="joinpoint-联结点回归模型.html#cb300-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 筛选数据：</span></span>
+<span id="cb300-2"><a href="joinpoint-联结点回归模型.html#cb300-2" aria-hidden="true" tabindex="-1"></a>number <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span> </span>
+<span id="cb300-3"><a href="joinpoint-联结点回归模型.html#cb300-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(cause<span class="sc">%in%</span><span class="fu">c</span>(<span class="st">&quot;HIV/AIDS&quot;</span>,<span class="st">&quot;Syphilis&quot;</span>,<span class="st">&quot;Chlamydial infection&quot;</span>,</span>
+<span id="cb300-4"><a href="joinpoint-联结点回归模型.html#cb300-4" aria-hidden="true" tabindex="-1"></a>                    <span class="st">&quot;Gonococcal infection&quot;</span>,<span class="st">&quot;Trichomoniasis&quot;</span>,</span>
+<span id="cb300-5"><a href="joinpoint-联结点回归模型.html#cb300-5" aria-hidden="true" tabindex="-1"></a>                    <span class="st">&quot;Genital herpes&quot;</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb300-6"><a href="joinpoint-联结点回归模型.html#cb300-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(age<span class="sc">==</span><span class="st">&quot;All ages&quot;</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb300-7"><a href="joinpoint-联结点回归模型.html#cb300-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(metric<span class="sc">==</span><span class="st">&quot;Number&quot;</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb300-8"><a href="joinpoint-联结点回归模型.html#cb300-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(measure<span class="sc">==</span><span class="st">&quot;Incidence&quot;</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb300-9"><a href="joinpoint-联结点回归模型.html#cb300-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">val=</span><span class="fu">round</span>(val,<span class="dv">0</span>),    <span class="co">#将数据变为整数</span></span>
+<span id="cb300-10"><a href="joinpoint-联结点回归模型.html#cb300-10" aria-hidden="true" tabindex="-1"></a>         <span class="at">upper=</span><span class="fu">round</span>(upper,<span class="dv">0</span>),</span>
+<span id="cb300-11"><a href="joinpoint-联结点回归模型.html#cb300-11" aria-hidden="true" tabindex="-1"></a>         <span class="at">lower=</span><span class="fu">round</span>(lower,<span class="dv">0</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb300-12"><a href="joinpoint-联结点回归模型.html#cb300-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(cause,sex,year)    <span class="co">#重排序，非常重要</span></span>
+<span id="cb300-13"><a href="joinpoint-联结点回归模型.html#cb300-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb300-14"><a href="joinpoint-联结点回归模型.html#cb300-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb300-15"><a href="joinpoint-联结点回归模型.html#cb300-15" aria-hidden="true" tabindex="-1"></a>ASR <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span> </span>
+<span id="cb300-16"><a href="joinpoint-联结点回归模型.html#cb300-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(cause<span class="sc">%in%</span><span class="fu">c</span>(<span class="st">&quot;HIV/AIDS&quot;</span>,<span class="st">&quot;Syphilis&quot;</span>,<span class="st">&quot;Chlamydial infection&quot;</span>,</span>
+<span id="cb300-17"><a href="joinpoint-联结点回归模型.html#cb300-17" aria-hidden="true" tabindex="-1"></a>                    <span class="st">&quot;Gonococcal infection&quot;</span>,<span class="st">&quot;Trichomoniasis&quot;</span>,</span>
+<span id="cb300-18"><a href="joinpoint-联结点回归模型.html#cb300-18" aria-hidden="true" tabindex="-1"></a>                    <span class="st">&quot;Genital herpes&quot;</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb300-19"><a href="joinpoint-联结点回归模型.html#cb300-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(age<span class="sc">==</span><span class="st">&quot;Age-standardized&quot;</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb300-20"><a href="joinpoint-联结点回归模型.html#cb300-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(measure<span class="sc">==</span><span class="st">&quot;Incidence&quot;</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb300-21"><a href="joinpoint-联结点回归模型.html#cb300-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(metric<span class="sc">==</span><span class="st">&quot;Rate&quot;</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb300-22"><a href="joinpoint-联结点回归模型.html#cb300-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">se=</span>(upper<span class="sc">-</span>lower)<span class="sc">/</span>(<span class="dv">2</span><span class="sc">*</span><span class="fl">1.96</span>)) <span class="sc">|&gt;</span>  <span class="co">#生成se</span></span>
+<span id="cb300-23"><a href="joinpoint-联结点回归模型.html#cb300-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(cause,sex,year)    <span class="co">#重排序，非常重要</span></span></code></pre></div>
+<div class="sourceCode" id="cb301"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb301-1"><a href="joinpoint-联结点回归模型.html#cb301-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 写出数据</span></span>
+<span id="cb301-2"><a href="joinpoint-联结点回归模型.html#cb301-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(number,<span class="st">&quot;data/number.csv&quot;</span>,<span class="at">row.names =</span> F)</span>
+<span id="cb301-3"><a href="joinpoint-联结点回归模型.html#cb301-3" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(ASR,<span class="st">&quot;data/ASR.csv&quot;</span>,<span class="at">row.names =</span> F)</span></code></pre></div>
+<p><img src="images/050z.png" width="90%" style="display: block; margin: auto;" /></p>
+
+</div>
+</div>
+  </main>
+
+  <div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page">
+      <h2>On this page</h2>
+      <div id="book-on-this-page"></div>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          <li><a id="book-source" href="#">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="#">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5">
+  <div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>GBD 笔记总结</strong>" was written by 杨 弘. It was last built on 2022-11-20.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+
+
+</body>
+
+</html>

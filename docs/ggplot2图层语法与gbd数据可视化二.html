@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>第 4 章 ggplot2图层语法与GBD数据可视化二 | GBD 笔记总结</title>
+
+    <meta name="author" content="杨 弘" />
+  
+   <meta name="description" content="This book is an overview of how practitioners can acquire, wrangle, visualize, and model data with the R and Stan." />
+   <meta name="generator" content="placeholder" />
+  <meta property="og:title" content="第 4 章 ggplot2图层语法与GBD数据可视化二 | GBD 笔记总结" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://yanghongxxl.github.com/GBD_yh_test/" />
+  
+  <meta property="og:description" content="This book is an overview of how practitioners can acquire, wrangle, visualize, and model data with the R and Stan." />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="第 4 章 ggplot2图层语法与GBD数据可视化二 | GBD 笔记总结" />
+  
+  <meta name="twitter:description" content="This book is an overview of how practitioners can acquire, wrangle, visualize, and model data with the R and Stan." />
+  
+  <!-- JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script>
+    <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet" />
+    <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script>
+    <script src="libs/bs3compat-0.4.1/transition.js"></script>
+    <script src="libs/bs3compat-0.4.1/tabs.js"></script>
+    <script src="libs/bs3compat-0.4.1/bs3compat.js"></script>
+    <link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet" />
+    <script src="libs/bs4_book-1.0.0/bs4_book.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script>
+
+  <!-- CSS -->
+  <style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+    
+</head>
+
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book">
+    <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">GBD 笔记总结</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+      </form>
+
+      <nav aria-label="Table of contents">
+        <h2>Table of contents</h2>
+        <div id="book-toc"></div>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="#">View book source <i class="fab fa-github"></i></a></li></p>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="col-sm-12 col-md-9 col-lg-7" id="content">
+<div id="ggplot2图层语法与gbd数据可视化二" class="section level1" number="4">
+<h1><span class="header-section-number">第 4 章</span> ggplot2图层语法与GBD数据可视化二</h1>
+<div id="柱状图" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> 柱状图</h2>
+<div id="geom_col-与-geom_bar-的区别" class="section level3" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> geom_col 与 geom_bar 的区别</h3>
+<p>geom_col 或者 geom_bar是常用的绘制柱状图的方法，它们都是使用柱（条）的高度来展示数据，但是二者存在一些差异：</p>
+<ol style="list-style-type: decimal">
+<li><p>geom_col 必须要映射 x,y 两个参数，如：geom_col(data,aes(x,y))，其中， x 为每个柱（条）的位置， y 展示的每个柱子（条）的具体数值；</p></li>
+<li><p>geom_bar 默认的参数为geom_bar(data,aes(x),stat=“count”)，这时候只能映射一个参数 x，不能设定 y。这里的 stat 是 statistics 的前面四个字母，是统计变换的意思。如果stat=“identity”（识别，不进行变换），则geom_bar 与 geom_col 完全相同</p></li>
+</ol>
+</div>
+<div id="geom_colgeom_bar-的常用参数" class="section level3" number="4.1.2">
+<h3><span class="header-section-number">4.1.2</span> geom_col/geom_bar 的常用参数</h3>
+<p>我们展示 GBD 数据时, 一般不需要用到统计变换 stat=“count”, 多数情况下使用 geom_col 或者geom_bar(stat=“identity”)，需要指定 x 与 y 两个参数。</p>
+<p>以全球艾滋病年龄标准化发病率为例, 我们想用柱状图展示 1990 年到 2019年 HIV 的年龄标准化患病率（间隔 5 年）：</p>
+<div class="sourceCode" id="cb259"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb259-1"><a href="ggplot2图层语法与gbd数据可视化二.html#cb259-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb259-2"><a href="ggplot2图层语法与gbd数据可视化二.html#cb259-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 读取数据</span></span>
+<span id="cb259-3"><a href="ggplot2图层语法与gbd数据可视化二.html#cb259-3" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/global_HIV.csv&quot;</span>,<span class="at">header=</span>T)</span>
+<span id="cb259-4"><a href="ggplot2图层语法与gbd数据可视化二.html#cb259-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 选择数据并且画图</span></span>
+<span id="cb259-5"><a href="ggplot2图层语法与gbd数据可视化二.html#cb259-5" aria-hidden="true" tabindex="-1"></a>fig1 <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span></span>
+<span id="cb259-6"><a href="ggplot2图层语法与gbd数据可视化二.html#cb259-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(cause<span class="sc">==</span><span class="st">&quot;HIV/AIDS&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb259-7"><a href="ggplot2图层语法与gbd数据可视化二.html#cb259-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(sex<span class="sc">%in%</span><span class="fu">c</span>(<span class="st">&quot;Male&quot;</span>,<span class="st">&quot;Female&quot;</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb259-8"><a href="ggplot2图层语法与gbd数据可视化二.html#cb259-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(measure<span class="sc">==</span><span class="st">&quot;Incidence&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb259-9"><a href="ggplot2图层语法与gbd数据可视化二.html#cb259-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(age<span class="sc">==</span><span class="st">&quot;Age-standardized&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb259-10"><a href="ggplot2图层语法与gbd数据可视化二.html#cb259-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(metric<span class="sc">==</span><span class="st">&quot;Rate&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb259-11"><a href="ggplot2图层语法与gbd数据可视化二.html#cb259-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(year<span class="sc">%in%</span><span class="fu">seq</span>(<span class="dv">1990</span>,<span class="dv">2019</span>,<span class="at">by=</span><span class="dv">5</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb259-12"><a href="ggplot2图层语法与gbd数据可视化二.html#cb259-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">year=</span><span class="fu">factor</span>(year)) <span class="sc">|&gt;</span> <span class="co"># 将年份设置为因子</span></span>
+<span id="cb259-13"><a href="ggplot2图层语法与gbd数据可视化二.html#cb259-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">sex=</span><span class="fu">factor</span>(sex,<span class="at">levels =</span> <span class="fu">c</span>(<span class="st">&quot;Male&quot;</span>,<span class="st">&quot;Female&quot;</span>))) <span class="sc">|&gt;</span></span>
+<span id="cb259-14"><a href="ggplot2图层语法与gbd数据可视化二.html#cb259-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>year,<span class="at">y=</span>val,<span class="at">fill=</span>sex))<span class="sc">+</span></span>
+<span id="cb259-15"><a href="ggplot2图层语法与gbd数据可视化二.html#cb259-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># geom_bar(stat = &quot;identity&quot;,position=position_dodge())</span></span>
+<span id="cb259-16"><a href="ggplot2图层语法与gbd数据可视化二.html#cb259-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_col</span>(<span class="at">position =</span> <span class="st">&quot;dodge&quot;</span>,<span class="at">width =</span> <span class="fl">0.8</span>)</span>
+<span id="cb259-17"><a href="ggplot2图层语法与gbd数据可视化二.html#cb259-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb259-18"><a href="ggplot2图层语法与gbd数据可视化二.html#cb259-18" aria-hidden="true" tabindex="-1"></a>fig1</span></code></pre></div>
+<p><img src="04_ggplot2%E7%BB%A7%E7%BB%AD_files/figure-html/unnamed-chunk-1-1.png" width="576" />
+这里我们使用管道操作直接将数据筛选后用管道符 “|&gt;” 连接后续的 ggplot() 函数，这样做的好处是可以避免生成多余的变量。这里需要注意的是，管道操作是用管道符”|&gt;” 连接的，而 ggplot() 之后，图层是用”+“进行连接。</p>
+<div id="position" class="section level4" number="4.1.2.1">
+<h4><span class="header-section-number">4.1.2.1</span> position</h4>
+</div>
+</div>
+<div id="课堂作业-1给柱状图加个误差" class="section level3" number="4.1.3">
+<h3><span class="header-section-number">4.1.3</span> 课堂作业 1：给柱状图加个误差</h3>
+</div>
+</div>
+<div id="ggplot2-的分面系统" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> ggplot2 的分面系统</h2>
+<div id="facet_wrapfacet_gridfacet_nested" class="section level3" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> facet_wrap/facet_grid/facet_nested</h3>
+</div>
+<div id="facet_wrap" class="section level3" number="4.2.2">
+<h3><span class="header-section-number">4.2.2</span> facet_wrap</h3>
+</div>
+<div id="facet_gridfacet_nested" class="section level3" number="4.2.3">
+<h3><span class="header-section-number">4.2.3</span> facet_grid/facet_nested</h3>
+</div>
+</div>
+<div id="图形的组合" class="section level2" number="4.3">
+<h2><span class="header-section-number">4.3</span> 图形的组合</h2>
+<div id="按照行" class="section level3" number="4.3.1">
+<h3><span class="header-section-number">4.3.1</span> 按照行</h3>
+</div>
+<div id="按照列" class="section level3" number="4.3.2">
+<h3><span class="header-section-number">4.3.2</span> 按照列</h3>
+</div>
+<div id="增加图片的其他元素plot_annotation" class="section level3" number="4.3.3">
+<h3><span class="header-section-number">4.3.3</span> 增加图片的其他元素（plot_annotation）</h3>
+</div>
+<div id="增加空格plot_spacer" class="section level3" number="4.3.4">
+<h3><span class="header-section-number">4.3.4</span> 增加空格（plot_spacer）</h3>
+</div>
+<div id="通过-layout-控制图片的位置-designlayout" class="section level3" number="4.3.5">
+<h3><span class="header-section-number">4.3.5</span> 通过 layout 控制图片的位置： design=layout</h3>
+</div>
+<div id="legend-的调整收集标签" class="section level3" number="4.3.6">
+<h3><span class="header-section-number">4.3.6</span> legend 的调整（收集标签）</h3>
+</div>
+</div>
+<div id="课后作业-1" class="section level2" number="4.4">
+<h2><span class="header-section-number">4.4</span> 课后作业</h2>
+<ol style="list-style-type: decimal">
+<li>绘制下面图形。（提示：使用课堂作业相同的数据， coord_flip() 可以翻转 x-y 轴； 1990 的数值设置为负）</li>
+</ol>
+<p><img src="images/050z.png" width="90%" style="display: block; margin: auto;" /></p>
+<ol start="2" style="list-style-type: decimal">
+<li>绘制下图（提示：使用 patchwork 改写 fig5）
+<img src="images/050z.png" width="90%" style="display: block; margin: auto;" /></li>
+</ol>
+
+</div>
+</div>
+  </main>
+
+  <div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page">
+      <h2>On this page</h2>
+      <div id="book-on-this-page"></div>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          <li><a id="book-source" href="#">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="#">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5">
+  <div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>GBD 笔记总结</strong>" was written by 杨 弘. It was last built on 2022-11-20.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+
+
+</body>
+
+</html>
